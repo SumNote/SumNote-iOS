@@ -17,6 +17,7 @@
 		294349D42B07922400C57B49 /* SumNote_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349D32B07922400C57B49 /* SumNote_iOSTests.swift */; };
 		294349DE2B07922400C57B49 /* SumNote_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349DD2B07922400C57B49 /* SumNote_iOSUITests.swift */; };
 		294349E02B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349DF2B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift */; };
+		294349ED2B0792DF00C57B49 /* KaKaoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349EC2B0792DF00C57B49 /* KaKaoAPI.swift */; };
 		6B131C677AE5EC50ED3C0C78 /* Pods_SumNote_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA17B356FAFB4FAA26769EE /* Pods_SumNote_iOS.framework */; };
 		E32A8C0C784668696349B96E /* Pods_SumNote_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E1944F96AACA28D292E1D5 /* Pods_SumNote_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		294349D92B07922400C57B49 /* SumNote-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SumNote-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294349DD2B07922400C57B49 /* SumNote_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumNote_iOSUITests.swift; sourceTree = "<group>"; };
 		294349DF2B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumNote_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		294349EC2B0792DF00C57B49 /* KaKaoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoAPI.swift; sourceTree = "<group>"; };
 		2C4A468B5C02A5DB6CCDCEE5 /* Pods-SumNote-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E8268A925AF864ED6DA63E5 /* Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOS-SumNote-iOSUITests/Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85530E1935055CC307638EC9 /* Pods-SumNote-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				294349C52B07922300C57B49 /* Assets.xcassets */,
 				294349C72B07922300C57B49 /* LaunchScreen.storyboard */,
 				294349CA2B07922300C57B49 /* Info.plist */,
+				294349EC2B0792DF00C57B49 /* KaKaoAPI.swift */,
 			);
 			path = "SumNote-iOS";
 			sourceTree = "<group>";
@@ -164,7 +167,6 @@
 				2C4A468B5C02A5DB6CCDCEE5 /* Pods-SumNote-iOSTests.debug.xcconfig */,
 				85530E1935055CC307638EC9 /* Pods-SumNote-iOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -409,6 +411,7 @@
 			files = (
 				294349C12B07922100C57B49 /* ViewController.swift in Sources */,
 				294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */,
+				294349ED2B0792DF00C57B49 /* KaKaoAPI.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

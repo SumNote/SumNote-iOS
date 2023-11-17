@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BC2B07922100C57B49 /* AppDelegate.swift */; };
+		294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BE2B07922100C57B49 /* SceneDelegate.swift */; };
+		294349C12B07922100C57B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349C02B07922100C57B49 /* ViewController.swift */; };
+		294349C42B07922100C57B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294349C22B07922100C57B49 /* Main.storyboard */; };
+		294349C62B07922300C57B49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294349C52B07922300C57B49 /* Assets.xcassets */; };
+		294349C92B07922300C57B49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294349C72B07922300C57B49 /* LaunchScreen.storyboard */; };
+		294349D42B07922400C57B49 /* SumNote_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349D32B07922400C57B49 /* SumNote_iOSTests.swift */; };
+		294349DE2B07922400C57B49 /* SumNote_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349DD2B07922400C57B49 /* SumNote_iOSUITests.swift */; };
+		294349E02B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349DF2B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		294349D02B07922400C57B49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 294349B12B07922100C57B49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 294349B82B07922100C57B49;
+			remoteInfo = "SumNote-iOS";
+		};
+		294349DA2B07922400C57B49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 294349B12B07922100C57B49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 294349B82B07922100C57B49;
+			remoteInfo = "SumNote-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		294349B92B07922100C57B49 /* SumNote-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SumNote-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		294349BC2B07922100C57B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		294349BE2B07922100C57B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		294349C02B07922100C57B49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		294349C32B07922100C57B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		294349C52B07922300C57B49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		294349C82B07922300C57B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		294349CA2B07922300C57B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		294349CF2B07922400C57B49 /* SumNote-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SumNote-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		294349D32B07922400C57B49 /* SumNote_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumNote_iOSTests.swift; sourceTree = "<group>"; };
+		294349D92B07922400C57B49 /* SumNote-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SumNote-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		294349DD2B07922400C57B49 /* SumNote_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumNote_iOSUITests.swift; sourceTree = "<group>"; };
+		294349DF2B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumNote_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		294349B62B07922100C57B49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		294349CC2B07922400C57B49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		294349D62B07922400C57B49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		294349B02B07922100C57B49 = {
+			isa = PBXGroup;
+			children = (
+				294349BB2B07922100C57B49 /* SumNote-iOS */,
+				294349D22B07922400C57B49 /* SumNote-iOSTests */,
+				294349DC2B07922400C57B49 /* SumNote-iOSUITests */,
+				294349BA2B07922100C57B49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		294349BA2B07922100C57B49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				294349B92B07922100C57B49 /* SumNote-iOS.app */,
+				294349CF2B07922400C57B49 /* SumNote-iOSTests.xctest */,
+				294349D92B07922400C57B49 /* SumNote-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		294349BB2B07922100C57B49 /* SumNote-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				294349BC2B07922100C57B49 /* AppDelegate.swift */,
+				294349BE2B07922100C57B49 /* SceneDelegate.swift */,
+				294349C02B07922100C57B49 /* ViewController.swift */,
+				294349C22B07922100C57B49 /* Main.storyboard */,
+				294349C52B07922300C57B49 /* Assets.xcassets */,
+				294349C72B07922300C57B49 /* LaunchScreen.storyboard */,
+				294349CA2B07922300C57B49 /* Info.plist */,
+			);
+			path = "SumNote-iOS";
+			sourceTree = "<group>";
+		};
+		294349D22B07922400C57B49 /* SumNote-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				294349D32B07922400C57B49 /* SumNote_iOSTests.swift */,
+			);
+			path = "SumNote-iOSTests";
+			sourceTree = "<group>";
+		};
+		294349DC2B07922400C57B49 /* SumNote-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				294349DD2B07922400C57B49 /* SumNote_iOSUITests.swift */,
+				294349DF2B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift */,
+			);
+			path = "SumNote-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		294349B82B07922100C57B49 /* SumNote-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 294349E32B07922400C57B49 /* Build configuration list for PBXNativeTarget "SumNote-iOS" */;
+			buildPhases = (
+				294349B52B07922100C57B49 /* Sources */,
+				294349B62B07922100C57B49 /* Frameworks */,
+				294349B72B07922100C57B49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SumNote-iOS";
+			productName = "SumNote-iOS";
+			productReference = 294349B92B07922100C57B49 /* SumNote-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		294349CE2B07922400C57B49 /* SumNote-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 294349E62B07922400C57B49 /* Build configuration list for PBXNativeTarget "SumNote-iOSTests" */;
+			buildPhases = (
+				294349CB2B07922400C57B49 /* Sources */,
+				294349CC2B07922400C57B49 /* Frameworks */,
+				294349CD2B07922400C57B49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				294349D12B07922400C57B49 /* PBXTargetDependency */,
+			);
+			name = "SumNote-iOSTests";
+			productName = "SumNote-iOSTests";
+			productReference = 294349CF2B07922400C57B49 /* SumNote-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		294349D82B07922400C57B49 /* SumNote-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 294349E92B07922400C57B49 /* Build configuration list for PBXNativeTarget "SumNote-iOSUITests" */;
+			buildPhases = (
+				294349D52B07922400C57B49 /* Sources */,
+				294349D62B07922400C57B49 /* Frameworks */,
+				294349D72B07922400C57B49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				294349DB2B07922400C57B49 /* PBXTargetDependency */,
+			);
+			name = "SumNote-iOSUITests";
+			productName = "SumNote-iOSUITests";
+			productReference = 294349D92B07922400C57B49 /* SumNote-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		294349B12B07922100C57B49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					294349B82B07922100C57B49 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					294349CE2B07922400C57B49 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 294349B82B07922100C57B49;
+					};
+					294349D82B07922400C57B49 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 294349B82B07922100C57B49;
+					};
+				};
+			};
+			buildConfigurationList = 294349B42B07922100C57B49 /* Build configuration list for PBXProject "SumNote-iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 294349B02B07922100C57B49;
+			productRefGroup = 294349BA2B07922100C57B49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				294349B82B07922100C57B49 /* SumNote-iOS */,
+				294349CE2B07922400C57B49 /* SumNote-iOSTests */,
+				294349D82B07922400C57B49 /* SumNote-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		294349B72B07922100C57B49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				294349C92B07922300C57B49 /* LaunchScreen.storyboard in Resources */,
+				294349C62B07922300C57B49 /* Assets.xcassets in Resources */,
+				294349C42B07922100C57B49 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		294349CD2B07922400C57B49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		294349D72B07922400C57B49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		294349B52B07922100C57B49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				294349C12B07922100C57B49 /* ViewController.swift in Sources */,
+				294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */,
+				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		294349CB2B07922400C57B49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				294349D42B07922400C57B49 /* SumNote_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		294349D52B07922400C57B49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				294349E02B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift in Sources */,
+				294349DE2B07922400C57B49 /* SumNote_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		294349D12B07922400C57B49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 294349B82B07922100C57B49 /* SumNote-iOS */;
+			targetProxy = 294349D02B07922400C57B49 /* PBXContainerItemProxy */;
+		};
+		294349DB2B07922400C57B49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 294349B82B07922100C57B49 /* SumNote-iOS */;
+			targetProxy = 294349DA2B07922400C57B49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		294349C22B07922100C57B49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				294349C32B07922100C57B49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		294349C72B07922300C57B49 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				294349C82B07922300C57B49 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		294349E12B07922400C57B49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		294349E22B07922400C57B49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		294349E42B07922400C57B49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SumNote-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SumNote.SumNote-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		294349E52B07922400C57B49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SumNote-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SumNote.SumNote-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		294349E72B07922400C57B49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SumNote.SumNote-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SumNote-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SumNote-iOS";
+			};
+			name = Debug;
+		};
+		294349E82B07922400C57B49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SumNote.SumNote-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SumNote-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SumNote-iOS";
+			};
+			name = Release;
+		};
+		294349EA2B07922400C57B49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SumNote.SumNote-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SumNote-iOS";
+			};
+			name = Debug;
+		};
+		294349EB2B07922400C57B49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFDFGPT2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SumNote.SumNote-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SumNote-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		294349B42B07922100C57B49 /* Build configuration list for PBXProject "SumNote-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				294349E12B07922400C57B49 /* Debug */,
+				294349E22B07922400C57B49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		294349E32B07922400C57B49 /* Build configuration list for PBXNativeTarget "SumNote-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				294349E42B07922400C57B49 /* Debug */,
+				294349E52B07922400C57B49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		294349E62B07922400C57B49 /* Build configuration list for PBXNativeTarget "SumNote-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				294349E72B07922400C57B49 /* Debug */,
+				294349E82B07922400C57B49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		294349E92B07922400C57B49 /* Build configuration list for PBXNativeTarget "SumNote-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				294349EA2B07922400C57B49 /* Debug */,
+				294349EB2B07922400C57B49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 294349B12B07922100C57B49 /* Project object */;
+}

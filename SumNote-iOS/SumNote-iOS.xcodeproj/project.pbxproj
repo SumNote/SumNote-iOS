@@ -10,7 +10,7 @@
 		1282C838B04E85A5407D6376 /* Pods_SumNote_iOS_SumNote_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAFEA5A35CEBEC1B324ECFC /* Pods_SumNote_iOS_SumNote_iOSUITests.framework */; };
 		294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BC2B07922100C57B49 /* AppDelegate.swift */; };
 		294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BE2B07922100C57B49 /* SceneDelegate.swift */; };
-		294349C12B07922100C57B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349C02B07922100C57B49 /* ViewController.swift */; };
+		294349C12B07922100C57B49 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349C02B07922100C57B49 /* LoginViewController.swift */; };
 		294349C42B07922100C57B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294349C22B07922100C57B49 /* Main.storyboard */; };
 		294349C62B07922300C57B49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294349C52B07922300C57B49 /* Assets.xcassets */; };
 		294349C92B07922300C57B49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294349C72B07922300C57B49 /* LaunchScreen.storyboard */; };
@@ -46,7 +46,7 @@
 		294349B92B07922100C57B49 /* SumNote-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SumNote-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294349BC2B07922100C57B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		294349BE2B07922100C57B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		294349C02B07922100C57B49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		294349C02B07922100C57B49 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		294349C32B07922100C57B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		294349C52B07922300C57B49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		294349C82B07922300C57B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,14 +118,14 @@
 		294349BB2B07922100C57B49 /* SumNote-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				294349EF2B07945400C57B49 /* View */,
+				294349EE2B07943C00C57B49 /* API */,
 				294349BC2B07922100C57B49 /* AppDelegate.swift */,
 				294349BE2B07922100C57B49 /* SceneDelegate.swift */,
-				294349C02B07922100C57B49 /* ViewController.swift */,
 				294349C22B07922100C57B49 /* Main.storyboard */,
-				294349C52B07922300C57B49 /* Assets.xcassets */,
 				294349C72B07922300C57B49 /* LaunchScreen.storyboard */,
+				294349C52B07922300C57B49 /* Assets.xcassets */,
 				294349CA2B07922300C57B49 /* Info.plist */,
-				294349EC2B0792DF00C57B49 /* KaKaoAPI.swift */,
 			);
 			path = "SumNote-iOS";
 			sourceTree = "<group>";
@@ -145,6 +145,22 @@
 				294349DF2B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift */,
 			);
 			path = "SumNote-iOSUITests";
+			sourceTree = "<group>";
+		};
+		294349EE2B07943C00C57B49 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				294349EC2B0792DF00C57B49 /* KaKaoAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		294349EF2B07945400C57B49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				294349C02B07922100C57B49 /* LoginViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4534B1652D8811D3E0E89F84 /* Frameworks */ = {
@@ -409,7 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				294349C12B07922100C57B49 /* ViewController.swift in Sources */,
+				294349C12B07922100C57B49 /* LoginViewController.swift in Sources */,
 				294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */,
 				294349ED2B0792DF00C57B49 /* KaKaoAPI.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,

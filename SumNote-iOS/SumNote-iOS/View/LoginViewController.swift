@@ -24,10 +24,13 @@ class LoginViewController: UIViewController {
 
     // 카카오 계정으로 시작하기 버튼 클릭시
     @IBAction func kakaoLoginBtnDidTapped(_ sender: Any) {
-//        // 1. 스토리보드 찾기
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        // 2. 이동할 뷰 찾기 => 스토리보드의 identifier릁 통해
-//        let MainView = storyboard.instantiateViewController(identifier: "MainViewController")
+        // 1. 스토리보드 찾기
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // 2. 이동할 뷰 찾기 => 스토리보드의 identifier릁 통해
+        let tabBarController = storyboard.instantiateViewController(identifier: "TabBarController") as TabBarController
+        tabBarController.modalPresentationStyle = .fullScreen //전체 화면으로 변경
+        // 3. 화면 이동
+        self.present(tabBarController, animated: true)
     }
     
 }

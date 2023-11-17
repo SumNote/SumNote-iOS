@@ -112,9 +112,81 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
+        <!--note maker-->
+        <scene sceneID="wui-sA-Uod">
+            <objects>
+                <viewController id="Jcd-Ii-ErG" customClass="NoteMakerViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iD0-Ex-goL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fh8-1h-xDn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="note maker" image="ic_noteMaker" id="eNS-iG-7mo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhL-kC-v0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="708"/>
+        </scene>
+        <!--my note-->
+        <scene sceneID="qjS-S1-Z4Z">
+            <objects>
+                <viewController id="vwn-8h-GxD" customClass="MyNoteViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hCk-tv-gBf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aMD-hj-zL3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="my note" image="ic_home" id="3vy-k4-OcM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MMc-rz-KTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871" y="709"/>
+        </scene>
+        <!--dev info-->
+        <scene sceneID="27q-Jy-qMh">
+            <objects>
+                <viewController id="GCF-jR-PYU" customClass="UserInfoViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z0l-3F-E4b">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EDe-fg-gR2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="dev info" image="ic_user" id="SH7-KR-7jU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmq-g3-VxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2344" y="708"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sOV-QE-3gZ">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="OjQ-XG-i2X" customClass="TabBarController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lt5-eE-QUw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="green"/>
+                        <color key="selectedImageTintColor" name="green"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vwn-8h-GxD" kind="relationship" relationship="viewControllers" id="bKt-7K-M4V"/>
+                        <segue destination="Jcd-Ii-ErG" kind="relationship" relationship="viewControllers" id="ZMG-x5-BeL"/>
+                        <segue destination="GCF-jR-PYU" kind="relationship" relationship="viewControllers" id="Tr7-s4-cDt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SgZ-YJ-rd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="-27"/>
+        </scene>
     </scenes>
     <resources>
         <image name="app_logo" width="28.666666030883789" height="43"/>
+        <image name="ic_home" width="28" height="28"/>
+        <image name="ic_noteMaker" width="28" height="28"/>
+        <image name="ic_user" width="28" height="28"/>
         <image name="message-square" width="28" height="28"/>
         <namedColor name="green">
             <color red="0.027450980392156862" green="0.78823529411764703" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

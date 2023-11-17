@@ -1,0 +1,6 @@
+framework module Pods_SumNote_iOS {
+  umbrella header "Pods-SumNote-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

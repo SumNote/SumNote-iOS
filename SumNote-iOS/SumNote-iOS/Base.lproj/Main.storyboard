@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,10 +16,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uf1-ws-wZH">
+                                <rect key="frame" x="5" y="223" width="383" height="232.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csi-7z-oM3">
+                                        <rect key="frame" x="190" y="112.66666666666669" width="175.33333333333337" height="77.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                        <color key="textColor" name="green"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2ej-DU-G9F">
+                                        <rect key="frame" x="20" y="20" width="110" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="63Y-zB-fbc"/>
+                                            <constraint firstAttribute="width" constant="110" id="sBh-fi-jXF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPs-By-JGo">
+                                        <rect key="frame" x="150" y="20" width="171.66666666666663" height="72.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72.666666666666629" id="xDl-nb-bx3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                        <color key="textColor" name="green"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Csi-7z-oM3" secondAttribute="bottom" constant="20" id="4n2-Z6-VHV"/>
+                                    <constraint firstItem="2ej-DU-G9F" firstAttribute="top" secondItem="lce-K8-bpi" secondAttribute="top" constant="20" id="BqM-gT-ZfG"/>
+                                    <constraint firstItem="MPs-By-JGo" firstAttribute="top" secondItem="2ej-DU-G9F" secondAttribute="top" id="Hbw-8h-UQJ"/>
+                                    <constraint firstItem="2ej-DU-G9F" firstAttribute="leading" secondItem="lce-K8-bpi" secondAttribute="leading" constant="20" id="QGa-RJ-rnG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Csi-7z-oM3" secondAttribute="trailing" constant="20" id="giL-Yq-Ejo"/>
+                                    <constraint firstItem="Csi-7z-oM3" firstAttribute="top" secondItem="MPs-By-JGo" secondAttribute="bottom" constant="20" id="hFK-pd-dAW"/>
+                                    <constraint firstItem="lce-K8-bpi" firstAttribute="trailing" secondItem="MPs-By-JGo" secondAttribute="trailing" constant="61.333333333333371" id="iB2-FG-ryR"/>
+                                    <constraint firstItem="MPs-By-JGo" firstAttribute="leading" secondItem="2ej-DU-G9F" secondAttribute="trailing" constant="20" id="pOJ-cO-1VY"/>
+                                    <constraint firstItem="Csi-7z-oM3" firstAttribute="leading" secondItem="2ej-DU-G9F" secondAttribute="trailing" constant="60" id="qki-G7-Vsz"/>
+                                    <constraint firstItem="Csi-7z-oM3" firstAttribute="bottom" secondItem="2ej-DU-G9F" secondAttribute="bottom" id="wRy-LY-aZJ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="QKE-lv-BGN"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="lce-K8-bpi"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-r8-1i8">
+                                <rect key="frame" x="20" y="655.66666666666663" width="353" height="50"/>
+                                <color key="backgroundColor" name="green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KTX-uc-Lsc"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="  카카오 계정으로 시작하기" image="message-square">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="kakaoLoginBtnDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oVl-QO-xkK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kh8-r8-1i8" firstAttribute="top" secondItem="uf1-ws-wZH" secondAttribute="bottom" constant="200" id="97I-n1-wJQ"/>
+                            <constraint firstItem="kh8-r8-1i8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CeK-LL-ocx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uf1-ws-wZH" secondAttribute="bottom" constant="362.33333333333337" id="Vdc-Ou-8Xj"/>
+                            <constraint firstItem="uf1-ws-wZH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="dgQ-uw-LYg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kh8-r8-1i8" secondAttribute="trailing" constant="20" id="fN1-mZ-U0H"/>
+                            <constraint firstItem="uf1-ws-wZH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="iaW-2a-agH"/>
+                            <constraint firstItem="uf1-ws-wZH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mSX-tr-H1s"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rvM-II-q7C"/>
+                    <connections>
+                        <outlet property="btnKaKaoLogin" destination="kh8-r8-1i8" id="Mnb-yh-rgl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,6 +114,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="app_logo" width="28.666666030883789" height="43"/>
+        <image name="message-square" width="28" height="28"/>
+        <namedColor name="green">
+            <color red="0.027450980392156862" green="0.78823529411764703" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

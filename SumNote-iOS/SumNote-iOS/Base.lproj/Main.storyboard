@@ -135,14 +135,65 @@
                     <view key="view" contentMode="scaleToFill" id="hCk-tv-gBf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tj5-g4-lE9">
+                                <rect key="frame" x="15" y="74" width="50" height="50"/>
+                                <color key="backgroundColor" name="green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZJ4-1w-xXf"/>
+                                    <constraint firstAttribute="width" constant="50" id="fXU-HB-Gol"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홍길동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-sd-J8u">
+                                <rect key="frame" x="80" y="74" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ghdrlfehd@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Be-cm-xeq">
+                                <rect key="frame" x="80" y="103" width="168" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 노트 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlk-Lb-Clb">
+                                <rect key="frame" x="15" y="154" width="96.333333333333329" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 푼 문제 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nj-v9-QV4">
+                                <rect key="frame" x="15" y="474.33333333333331" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aMD-hj-zL3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Be-cm-xeq" firstAttribute="bottom" secondItem="tj5-g4-lE9" secondAttribute="bottom" id="40G-J4-8H7"/>
+                            <constraint firstItem="tj5-g4-lE9" firstAttribute="top" secondItem="aMD-hj-zL3" secondAttribute="top" constant="15" id="Edh-a1-LVW"/>
+                            <constraint firstItem="9nj-v9-QV4" firstAttribute="top" secondItem="dlk-Lb-Clb" secondAttribute="bottom" constant="300" id="EsI-qZ-FLV"/>
+                            <constraint firstItem="Mva-sd-J8u" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="15" id="JLH-v9-rFu"/>
+                            <constraint firstItem="9nj-v9-QV4" firstAttribute="leading" secondItem="dlk-Lb-Clb" secondAttribute="leading" id="JWV-iy-aaP"/>
+                            <constraint firstItem="tj5-g4-lE9" firstAttribute="leading" secondItem="aMD-hj-zL3" secondAttribute="leading" constant="15" id="L39-Nh-MtE"/>
+                            <constraint firstItem="2Be-cm-xeq" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="15" id="aeq-Sw-Duh"/>
+                            <constraint firstItem="Mva-sd-J8u" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="top" id="duv-vy-XX2"/>
+                            <constraint firstItem="dlk-Lb-Clb" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="bottom" constant="30" id="hdK-Bs-dWh"/>
+                            <constraint firstItem="dlk-Lb-Clb" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="leading" id="ig2-fd-N70"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="my note" image="ic_home" id="3vy-k4-OcM"/>
+                    <connections>
+                        <outlet property="userEmailLabel" destination="2Be-cm-xeq" id="gzP-7r-kT9"/>
+                        <outlet property="userImageLabel" destination="tj5-g4-lE9" id="DN7-cm-LBS"/>
+                        <outlet property="userNameLabel" destination="Mva-sd-J8u" id="HrL-Me-WeO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMc-rz-KTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="709"/>
+            <point key="canvasLocation" x="870.99236641221376" y="708.45070422535218"/>
         </scene>
         <!--dev info-->
         <scene sceneID="27q-Jy-qMh">

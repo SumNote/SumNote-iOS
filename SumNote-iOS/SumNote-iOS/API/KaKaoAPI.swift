@@ -12,6 +12,12 @@ import KakaoSDKAuth
 import KakaoSDKUser
 import KakaoSDKCommon
 
+// KaKao App Information
+// https://developers.kakao.com/console/app/995002
+
+// Reference
+// https://sujinnaljin.medium.com/ios-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EC%86%8C%EC%85%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8-58a525e6f219
+
 // 카카오 계정과 관련된 작업을 수행하기 위한 싱글톤 객체
 class KaKaoAPI{
     

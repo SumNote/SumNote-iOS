@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyNoteListCollectionViewCell" id="gTV-IL-0wX" customClass="MyNoteListCollectionViewCell" customModule="SumNote_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="187" height="325"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="187" height="325"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tc4-UD-9o7">
+                        <rect key="frame" x="0.0" y="0.0" width="187" height="325"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_note_1" translatesAutoresizingMaskIntoConstraints="NO" id="hK8-zs-8n5">
+                                <rect key="frame" x="0.0" y="0.0" width="187" height="233"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="233" id="4Rn-ff-Rwn"/>
+                                    <constraint firstAttribute="width" constant="187" id="fCB-l0-FXg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터베이스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwj-Tc-D8a">
+                                <rect key="frame" x="15" y="274" width="88.333333333333329" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023.11.17 PM 11:29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXL-gh-fpT">
+                                <rect key="frame" x="15" y="298" width="110" height="13.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YXL-gh-fpT" firstAttribute="top" secondItem="Qwj-Tc-D8a" secondAttribute="bottom" constant="3" id="7Mf-MF-wSu"/>
+                            <constraint firstAttribute="bottom" secondItem="Qwj-Tc-D8a" secondAttribute="bottom" constant="30" id="7VE-bf-PeI"/>
+                            <constraint firstAttribute="trailing" secondItem="hK8-zs-8n5" secondAttribute="trailing" id="OaX-MV-O8r"/>
+                            <constraint firstItem="Qwj-Tc-D8a" firstAttribute="leading" secondItem="Tc4-UD-9o7" secondAttribute="leading" constant="15" id="fJX-qU-LTd"/>
+                            <constraint firstItem="hK8-zs-8n5" firstAttribute="top" secondItem="Tc4-UD-9o7" secondAttribute="top" id="fYU-Fp-fGW"/>
+                            <constraint firstAttribute="width" constant="187" id="mMM-EK-v0A"/>
+                            <constraint firstItem="hK8-zs-8n5" firstAttribute="leading" secondItem="Tc4-UD-9o7" secondAttribute="leading" id="nKv-at-bjU"/>
+                            <constraint firstItem="YXL-gh-fpT" firstAttribute="leading" secondItem="Qwj-Tc-D8a" secondAttribute="leading" id="tVx-rm-fEN"/>
+                            <constraint firstAttribute="bottom" secondItem="hK8-zs-8n5" secondAttribute="bottom" id="xAy-DG-Yel"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Tc4-UD-9o7" secondAttribute="trailing" id="1zD-Uz-Pvm"/>
+                <constraint firstItem="Tc4-UD-9o7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2ss-XH-05K"/>
+                <constraint firstAttribute="bottom" secondItem="Tc4-UD-9o7" secondAttribute="bottom" id="B6M-SZ-Cge"/>
+                <constraint firstItem="Tc4-UD-9o7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HJt-kb-TdN"/>
+                <constraint firstItem="Tc4-UD-9o7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="U1T-kE-hah"/>
+                <constraint firstAttribute="trailing" secondItem="Tc4-UD-9o7" secondAttribute="trailing" id="fpg-MG-1kS"/>
+                <constraint firstItem="Tc4-UD-9o7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nhL-xL-zro"/>
+            </constraints>
+            <size key="customSize" width="187" height="325"/>
+            <connections>
+                <outlet property="noteGeneratedTime" destination="YXL-gh-fpT" id="aVy-xl-1KX"/>
+                <outlet property="noteNameLabel" destination="Qwj-Tc-D8a" id="bqk-O2-q3m"/>
+                <outlet property="noteUIImage" destination="hK8-zs-8n5" id="gqx-hK-BUb"/>
+            </connections>
+            <point key="canvasLocation" x="235.87786259541983" y="85.563380281690144"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img_note_1" width="1280" height="853"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

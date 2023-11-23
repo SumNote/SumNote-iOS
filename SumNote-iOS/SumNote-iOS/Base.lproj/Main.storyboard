@@ -235,7 +235,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="my note" image="ic_home" id="3vy-k4-OcM"/>
                     <connections>
-                        <outlet property="collectionView" destination="Tnx-Q2-53N" id="8Z3-Qo-Gqd"/>
+                        <outlet property="noteCollectionView" destination="Tnx-Q2-53N" id="8Z3-Qo-Gqd"/>
                         <outlet property="quizCollectionView" destination="cdg-CD-63M" id="U3w-Fp-eyo"/>
                         <outlet property="userEmailLabel" destination="2Be-cm-xeq" id="gzP-7r-kT9"/>
                         <outlet property="userImageLabel" destination="tj5-g4-lE9" id="DN7-cm-LBS"/>

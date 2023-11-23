@@ -16,7 +16,12 @@ class MyNoteViewController: UIViewController {
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userImageLabel: UIImageView!
     
+    //노트 컬렉션 뷰
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    //퀴즈 컬렉션 뷰
+    @IBOutlet weak var quizCollectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +48,24 @@ class MyNoteViewController: UIViewController {
     }
     
     private func setCollectionView(){
+        //note collectionview init
         collectionView.dataSource = self
         collectionView.delegate = self
         
         //Nib 등록
         collectionView.register(UINib(nibName: "MyNoteListCollectionViewCell", bundle: nil),
                       forCellWithReuseIdentifier: MyNoteListCollectionViewCell.identifier)
+        
+        
+        //quiz collectionview init
+        quizCollectionView.dataSource = self
+        quizCollectionView.delegate = self
+        
+        //Nib 등록
+        quizCollectionView.register(UINib(nibName: "MyNoteListCollectionViewCell", bundle: nil),
+                      forCellWithReuseIdentifier: MyNoteListCollectionViewCell.identifier)
+        
+        
     }
     
     

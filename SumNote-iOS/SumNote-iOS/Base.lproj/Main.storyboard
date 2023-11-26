@@ -120,14 +120,129 @@
                     <view key="view" contentMode="scaleToFill" id="iD0-Ex-goL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이렇게 찍어주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC2-wK-Bkh">
+                                <rect key="frame" x="10" y="79" width="373" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" name="green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqH-Kb-Szs">
+                                <rect key="frame" x="66.666666666666686" y="122.33333333333333" width="260" height="3"/>
+                                <color key="backgroundColor" name="green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="AIN-vj-aMS"/>
+                                    <constraint firstAttribute="width" constant="260" id="tLK-OA-Xow"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Uv-fV-TnO">
+                                <rect key="frame" x="14" y="549" width="365" height="3"/>
+                                <color key="backgroundColor" name="green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="5Sk-uo-wPl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drW-XQ-OUh">
+                                <rect key="frame" x="20" y="699" width="170" height="50"/>
+                                <color key="backgroundColor" name="green"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="r3v-5h-ZeN"/>
+                                    <constraint firstAttribute="height" constant="50" id="syG-cS-z13"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="카메라">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCameraDidTapped:" destination="Jcd-Ii-ErG" eventType="touchUpInside" id="W1V-3W-RbT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSE-1M-G1L">
+                                <rect key="frame" x="203" y="699" width="170" height="50"/>
+                                <color key="backgroundColor" name="green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Ah-wc-ddL"/>
+                                    <constraint firstAttribute="width" constant="170" id="iDN-lQ-SK1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="갤러리">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnGalleryDidTapped:" destination="Jcd-Ii-ErG" eventType="touchUpInside" id="a7g-Uc-D6b"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글자가 수평으로 잘 보이게 찍어주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCB-pl-lmT">
+                                <rect key="frame" x="53.333333333333343" y="567" width="286.33333333333326" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" name="green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중요한 단어는 빨간 펜으로 밑줄을 그어주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dC-V9-NK3">
+                                <rect key="frame" x="29.333333333333343" y="605" width="334.33333333333326" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" name="green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지면으로부터 수직으로 찍어주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NV-WY-faE">
+                                <rect key="frame" x="66" y="643" width="261.33333333333331" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" name="green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="img_reference_image" translatesAutoresizingMaskIntoConstraints="NO" id="mfD-Tb-Ugl">
+                                <rect key="frame" x="15" y="145.33333333333334" width="363" height="383.66666666666663"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uun-hc-sdD">
+                                <rect key="frame" x="15" y="681" width="363" height="3"/>
+                                <color key="backgroundColor" name="green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="gkH-CY-2GX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fh8-1h-xDn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SqH-Kb-Szs" firstAttribute="centerX" secondItem="fh8-1h-xDn" secondAttribute="centerX" id="A5j-qI-WI5"/>
+                            <constraint firstItem="PC2-wK-Bkh" firstAttribute="leading" secondItem="fh8-1h-xDn" secondAttribute="leading" constant="10" id="C1t-NA-qdT"/>
+                            <constraint firstItem="PC2-wK-Bkh" firstAttribute="centerX" secondItem="fh8-1h-xDn" secondAttribute="centerX" id="EHa-gm-Ea6"/>
+                            <constraint firstItem="PC2-wK-Bkh" firstAttribute="top" secondItem="fh8-1h-xDn" secondAttribute="top" constant="20" id="FhR-F2-MyH"/>
+                            <constraint firstItem="fh8-1h-xDn" firstAttribute="trailing" secondItem="PC2-wK-Bkh" secondAttribute="trailing" constant="10" id="ILS-Ju-Yev"/>
+                            <constraint firstItem="mfD-Tb-Ugl" firstAttribute="leading" secondItem="fh8-1h-xDn" secondAttribute="leading" constant="15" id="K6g-Zh-vEF"/>
+                            <constraint firstItem="fh8-1h-xDn" firstAttribute="bottom" secondItem="dSE-1M-G1L" secondAttribute="bottom" constant="20" id="KOe-Hx-SkX"/>
+                            <constraint firstItem="drW-XQ-OUh" firstAttribute="top" secondItem="Uun-hc-sdD" secondAttribute="bottom" constant="15" id="Lcs-c7-0He"/>
+                            <constraint firstItem="drW-XQ-OUh" firstAttribute="leading" secondItem="fh8-1h-xDn" secondAttribute="leading" constant="20" id="Lux-Xm-cba"/>
+                            <constraint firstItem="4dC-V9-NK3" firstAttribute="top" secondItem="MCB-pl-lmT" secondAttribute="bottom" constant="15" id="PCQ-hE-PsH"/>
+                            <constraint firstItem="Uun-hc-sdD" firstAttribute="centerX" secondItem="SqH-Kb-Szs" secondAttribute="centerX" id="Qxk-ly-cbn"/>
+                            <constraint firstItem="mfD-Tb-Ugl" firstAttribute="width" secondItem="8Uv-fV-TnO" secondAttribute="width" multiplier="0.994118" id="T5k-9l-aK3"/>
+                            <constraint firstItem="SqH-Kb-Szs" firstAttribute="top" secondItem="PC2-wK-Bkh" secondAttribute="bottom" constant="5" id="UPV-iP-Sxb"/>
+                            <constraint firstItem="fh8-1h-xDn" firstAttribute="trailing" secondItem="dSE-1M-G1L" secondAttribute="trailing" constant="20" id="VVb-7e-iRd"/>
+                            <constraint firstItem="3NV-WY-faE" firstAttribute="top" secondItem="4dC-V9-NK3" secondAttribute="bottom" constant="15" id="WUR-0Z-5iY"/>
+                            <constraint firstItem="fh8-1h-xDn" firstAttribute="trailing" secondItem="mfD-Tb-Ugl" secondAttribute="trailing" constant="15" id="b05-Hc-bi3"/>
+                            <constraint firstItem="MCB-pl-lmT" firstAttribute="top" secondItem="8Uv-fV-TnO" secondAttribute="bottom" constant="15" id="eIh-Gc-Yaf"/>
+                            <constraint firstItem="Uun-hc-sdD" firstAttribute="centerX" secondItem="3NV-WY-faE" secondAttribute="centerX" id="eZY-ev-m7L"/>
+                            <constraint firstItem="8Uv-fV-TnO" firstAttribute="centerX" secondItem="MCB-pl-lmT" secondAttribute="centerX" id="ied-iB-7el"/>
+                            <constraint firstItem="Uun-hc-sdD" firstAttribute="top" secondItem="3NV-WY-faE" secondAttribute="bottom" constant="15" id="lbl-Gx-LTS"/>
+                            <constraint firstItem="fh8-1h-xDn" firstAttribute="bottom" secondItem="drW-XQ-OUh" secondAttribute="bottom" constant="20" id="q2k-LV-SKJ"/>
+                            <constraint firstItem="Uun-hc-sdD" firstAttribute="leading" secondItem="mfD-Tb-Ugl" secondAttribute="leading" id="sy9-Aa-9Vc"/>
+                            <constraint firstItem="8Uv-fV-TnO" firstAttribute="centerX" secondItem="3NV-WY-faE" secondAttribute="centerX" id="ugI-Tj-l4U"/>
+                            <constraint firstItem="mfD-Tb-Ugl" firstAttribute="top" secondItem="SqH-Kb-Szs" secondAttribute="bottom" constant="20" id="uiw-3k-wf7"/>
+                            <constraint firstItem="8Uv-fV-TnO" firstAttribute="centerX" secondItem="4dC-V9-NK3" secondAttribute="centerX" id="xXJ-Vu-6dz"/>
+                            <constraint firstItem="8Uv-fV-TnO" firstAttribute="top" secondItem="mfD-Tb-Ugl" secondAttribute="bottom" constant="20" id="zQo-WA-me1"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="note maker" image="ic_noteMaker" id="eNS-iG-7mo"/>
+                    <connections>
+                        <outlet property="btnCamera" destination="drW-XQ-OUh" id="Rr4-Li-ONk"/>
+                        <outlet property="btnGallery" destination="dSE-1M-G1L" id="XjZ-d9-qNQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhL-kC-v0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="708"/>
+            <point key="canvasLocation" x="1603.8167938931297" y="707.04225352112678"/>
         </scene>
         <!--my note-->
         <scene sceneID="qjS-S1-Z4Z">
@@ -179,7 +294,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="94g-C7-vZT">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="94g-C7-vZT" customClass="MyNoteListCollectionViewCell" customModule="SumNote_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oTw-qL-hJM">
@@ -199,7 +314,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Quz-VN-w2C">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Quz-VN-w2C" customClass="MyQuizListCollectionViewCell" customModule="SumNote_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mR9-Ec-7t6">
@@ -289,6 +404,7 @@
         <image name="ic_home" width="28" height="28"/>
         <image name="ic_noteMaker" width="28" height="28"/>
         <image name="ic_user" width="28" height="28"/>
+        <image name="img_reference_image" width="800.33331298828125" height="1181.3333740234375"/>
         <image name="message-square" width="28" height="28"/>
         <namedColor name="green">
             <color red="0.027450980392156862" green="0.78823529411764703" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

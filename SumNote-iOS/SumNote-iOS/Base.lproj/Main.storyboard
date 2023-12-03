@@ -244,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="1603.8167938931297" y="707.04225352112678"/>
         </scene>
-        <!--View Controller-->
+        <!--All Note View Controller-->
         <scene sceneID="9Lb-B2-eDb">
             <objects>
-                <viewController id="VQ1-KF-6dM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllNoteViewController" id="VQ1-KF-6dM" customClass="AllNoteViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IPf-tB-CZd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

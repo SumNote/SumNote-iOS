@@ -25,6 +25,8 @@
 		294349FA2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349F82B07AD3E00C57B49 /* MyNoteListCollectionViewCell.swift */; };
 		294349FB2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294349F92B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib */; };
 		296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */; };
+		296FFA5F2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA5D2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift */; };
+		296FFA602B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296FFA5E2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib */; };
 		2984A8FD2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */; };
 		2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */; };
 		6B131C677AE5EC50ED3C0C78 /* Pods_SumNote_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA17B356FAFB4FAA26769EE /* Pods_SumNote_iOS.framework */; };
@@ -73,6 +75,8 @@
 		294349F82B07AD3E00C57B49 /* MyNoteListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteListCollectionViewCell.swift; sourceTree = "<group>"; };
 		294349F92B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNoteListCollectionViewCell.xib; sourceTree = "<group>"; };
 		296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteViewController.swift; sourceTree = "<group>"; };
+		296FFA5D2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		296FFA5E2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNoteCollectionViewCell.xib; sourceTree = "<group>"; };
 		2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyQuizListCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4A468B5C02A5DB6CCDCEE5 /* Pods-SumNote-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 				294349F92B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib */,
 				2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */,
 				2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */,
+				296FFA5D2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift */,
+				296FFA5E2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			files = (
 				294349FB2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib in Resources */,
 				2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */,
+				296FFA602B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib in Resources */,
 				294349C92B07922300C57B49 /* LaunchScreen.storyboard in Resources */,
 				294349C62B07922300C57B49 /* Assets.xcassets in Resources */,
 				294349C42B07922100C57B49 /* Main.storyboard in Resources */,
@@ -462,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296FFA5F2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift in Sources */,
 				294349F52B079F2E00C57B49 /* NoteMakerViewController.swift in Sources */,
 				2984A8FD2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift in Sources */,
 				294349F72B079F3700C57B49 /* UserInfoViewController.swift in Sources */,

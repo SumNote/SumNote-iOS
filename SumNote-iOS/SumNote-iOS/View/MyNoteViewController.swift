@@ -80,6 +80,15 @@ class MyNoteViewController: UIViewController {
     
     //MARK: 노트 전체 보기
     @IBAction func btnViewAllNoteDidTapped(_ sender: Any) {
+        // 뷰 이동
+        // 1. 스토리보드 찾기
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // 2. 이동할 뷰 찾기
+        let AllNoteView = storyboard
+            .instantiateViewController(withIdentifier: "AllNoteViewController") as! AllNoteViewController
+        // 3. 이동
+        self.navigationController?.pushViewController(AllNoteView, animated: true)
+        
     }
     
     

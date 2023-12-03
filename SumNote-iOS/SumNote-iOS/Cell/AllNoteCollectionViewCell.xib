@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllNoteCollectionViewCell" id="gTV-IL-0wX" customClass="AllNoteCollectionViewCell" customModule="SumNote_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="467" height="116"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="467" height="116"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWt-UO-mK3">
+                        <rect key="frame" x="0.0" y="0.0" width="467" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_note_1" translatesAutoresizingMaskIntoConstraints="NO" id="kW6-0B-pVc">
+                                <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="QIQ-vx-bRu"/>
+                                    <constraint firstAttribute="height" constant="60" id="zUF-Y3-ivX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kW6-0B-pVc" secondAttribute="bottom" constant="10" id="Gjz-5C-OAe"/>
+                            <constraint firstAttribute="height" constant="80" id="brr-5b-xKG"/>
+                            <constraint firstItem="kW6-0B-pVc" firstAttribute="top" secondItem="qWt-UO-mK3" secondAttribute="top" constant="10" id="gHP-we-YAL"/>
+                            <constraint firstItem="kW6-0B-pVc" firstAttribute="leading" secondItem="qWt-UO-mK3" secondAttribute="leading" constant="10" id="u9o-qc-jOp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="qWt-UO-mK3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UWA-Y1-DPU"/>
+                <constraint firstItem="qWt-UO-mK3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WXH-7N-S4h"/>
+                <constraint firstAttribute="trailing" secondItem="qWt-UO-mK3" secondAttribute="trailing" id="iFm-Jk-G3g"/>
+            </constraints>
+            <size key="customSize" width="467" height="116"/>
+            <connections>
+                <outlet property="noteImage" destination="kW6-0B-pVc" id="EWR-ie-ZBL"/>
+            </connections>
+            <point key="canvasLocation" x="191.6030534351145" y="15.492957746478874"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img_note_1" width="1280" height="853"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

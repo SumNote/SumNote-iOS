@@ -304,19 +304,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 노트 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlk-Lb-Clb">
-                                <rect key="frame" x="15" y="198" width="96.333333333333329" height="21"/>
+                                <rect key="frame" x="15" y="198" width="96.333333333333329" height="28"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 푼 문제 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nj-v9-QV4">
-                                <rect key="frame" x="15" y="519" width="115" height="21"/>
+                                <rect key="frame" x="15" y="526" width="115" height="28"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tnx-Q2-53N">
-                                <rect key="frame" x="10" y="234" width="383" height="270"/>
+                                <rect key="frame" x="10" y="241" width="383" height="270"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sOs-vO-sUc">
                                     <size key="itemSize" width="128" height="128"/>
@@ -336,7 +336,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cdg-CD-63M">
-                                <rect key="frame" x="0.0" y="555" width="393" height="253"/>
+                                <rect key="frame" x="0.0" y="569" width="393" height="239"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jKP-MU-OjI">
                                     <size key="itemSize" width="128" height="128"/>
@@ -355,53 +355,63 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDn-aZ-jcm">
-                                <rect key="frame" x="325" y="198" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEy-67-eKP">
-                                <rect key="frame" x="325" y="519" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVB-tj-MD4">
+                                <rect key="frame" x="329" y="198" width="49" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="전체 보기">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnViewAllNoteDidTapped:" destination="vwn-8h-GxD" eventType="touchUpInside" id="blj-Ip-P7T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ1-ba-xcH">
+                                <rect key="frame" x="329" y="526" width="49" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="전체 보기">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnViewAllQuizDidTapped:" destination="vwn-8h-GxD" eventType="touchUpInside" id="wXI-o8-yPK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aMD-hj-zL3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tEy-67-eKP" firstAttribute="bottom" secondItem="9nj-v9-QV4" secondAttribute="bottom" id="0BC-dT-U9Z"/>
+                            <constraint firstItem="kVB-tj-MD4" firstAttribute="top" secondItem="dlk-Lb-Clb" secondAttribute="top" id="0JR-fZ-Uhv"/>
                             <constraint firstItem="2Be-cm-xeq" firstAttribute="bottom" secondItem="tj5-g4-lE9" secondAttribute="bottom" id="40G-J4-8H7"/>
-                            <constraint firstItem="tEy-67-eKP" firstAttribute="top" secondItem="9nj-v9-QV4" secondAttribute="top" id="4GG-3p-9tX"/>
+                            <constraint firstItem="aMD-hj-zL3" firstAttribute="trailing" secondItem="kVB-tj-MD4" secondAttribute="trailing" constant="15" id="8AI-mM-gVC"/>
                             <constraint firstItem="Tnx-Q2-53N" firstAttribute="leading" secondItem="aMD-hj-zL3" secondAttribute="leading" constant="10" id="AdL-7E-3wC"/>
                             <constraint firstItem="tj5-g4-lE9" firstAttribute="top" secondItem="aMD-hj-zL3" secondAttribute="top" constant="15" id="Edh-a1-LVW"/>
                             <constraint firstItem="9nj-v9-QV4" firstAttribute="top" secondItem="dlk-Lb-Clb" secondAttribute="bottom" constant="300" id="EsI-qZ-FLV"/>
-                            <constraint firstItem="aMD-hj-zL3" firstAttribute="trailing" secondItem="tEy-67-eKP" secondAttribute="trailing" constant="15" id="Fkr-Nh-XJW"/>
                             <constraint firstItem="Mva-sd-J8u" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="15" id="JLH-v9-rFu"/>
                             <constraint firstItem="9nj-v9-QV4" firstAttribute="leading" secondItem="dlk-Lb-Clb" secondAttribute="leading" id="JWV-iy-aaP"/>
                             <constraint firstItem="cdg-CD-63M" firstAttribute="trailing" secondItem="aMD-hj-zL3" secondAttribute="trailing" id="KKw-rM-cT8"/>
                             <constraint firstItem="tj5-g4-lE9" firstAttribute="leading" secondItem="aMD-hj-zL3" secondAttribute="leading" constant="15" id="L39-Nh-MtE"/>
-                            <constraint firstItem="zDn-aZ-jcm" firstAttribute="top" secondItem="dlk-Lb-Clb" secondAttribute="top" id="LeC-0i-SH5"/>
                             <constraint firstItem="9nj-v9-QV4" firstAttribute="top" secondItem="Tnx-Q2-53N" secondAttribute="bottom" constant="15" id="MOd-dF-db7"/>
                             <constraint firstItem="aMD-hj-zL3" firstAttribute="trailing" secondItem="Tnx-Q2-53N" secondAttribute="trailing" id="NH8-Gg-f21"/>
+                            <constraint firstItem="kVB-tj-MD4" firstAttribute="bottom" secondItem="dlk-Lb-Clb" secondAttribute="bottom" id="Pnx-yr-5nX"/>
                             <constraint firstItem="aMD-hj-zL3" firstAttribute="bottom" secondItem="cdg-CD-63M" secondAttribute="bottom" constant="10" id="aHU-zf-ITX"/>
                             <constraint firstItem="cdg-CD-63M" firstAttribute="leading" secondItem="aMD-hj-zL3" secondAttribute="leading" id="aLY-u9-bW2"/>
+                            <constraint firstItem="fJ1-ba-xcH" firstAttribute="bottom" secondItem="9nj-v9-QV4" secondAttribute="bottom" id="aOb-RI-uKc"/>
                             <constraint firstItem="2Be-cm-xeq" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="15" id="aeq-Sw-Duh"/>
-                            <constraint firstItem="aMD-hj-zL3" firstAttribute="trailing" secondItem="zDn-aZ-jcm" secondAttribute="trailing" constant="15" id="atO-5c-KXc"/>
                             <constraint firstItem="Mva-sd-J8u" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="top" id="duv-vy-XX2"/>
                             <constraint firstItem="dlk-Lb-Clb" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="bottom" constant="30" id="hdK-Bs-dWh"/>
                             <constraint firstItem="dlk-Lb-Clb" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="leading" id="ig2-fd-N70"/>
                             <constraint firstItem="cdg-CD-63M" firstAttribute="top" secondItem="9nj-v9-QV4" secondAttribute="bottom" constant="15" id="rMN-eS-IXA"/>
-                            <constraint firstItem="zDn-aZ-jcm" firstAttribute="bottom" secondItem="dlk-Lb-Clb" secondAttribute="bottom" id="uKw-XS-aWE"/>
+                            <constraint firstItem="aMD-hj-zL3" firstAttribute="trailing" secondItem="fJ1-ba-xcH" secondAttribute="trailing" constant="15" id="tGX-d2-TKu"/>
+                            <constraint firstItem="fJ1-ba-xcH" firstAttribute="top" secondItem="9nj-v9-QV4" secondAttribute="top" id="w5a-mq-n6m"/>
                             <constraint firstItem="Tnx-Q2-53N" firstAttribute="top" secondItem="dlk-Lb-Clb" secondAttribute="bottom" constant="15" id="xpW-Oy-a7S"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="my note" image="ic_home" id="3vy-k4-OcM"/>
                     <navigationItem key="navigationItem" id="Buc-pI-V05"/>
                     <connections>
-                        <outlet property="labelGoAllNote" destination="zDn-aZ-jcm" id="9xu-Bc-CbH"/>
-                        <outlet property="labelGoAllQuiz" destination="tEy-67-eKP" id="uQ4-NO-zhd"/>
+                        <outlet property="btnViewAllNote" destination="kVB-tj-MD4" id="rCU-xY-INk"/>
+                        <outlet property="btnViewAllQuiz" destination="fJ1-ba-xcH" id="8LG-N1-hmb"/>
                         <outlet property="noteCollectionView" destination="Tnx-Q2-53N" id="8Z3-Qo-Gqd"/>
                         <outlet property="quizCollectionView" destination="cdg-CD-63M" id="U3w-Fp-eyo"/>
                         <outlet property="userEmailLabel" destination="2Be-cm-xeq" id="gzP-7r-kT9"/>

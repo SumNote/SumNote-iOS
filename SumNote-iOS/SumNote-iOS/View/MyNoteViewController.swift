@@ -16,12 +16,11 @@ class MyNoteViewController: UIViewController {
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userImageLabel: UIImageView!
     
-    //전체 노트 보기
-    @IBOutlet weak var labelGoAllNote: UILabel!
+    // 전체 노트 보기
+    @IBOutlet weak var btnViewAllNote: UIButton!
     
-    //전체 퀴즈 보기
-    @IBOutlet weak var labelGoAllQuiz: UILabel!
-    
+    // 전체 퀴즈 보기
+    @IBOutlet weak var btnViewAllQuiz: UIButton!
     
     
     //노트 컬렉션 뷰
@@ -39,6 +38,7 @@ class MyNoteViewController: UIViewController {
         setCollectionView()
     }
     
+    // 사용자 정보 얻어오기(카카오톡 사용자 정보)
     private func setUserInfo(){
         UserApi.shared.me() {(user, error) in
             if let error = error {
@@ -55,6 +55,7 @@ class MyNoteViewController: UIViewController {
         }
     }
     
+    // 컬렉션뷰 초기 설정 Delgate, Datasource 위임
     private func setCollectionView(){
         //note collectionview init
         noteCollectionView.dataSource = self
@@ -75,6 +76,18 @@ class MyNoteViewController: UIViewController {
         
         
     }
+    
+    
+    //MARK: 노트 전체 보기
+    @IBAction func btnViewAllNoteDidTapped(_ sender: Any) {
+    }
+    
+    
+    //MARK: 퀴즈 전체 보기
+    @IBAction func btnViewAllQuizDidTapped(_ sender: Any) {
+    }
+    
+    
     
     
 }

@@ -16,6 +16,14 @@ class MyNoteViewController: UIViewController {
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userImageLabel: UIImageView!
     
+    //전체 노트 보기
+    @IBOutlet weak var labelGoAllNote: UILabel!
+    
+    //전체 퀴즈 보기
+    @IBOutlet weak var labelGoAllQuiz: UILabel!
+    
+    
+    
     //노트 컬렉션 뷰
     @IBOutlet weak var noteCollectionView: UICollectionView!
     

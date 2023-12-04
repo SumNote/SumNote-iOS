@@ -16,12 +16,14 @@ class AllNoteCollectionViewCell: UICollectionViewCell {
     // 노트 이미지
     @IBOutlet weak var noteImage: UIImageView!
     // 노트 이름
-    
+    @IBOutlet weak var noteTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         noteImage.layer.cornerRadius = 10 // 테두리 둥글게
+        noteTitle.preferredMaxLayoutWidth =
+            UIScreen.main.bounds.width - 30 // 텍스트 영역 조절(스크린의 전체 가로보다 30만큼 작은크기까지 허용)
     }
 
 }

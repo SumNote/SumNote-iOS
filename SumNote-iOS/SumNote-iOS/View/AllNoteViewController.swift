@@ -47,12 +47,21 @@ extension AllNoteViewController : UICollectionViewDelegate,
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllNoteCollectionViewCell.identifier, for: indexPath) as? AllNoteCollectionViewCell else {
             let error = UICollectionViewCell()
-            error.backgroundColor = .blue
             print("에러 발생")
             return error
         }
+        // 영역 확인용
+        
         return cell
     }
     
     
+}
+
+// 컬렉션 뷰 셀 디자인 설정(가로 길이, 높이 지정)
+extension AllNoteViewController : UICollectionViewDelegateFlowLayout{
+    //높이와 너비 설정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 50, height: 80) // 높이 80
+    }
 }

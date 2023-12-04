@@ -103,16 +103,6 @@ class MyNoteViewController: UIViewController {
 
 extension MyNoteViewController : UICollectionViewDelegate,UICollectionViewDataSource{
     
-    // 노트에 대한 컬렉션 뷰 => 섹션 1개로 설정해서 가로로만 아이템 보여줄 수 있도록 지정
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if collectionView == self.noteCollectionView{
-            return 1 // 1개만 보여줄 수 있도록 설정
-        } else{
-            return 4 // 퀴즈 컬렉션 뷰의 경우, 리스트에 포함된 속성의 개수만큼 보여줄 것(수정 필요)
-        }
-    }
-    
-    
     //몇개의 셀을 보여줄 것인지
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.noteCollectionView { // 노트 컬렉션 뷰라면

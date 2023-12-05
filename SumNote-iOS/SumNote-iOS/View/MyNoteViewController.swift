@@ -21,7 +21,7 @@ class MyNoteViewController: UIViewController {
     
     // 전체 퀴즈 보기
     @IBOutlet weak var btnViewAllQuiz: UIButton!
-    
+
     
     //노트 컬렉션 뷰
     @IBOutlet weak var noteCollectionView: UICollectionView!
@@ -30,9 +30,18 @@ class MyNoteViewController: UIViewController {
     @IBOutlet weak var quizCollectionView: UICollectionView!
     
     
+    // 메인 테이블 뷰 데이터 리스트
+    private let mainTableViewModelList : [MainTableViewModel] = [
+        MainTableViewModel(title: "최근 노트 보기", type: MainTableViewType.NOTE),
+        MainTableViewModel(title: "최근 푼 문제 보기", type: MainTableViewType.QUIZ)
+    ]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         userImageLabel.layer.cornerRadius = 25
         setUserInfo()
         setCollectionView()

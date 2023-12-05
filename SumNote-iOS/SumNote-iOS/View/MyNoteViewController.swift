@@ -30,7 +30,7 @@ class MyNoteViewController: UIViewController {
         
         userImageLabel.layer.cornerRadius = 25
         setUserInfo()
-        setCollectionView()
+        //setCollectionView()
     }
     
     // 사용자 정보 얻어오기(카카오톡 사용자 정보)

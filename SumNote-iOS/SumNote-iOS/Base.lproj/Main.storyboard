@@ -336,6 +336,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sjW-vM-dpk">
+                                <rect key="frame" x="0.0" y="178" width="393" height="591"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aMD-hj-zL3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -344,8 +348,12 @@
                             <constraint firstItem="tj5-g4-lE9" firstAttribute="top" secondItem="aMD-hj-zL3" secondAttribute="top" constant="15" id="Edh-a1-LVW"/>
                             <constraint firstItem="Mva-sd-J8u" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="15" id="JLH-v9-rFu"/>
                             <constraint firstItem="tj5-g4-lE9" firstAttribute="leading" secondItem="aMD-hj-zL3" secondAttribute="leading" constant="15" id="L39-Nh-MtE"/>
+                            <constraint firstItem="aMD-hj-zL3" firstAttribute="bottom" secondItem="sjW-vM-dpk" secondAttribute="bottom" id="Qb4-UN-JLL"/>
+                            <constraint firstItem="sjW-vM-dpk" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="bottom" constant="10" id="Yph-e1-RFX"/>
                             <constraint firstItem="2Be-cm-xeq" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="15" id="aeq-Sw-Duh"/>
                             <constraint firstItem="Mva-sd-J8u" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="top" id="duv-vy-XX2"/>
+                            <constraint firstItem="sjW-vM-dpk" firstAttribute="leading" secondItem="aMD-hj-zL3" secondAttribute="leading" id="hmj-ak-HEt"/>
+                            <constraint firstItem="sjW-vM-dpk" firstAttribute="trailing" secondItem="aMD-hj-zL3" secondAttribute="trailing" id="kOD-z5-YD1"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="my note" image="ic_home" id="3vy-k4-OcM"/>
@@ -358,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMc-rz-KTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853" y="708"/>
+            <point key="canvasLocation" x="852.67175572519079" y="707.74647887323943"/>
         </scene>
         <!--dev info-->
         <scene sceneID="27q-Jy-qMh">

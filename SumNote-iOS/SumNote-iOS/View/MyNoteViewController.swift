@@ -15,21 +15,7 @@ class MyNoteViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userImageLabel: UIImageView!
-    
-    // 전체 노트 보기
-    @IBOutlet weak var btnViewAllNote: UIButton!
-    
-    // 전체 퀴즈 보기
-    @IBOutlet weak var btnViewAllQuiz: UIButton!
 
-    
-    //노트 컬렉션 뷰
-    @IBOutlet weak var noteCollectionView: UICollectionView!
-    
-    //퀴즈 컬렉션 뷰
-    @IBOutlet weak var quizCollectionView: UICollectionView!
-    
-    
     // 메인 테이블 뷰 데이터 리스트
     private let mainTableViewModelList : [MainTableViewModel] = [
         MainTableViewModel(title: "최근 노트 보기", type: MainTableViewType.NOTE),
@@ -65,27 +51,27 @@ class MyNoteViewController: UIViewController {
     }
     
     // 컬렉션뷰 초기 설정 Delgate, Datasource 위임
-    private func setCollectionView(){
-        //note collectionview init
-        noteCollectionView.dataSource = self
-        noteCollectionView.delegate = self
-        
-        //Nib 등록
-        noteCollectionView.register(UINib(nibName: "MyNoteListCollectionViewCell", bundle: nil),
-                      forCellWithReuseIdentifier: MyNoteListCollectionViewCell.identifier)
-        
-        
-        //quiz collectionview init
-        quizCollectionView.dataSource = self
-        quizCollectionView.delegate = self
-        
-        //Nib 등록
-        quizCollectionView.register(UINib(nibName: "MyQuizListCollectionViewCell", bundle: nil),
-                      forCellWithReuseIdentifier: MyQuizListCollectionViewCell.identifier)
-        
-        
-    }
-    
+//    private func setCollectionView(){
+//        //note collectionview init
+//        noteCollectionView.dataSource = self
+//        noteCollectionView.delegate = self
+//
+//        //Nib 등록
+//        noteCollectionView.register(UINib(nibName: "MyNoteListCollectionViewCell", bundle: nil),
+//                      forCellWithReuseIdentifier: MyNoteListCollectionViewCell.identifier)
+//
+//
+//        //quiz collectionview init
+//        quizCollectionView.dataSource = self
+//        quizCollectionView.delegate = self
+//
+//        //Nib 등록
+//        quizCollectionView.register(UINib(nibName: "MyQuizListCollectionViewCell", bundle: nil),
+//                      forCellWithReuseIdentifier: MyQuizListCollectionViewCell.identifier)
+//
+//
+//    }
+//
     
     //MARK: 노트 전체 보기
     @IBAction func btnViewAllNoteDidTapped(_ sender: Any) {
@@ -110,40 +96,40 @@ class MyNoteViewController: UIViewController {
     
 }
 
-extension MyNoteViewController : UICollectionViewDelegate,UICollectionViewDataSource{
-    
-    //몇개의 셀을 보여줄 것인지
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.noteCollectionView { // 노트 컬렉션 뷰라면
-            // 노트 컬렉션 뷰의 아이템 수
-            return 5
-        } else if collectionView == self.quizCollectionView { // 퀴즈 컬렉션 뷰라면
-            // 퀴즈 컬렉션 뷰의 아이템 수
-            return 4
-        }
-        return 0
-    }
-    
-    //어떤 셀을 보여줄 것인지
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // 노트 컬렉션 뷰일 경우
-        if collectionView == self.noteCollectionView {
-            //퀴즈 컬렉션 뷰
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyNoteListCollectionViewCell.identifier, for: indexPath) as? MyNoteListCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            // 여기서 cell을 설정합니다.
-            return cell
-        } else if collectionView == self.quizCollectionView { // 퀴즈 컬렉션 뷰일 경우
-            // 퀴즈 컬렉션 뷰 셀
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyQuizListCollectionViewCell.identifier, for: indexPath) as? MyQuizListCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            // 여기서 cell을 설정합니다.
-            return cell
-        }
-        return UICollectionViewCell()
-    }
-    
-    
-}
+//extension MyNoteViewController : UICollectionViewDelegate,UICollectionViewDataSource{
+//
+//    //몇개의 셀을 보여줄 것인지
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        if collectionView == self.noteCollectionView { // 노트 컬렉션 뷰라면
+//            // 노트 컬렉션 뷰의 아이템 수
+//            return 5
+//        } else if collectionView == self.quizCollectionView { // 퀴즈 컬렉션 뷰라면
+//            // 퀴즈 컬렉션 뷰의 아이템 수
+//            return 4
+//        }
+//        return 0
+//    }
+//
+//    //어떤 셀을 보여줄 것인지
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        // 노트 컬렉션 뷰일 경우
+//        if collectionView == self.noteCollectionView {
+//            //퀴즈 컬렉션 뷰
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyNoteListCollectionViewCell.identifier, for: indexPath) as? MyNoteListCollectionViewCell else {
+//                return UICollectionViewCell()
+//            }
+//            // 여기서 cell을 설정합니다.
+//            return cell
+//        } else if collectionView == self.quizCollectionView { // 퀴즈 컬렉션 뷰일 경우
+//            // 퀴즈 컬렉션 뷰 셀
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyQuizListCollectionViewCell.identifier, for: indexPath) as? MyQuizListCollectionViewCell else {
+//                return UICollectionViewCell()
+//            }
+//            // 여기서 cell을 설정합니다.
+//            return cell
+//        }
+//        return UICollectionViewCell()
+//    }
+//
+//
+//}

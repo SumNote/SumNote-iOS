@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
             } else {
                 // 1. 스토리보드 찾기
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                // 2. 이동할 뷰 찾기 => 스토리보드의 identifier릁 통해
+                // 2. 이동할 뷰 찾기 => 스토리보드의 identifier를 통해
                 let tabBarController = storyboard
                     .instantiateViewController(identifier: "TabBarController") as TabBarController
                 tabBarController.modalPresentationStyle = .fullScreen //전체 화면으로 변경

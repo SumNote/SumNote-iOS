@@ -17,17 +17,15 @@ class MyNoteViewController: UIViewController {
     @IBOutlet weak var userImageLabel: UIImageView!
 
     // 메인 테이블 뷰 데이터 리스트
-    private let mainTableViewModelList : [MainTableViewModel] = [
-        MainTableViewModel(title: "최근 노트 보기", type: MainTableViewType.NOTE),
-        MainTableViewModel(title: "최근 푼 문제 보기", type: MainTableViewType.QUIZ)
-    ]
+//    private let mainTableViewModelList : [MainTableViewModel] = [
+//        MainTableViewModel(title: "최근 노트 보기", type: MainTableViewType.NOTE),
+//        MainTableViewModel(title: "최근 푼 문제 보기", type: MainTableViewType.QUIZ)
+//    ]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
         userImageLabel.layer.cornerRadius = 25
         setUserInfo()
         //setCollectionView()
@@ -73,23 +71,23 @@ class MyNoteViewController: UIViewController {
 //    }
 //
     
-    //MARK: 노트 전체 보기
-    @IBAction func btnViewAllNoteDidTapped(_ sender: Any) {
-        // 뷰 이동
-        // 1. 스토리보드 찾기
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        // 2. 이동할 뷰 찾기
-        let AllNoteView = storyboard
-            .instantiateViewController(withIdentifier: "AllNoteViewController") as! AllNoteViewController
-        // 3. 이동
-        self.navigationController?.pushViewController(AllNoteView, animated: true)
-        
-    }
-    
-    
-    //MARK: 퀴즈 전체 보기
-    @IBAction func btnViewAllQuizDidTapped(_ sender: Any) {
-    }
+//    //MARK: 노트 전체 보기
+//    @IBAction func btnViewAllNoteDidTapped(_ sender: Any) {
+//        // 뷰 이동
+//        // 1. 스토리보드 찾기
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        // 2. 이동할 뷰 찾기
+//        let AllNoteView = storyboard
+//            .instantiateViewController(withIdentifier: "AllNoteViewController") as! AllNoteViewController
+//        // 3. 이동
+//        self.navigationController?.pushViewController(AllNoteView, animated: true)
+//
+//    }
+//
+//
+//    //MARK: 퀴즈 전체 보기
+//    @IBAction func btnViewAllQuizDidTapped(_ sender: Any) {
+//    }
     
     
     

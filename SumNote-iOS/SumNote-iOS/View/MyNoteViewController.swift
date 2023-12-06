@@ -63,9 +63,15 @@ class MyNoteViewController: UIViewController {
         mainTableView.delegate = self
         mainTableView.dataSource = self
         
+        // 노트
         mainTableView.register(
             UINib(nibName: "NoteTableViewCell", bundle: nil),
             forCellReuseIdentifier: NoteTableViewCell.identifier)
+        
+        // 퀴즈
+        mainTableView.register(
+            UINib(nibName: "QuizTableViewCell", bundle: nil),
+            forCellReuseIdentifier: QuizTableViewCell.identifier)
         
     }
     
@@ -100,15 +106,21 @@ extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
     
     // 각각 어떤 셀을 보여줄 것인지
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if(indexPath.row == 0){
-//
-//        }
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteTableViewCell.identifier, for: indexPath) as? NoteTableViewCell else{
-            let errorTableViewCell = UITableViewCell()
-            errorTableViewCell.backgroundColor = .blue
-            return errorTableViewCell
+        if(indexPath.row == 0){
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteTableViewCell.identifier, for: indexPath) as? NoteTableViewCell else{
+                let errorTableViewCell = UITableViewCell()
+                errorTableViewCell.backgroundColor = .blue
+                return errorTableViewCell
+            }
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: QuizTableViewCell.identifier, for: indexPath) as? QuizTableViewCell else{
+                let errorTableViewCell = UITableViewCell()
+                errorTableViewCell.backgroundColor = .blue
+                return errorTableViewCell
+            }
+            return cell
         }
-        return cell
     }
     
     //셀 크기 지정

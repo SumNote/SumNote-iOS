@@ -15,7 +15,7 @@ class NoteTableViewCell: UITableViewCell {
 
     static let identifier = "NoteTableViewCell"
     
-    weak var delegate : NoteTableViewCellDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
+    weak var delegate : MyNoteTableViewDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
     
     @IBOutlet weak var myNoteListCollectionView: UICollectionView!
     

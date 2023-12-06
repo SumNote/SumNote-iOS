@@ -291,10 +291,10 @@
             </objects>
             <point key="canvasLocation" x="506" y="1413"/>
         </scene>
-        <!--View Controller-->
+        <!--All Quiz View Controller-->
         <scene sceneID="Nsf-xS-b4o">
             <objects>
-                <viewController id="IMG-c8-EXc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllQuizViewController" id="IMG-c8-EXc" customClass="AllQuizViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XMQ-5Z-LcE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,6 +313,9 @@
                             <constraint firstItem="3IK-gq-j6l" firstAttribute="leading" secondItem="sc8-I8-hiA" secondAttribute="leading" id="vat-KY-myl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="allQuizTableView" destination="3IK-gq-j6l" id="lHJ-k0-SWb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCk-KV-1tZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

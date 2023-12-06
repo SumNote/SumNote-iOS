@@ -25,6 +25,8 @@
 		294349FA2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349F82B07AD3E00C57B49 /* MyNoteListCollectionViewCell.swift */; };
 		294349FB2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294349F92B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib */; };
 		295F90402B20CAFF00F28446 /* AllQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295F903F2B20CAFF00F28446 /* AllQuizViewController.swift */; };
+		295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295F90412B20CBF000F28446 /* AllQuizTableViewCell.swift */; };
+		295F90442B20CBF000F28446 /* AllQuizTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */; };
 		296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */; };
 		296FFA5F2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA5D2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift */; };
 		296FFA602B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296FFA5E2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib */; };
@@ -84,6 +86,8 @@
 		294349F82B07AD3E00C57B49 /* MyNoteListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteListCollectionViewCell.swift; sourceTree = "<group>"; };
 		294349F92B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNoteListCollectionViewCell.xib; sourceTree = "<group>"; };
 		295F903F2B20CAFF00F28446 /* AllQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizViewController.swift; sourceTree = "<group>"; };
+		295F90412B20CBF000F28446 /* AllQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizTableViewCell.swift; sourceTree = "<group>"; };
+		295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllQuizTableViewCell.xib; sourceTree = "<group>"; };
 		296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteViewController.swift; sourceTree = "<group>"; };
 		296FFA5D2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		296FFA5E2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNoteCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 				296FFA752B2014F000DE1D68 /* NoteTableViewCell.xib */,
 				296FFA782B2014FF00DE1D68 /* QuizTableViewCell.swift */,
 				296FFA792B2014FF00DE1D68 /* QuizTableViewCell.xib */,
+				295F90412B20CBF000F28446 /* AllQuizTableViewCell.swift */,
+				295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 				294349C62B07922300C57B49 /* Assets.xcassets in Resources */,
 				296FFA772B2014F000DE1D68 /* NoteTableViewCell.xib in Resources */,
 				296FFA7B2B2014FF00DE1D68 /* QuizTableViewCell.xib in Resources */,
+				295F90442B20CBF000F28446 /* AllQuizTableViewCell.xib in Resources */,
 				294349C42B07922100C57B49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +540,7 @@
 				294349F12B079DDE00C57B49 /* TabBarController.swift in Sources */,
 				296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
+				295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

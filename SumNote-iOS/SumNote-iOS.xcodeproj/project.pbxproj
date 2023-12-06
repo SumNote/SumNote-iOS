@@ -34,6 +34,7 @@
 		296FFA772B2014F000DE1D68 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296FFA752B2014F000DE1D68 /* NoteTableViewCell.xib */; };
 		296FFA7A2B2014FF00DE1D68 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA782B2014FF00DE1D68 /* QuizTableViewCell.swift */; };
 		296FFA7B2B2014FF00DE1D68 /* QuizTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296FFA792B2014FF00DE1D68 /* QuizTableViewCell.xib */; };
+		296FFA7E2B20392100DE1D68 /* NoteTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA7D2B20392100DE1D68 /* NoteTableViewCellDelegate.swift */; };
 		2984A8FD2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */; };
 		2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */; };
 		6B131C677AE5EC50ED3C0C78 /* Pods_SumNote_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA17B356FAFB4FAA26769EE /* Pods_SumNote_iOS.framework */; };
@@ -91,6 +92,7 @@
 		296FFA752B2014F000DE1D68 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 		296FFA782B2014FF00DE1D68 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		296FFA792B2014FF00DE1D68 /* QuizTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizTableViewCell.xib; sourceTree = "<group>"; };
+		296FFA7D2B20392100DE1D68 /* NoteTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyQuizListCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4A468B5C02A5DB6CCDCEE5 /* Pods-SumNote-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		294349BB2B07922100C57B49 /* SumNote-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				296FFA7C2B2038F400DE1D68 /* Protocal */,
 				296FFA712B1F134E00DE1D68 /* Model */,
 				2984A8FA2B0F161B009BDF9F /* Cell */,
 				294349EF2B07945400C57B49 /* View */,
@@ -212,6 +215,14 @@
 				296FFA722B1F136300DE1D68 /* MainTableViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		296FFA7C2B2038F400DE1D68 /* Protocal */ = {
+			isa = PBXGroup;
+			children = (
+				296FFA7D2B20392100DE1D68 /* NoteTableViewCellDelegate.swift */,
+			);
+			path = Protocal;
 			sourceTree = "<group>";
 		};
 		2984A8FA2B0F161B009BDF9F /* Cell */ = {
@@ -510,6 +521,7 @@
 				294349F72B079F3700C57B49 /* UserInfoViewController.swift in Sources */,
 				294349F32B079EEF00C57B49 /* MyNoteViewController.swift in Sources */,
 				294349C12B07922100C57B49 /* LoginViewController.swift in Sources */,
+				296FFA7E2B20392100DE1D68 /* NoteTableViewCellDelegate.swift in Sources */,
 				294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */,
 				294349FA2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.swift in Sources */,
 				294349ED2B0792DF00C57B49 /* KaKaoAPI.swift in Sources */,

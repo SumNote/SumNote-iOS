@@ -10,10 +10,12 @@ import UIKit
 // MyNoteView에서 노트 프리뷰를 제공
 // 사용자가 보유중인 노트중 5개를 최근 노트로 보여줌
 // MyNoteListCollectionViewCell을 CollectionView를 통해 보여준다.
-
+// 위밈을 통해, 화면이동은 MyNoteTableViewController에서 수행한다.
 class NoteTableViewCell: UITableViewCell {
 
     static let identifier = "NoteTableViewCell"
+    
+    weak var delegate : NoteTableViewCellDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
     
     @IBOutlet weak var myNoteListCollectionView: UICollectionView!
     
@@ -30,8 +32,10 @@ class NoteTableViewCell: UITableViewCell {
     }
     
     // 전체 보기 버튼 클릭시 => 화면 전환
+    //MARK: 전체 보기 함수
     @IBAction func goAllNoteBtnDidTapped(_ sender: Any) {
-        
+        print("goAllNoteBtnDidTapped : NoteTableViewCell")
+        delegate?.didTapGoAllNoteButton() // 위임자에서 화면이동 프로토콜 수행
     }
     
     
@@ -81,3 +85,4 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     
     
 }
+

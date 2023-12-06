@@ -10,7 +10,8 @@ import UIKit
 import KakaoSDKUser
 import Kingfisher
 
-class MyNoteViewController: UIViewController {
+
+class MyNoteViewController: UIViewController{
 
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
@@ -75,28 +76,6 @@ class MyNoteViewController: UIViewController {
         
     }
     
-    
-    
-
-    
-    
-    //    //MARK: 노트 전체 보기
-    //    @IBAction func btnViewAllNoteDidTapped(_ sender: Any) {
-    //        // 뷰 이동
-    //        // 1. 스토리보드 찾기
-    //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //        // 2. 이동할 뷰 찾기
-    //        let AllNoteView = storyboard
-    //            .instantiateViewController(withIdentifier: "AllNoteViewController") as! AllNoteViewController
-    //        // 3. 이동
-    //        self.navigationController?.pushViewController(AllNoteView, animated: true)
-    //
-    //    }
-    //
-    //
-    //    //MARK: 퀴즈 전체 보기
-    //    @IBAction func btnViewAllQuizDidTapped(_ sender: Any) {
-    //    }
 }
 
 extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
@@ -112,6 +91,8 @@ extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
                 errorTableViewCell.backgroundColor = .blue
                 return errorTableViewCell
             }
+            // 위임자 설정
+            cell.delegate = self // 메인뷰에서 프로토콜 수행
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: QuizTableViewCell.identifier, for: indexPath) as? QuizTableViewCell else{
@@ -119,6 +100,8 @@ extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
                 errorTableViewCell.backgroundColor = .blue
                 return errorTableViewCell
             }
+//            // 위임자 설정
+//            cell.delegate = self // 메인뷰에서 프로토콜 수행
             return cell
         }
     }
@@ -132,3 +115,21 @@ extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
     
 }
 
+
+// NoteTableViewCellDelegate 프로토콜을 채택 => 노트 셀 아이템에서 화면이동하는 알고리즘을 구현
+// QuizTableViewCellDelegate 프로토콜을 채택 => 퀴즈 셀 아이템에서 화면이동하는 알고리즘을 구현(예정)
+extension MyNoteViewController : NoteTableViewCellDelegate{
+    
+    // 전체 노트 보기로 이동
+    func didTapGoAllNoteButton() {
+        print("didTapgoAllNoteButton Did Tapped : by Protocal")
+        // 스토리보드 찾기
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // 이동할 뷰 찾기(전체 노트 뷰)
+        let allNoteView = storyboard.instantiateViewController(withIdentifier: "AllNoteViewController") as! AllNoteViewController
+        // 화면 이동하기
+        self.navigationController?.pushViewController(allNoteView, animated: true)
+    }
+    
+    
+}

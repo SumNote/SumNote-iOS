@@ -15,6 +15,8 @@ class QuizTableViewCell: UITableViewCell {
     
     static let identifier = "QuizTableViewCell"
     
+    weak var delegate : NoteTableViewCellDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
+    
     // 서버로부터 얻어올 퀴즈 데이터 리스트 작성 필요
     @IBOutlet weak var MyQuizListCollectionView: UICollectionView!
     
@@ -42,6 +44,12 @@ class QuizTableViewCell: UITableViewCell {
     // 서버로부터 보유중인 퀴즈 얻어오는 동작 작성 필요
     func getMyQuiz(){
         print("서버에서 퀴즈 얻어오기")
+    }
+    
+    
+    //MARK: 전체 보기
+    @IBAction func goAllQuizBtnDidTapped(_ sender: Any) {
+        delegate?.didTapGoAllQuizButton() // 위임
     }
     
     // 해당 테이블 셀 클릭시 동작 정의(정의 x => 컨테이너 역할)

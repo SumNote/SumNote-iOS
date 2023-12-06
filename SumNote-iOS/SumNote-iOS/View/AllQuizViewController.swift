@@ -23,6 +23,7 @@ class AllQuizViewController: UIViewController {
         allQuizTableView.dataSource = self
         
         //nib 등록
+        allQuizTableView.register(UINib(nibName: "AllQuizTableViewCell", bundle: nil), forCellReuseIdentifier: AllQuizTableViewCell.identifier)
     }
 
 }
@@ -33,11 +34,16 @@ extension AllQuizViewController : UITableViewDelegate,UITableViewDataSource{
         return 10
     }
     
+    // 어떤 셀을 보여줄 것인지
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 보여줄 셀의 모습 지정
-        let errorCell = UITableViewCell()
-        errorCell.backgroundColor = .blue
-        return errorCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AllQuizTableViewCell.identifier, for: indexPath) as? AllQuizTableViewCell else{
+            // 보여줄 셀의 모습 지정
+            let errorCell = UITableViewCell()
+            errorCell.backgroundColor = .blue
+            return errorCell
+        }
+        return cell
+        
     }
     
     

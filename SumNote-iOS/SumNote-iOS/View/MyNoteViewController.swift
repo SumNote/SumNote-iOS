@@ -125,9 +125,9 @@ extension MyNoteViewController : MyNoteTableViewDelegate{
         // 스토리보드 찾기
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         // 이동할 뷰 찾기(전체 노트 뷰)
-        let allNoteView = storyboard.instantiateViewController(withIdentifier: "AllNoteViewController") as! AllNoteViewController
+        let allQuizView = storyboard.instantiateViewController(withIdentifier: "AllQuizViewController") as! AllQuizViewController
         // 화면 이동하기
-        self.navigationController?.pushViewController(allNoteView, animated: true)
+        self.navigationController?.pushViewController(allQuizView, animated: true)
     }
     
     

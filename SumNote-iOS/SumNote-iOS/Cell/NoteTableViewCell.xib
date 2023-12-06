@@ -29,6 +29,9 @@
                         <state key="normal" title="전체 보기">
                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <connections>
+                            <action selector="goAllNoteBtnDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2lh-C4-qqH"/>
+                        </connections>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lqe-25-Ttm">
                         <rect key="frame" x="0.0" y="55" width="563" height="262"/>
@@ -54,6 +57,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="myNoteListCollectionView" destination="lqe-25-Ttm" id="yTs-lS-ufr"/>
+            </connections>
             <point key="canvasLocation" x="17.557251908396946" y="-7.394366197183099"/>
         </tableViewCell>
     </objects>

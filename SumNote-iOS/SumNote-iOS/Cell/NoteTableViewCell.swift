@@ -13,6 +13,8 @@ import UIKit
 
 class NoteTableViewCell: UITableViewCell {
 
+    static let identifier = "NoteTableViewCell"
+    
     @IBOutlet weak var myNoteListCollectionView: UICollectionView!
     
     // 서버로부터 얻어올 노트 데이터 리스트 작성 필요

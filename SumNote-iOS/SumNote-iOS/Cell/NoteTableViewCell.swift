@@ -49,7 +49,7 @@ class NoteTableViewCell: UITableViewCell {
             nibName: "MyNoteListCollectionViewCell",
             bundle: nil), forCellWithReuseIdentifier: MyNoteListCollectionViewCell.identifier)
         
-        myNoteListCollectionView.contentInset = UIEdgeInsets(top:0, left:10, bottom:0, right: 0)
+        myNoteListCollectionView.contentInset = UIEdgeInsets(top:0, left:10, bottom:0, right: 0) // 컬렉션뷰 시작 위치 간격 설정
         
         
     }

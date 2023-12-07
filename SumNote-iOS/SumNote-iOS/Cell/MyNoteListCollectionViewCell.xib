@@ -71,7 +71,7 @@
                 <outlet property="noteNameLabel" destination="Qwj-Tc-D8a" id="bqk-O2-q3m"/>
                 <outlet property="noteUIImage" destination="hK8-zs-8n5" id="gqx-hK-BUb"/>
             </connections>
-            <point key="canvasLocation" x="235.87786259541983" y="52.112676056338032"/>
+            <point key="canvasLocation" x="-39" y="2"/>
         </collectionViewCell>
     </objects>
     <resources>

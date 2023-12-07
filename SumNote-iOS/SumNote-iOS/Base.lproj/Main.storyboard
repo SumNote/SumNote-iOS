@@ -338,15 +338,15 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홍길동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-sd-J8u">
-                                <rect key="frame" x="80" y="118" width="45" height="21"/>
+                                <rect key="frame" x="75" y="123" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ghdrlfehd@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Be-cm-xeq">
-                                <rect key="frame" x="80" y="147" width="168" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="75" y="149" width="124" height="14.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sjW-vM-dpk">
@@ -357,14 +357,14 @@
                         <viewLayoutGuide key="safeArea" id="aMD-hj-zL3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2Be-cm-xeq" firstAttribute="bottom" secondItem="tj5-g4-lE9" secondAttribute="bottom" id="40G-J4-8H7"/>
+                            <constraint firstItem="Mva-sd-J8u" firstAttribute="top" secondItem="aMD-hj-zL3" secondAttribute="top" constant="20" id="BdH-D8-bau"/>
+                            <constraint firstItem="2Be-cm-xeq" firstAttribute="top" secondItem="Mva-sd-J8u" secondAttribute="bottom" constant="5" id="DTV-Oq-0mH"/>
                             <constraint firstItem="tj5-g4-lE9" firstAttribute="top" secondItem="aMD-hj-zL3" secondAttribute="top" constant="15" id="Edh-a1-LVW"/>
-                            <constraint firstItem="Mva-sd-J8u" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="15" id="JLH-v9-rFu"/>
+                            <constraint firstItem="Mva-sd-J8u" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="10" id="JLH-v9-rFu"/>
                             <constraint firstItem="tj5-g4-lE9" firstAttribute="leading" secondItem="aMD-hj-zL3" secondAttribute="leading" constant="15" id="L39-Nh-MtE"/>
                             <constraint firstItem="aMD-hj-zL3" firstAttribute="bottom" secondItem="sjW-vM-dpk" secondAttribute="bottom" id="Qb4-UN-JLL"/>
                             <constraint firstItem="sjW-vM-dpk" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="bottom" id="Yph-e1-RFX"/>
-                            <constraint firstItem="2Be-cm-xeq" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="15" id="aeq-Sw-Duh"/>
-                            <constraint firstItem="Mva-sd-J8u" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="top" id="duv-vy-XX2"/>
+                            <constraint firstItem="2Be-cm-xeq" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="10" id="aeq-Sw-Duh"/>
                             <constraint firstItem="sjW-vM-dpk" firstAttribute="leading" secondItem="aMD-hj-zL3" secondAttribute="leading" id="hmj-ak-HEt"/>
                             <constraint firstItem="sjW-vM-dpk" firstAttribute="trailing" secondItem="aMD-hj-zL3" secondAttribute="trailing" id="kOD-z5-YD1"/>
                         </constraints>

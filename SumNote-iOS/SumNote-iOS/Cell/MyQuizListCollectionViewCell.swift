@@ -19,7 +19,7 @@ class MyQuizListCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        quizUIImage.layer.cornerRadius = 15 //테두리 둥글게
+        quizUIImage.layer.cornerRadius = 25 //테두리 둥글게
     }
 
 }

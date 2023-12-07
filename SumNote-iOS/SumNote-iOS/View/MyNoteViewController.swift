@@ -116,8 +116,7 @@ extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
 }
 
 
-// NoteTableViewCellDelegate 프로토콜을 채택 => 노트 셀 아이템에서 화면이동하는 알고리즘을 구현
-// QuizTableViewCellDelegate 프로토콜을 채택 => 퀴즈 셀 아이템에서 화면이동하는 알고리즘을 구현(예정)
+// 노트 셀, 퀴즈 셀 아이템에서 화면이동하는 알고리즘을 구현
 extension MyNoteViewController : MyNoteTableViewDelegate{
     // 전체 퀴즈 보기로 이동
     func didTapGoAllQuizButton() {

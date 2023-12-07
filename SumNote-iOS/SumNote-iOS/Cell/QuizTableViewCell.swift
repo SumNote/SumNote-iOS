@@ -18,7 +18,7 @@ class QuizTableViewCell: UITableViewCell {
     weak var delegate : MyNoteTableViewDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
     
     // 서버로부터 얻어올 퀴즈 데이터 리스트 작성 필요
-    @IBOutlet weak var MyQuizListCollectionView: UICollectionView!
+    @IBOutlet weak var myQuizListCollectionView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,11 +30,11 @@ class QuizTableViewCell: UITableViewCell {
     
     // 컬렉션뷰 init
     func setMyQuizListCollectionView(){
-        MyQuizListCollectionView.dataSource = self
-        MyQuizListCollectionView.delegate = self
+        myQuizListCollectionView.dataSource = self
+        myQuizListCollectionView.delegate = self
         
         // 사용할 nib파일 등록
-        MyQuizListCollectionView.register(UINib(
+        myQuizListCollectionView.register(UINib(
             nibName: "MyQuizListCollectionViewCell",
             bundle: nil), forCellWithReuseIdentifier: MyQuizListCollectionViewCell.identifier)
         
@@ -82,67 +82,18 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     
 }
 
-/**
- //컬렉션 뷰의 셀 사이즈 조절 => 테이블 뷰와 다른 방식을 사용함
- //nib파일은 ui작업을 도와주는 용도일 뿐이라, nib에서 커스텀을 진행해도 반영되지 않음
- //크기에 대한 작업은 프로토콜로 해야함
- extension ProfileViewController: UICollectionViewDelegateFlowLayout{
-     
-  
-     //CGSize를 리턴함 => 셀에 따라서 다른 크기를 리턴해야함 => 셀은 섹션에 소속되어있음 => 섹션을 확인하고 맞춰서 크기 지정필요
-     func collectionView(_ collectionView: UICollectionView,
-                         layout collectionViewLayout: UICollectionViewLayout,
-                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-         let section = indexPath.section
-         
-         switch section{
-         case 0: // 프로필 화면을 보여주기 위한 셀에 대한 크기 지정
-             return CGSize(
-                 width: collectionView.frame.width,
-                 height: CGFloat(159)
-             )
-         default: // 피드 셀에 대한 크기 지정 => 한 화면에 3개씩 들어가도록 하는것이 목표라면 3으로 나눠줘야함
-             //한 화면의 크기 확보
-             //collectionview의 가로의 3분의 1씩 가져간다면 가운데 부분에 여백이 2개 생길것 => 여백을 1씩 둘 예정이므로(아래 함수 참고) 미리 -2를 해둔다.
-             
-             //수정 -2 => -4/3 : 한 가로에 아이템이 3개씩 들어가는 것이 우리의 목표
-             //3개가 들어가면 여백은 총 4개가 발생함(*ㅁ*ㅁ*ㅁ*) 따라서 전체적으로 4를 빼줘야함
-             //한 셀에 대해 여백이 총 6번 제거되므로(왼쪽,오른쪽에 대해 여백이 지정됨)
-             //총 4의 여백을 지정해주기 위해선 4/3을 빼줘야함
-             //(가로에 들어가는 것의 개수는 3개, 한 셀당 빼기 연산을 한번씩 수행, 같은 연산 3번 수행했을때 총 4가 빠지려면? => 4/3을 빼줘야함 4/3*3=4 이므로)
-             let side = CGFloat((collectionView.frame.width/3)-4/3)
-             return CGSize(
-                 width: side, height: side //정사각형으로 지정
-             )
-         }
-     }
-     
-     //아이템 사이의 행(가로 사이의 여백) 간격 지정
-     func collectionView(_ collectionView: UICollectionView,
-                         layout collectionViewLayout: UICollectionViewLayout,
-                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-         switch section{
-         case 0: //프로필 아이템 간격은 0으로 둠
-             return CGFloat(0)
-         default: //위에서 말했듯이 피드 아이템간의 가로 간격을 1로 둠
-             return CGFloat(1) //왼쪽, 오른쪽 각각 여백이 지정됨
-         }
-     }
-     
-     //아이템 사이의 열(세로 사이의 여백) 간격 지정
-     func collectionView(_ collectionView: UICollectionView,
-                         layout collectionViewLayout: UICollectionViewLayout,
-                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-         switch section{
-         case 0:
-             return CGFloat(0)
-         default: //피드 아이템간의 높이 간격 지정
-             return CGFloat(1)
-         }
-     }
- }
-
- 
- 
- 
- */
+// 셀 크기 동적으로 정의
+// 노트의 높이는 컬렉션뷰 셀의 높이만큼, 가로는 2분의 1정도 => 셀 왼쪽 간격 지정 필요
+extension QuizTableViewCell : UICollectionViewDelegateFlowLayout{
+    
+    //높이와 너비 설정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let collectionViewFrameSize = self.myQuizListCollectionView.frame.size
+        let height = collectionViewFrameSize.height
+        let width = collectionViewFrameSize.width
+        
+        return CGSize(width: width-20, height: height/2-20)
+    }
+    
+}

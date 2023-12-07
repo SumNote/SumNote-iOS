@@ -58,7 +58,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="MyQuizListCollectionView" destination="ObU-tg-C5v" id="9vt-LJ-Ixi"/>
+                <outlet property="myQuizListCollectionView" destination="ObU-tg-C5v" id="9vt-LJ-Ixi"/>
             </connections>
             <point key="canvasLocation" x="398" y="62"/>
         </tableViewCell>

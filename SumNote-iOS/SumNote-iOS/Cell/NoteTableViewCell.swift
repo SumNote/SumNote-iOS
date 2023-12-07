@@ -49,6 +49,9 @@ class NoteTableViewCell: UITableViewCell {
             nibName: "MyNoteListCollectionViewCell",
             bundle: nil), forCellWithReuseIdentifier: MyNoteListCollectionViewCell.identifier)
         
+        myNoteListCollectionView.contentInset = UIEdgeInsets(top:0, left:10, bottom:0, right: 0)
+        
+        
     }
     
 
@@ -86,3 +89,23 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     
 }
 
+// 셀 크기 동적으로 정의
+// 노트의 높이는 컬렉션뷰 셀의 높이만큼, 가로는 2분의 1정도 => 셀 왼쪽 간격 지정 필요
+extension NoteTableViewCell : UICollectionViewDelegateFlowLayout{
+    
+    //높이와 너비 설정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let collectionViewFrameSize = self.myNoteListCollectionView.frame.size
+        let height = collectionViewFrameSize.height
+        let width = collectionViewFrameSize.width
+        
+        return CGSize(width: width/2, height: height)
+    }
+    
+    //아이템 사이의 행(가로 사이의 여백) 간격 지정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+
+}

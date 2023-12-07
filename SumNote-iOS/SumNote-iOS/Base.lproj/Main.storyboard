@@ -6,7 +6,6 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -252,44 +251,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mC4-EI-P5d">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y2b-sn-Gxf">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0yk-J8-2KH">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="J6W-4w-F3m">
-                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Im-6D-3w1">
-                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="slF-wz-K6E"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="slF-wz-K6E" firstAttribute="bottom" secondItem="mC4-EI-P5d" secondAttribute="bottom" id="ATX-Cb-X7Q"/>
-                            <constraint firstItem="mC4-EI-P5d" firstAttribute="leading" secondItem="slF-wz-K6E" secondAttribute="leading" id="KKg-dQ-d2U"/>
-                            <constraint firstItem="mC4-EI-P5d" firstAttribute="top" secondItem="slF-wz-K6E" secondAttribute="top" id="b7L-M4-8yu"/>
-                            <constraint firstItem="slF-wz-K6E" firstAttribute="trailing" secondItem="mC4-EI-P5d" secondAttribute="trailing" id="yXS-ma-Kcb"/>
+                            <constraint firstItem="y2b-sn-Gxf" firstAttribute="leading" secondItem="slF-wz-K6E" secondAttribute="leading" id="Czn-E7-TAi"/>
+                            <constraint firstItem="y2b-sn-Gxf" firstAttribute="trailing" secondItem="slF-wz-K6E" secondAttribute="trailing" id="eky-W6-tnv"/>
+                            <constraint firstItem="slF-wz-K6E" firstAttribute="bottom" secondItem="y2b-sn-Gxf" secondAttribute="bottom" id="pul-3L-paY"/>
+                            <constraint firstItem="y2b-sn-Gxf" firstAttribute="top" secondItem="slF-wz-K6E" secondAttribute="top" id="r4h-U3-ESW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wex-01-t2I"/>
                     <connections>
-                        <outlet property="collectionView" destination="mC4-EI-P5d" id="Ld0-Ti-MaQ"/>
+                        <outlet property="allNoteTableView" destination="y2b-sn-Gxf" id="8Qm-JW-cpH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnB-Nq-bhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="506" y="1413"/>
+            <point key="canvasLocation" x="870.99236641221376" y="1412.6760563380283"/>
         </scene>
         <!--All Quiz View Controller-->
         <scene sceneID="Nsf-xS-b4o">
@@ -319,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCk-KV-1tZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1278.6259541984732" y="1412.6760563380283"/>
+            <point key="canvasLocation" x="1604" y="1413"/>
         </scene>
         <!--my note-->
         <scene sceneID="0ha-Jv-mQD">
@@ -336,7 +319,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kc7-Lh-gsg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="708"/>
+            <point key="canvasLocation" x="131" y="706"/>
         </scene>
         <!--my note-->
         <scene sceneID="qjS-S1-Z4Z">
@@ -366,8 +349,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sjW-vM-dpk">
-                                <rect key="frame" x="0.0" y="178" width="393" height="591"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sjW-vM-dpk">
+                                <rect key="frame" x="0.0" y="168" width="393" height="601"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -379,7 +362,7 @@
                             <constraint firstItem="Mva-sd-J8u" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="15" id="JLH-v9-rFu"/>
                             <constraint firstItem="tj5-g4-lE9" firstAttribute="leading" secondItem="aMD-hj-zL3" secondAttribute="leading" constant="15" id="L39-Nh-MtE"/>
                             <constraint firstItem="aMD-hj-zL3" firstAttribute="bottom" secondItem="sjW-vM-dpk" secondAttribute="bottom" id="Qb4-UN-JLL"/>
-                            <constraint firstItem="sjW-vM-dpk" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="bottom" constant="10" id="Yph-e1-RFX"/>
+                            <constraint firstItem="sjW-vM-dpk" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="bottom" id="Yph-e1-RFX"/>
                             <constraint firstItem="2Be-cm-xeq" firstAttribute="leading" secondItem="tj5-g4-lE9" secondAttribute="trailing" constant="15" id="aeq-Sw-Duh"/>
                             <constraint firstItem="Mva-sd-J8u" firstAttribute="top" secondItem="tj5-g4-lE9" secondAttribute="top" id="duv-vy-XX2"/>
                             <constraint firstItem="sjW-vM-dpk" firstAttribute="leading" secondItem="aMD-hj-zL3" secondAttribute="leading" id="hmj-ak-HEt"/>
@@ -397,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMc-rz-KTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852.67175572519079" y="707.74647887323943"/>
+            <point key="canvasLocation" x="871" y="706"/>
         </scene>
         <!--dev info-->
         <scene sceneID="27q-Jy-qMh">
@@ -413,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmq-g3-VxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344" y="708"/>
+            <point key="canvasLocation" x="2332" y="706"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sOV-QE-3gZ">

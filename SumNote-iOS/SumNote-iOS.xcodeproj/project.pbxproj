@@ -28,10 +28,6 @@
 		295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295F90412B20CBF000F28446 /* AllQuizTableViewCell.swift */; };
 		295F90442B20CBF000F28446 /* AllQuizTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */; };
 		296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */; };
-		296FFA5F2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA5D2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift */; };
-		296FFA602B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296FFA5E2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib */; };
-		296FFA632B1DD29700DE1D68 /* AllQuizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA612B1DD29700DE1D68 /* AllQuizCollectionViewCell.swift */; };
-		296FFA642B1DD29700DE1D68 /* AllQuizCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296FFA622B1DD29700DE1D68 /* AllQuizCollectionViewCell.xib */; };
 		296FFA732B1F136300DE1D68 /* MainTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA722B1F136300DE1D68 /* MainTableViewModel.swift */; };
 		296FFA762B2014F000DE1D68 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA742B2014F000DE1D68 /* NoteTableViewCell.swift */; };
 		296FFA772B2014F000DE1D68 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296FFA752B2014F000DE1D68 /* NoteTableViewCell.xib */; };
@@ -40,6 +36,8 @@
 		296FFA7E2B20392100DE1D68 /* MyNoteTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA7D2B20392100DE1D68 /* MyNoteTableViewDelegate.swift */; };
 		2984A8FD2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */; };
 		2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */; };
+		29E54F532B2151CD00E6E4B9 /* AllNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E54F512B2151CD00E6E4B9 /* AllNoteTableViewCell.swift */; };
+		29E54F542B2151CD00E6E4B9 /* AllNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E54F522B2151CD00E6E4B9 /* AllNoteTableViewCell.xib */; };
 		6B131C677AE5EC50ED3C0C78 /* Pods_SumNote_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA17B356FAFB4FAA26769EE /* Pods_SumNote_iOS.framework */; };
 		E32A8C0C784668696349B96E /* Pods_SumNote_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E1944F96AACA28D292E1D5 /* Pods_SumNote_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -89,10 +87,6 @@
 		295F90412B20CBF000F28446 /* AllQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizTableViewCell.swift; sourceTree = "<group>"; };
 		295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllQuizTableViewCell.xib; sourceTree = "<group>"; };
 		296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteViewController.swift; sourceTree = "<group>"; };
-		296FFA5D2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteCollectionViewCell.swift; sourceTree = "<group>"; };
-		296FFA5E2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNoteCollectionViewCell.xib; sourceTree = "<group>"; };
-		296FFA612B1DD29700DE1D68 /* AllQuizCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizCollectionViewCell.swift; sourceTree = "<group>"; };
-		296FFA622B1DD29700DE1D68 /* AllQuizCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllQuizCollectionViewCell.xib; sourceTree = "<group>"; };
 		296FFA722B1F136300DE1D68 /* MainTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewModel.swift; sourceTree = "<group>"; };
 		296FFA742B2014F000DE1D68 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		296FFA752B2014F000DE1D68 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
@@ -101,6 +95,8 @@
 		296FFA7D2B20392100DE1D68 /* MyNoteTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteTableViewDelegate.swift; sourceTree = "<group>"; };
 		2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyQuizListCollectionViewCell.xib; sourceTree = "<group>"; };
+		29E54F512B2151CD00E6E4B9 /* AllNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteTableViewCell.swift; sourceTree = "<group>"; };
+		29E54F522B2151CD00E6E4B9 /* AllNoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNoteTableViewCell.xib; sourceTree = "<group>"; };
 		2C4A468B5C02A5DB6CCDCEE5 /* Pods-SumNote-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E8268A925AF864ED6DA63E5 /* Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOS-SumNote-iOSUITests/Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85530E1935055CC307638EC9 /* Pods-SumNote-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,16 +235,14 @@
 				294349F92B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib */,
 				2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */,
 				2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */,
-				296FFA5D2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift */,
-				296FFA5E2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib */,
-				296FFA612B1DD29700DE1D68 /* AllQuizCollectionViewCell.swift */,
-				296FFA622B1DD29700DE1D68 /* AllQuizCollectionViewCell.xib */,
 				296FFA742B2014F000DE1D68 /* NoteTableViewCell.swift */,
 				296FFA752B2014F000DE1D68 /* NoteTableViewCell.xib */,
 				296FFA782B2014FF00DE1D68 /* QuizTableViewCell.swift */,
 				296FFA792B2014FF00DE1D68 /* QuizTableViewCell.xib */,
 				295F90412B20CBF000F28446 /* AllQuizTableViewCell.swift */,
 				295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */,
+				29E54F512B2151CD00E6E4B9 /* AllNoteTableViewCell.swift */,
+				29E54F522B2151CD00E6E4B9 /* AllNoteTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -385,16 +379,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				296FFA642B1DD29700DE1D68 /* AllQuizCollectionViewCell.xib in Resources */,
 				294349FB2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib in Resources */,
 				2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */,
-				296FFA602B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.xib in Resources */,
 				294349C92B07922300C57B49 /* LaunchScreen.storyboard in Resources */,
 				294349C62B07922300C57B49 /* Assets.xcassets in Resources */,
 				296FFA772B2014F000DE1D68 /* NoteTableViewCell.xib in Resources */,
 				296FFA7B2B2014FF00DE1D68 /* QuizTableViewCell.xib in Resources */,
 				295F90442B20CBF000F28446 /* AllQuizTableViewCell.xib in Resources */,
 				294349C42B07922100C57B49 /* Main.storyboard in Resources */,
+				29E54F542B2151CD00E6E4B9 /* AllNoteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,10 +515,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				296FFA5F2B1CB6CC00DE1D68 /* AllNoteCollectionViewCell.swift in Sources */,
 				294349F52B079F2E00C57B49 /* NoteMakerViewController.swift in Sources */,
 				2984A8FD2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift in Sources */,
-				296FFA632B1DD29700DE1D68 /* AllQuizCollectionViewCell.swift in Sources */,
 				296FFA732B1F136300DE1D68 /* MainTableViewModel.swift in Sources */,
 				296FFA7A2B2014FF00DE1D68 /* QuizTableViewCell.swift in Sources */,
 				294349F72B079F3700C57B49 /* UserInfoViewController.swift in Sources */,
@@ -539,6 +530,7 @@
 				296FFA762B2014F000DE1D68 /* NoteTableViewCell.swift in Sources */,
 				294349F12B079DDE00C57B49 /* TabBarController.swift in Sources */,
 				296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */,
+				29E54F532B2151CD00E6E4B9 /* AllNoteTableViewCell.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
 				295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */,
 			);

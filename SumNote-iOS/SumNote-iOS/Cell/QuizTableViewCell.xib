@@ -60,7 +60,7 @@
             <connections>
                 <outlet property="myQuizListCollectionView" destination="ObU-tg-C5v" id="9vt-LJ-Ixi"/>
             </connections>
-            <point key="canvasLocation" x="398" y="62"/>
+            <point key="canvasLocation" x="-358" y="59"/>
         </tableViewCell>
     </objects>
     <resources>

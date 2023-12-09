@@ -47,14 +47,5 @@ extension AllNoteViewController : UITableViewDelegate,UITableViewDataSource{
         }
         return cell
     }
-    
-    
 }
 
-//// 컬렉션 뷰 셀 디자인 설정(가로 길이, 높이 지정)
-//extension AllNoteViewController : UICollectionViewDelegateFlowLayout{
-//    //높이와 너비 설정
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 50, height: 80) // 높이 80
-//    }
-//}

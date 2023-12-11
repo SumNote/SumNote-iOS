@@ -76,6 +76,11 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
             errorCell.backgroundColor = .blue
             return errorCell
         }
+        
+        // 퀴즈 이미지 지정
+        let quizNum = (indexPath.row+1)%10
+        cell.quizUIImage.image = UIImage(named: "img_quiz_\(quizNum)")
+        
         return cell
     }
     

@@ -50,7 +50,15 @@ extension AllNoteViewController : UITableViewDelegate,UITableViewDataSource{
         let noteNum = (indexPath.row)%8+1
         cell.noteImage.image = UIImage(named: "img_note_\(noteNum)")
         
+        // 셀 클릭 이벤트 제거(회색 배경 안뜨드록)
+        cell.selectionStyle = .none
+        
         return cell
+    }
+    
+    // 셀 클릭시 동작
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("allNoteTableViewCell Clicked : \(indexPath.row)")
     }
 }
 

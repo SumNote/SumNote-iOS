@@ -47,6 +47,9 @@ extension AllQuizViewController : UITableViewDelegate,UITableViewDataSource{
         let quizNum = (indexPath.row)%6+1
         cell.quizImage.image = UIImage(named: "img_quiz_\(quizNum)")
         
+        // 셀 클릭 이벤트 제거(회색 배경 안뜨드록)
+        cell.selectionStyle = .none
+        
         return cell
         
     }

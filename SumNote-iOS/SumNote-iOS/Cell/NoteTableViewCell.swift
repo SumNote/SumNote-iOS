@@ -83,7 +83,19 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
             errorCell.backgroundColor = .blue
             return errorCell
         }
+        
+        // 정보 주입
+        
+        // 모듈러 연산을 사용하여 노트 이미지를 돌려쓸수 있도록
+        let noteNum = (indexPath.row+1)%10
+        cell.noteUIImage.image = UIImage(named: "img_note_\(noteNum)")
+        
         return cell
+    }
+    
+    // 컬렉션뷰 클릭시 동작 => MyNoteView로 위임 필요?
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("cell clicked")
     }
     
     

@@ -87,7 +87,7 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
         // 정보 주입
         
         // 모듈러 연산을 사용하여 노트 이미지를 돌려쓸수 있도록
-        let noteNum = (indexPath.row+1)%10
+        let noteNum = (indexPath.row)%8+1
         cell.noteUIImage.image = UIImage(named: "img_note_\(noteNum)")
         
         return cell

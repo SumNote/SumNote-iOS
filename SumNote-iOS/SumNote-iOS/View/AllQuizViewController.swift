@@ -42,6 +42,11 @@ extension AllQuizViewController : UITableViewDelegate,UITableViewDataSource{
             errorCell.backgroundColor = .blue
             return errorCell
         }
+        
+        // 퀴즈 이미지 지정
+        let quizNum = (indexPath.row)%6+1
+        cell.quizImage.image = UIImage(named: "img_quiz_\(quizNum)")
+        
         return cell
         
     }

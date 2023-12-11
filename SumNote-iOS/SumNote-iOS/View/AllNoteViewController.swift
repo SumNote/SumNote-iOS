@@ -13,6 +13,8 @@ class AllNoteViewController: UIViewController {
     
     @IBOutlet weak var allNoteTableView: UITableView!
     
+    weak var delegater : NavigationDelegate? // MyNoteView를 위임자로 설정
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
@@ -59,6 +61,7 @@ extension AllNoteViewController : UITableViewDelegate,UITableViewDataSource{
     // 셀 클릭시 동작
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("allNoteTableViewCell Clicked : \(indexPath.row)")
+        delegater?.didTappedNoteCell() // 노트 셀 클릭됨
     }
 }
 

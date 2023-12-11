@@ -96,6 +96,7 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     // 컬렉션뷰 클릭시 동작 => MyNoteView로 위임 필요?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("cell clicked")
+        delegate?.didTappedNoteCell() // 노트 페이지로 이동
     }
     
     

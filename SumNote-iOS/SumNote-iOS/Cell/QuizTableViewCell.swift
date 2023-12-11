@@ -84,6 +84,10 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
         return cell
     }
     
+    // 셀 클릭시
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didTappedQuizCell() // 퀴즈 페이지로 이동
+    }
     
 }
 

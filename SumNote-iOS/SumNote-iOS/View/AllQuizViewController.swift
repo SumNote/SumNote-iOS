@@ -11,6 +11,8 @@ class AllQuizViewController: UIViewController {
 
     @IBOutlet weak var allQuizTableView: UITableView!
     
+    weak var delegater : NavigationDelegate? // 화면 이동을 위한 위임자 지정
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -52,6 +54,11 @@ extension AllQuizViewController : UITableViewDelegate,UITableViewDataSource{
         
         return cell
         
+    }
+    
+    // 화면 클릭 이벤트 발생시
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegater?.didTappedQuizCell() // 위임자를 이용하여 화면 이동
     }
     
     

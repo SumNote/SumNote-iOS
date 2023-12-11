@@ -129,6 +129,8 @@ extension MyNoteViewController : NavigationDelegate{
         print("didTapgoAllQuizButton Did Tapped : by Protocal")
         // 이동할 뷰 찾기(전체 노트 뷰)
         let allQuizView = stoaryBoard.instantiateViewController(withIdentifier: "AllQuizViewController") as! AllQuizViewController
+        // 위임자 전달
+        allQuizView.delegater = self // MyNoteViewController 를 위임자로 지정
         // 화면 이동하기
         self.navigationController?.pushViewController(allQuizView, animated: true)
     }
@@ -139,6 +141,8 @@ extension MyNoteViewController : NavigationDelegate{
         print("didTapgoAllNoteButton Did Tapped : by Protocal")
         // 이동할 뷰 찾기(전체 노트 뷰)
         let allNoteView = stoaryBoard.instantiateViewController(withIdentifier: "AllNoteViewController") as! AllNoteViewController
+        // 위임자 전달
+        allNoteView.delegater = self // MyNoteViewController 를 위임자로 지정
         // 화면 이동하기
         self.navigationController?.pushViewController(allNoteView, animated: true)
     }

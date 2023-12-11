@@ -9,8 +9,38 @@ import UIKit
 
 // 개발자 정보 페이지
 class UserInfoViewController: UIViewController {
-
+    
     @IBOutlet weak var developerInfoCollectionView: UICollectionView!
+    
+    // 개발자 정보 데이터
+    let devInfoArray = [
+        DeveloperInfo(
+            imageName: "img_choi76",
+            devName: "강민서", devEmail: "y2_12@naver.com",
+            role1: "Android & iOS Application 개발 담당" ,
+            role2: "Django Server 구축 및 개발",
+            role3: "GPT Prompt Engineering"),
+        DeveloperInfo(
+            imageName: "image_choi76",
+            devName: "김태하", devEmail: "y2_12@naver.com",
+            role1: "Android & iOS Application 개발 담당" ,
+            role2: "Django Server 구축 및 개발",
+            role3: "GPT Prompt Engineering"),
+        DeveloperInfo(
+            imageName: "image_choi76",
+            devName: "최 강", devEmail: "y2_12@naver.com",
+            role1: "Android & iOS Application 개발 담당" ,
+            role2: "Django Server 구축 및 개발",
+            role3: "GPT Prompt Engineering"),
+        DeveloperInfo(
+            imageName: "image_choi76",
+            devName: "이경민", devEmail: "y2_12@naver.com",
+            role1: "Android & iOS Application 개발 담당" ,
+            role2: "Django Server 구축 및 개발",
+            role3: "")
+    ]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +88,12 @@ extension UserInfoViewController : UICollectionViewDelegate,UICollectionViewData
 
             return errorCell
         }
+        let num = indexPath.row - 1
+        cell.devName.text = devInfoArray[num].devName
+        cell.devEmail.text = devInfoArray[num].devEmail
+        cell.role1.text = devInfoArray[num].role1
+        cell.role2.text = devInfoArray[num].role2
+        cell.role3.text = devInfoArray[num].role3
         return cell
     }
 }
@@ -80,9 +116,4 @@ extension UserInfoViewController : UICollectionViewDelegateFlowLayout{
         return CGSize(width: width, height: height/2)
     }
     
-    //아이템 사이의 행(가로 사이의 여백) 간격 지정
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 20
-//    }
-
 }

@@ -18,6 +18,9 @@ class MyNoteViewController: UIViewController{
     @IBOutlet weak var userImageLabel: UIImageView!
     @IBOutlet weak var mainTableView: UITableView!
     
+    // 스토리보드 참조
+    private let stoaryBoard = UIStoryboard(name: "Main", bundle: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -117,14 +120,15 @@ extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
 
 
 // 노트 셀, 퀴즈 셀 아이템에서 화면이동하는 알고리즘을 구현
-extension MyNoteViewController : MyNoteTableViewDelegate{
+extension MyNoteViewController : NavigationDelegate{
+    
+    
+    
     // 전체 퀴즈 보기로 이동
     func didTapGoAllQuizButton() {
         print("didTapgoAllQuizButton Did Tapped : by Protocal")
-        // 스토리보드 찾기
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         // 이동할 뷰 찾기(전체 노트 뷰)
-        let allQuizView = storyboard.instantiateViewController(withIdentifier: "AllQuizViewController") as! AllQuizViewController
+        let allQuizView = stoaryBoard.instantiateViewController(withIdentifier: "AllQuizViewController") as! AllQuizViewController
         // 화면 이동하기
         self.navigationController?.pushViewController(allQuizView, animated: true)
     }
@@ -133,14 +137,21 @@ extension MyNoteViewController : MyNoteTableViewDelegate{
     // 전체 노트 보기로 이동
     func didTapGoAllNoteButton() {
         print("didTapgoAllNoteButton Did Tapped : by Protocal")
-        // 스토리보드 찾기
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         // 이동할 뷰 찾기(전체 노트 뷰)
-        let allNoteView = storyboard.instantiateViewController(withIdentifier: "AllNoteViewController") as! AllNoteViewController
+        let allNoteView = stoaryBoard.instantiateViewController(withIdentifier: "AllNoteViewController") as! AllNoteViewController
         // 화면 이동하기
         self.navigationController?.pushViewController(allNoteView, animated: true)
     }
     
+    // 노트 페이지로 이동(노트 셀 클릭시)
+    func didTappedNoteCell() {
+        print("didTappedNoteCell")
+    }
+    
+    // 퀴즈 페이지로 이동(퀴즈 셀 클릭시
+    func didTappedQuizCell() {
+        print("didTappedQuizCell")
+    }
     
     
 }

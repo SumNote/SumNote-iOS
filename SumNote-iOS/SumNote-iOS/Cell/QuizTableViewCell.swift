@@ -15,7 +15,7 @@ class QuizTableViewCell: UITableViewCell {
     
     static let identifier = "QuizTableViewCell"
     
-    weak var delegate : MyNoteTableViewDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
+    weak var delegate : NavigationDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
     
     // 서버로부터 얻어올 퀴즈 데이터 리스트 작성 필요
     @IBOutlet weak var myQuizListCollectionView: UICollectionView!

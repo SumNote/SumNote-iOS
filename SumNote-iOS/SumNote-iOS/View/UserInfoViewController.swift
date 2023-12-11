@@ -15,28 +15,28 @@ class UserInfoViewController: UIViewController {
     // 개발자 정보 데이터
     let devInfoArray = [
         DeveloperInfo(
+            imageName: "img_minseo",
+            devName: "강민서", devEmail: "kms02171@naver.com",
+            role1: "JPA와 SpringBoot를 이용한 API 개발" ,
+            role2: "Naver Cloud Flatform을 이용한 서버 배포",
+            role3: "Android 디자인 개선"),
+        DeveloperInfo(
+            imageName: "img_taeha",
+            devName: "김태하", devEmail: "xogk1128@naver.com",
+            role1: "안드로이드 및 장고 서버 개발" ,
+            role2: "클라이언트 서버간 API 통신 구축",
+            role3: "GPT 프롬프트 엔지니어링"),
+        DeveloperInfo(
             imageName: "img_choi76",
-            devName: "강민서", devEmail: "y2_12@naver.com",
-            role1: "Android & iOS Application 개발 담당" ,
-            role2: "Django Server 구축 및 개발",
-            role3: "GPT Prompt Engineering"),
-        DeveloperInfo(
-            imageName: "image_choi76",
-            devName: "김태하", devEmail: "y2_12@naver.com",
-            role1: "Android & iOS Application 개발 담당" ,
-            role2: "Django Server 구축 및 개발",
-            role3: "GPT Prompt Engineering"),
-        DeveloperInfo(
-            imageName: "image_choi76",
             devName: "최 강", devEmail: "y2_12@naver.com",
-            role1: "Android & iOS Application 개발 담당" ,
+            role1: "Android & iOS Application 개발" ,
             role2: "Django Server 구축 및 개발",
             role3: "GPT Prompt Engineering"),
         DeveloperInfo(
-            imageName: "image_choi76",
-            devName: "이경민", devEmail: "y2_12@naver.com",
-            role1: "Android & iOS Application 개발 담당" ,
-            role2: "Django Server 구축 및 개발",
+            imageName: "img_geongmin",
+            devName: "이경민", devEmail: "gyeongmin@hansung.ac.kr",
+            role1: "OpenCV를 이용한 객체 탐지" ,
+            role2: "광학 문자 인식 및 속도 개선",
             role3: "")
     ]
     
@@ -89,6 +89,7 @@ extension UserInfoViewController : UICollectionViewDelegate,UICollectionViewData
             return errorCell
         }
         let num = indexPath.row - 1
+        cell.devImage.image = UIImage(named:devInfoArray[num].imageName)
         cell.devName.text = devInfoArray[num].devName
         cell.devEmail.text = devInfoArray[num].devEmail
         cell.role1.text = devInfoArray[num].role1

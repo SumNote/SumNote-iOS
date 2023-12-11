@@ -40,6 +40,8 @@
 		29E54F542B2151CD00E6E4B9 /* AllNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E54F522B2151CD00E6E4B9 /* AllNoteTableViewCell.xib */; };
 		29F237532B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F237512B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift */; };
 		29F237542B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F237522B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.xib */; };
+		29F818002B26F2950002E3C8 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F817FE2B26F2950002E3C8 /* TitleCollectionViewCell.swift */; };
+		29F818012B26F2950002E3C8 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F817FF2B26F2950002E3C8 /* TitleCollectionViewCell.xib */; };
 		6B131C677AE5EC50ED3C0C78 /* Pods_SumNote_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA17B356FAFB4FAA26769EE /* Pods_SumNote_iOS.framework */; };
 		E32A8C0C784668696349B96E /* Pods_SumNote_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E1944F96AACA28D292E1D5 /* Pods_SumNote_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +103,8 @@
 		29E54F522B2151CD00E6E4B9 /* AllNoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNoteTableViewCell.xib; sourceTree = "<group>"; };
 		29F237512B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		29F237522B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeveloperInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		29F817FE2B26F2950002E3C8 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		29F817FF2B26F2950002E3C8 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C4A468B5C02A5DB6CCDCEE5 /* Pods-SumNote-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E8268A925AF864ED6DA63E5 /* Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOS-SumNote-iOSUITests/Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85530E1935055CC307638EC9 /* Pods-SumNote-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 				29E54F522B2151CD00E6E4B9 /* AllNoteTableViewCell.xib */,
 				29F237512B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift */,
 				29F237522B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.xib */,
+				29F817FE2B26F2950002E3C8 /* TitleCollectionViewCell.swift */,
+				29F817FF2B26F2950002E3C8 /* TitleCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				294349FB2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib in Resources */,
+				29F818012B26F2950002E3C8 /* TitleCollectionViewCell.xib in Resources */,
 				2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */,
 				294349C92B07922300C57B49 /* LaunchScreen.storyboard in Resources */,
 				294349C62B07922300C57B49 /* Assets.xcassets in Resources */,
@@ -539,6 +546,7 @@
 				294349F12B079DDE00C57B49 /* TabBarController.swift in Sources */,
 				296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */,
 				29E54F532B2151CD00E6E4B9 /* AllNoteTableViewCell.swift in Sources */,
+				29F818002B26F2950002E3C8 /* TitleCollectionViewCell.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
 				295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */,
 			);

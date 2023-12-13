@@ -30,7 +30,8 @@ class PageContentsViewController: UIViewController {
        
     // 값 할당?
     private func setupUI() {
-        //view.backgroundColor = .systemBackground
-        titleTextLabel.text = titleString
+        print("PageContentsViewController : setupUI()")
+        view.backgroundColor = .systemBackground
+        //titleTextLabel.text = titleString
     }
 }

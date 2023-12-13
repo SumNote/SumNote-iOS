@@ -23,7 +23,7 @@ class NotePageViewController: UIPageViewController {
         // Do any additional setup after loading the view.
     }
     
-    // 페이지에 값 할당
+    // 페이지 배열에 값 할당 => 서버로부터 데이터 얻어와서 할당하는 과정 필요
     private func setupPages(){
         
     }

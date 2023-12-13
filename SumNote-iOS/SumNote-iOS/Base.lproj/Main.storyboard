@@ -438,6 +438,36 @@
             </objects>
             <point key="canvasLocation" x="1604" y="1392"/>
         </scene>
+        <!--Page Contents View Controller-->
+        <scene sceneID="Rv8-QE-yLa">
+            <objects>
+                <viewController id="1Ub-sp-gDn" customClass="PageContentsViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kqz-75-EDV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOM-Kv-MNs">
+                                <rect key="frame" x="138" y="408.66666666666669" width="117" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xYL-va-Ic4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AOM-Kv-MNs" firstAttribute="centerX" secondItem="xYL-va-Ic4" secondAttribute="centerX" id="v8n-PA-NQC"/>
+                            <constraint firstItem="AOM-Kv-MNs" firstAttribute="centerY" secondItem="xYL-va-Ic4" secondAttribute="centerY" id="vFc-IC-HXh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="title" destination="AOM-Kv-MNs" id="dSJ-lP-tXs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZB-Ur-MyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2372" y="1392"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sOV-QE-3gZ">
             <objects>

@@ -43,6 +43,7 @@
 		29F818002B26F2950002E3C8 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F817FE2B26F2950002E3C8 /* TitleCollectionViewCell.swift */; };
 		29F818012B26F2950002E3C8 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F817FF2B26F2950002E3C8 /* TitleCollectionViewCell.xib */; };
 		29F818032B26F67D0002E3C8 /* DeveloperInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F818022B26F67D0002E3C8 /* DeveloperInfo.swift */; };
+		29F818052B2994530002E3C8 /* NotePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F818042B2994530002E3C8 /* NotePageViewController.swift */; };
 		6B131C677AE5EC50ED3C0C78 /* Pods_SumNote_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA17B356FAFB4FAA26769EE /* Pods_SumNote_iOS.framework */; };
 		E32A8C0C784668696349B96E /* Pods_SumNote_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E1944F96AACA28D292E1D5 /* Pods_SumNote_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -107,6 +108,7 @@
 		29F817FE2B26F2950002E3C8 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		29F817FF2B26F2950002E3C8 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		29F818022B26F67D0002E3C8 /* DeveloperInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfo.swift; sourceTree = "<group>"; };
+		29F818042B2994530002E3C8 /* NotePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePageViewController.swift; sourceTree = "<group>"; };
 		2C4A468B5C02A5DB6CCDCEE5 /* Pods-SumNote-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E8268A925AF864ED6DA63E5 /* Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOS-SumNote-iOSUITests/Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85530E1935055CC307638EC9 /* Pods-SumNote-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				294349F62B079F3700C57B49 /* UserInfoViewController.swift */,
 				296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */,
 				295F903F2B20CAFF00F28446 /* AllQuizViewController.swift */,
+				29F818042B2994530002E3C8 /* NotePageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				294349F72B079F3700C57B49 /* UserInfoViewController.swift in Sources */,
 				295F90402B20CAFF00F28446 /* AllQuizViewController.swift in Sources */,
 				294349F32B079EEF00C57B49 /* MyNoteViewController.swift in Sources */,
+				29F818052B2994530002E3C8 /* NotePageViewController.swift in Sources */,
 				294349C12B07922100C57B49 /* LoginViewController.swift in Sources */,
 				296FFA7E2B20392100DE1D68 /* NavigationDelegate.swift in Sources */,
 				294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */,

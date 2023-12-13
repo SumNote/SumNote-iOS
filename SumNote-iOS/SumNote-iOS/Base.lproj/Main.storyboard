@@ -273,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnB-Nq-bhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="1411"/>
+            <point key="canvasLocation" x="131" y="1392"/>
         </scene>
         <!--All Quiz View Controller-->
         <scene sceneID="Nsf-xS-b4o">
@@ -303,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCk-KV-1tZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="1411"/>
+            <point key="canvasLocation" x="871" y="1392"/>
         </scene>
         <!--my note-->
         <scene sceneID="0ha-Jv-mQD">
@@ -429,6 +429,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmq-g3-VxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2371.7557251908397" y="712.67605633802816"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Xe9-sq-Xl1">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Cu0-Ih-biP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e36-r8-Agu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="1392"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sOV-QE-3gZ">

@@ -461,7 +461,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="title" destination="AOM-Kv-MNs" id="dSJ-lP-tXs"/>
+                        <outlet property="titleTextLabel" destination="AOM-Kv-MNs" id="dSJ-lP-tXs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZB-Ur-MyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

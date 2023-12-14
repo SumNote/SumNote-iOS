@@ -36,6 +36,8 @@
 		296FFA7E2B20392100DE1D68 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA7D2B20392100DE1D68 /* NavigationDelegate.swift */; };
 		2984A8FD2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */; };
 		2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */; };
+		29C43BA02B2B4956003D0E3D /* QuizPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C43B9F2B2B4956003D0E3D /* QuizPageViewController.swift */; };
+		29C43BA22B2B49D9003D0E3D /* QuizContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C43BA12B2B49D9003D0E3D /* QuizContentsViewController.swift */; };
 		29E54F532B2151CD00E6E4B9 /* AllNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E54F512B2151CD00E6E4B9 /* AllNoteTableViewCell.swift */; };
 		29E54F542B2151CD00E6E4B9 /* AllNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E54F522B2151CD00E6E4B9 /* AllNoteTableViewCell.xib */; };
 		29F237532B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F237512B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift */; };
@@ -102,6 +104,8 @@
 		296FFA7D2B20392100DE1D68 /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
 		2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyQuizListCollectionViewCell.xib; sourceTree = "<group>"; };
+		29C43B9F2B2B4956003D0E3D /* QuizPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPageViewController.swift; sourceTree = "<group>"; };
+		29C43BA12B2B49D9003D0E3D /* QuizContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizContentsViewController.swift; sourceTree = "<group>"; };
 		29E54F512B2151CD00E6E4B9 /* AllNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteTableViewCell.swift; sourceTree = "<group>"; };
 		29E54F522B2151CD00E6E4B9 /* AllNoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNoteTableViewCell.xib; sourceTree = "<group>"; };
 		29F237512B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 				295F903F2B20CAFF00F28446 /* AllQuizViewController.swift */,
 				29F818042B2994530002E3C8 /* NotePageViewController.swift */,
 				29F818062B2999650002E3C8 /* PageContentsViewController.swift */,
+				29C43B9F2B2B4956003D0E3D /* QuizPageViewController.swift */,
+				29C43BA12B2B49D9003D0E3D /* QuizContentsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -548,8 +554,10 @@
 				295F90402B20CAFF00F28446 /* AllQuizViewController.swift in Sources */,
 				294349F32B079EEF00C57B49 /* MyNoteViewController.swift in Sources */,
 				29F818052B2994530002E3C8 /* NotePageViewController.swift in Sources */,
+				29C43BA22B2B49D9003D0E3D /* QuizContentsViewController.swift in Sources */,
 				294349C12B07922100C57B49 /* LoginViewController.swift in Sources */,
 				296FFA7E2B20392100DE1D68 /* NavigationDelegate.swift in Sources */,
+				29C43BA02B2B4956003D0E3D /* QuizPageViewController.swift in Sources */,
 				294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */,
 				294349FA2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.swift in Sources */,
 				294349ED2B0792DF00C57B49 /* KaKaoAPI.swift in Sources */,

@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhL-kC-v0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1485" y="713"/>
+            <point key="canvasLocation" x="1605" y="715"/>
         </scene>
         <!--All Note View Controller-->
         <scene sceneID="9Lb-B2-eDb">
@@ -273,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnB-Nq-bhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11" y="1414"/>
+            <point key="canvasLocation" x="129" y="1410"/>
         </scene>
         <!--All Quiz View Controller-->
         <scene sceneID="Nsf-xS-b4o">
@@ -303,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCk-KV-1tZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="2114"/>
+            <point key="canvasLocation" x="129" y="2113"/>
         </scene>
         <!--my note-->
         <scene sceneID="0ha-Jv-mQD">
@@ -320,7 +320,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kc7-Lh-gsg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11" y="713"/>
+            <point key="canvasLocation" x="131" y="715"/>
         </scene>
         <!--my note-->
         <scene sceneID="qjS-S1-Z4Z">
@@ -381,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMc-rz-KTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="713"/>
+            <point key="canvasLocation" x="873" y="715"/>
         </scene>
         <!--dev info-->
         <scene sceneID="27q-Jy-qMh">
@@ -428,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmq-g3-VxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2253" y="712"/>
+            <point key="canvasLocation" x="2372" y="715"/>
         </scene>
         <!--Note Page View Controller-->
         <scene sceneID="Xe9-sq-Xl1">
@@ -436,7 +436,7 @@
                 <pageViewController storyboardIdentifier="NotePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Cu0-Ih-biP" customClass="NotePageViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e36-r8-Agu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="1413"/>
+            <point key="canvasLocation" x="871" y="1409"/>
         </scene>
         <!--Page Contents View Controller-->
         <scene sceneID="Rv8-QE-yLa">
@@ -466,7 +466,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZB-Ur-MyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1485" y="1413"/>
+            <point key="canvasLocation" x="1604" y="1409"/>
+        </scene>
+        <!--Quiz Page View Controller-->
+        <scene sceneID="SkR-fL-pns">
+            <objects>
+                <pageViewController storyboardIdentifier="QuizPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="OA2-bZ-hGg" customClass="QuizPageViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmZ-EF-eqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871" y="2113"/>
+        </scene>
+        <!--Quiz Contents View Controller-->
+        <scene sceneID="DkC-4q-hXC">
+            <objects>
+                <viewController storyboardIdentifier="QuizContentsViewController" id="z4v-3J-HET" customClass="QuizContentsViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9ce-1n-BEn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qvb-UZ-GNa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drs-Hx-8sX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="2113"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sOV-QE-3gZ">

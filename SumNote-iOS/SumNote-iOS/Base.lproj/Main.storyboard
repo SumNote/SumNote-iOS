@@ -436,7 +436,7 @@
                 <pageViewController storyboardIdentifier="NotePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Cu0-Ih-biP" customClass="NotePageViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e36-r8-Agu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="1409"/>
+            <point key="canvasLocation" x="1622" y="1410"/>
         </scene>
         <!--Page Contents View Controller-->
         <scene sceneID="Rv8-QE-yLa">
@@ -466,22 +466,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZB-Ur-MyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="1409"/>
+            <point key="canvasLocation" x="2372" y="1410"/>
         </scene>
-        <!--View Controller-->
+        <!--Note View Controller-->
         <scene sceneID="fSt-aj-doV">
             <objects>
-                <viewController id="OUQ-P3-XDb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteViewController" id="OUQ-P3-XDb" customClass="NoteViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nkd-Q2-7nI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9U6-Zk-jJG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3ZZ-be-cJe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9U6-Zk-jJG" firstAttribute="trailing" secondItem="3ZZ-be-cJe" secondAttribute="trailing" id="DaD-hc-X1V"/>
+                            <constraint firstItem="9U6-Zk-jJG" firstAttribute="bottom" secondItem="3ZZ-be-cJe" secondAttribute="bottom" id="aFz-M6-ztE"/>
+                            <constraint firstItem="9U6-Zk-jJG" firstAttribute="leading" secondItem="3ZZ-be-cJe" secondAttribute="leading" id="fmu-1B-RCS"/>
+                            <constraint firstItem="9U6-Zk-jJG" firstAttribute="top" secondItem="3ZZ-be-cJe" secondAttribute="top" id="swQ-vy-kDJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyL-2f-B0G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2350" y="1421"/>
+            <point key="canvasLocation" x="870.99236641221376" y="1409.8591549295775"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="C6P-jB-nHE">

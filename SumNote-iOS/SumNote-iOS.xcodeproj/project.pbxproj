@@ -10,6 +10,8 @@
 		1282C838B04E85A5407D6376 /* Pods_SumNote_iOS_SumNote_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAFEA5A35CEBEC1B324ECFC /* Pods_SumNote_iOS_SumNote_iOSUITests.framework */; };
 		29237D722B2D62C900BE751D /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D712B2D62C900BE751D /* QuizViewController.swift */; };
 		29237D742B2D711100BE751D /* QuizViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D732B2D711100BE751D /* QuizViewDelegate.swift */; };
+		29237D762B2DDF9D00BE751D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D752B2DDF9D00BE751D /* NoteViewController.swift */; };
+		29237D782B2DE11700BE751D /* NoteContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D772B2DE11700BE751D /* NoteContentsViewController.swift */; };
 		294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BC2B07922100C57B49 /* AppDelegate.swift */; };
 		294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BE2B07922100C57B49 /* SceneDelegate.swift */; };
 		294349C12B07922100C57B49 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349C02B07922100C57B49 /* LoginViewController.swift */; };
@@ -48,7 +50,6 @@
 		29F818012B26F2950002E3C8 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F817FF2B26F2950002E3C8 /* TitleCollectionViewCell.xib */; };
 		29F818032B26F67D0002E3C8 /* DeveloperInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F818022B26F67D0002E3C8 /* DeveloperInfo.swift */; };
 		29F818052B2994530002E3C8 /* NotePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F818042B2994530002E3C8 /* NotePageViewController.swift */; };
-		29F818072B2999650002E3C8 /* PageContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F818062B2999650002E3C8 /* PageContentsViewController.swift */; };
 		6B131C677AE5EC50ED3C0C78 /* Pods_SumNote_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA17B356FAFB4FAA26769EE /* Pods_SumNote_iOS.framework */; };
 		E32A8C0C784668696349B96E /* Pods_SumNote_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E1944F96AACA28D292E1D5 /* Pods_SumNote_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,8 @@
 		2069261481E287F72556C29C /* Pods-SumNote-iOS-SumNote-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOS-SumNote-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-SumNote-iOS-SumNote-iOSUITests/Pods-SumNote-iOS-SumNote-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		29237D712B2D62C900BE751D /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		29237D732B2D711100BE751D /* QuizViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewDelegate.swift; sourceTree = "<group>"; };
+		29237D752B2DDF9D00BE751D /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		29237D772B2DE11700BE751D /* NoteContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteContentsViewController.swift; sourceTree = "<group>"; };
 		294349B92B07922100C57B49 /* SumNote-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SumNote-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294349BC2B07922100C57B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		294349BE2B07922100C57B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +121,6 @@
 		29F817FF2B26F2950002E3C8 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		29F818022B26F67D0002E3C8 /* DeveloperInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfo.swift; sourceTree = "<group>"; };
 		29F818042B2994530002E3C8 /* NotePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePageViewController.swift; sourceTree = "<group>"; };
-		29F818062B2999650002E3C8 /* PageContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentsViewController.swift; sourceTree = "<group>"; };
 		2C4A468B5C02A5DB6CCDCEE5 /* Pods-SumNote-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E8268A925AF864ED6DA63E5 /* Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOS-SumNote-iOSUITests/Pods-SumNote-iOS-SumNote-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85530E1935055CC307638EC9 /* Pods-SumNote-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOSTests/Pods-SumNote-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -231,10 +233,11 @@
 				296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */,
 				295F903F2B20CAFF00F28446 /* AllQuizViewController.swift */,
 				29F818042B2994530002E3C8 /* NotePageViewController.swift */,
-				29F818062B2999650002E3C8 /* PageContentsViewController.swift */,
 				29C43B9F2B2B4956003D0E3D /* QuizPageViewController.swift */,
 				29C43BA12B2B49D9003D0E3D /* QuizContentsViewController.swift */,
 				29237D712B2D62C900BE751D /* QuizViewController.swift */,
+				29237D752B2DDF9D00BE751D /* NoteViewController.swift */,
+				29237D772B2DE11700BE751D /* NoteContentsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29237D762B2DDF9D00BE751D /* NoteViewController.swift in Sources */,
 				294349F52B079F2E00C57B49 /* NoteMakerViewController.swift in Sources */,
 				29F818032B26F67D0002E3C8 /* DeveloperInfo.swift in Sources */,
 				2984A8FD2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift in Sources */,
@@ -565,6 +569,7 @@
 				296FFA7E2B20392100DE1D68 /* NavigationDelegate.swift in Sources */,
 				29C43BA02B2B4956003D0E3D /* QuizPageViewController.swift in Sources */,
 				294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */,
+				29237D782B2DE11700BE751D /* NoteContentsViewController.swift in Sources */,
 				294349FA2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.swift in Sources */,
 				294349ED2B0792DF00C57B49 /* KaKaoAPI.swift in Sources */,
 				296FFA762B2014F000DE1D68 /* NoteTableViewCell.swift in Sources */,
@@ -575,7 +580,6 @@
 				29F818002B26F2950002E3C8 /* TitleCollectionViewCell.swift in Sources */,
 				29237D742B2D711100BE751D /* QuizViewDelegate.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
-				29F818072B2999650002E3C8 /* PageContentsViewController.swift in Sources */,
 				295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

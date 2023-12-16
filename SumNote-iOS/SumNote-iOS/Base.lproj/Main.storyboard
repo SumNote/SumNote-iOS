@@ -483,13 +483,82 @@
             </objects>
             <point key="canvasLocation" x="2350" y="1421"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="C6P-jB-nHE">
+            <objects>
+                <viewController id="zsT-0s-1S3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HD0-Tj-QsL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_left_cross" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-kP-VVF">
+                                <rect key="frame" x="40" y="124" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="03i-oa-EpW"/>
+                                    <constraint firstAttribute="height" constant="24" id="l1s-hY-JD1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터베이스의 문제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVa-sP-lPE">
+                                <rect key="frame" x="74.000000000000014" y="124" width="160.33333333333337" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xBl-9l-7Ja">
+                                <rect key="frame" x="40" y="168" width="313" height="4"/>
+                                <color key="tintColor" name="green"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVc-ID-SXm">
+                                <rect key="frame" x="339" y="177" width="14" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUh-pU-X22">
+                                <rect key="frame" x="330" y="177" width="7" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" name="green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnW-3J-uMv">
+                                <rect key="frame" x="0.0" y="225" width="393" height="593"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Zd-oU-pJd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Zd-oU-pJd" firstAttribute="trailing" secondItem="xBl-9l-7Ja" secondAttribute="trailing" constant="40" id="51j-A7-CRz"/>
+                            <constraint firstItem="JVa-sP-lPE" firstAttribute="leading" secondItem="eNc-kP-VVF" secondAttribute="trailing" constant="10" id="ACg-fh-KX6"/>
+                            <constraint firstItem="JVa-sP-lPE" firstAttribute="top" secondItem="eNc-kP-VVF" secondAttribute="top" id="BcW-Cc-5I8"/>
+                            <constraint firstItem="xBl-9l-7Ja" firstAttribute="leading" secondItem="2Zd-oU-pJd" secondAttribute="leading" constant="40" id="GeW-WV-i8b"/>
+                            <constraint firstItem="cnW-3J-uMv" firstAttribute="leading" secondItem="2Zd-oU-pJd" secondAttribute="leading" id="H8g-qo-kEF"/>
+                            <constraint firstItem="cnW-3J-uMv" firstAttribute="top" secondItem="eVc-ID-SXm" secondAttribute="bottom" constant="30" id="JTp-GN-KcF"/>
+                            <constraint firstItem="eVc-ID-SXm" firstAttribute="trailing" secondItem="xBl-9l-7Ja" secondAttribute="trailing" id="QjP-72-NxH"/>
+                            <constraint firstItem="bUh-pU-X22" firstAttribute="top" secondItem="eVc-ID-SXm" secondAttribute="top" id="V2j-tC-Avc"/>
+                            <constraint firstItem="2Zd-oU-pJd" firstAttribute="bottom" secondItem="cnW-3J-uMv" secondAttribute="bottom" id="X0d-e5-jel"/>
+                            <constraint firstItem="bUh-pU-X22" firstAttribute="bottom" secondItem="eVc-ID-SXm" secondAttribute="bottom" id="YG3-KX-v3K"/>
+                            <constraint firstItem="eNc-kP-VVF" firstAttribute="top" secondItem="2Zd-oU-pJd" secondAttribute="top" constant="65" id="YM7-o3-cCv"/>
+                            <constraint firstItem="eNc-kP-VVF" firstAttribute="leading" secondItem="2Zd-oU-pJd" secondAttribute="leading" constant="40" id="Ye2-Xe-hZe"/>
+                            <constraint firstItem="eVc-ID-SXm" firstAttribute="top" secondItem="xBl-9l-7Ja" secondAttribute="bottom" constant="5" id="a2C-g6-k6M"/>
+                            <constraint firstItem="cnW-3J-uMv" firstAttribute="trailing" secondItem="2Zd-oU-pJd" secondAttribute="trailing" id="ds0-MM-HH6"/>
+                            <constraint firstItem="eVc-ID-SXm" firstAttribute="leading" secondItem="bUh-pU-X22" secondAttribute="trailing" constant="2" id="fQM-5x-9jh"/>
+                            <constraint firstItem="xBl-9l-7Ja" firstAttribute="top" secondItem="eNc-kP-VVF" secondAttribute="bottom" constant="20" id="rZ4-ct-a9e"/>
+                            <constraint firstItem="JVa-sP-lPE" firstAttribute="bottom" secondItem="eNc-kP-VVF" secondAttribute="bottom" id="svE-Yf-LiY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPe-UQ-9ae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870.99236641221376" y="2112.6760563380285"/>
+        </scene>
         <!--Quiz Page View Controller-->
         <scene sceneID="SkR-fL-pns">
             <objects>
                 <pageViewController storyboardIdentifier="QuizPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="OA2-bZ-hGg" customClass="QuizPageViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmZ-EF-eqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="2113"/>
+            <point key="canvasLocation" x="1604" y="2113"/>
         </scene>
         <!--Quiz Contents View Controller-->
         <scene sceneID="DkC-4q-hXC">
@@ -504,7 +573,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drs-Hx-8sX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="2113"/>
+            <point key="canvasLocation" x="2349" y="2113"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sOV-QE-3gZ">
@@ -533,6 +602,7 @@
         <image name="ic_home" width="28" height="28"/>
         <image name="ic_noteMaker" width="28" height="28"/>
         <image name="ic_user" width="28" height="28"/>
+        <image name="img_left_cross" width="8.6666669845581055" height="8.6666669845581055"/>
         <image name="img_reference_image" width="800.33331298828125" height="1181.3333740234375"/>
         <image name="message-square" width="28" height="28"/>
         <namedColor name="green">

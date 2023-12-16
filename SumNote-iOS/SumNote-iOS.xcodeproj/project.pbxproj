@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1282C838B04E85A5407D6376 /* Pods_SumNote_iOS_SumNote_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAFEA5A35CEBEC1B324ECFC /* Pods_SumNote_iOS_SumNote_iOSUITests.framework */; };
+		29237D722B2D62C900BE751D /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D712B2D62C900BE751D /* QuizViewController.swift */; };
 		294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BC2B07922100C57B49 /* AppDelegate.swift */; };
 		294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BE2B07922100C57B49 /* SceneDelegate.swift */; };
 		294349C12B07922100C57B49 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349C02B07922100C57B49 /* LoginViewController.swift */; };
@@ -72,6 +73,7 @@
 		0B7AA69BC57E5F60F94A9030 /* Pods-SumNote-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOS.release.xcconfig"; path = "Target Support Files/Pods-SumNote-iOS/Pods-SumNote-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		1DAFEA5A35CEBEC1B324ECFC /* Pods_SumNote_iOS_SumNote_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SumNote_iOS_SumNote_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2069261481E287F72556C29C /* Pods-SumNote-iOS-SumNote-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SumNote-iOS-SumNote-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-SumNote-iOS-SumNote-iOSUITests/Pods-SumNote-iOS-SumNote-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		29237D712B2D62C900BE751D /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		294349B92B07922100C57B49 /* SumNote-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SumNote-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294349BC2B07922100C57B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		294349BE2B07922100C57B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				29F818062B2999650002E3C8 /* PageContentsViewController.swift */,
 				29C43B9F2B2B4956003D0E3D /* QuizPageViewController.swift */,
 				29C43BA12B2B49D9003D0E3D /* QuizContentsViewController.swift */,
+				29237D712B2D62C900BE751D /* QuizViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				294349F12B079DDE00C57B49 /* TabBarController.swift in Sources */,
 				296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */,
 				29E54F532B2151CD00E6E4B9 /* AllNoteTableViewCell.swift in Sources */,
+				29237D722B2D62C900BE751D /* QuizViewController.swift in Sources */,
 				29F818002B26F2950002E3C8 /* TitleCollectionViewCell.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
 				29F818072B2999650002E3C8 /* PageContentsViewController.swift in Sources */,

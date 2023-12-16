@@ -483,10 +483,10 @@
             </objects>
             <point key="canvasLocation" x="2350" y="1421"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="C6P-jB-nHE">
             <objects>
-                <viewController id="zsT-0s-1S3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizViewController" id="zsT-0s-1S3" customClass="QuizViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HD0-Tj-QsL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -547,6 +547,14 @@
                             <constraint firstItem="JVa-sP-lPE" firstAttribute="bottom" secondItem="eNc-kP-VVF" secondAttribute="bottom" id="svE-Yf-LiY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="eNc-kP-VVF" id="NaP-RL-lR4"/>
+                        <outlet property="currentIndex" destination="bUh-pU-X22" id="ths-IJ-EsW"/>
+                        <outlet property="numberOfQuiz" destination="eVc-ID-SXm" id="1Om-T2-D4v"/>
+                        <outlet property="progressBar" destination="xBl-9l-7Ja" id="Ye7-qF-CZp"/>
+                        <outlet property="quizPageViewContainer" destination="cnW-3J-uMv" id="8Cv-Lb-XO4"/>
+                        <outlet property="quizTitle" destination="JVa-sP-lPE" id="bK7-qq-J2D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPe-UQ-9ae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -567,9 +575,26 @@
                     <view key="view" contentMode="scaleToFill" id="9ce-1n-BEn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORTRAN은 어떤 목적으로 개발되었나요?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoI-dn-onH">
+                                <rect key="frame" x="40" y="69" width="313" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qvb-UZ-GNa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IoI-dn-onH" firstAttribute="centerX" secondItem="qvb-UZ-GNa" secondAttribute="centerX" id="8y1-jM-IYA"/>
+                            <constraint firstItem="IoI-dn-onH" firstAttribute="leading" secondItem="qvb-UZ-GNa" secondAttribute="leading" constant="40" id="WFe-A7-LjT"/>
+                            <constraint firstItem="IoI-dn-onH" firstAttribute="top" secondItem="qvb-UZ-GNa" secondAttribute="top" constant="10" id="mF5-aV-7ve"/>
+                            <constraint firstItem="qvb-UZ-GNa" firstAttribute="trailing" secondItem="IoI-dn-onH" secondAttribute="trailing" constant="40" id="r8r-RW-TO1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="IoI-dn-onH" id="Kpa-i4-RKB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drs-Hx-8sX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

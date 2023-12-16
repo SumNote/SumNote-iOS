@@ -12,6 +12,11 @@ import UIKit
 // 올바른 번호 클릭시 해설 알려주고, 틀린 번호 클릭시 정답과 해설 공개
 class QuizContentsViewController: UIViewController {
     
+    var pageIndex: Int = 0 // 페이지 인덱스 프로퍼티
+    
+    // 문제
+    @IBOutlet weak var questionLabel: UILabel!
+    var question : String?
     // 1번 문항
     // 2번 문항
     // 3번 문항
@@ -23,6 +28,7 @@ class QuizContentsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        questionLabel.text = question
     }
     
 

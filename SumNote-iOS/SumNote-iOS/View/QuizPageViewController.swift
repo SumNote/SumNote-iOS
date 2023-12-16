@@ -20,23 +20,10 @@ class QuizPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.dataSource = self // datasource를 자기 자신으로 지정
         self.delegate = self // delegate 설정 추가
         
-//        // 시작 페이지 지정 UIPageViewController의 setViewController함수 사용
-//        if let startingViewController = getQuizContent(at: 0) { // 0번째 값으로 페이지 시작
-//            setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
-//        }
-        
     }
-
-//    // 서버로부터 퀴즈 정보 얻어오기
-//    func fetchQuizData(){
-//        let data = ["Quiz1","Quiz2","Quiz3","Quiz4"] // 퀴즈로 제공할 정보 배열(테스트용)
-//        self.quizData = data
-//    }
-//
     
     // 퀴즈 페이지에 정보 할당 후 퀴즈 페이지 리턴
     func getQuizContent(at index : Int) -> QuizContentsViewController? {

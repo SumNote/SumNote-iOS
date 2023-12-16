@@ -151,10 +151,10 @@ extension MyNoteViewController : NavigationDelegate{
     func didTappedNoteCell() {
         print("didTappedNoteCell")
         
-        // 노트 페이지 뷰 인스턴스 찾기 => 변경 필요
-        let notePageView = stoaryBoard.instantiateViewController(withIdentifier: "NotePageViewController") as! NotePageViewController
+        // 노트 페이지 뷰 인스턴스 찾기
+        let noteVC = stoaryBoard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
         // 화면 이동하기
-        self.navigationController?.pushViewController(notePageView, animated: true)
+        self.navigationController?.pushViewController(noteVC, animated: true)
     }
     
     // 퀴즈 페이지로 이동(퀴즈 셀 클릭시)

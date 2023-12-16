@@ -9,6 +9,8 @@ import UIKit
 
 class NoteContentsViewController: UIViewController {
 
+    var pageIndex: Int = 0 // 페이지 인덱스 프로퍼티
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

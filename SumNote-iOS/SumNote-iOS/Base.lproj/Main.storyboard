@@ -433,7 +433,7 @@
         <!--Note Page View Controller-->
         <scene sceneID="Xe9-sq-Xl1">
             <objects>
-                <pageViewController storyboardIdentifier="NotePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Cu0-Ih-biP" customClass="NotePageViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="NotePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="Cu0-Ih-biP" customClass="NotePageViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e36-r8-Agu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1622" y="1410"/>
@@ -449,12 +449,31 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_note_background" translatesAutoresizingMaskIntoConstraints="NO" id="3V6-Kn-P53">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터 베이스의 이해" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-s5-zgD">
+                                <rect key="frame" x="20" y="79" width="353" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y92-fW-8wD">
+                                <rect key="frame" x="20" y="135" width="353" height="573"/>
+                                <mutableString key="text"># 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어 </mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xYL-va-Ic4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xYL-va-Ic4" firstAttribute="trailing" secondItem="3V6-Kn-P53" secondAttribute="trailing" id="5MM-V2-vGF"/>
+                            <constraint firstItem="hAK-s5-zgD" firstAttribute="top" secondItem="xYL-va-Ic4" secondAttribute="top" constant="20" id="5o4-Xs-E7o"/>
                             <constraint firstItem="3V6-Kn-P53" firstAttribute="top" secondItem="xYL-va-Ic4" secondAttribute="top" id="9xc-4l-eRJ"/>
+                            <constraint firstItem="Y92-fW-8wD" firstAttribute="leading" secondItem="hAK-s5-zgD" secondAttribute="leading" id="CVp-PE-4fP"/>
+                            <constraint firstItem="Y92-fW-8wD" firstAttribute="top" secondItem="hAK-s5-zgD" secondAttribute="bottom" constant="20" id="Kj6-dh-szx"/>
+                            <constraint firstItem="xYL-va-Ic4" firstAttribute="trailing" secondItem="hAK-s5-zgD" secondAttribute="trailing" constant="20" id="Sif-sb-LC3"/>
+                            <constraint firstItem="Y92-fW-8wD" firstAttribute="trailing" secondItem="hAK-s5-zgD" secondAttribute="trailing" id="WbF-yL-I0v"/>
+                            <constraint firstItem="hAK-s5-zgD" firstAttribute="leading" secondItem="xYL-va-Ic4" secondAttribute="leading" constant="20" id="abo-Kf-dnF"/>
                             <constraint firstItem="3V6-Kn-P53" firstAttribute="leading" secondItem="xYL-va-Ic4" secondAttribute="leading" id="kWC-LZ-Wvd"/>
                             <constraint firstItem="xYL-va-Ic4" firstAttribute="bottom" secondItem="3V6-Kn-P53" secondAttribute="bottom" id="uLG-lU-yVB"/>
                         </constraints>

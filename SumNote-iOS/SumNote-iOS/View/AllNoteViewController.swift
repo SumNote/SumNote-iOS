@@ -15,9 +15,17 @@ class AllNoteViewController: UIViewController {
     
     weak var delegater : NavigationDelegate? // MyNoteView를 위임자로 설정
     
+    @IBOutlet weak var backBtn: UIImageView! // 뒤로가기버튼(이미지)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
+        
+        // 뒤로가기 이벤트 정의
+        // 탭 제스처 인식기 설정 => 뒤로가기 버튼 사용을 위해
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backBtnTapped))
+        backBtn.isUserInteractionEnabled = true // 사용자 상호작용 활성화
+        backBtn.addGestureRecognizer(tapGesture)
     }
     
     func setTableView(){
@@ -28,6 +36,29 @@ class AllNoteViewController: UIViewController {
         allNoteTableView.register(UINib(nibName: "AllNoteTableViewCell", bundle: nil), forCellReuseIdentifier: AllNoteTableViewCell.identifier)
         
         
+    }
+    
+    // 뷰가 실행되고 난 이후 (네비게이션 바 커스텀을 위해 상단 바 숨기기)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 네비게이션 바 숨기기
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    // 뷰가 사라질 때 (네비게이션 바 다시 보일 수 있도록)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // 다른 뷰로 이동할 때 네비게이션 바를 다시 보이게 설정
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    // 백 버튼 탭 처리
+    // 네비게이션 컨트롤러에서 현재 뷰 컨트롤러 제거
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
+        print("뒤로가기 클릭됨")
     }
 
 }

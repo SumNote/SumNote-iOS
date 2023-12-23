@@ -287,6 +287,7 @@
                     <navigationItem key="navigationItem" id="Wex-01-t2I"/>
                     <connections>
                         <outlet property="allNoteTableView" destination="y2b-sn-Gxf" id="8Qm-JW-cpH"/>
+                        <outlet property="backBtn" destination="Hvt-sw-znu" id="cxh-vF-w4X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnB-Nq-bhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

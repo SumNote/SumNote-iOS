@@ -11,15 +11,22 @@ class NoteViewController: UIViewController {
     
     var noteData : [String] = [] // 사용자에게 보여줄 데이터
     
-    
     @IBOutlet weak var notePageViewContainer: UIView! // 페이지뷰의 컨테이너 역할을 수행
     var notePageViewController : UIPageViewController! // 노트 페이지 뷰
     
+    @IBOutlet weak var backBtn : UIImageView! // 뒤로가기 기능을 수행하기 위함
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fetchNoteData() // 노트 데이터 얻어오기
+        
+        // 뒤로가기 이벤트 정의
+        // 탭 제스처 인식기 설정 => 뒤로가기 버튼 사용을 위해
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backBtnTapped))
+        backBtn.isUserInteractionEnabled = true // 사용자 상호작용 활성화
+        backBtn.addGestureRecognizer(tapGesture)
+        
         
         //스토리보드를 사용하여 NotePageViewController 인스턴스화 & 자식 VC로 지정
         if let notePageVC = storyboard?.instantiateViewController(withIdentifier: "NotePageViewController") as? NotePageViewController {
@@ -42,17 +49,28 @@ class NoteViewController: UIViewController {
         }
     }
     
+    // 뷰가 실행되고 난 이후 (네비게이션 바 커스텀을 위해 상단 바 숨기기)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 네비게이션 바 숨기기
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     // 서버로부터 데이터 얻어오기
     private func fetchNoteData(){
         let data = ["Page1","Page2","Page3"] // 노트의 각 페이지에 해당하는 내용
         self.noteData = data
     }
     
+    // 네비게이션 바 숨기기
+    
 
     // 백 버튼 탭 처리
     // 네비게이션 컨트롤러에서 현재 뷰 컨트롤러 제거
-//    @objc func backBtnTapped() {
-//        self.navigationController?.popViewController(animated: true)
-//    }
+    @objc func backBtnTapped() {
+        self.navigationController?.popViewController(animated: true)
+        print("뒤로가기 클릭됨")
+    }
     
 }

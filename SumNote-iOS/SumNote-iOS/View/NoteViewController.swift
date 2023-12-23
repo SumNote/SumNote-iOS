@@ -57,6 +57,14 @@ class NoteViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    // 뷰가 사라질 때 (네비게이션 바 다시 보일 수 있도록)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // 다른 뷰로 이동할 때 네비게이션 바를 다시 보이게 설정
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     // 서버로부터 데이터 얻어오기
     private func fetchNoteData(){
         let data = ["Page1","Page2","Page3"] // 노트의 각 페이지에 해당하는 내용

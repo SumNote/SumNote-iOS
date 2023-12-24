@@ -313,7 +313,7 @@
                                     <constraint firstAttribute="width" constant="24" id="hdh-nF-KXL"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="나의 노트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCV-kn-2Jc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 퀴즈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCV-kn-2Jc">
                                 <rect key="frame" x="44" y="69" width="74" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -326,7 +326,7 @@
                             <constraint firstItem="UCV-kn-2Jc" firstAttribute="bottom" secondItem="b2S-At-oHk" secondAttribute="bottom" id="0c7-c7-i9o"/>
                             <constraint firstItem="3IK-gq-j6l" firstAttribute="top" secondItem="b2S-At-oHk" secondAttribute="bottom" constant="10" id="4KY-pa-EaO"/>
                             <constraint firstItem="sc8-I8-hiA" firstAttribute="bottom" secondItem="3IK-gq-j6l" secondAttribute="bottom" id="6cR-AE-dg8"/>
-                            <constraint firstItem="UCV-kn-2Jc" firstAttribute="centerY" secondItem="b2S-At-oHk" secondAttribute="centerY" id="Cyq-yQ-QKp"/>
+                            <constraint firstItem="UCV-kn-2Jc" firstAttribute="leading" secondItem="b2S-At-oHk" secondAttribute="trailing" constant="10" id="KiW-H3-iHi"/>
                             <constraint firstItem="UCV-kn-2Jc" firstAttribute="top" secondItem="b2S-At-oHk" secondAttribute="top" id="VX0-qk-J8T"/>
                             <constraint firstItem="b2S-At-oHk" firstAttribute="leading" secondItem="sc8-I8-hiA" secondAttribute="leading" constant="10" id="jRg-Np-PTs"/>
                             <constraint firstItem="3IK-gq-j6l" firstAttribute="trailing" secondItem="sc8-I8-hiA" secondAttribute="trailing" id="pPQ-Tm-ClI"/>

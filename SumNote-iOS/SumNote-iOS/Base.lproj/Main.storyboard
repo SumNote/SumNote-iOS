@@ -336,6 +336,7 @@
                     </view>
                     <connections>
                         <outlet property="allQuizTableView" destination="3IK-gq-j6l" id="lHJ-k0-SWb"/>
+                        <outlet property="backBtn" destination="b2S-At-oHk" id="Jx5-AZ-Du2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCk-KV-1tZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

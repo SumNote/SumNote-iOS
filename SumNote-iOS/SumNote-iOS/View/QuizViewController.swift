@@ -27,6 +27,7 @@ class QuizViewController: UIViewController {
     var quizData : [String] = [] // 사용자에게 보여줄 데이터 => 서버로부터 얻어온 결과물
     
     
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,7 +65,25 @@ class QuizViewController: UIViewController {
         
     }
     
+    // 뷰가 실행되고 난 이후 (네비게이션 바 커스텀을 위해 상단 바 숨기기)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 네비게이션 바 숨기기
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
     
+    // 뷰가 사라질 때 (네비게이션 바 다시 보일 수 있도록)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // 다른 뷰로 이동할 때 네비게이션 바를 다시 보이게 설정
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    
+    
+    // MARK: functions
     // 서버로부터 데이터 얻어오기
     private func fetchQuizData(){
         let data = ["Quiz1","Quiz2","Quiz3","Quiz4","Quiz5"] // 퀴즈로 제공할 정보 배열(테스트용)
@@ -79,6 +98,8 @@ class QuizViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         print("뒤로가기 클릭됨")
     }
+    
+    
     
 }
 

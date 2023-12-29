@@ -12,6 +12,7 @@
 		29237D742B2D711100BE751D /* QuizViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D732B2D711100BE751D /* QuizViewDelegate.swift */; };
 		29237D762B2DDF9D00BE751D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D752B2DDF9D00BE751D /* NoteViewController.swift */; };
 		29237D782B2DE11700BE751D /* NoteContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D772B2DE11700BE751D /* NoteContentsViewController.swift */; };
+		293E0C672B3F11D800032033 /* DjangoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C662B3F11D800032033 /* DjangoAPI.swift */; };
 		294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BC2B07922100C57B49 /* AppDelegate.swift */; };
 		294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BE2B07922100C57B49 /* SceneDelegate.swift */; };
 		294349C12B07922100C57B49 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349C02B07922100C57B49 /* LoginViewController.swift */; };
@@ -79,6 +80,7 @@
 		29237D732B2D711100BE751D /* QuizViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewDelegate.swift; sourceTree = "<group>"; };
 		29237D752B2DDF9D00BE751D /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		29237D772B2DE11700BE751D /* NoteContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteContentsViewController.swift; sourceTree = "<group>"; };
+		293E0C662B3F11D800032033 /* DjangoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DjangoAPI.swift; sourceTree = "<group>"; };
 		294349B92B07922100C57B49 /* SumNote-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SumNote-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294349BC2B07922100C57B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		294349BE2B07922100C57B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				294349EC2B0792DF00C57B49 /* KaKaoAPI.swift */,
+				293E0C662B3F11D800032033 /* DjangoAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				29F818002B26F2950002E3C8 /* TitleCollectionViewCell.swift in Sources */,
 				29237D742B2D711100BE751D /* QuizViewDelegate.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
+				293E0C672B3F11D800032033 /* DjangoAPI.swift in Sources */,
 				295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

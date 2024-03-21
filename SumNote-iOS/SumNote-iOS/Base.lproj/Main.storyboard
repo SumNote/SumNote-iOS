@@ -244,6 +244,92 @@
             </objects>
             <point key="canvasLocation" x="1605" y="715"/>
         </scene>
+        <!--Created Note View Controller-->
+        <scene sceneID="HHW-oz-cHb">
+            <objects>
+                <viewController storyboardIdentifier="CreatedNoteViewController" id="kxx-Am-t7s" customClass="CreatedNoteViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zb8-ZJ-M3t">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_note_background" translatesAutoresizingMaskIntoConstraints="NO" id="p1O-Z6-emG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKi-jB-b3S">
+                                <rect key="frame" x="20" y="753" width="170" height="50"/>
+                                <color key="backgroundColor" name="green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="TAm-h7-lGP"/>
+                                    <constraint firstAttribute="width" constant="170" id="XUD-er-j5O"/>
+                                    <constraint firstAttribute="height" constant="50" id="uBe-8f-4qw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="취소">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCameraDidTapped:" destination="Jcd-Ii-ErG" eventType="touchUpInside" id="SdV-yp-aH6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터 베이스의 이해" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptl-yb-YaY">
+                                <rect key="frame" x="20" y="79" width="353" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLA-op-xng">
+                                <rect key="frame" x="20" y="135" width="353" height="573"/>
+                                <string key="text"># 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어 </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIl-sk-jH0">
+                                <rect key="frame" x="203" y="753" width="170" height="50"/>
+                                <color key="backgroundColor" name="green"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="chq-op-NU1"/>
+                                    <constraint firstAttribute="height" constant="50" id="qiw-Hm-5Q0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="카메라">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCameraDidTapped:" destination="Jcd-Ii-ErG" eventType="touchUpInside" id="zXK-fe-gXm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XWc-Xh-UMG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bLA-op-xng" firstAttribute="leading" secondItem="ptl-yb-YaY" secondAttribute="leading" id="1Oj-Uw-KRY"/>
+                            <constraint firstItem="xIl-sk-jH0" firstAttribute="width" secondItem="FKi-jB-b3S" secondAttribute="width" id="2yJ-mW-VRp"/>
+                            <constraint firstItem="FKi-jB-b3S" firstAttribute="leading" secondItem="bLA-op-xng" secondAttribute="leading" id="3zA-dL-Zpc"/>
+                            <constraint firstItem="xIl-sk-jH0" firstAttribute="bottom" secondItem="FKi-jB-b3S" secondAttribute="bottom" id="50d-yB-5U9"/>
+                            <constraint firstItem="p1O-Z6-emG" firstAttribute="leading" secondItem="XWc-Xh-UMG" secondAttribute="leading" id="9qH-sI-2hI"/>
+                            <constraint firstItem="p1O-Z6-emG" firstAttribute="top" secondItem="XWc-Xh-UMG" secondAttribute="top" id="Eeh-bm-Bhc"/>
+                            <constraint firstItem="xIl-sk-jH0" firstAttribute="centerY" secondItem="FKi-jB-b3S" secondAttribute="centerY" id="LfN-RR-ADx"/>
+                            <constraint firstItem="ptl-yb-YaY" firstAttribute="top" secondItem="XWc-Xh-UMG" secondAttribute="top" constant="20" id="UMo-2T-gq0"/>
+                            <constraint firstItem="FKi-jB-b3S" firstAttribute="top" secondItem="bLA-op-xng" secondAttribute="bottom" constant="45" id="XXJ-Di-e0s"/>
+                            <constraint firstItem="bLA-op-xng" firstAttribute="top" secondItem="ptl-yb-YaY" secondAttribute="bottom" constant="20" id="dfM-f3-SQc"/>
+                            <constraint firstItem="ptl-yb-YaY" firstAttribute="leading" secondItem="XWc-Xh-UMG" secondAttribute="leading" constant="20" id="i1Z-z5-Gls"/>
+                            <constraint firstItem="XWc-Xh-UMG" firstAttribute="bottom" secondItem="p1O-Z6-emG" secondAttribute="bottom" id="lnA-Cv-bum"/>
+                            <constraint firstItem="bLA-op-xng" firstAttribute="trailing" secondItem="ptl-yb-YaY" secondAttribute="trailing" id="m9X-sF-NED"/>
+                            <constraint firstItem="XWc-Xh-UMG" firstAttribute="trailing" secondItem="ptl-yb-YaY" secondAttribute="trailing" constant="20" id="ol6-dA-HOA"/>
+                            <constraint firstItem="XWc-Xh-UMG" firstAttribute="trailing" secondItem="p1O-Z6-emG" secondAttribute="trailing" id="pcF-zk-Z1H"/>
+                            <constraint firstItem="xIl-sk-jH0" firstAttribute="height" secondItem="FKi-jB-b3S" secondAttribute="height" id="qLH-jD-Zt7"/>
+                            <constraint firstItem="xIl-sk-jH0" firstAttribute="top" secondItem="FKi-jB-b3S" secondAttribute="top" id="qNK-hY-0Pg"/>
+                            <constraint firstItem="xIl-sk-jH0" firstAttribute="trailing" secondItem="bLA-op-xng" secondAttribute="trailing" id="ywr-kf-ZJL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCb-2T-ia0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="1401"/>
+        </scene>
         <!--All Note View Controller-->
         <scene sceneID="9Lb-B2-eDb">
             <objects>
@@ -292,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnB-Nq-bhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127.48091603053435" y="1409.8591549295775"/>
+            <point key="canvasLocation" x="95" y="2101"/>
         </scene>
         <!--All Quiz View Controller-->
         <scene sceneID="Nsf-xS-b4o">
@@ -341,7 +427,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCk-KV-1tZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127.48091603053435" y="2112.6760563380285"/>
+            <point key="canvasLocation" x="94" y="2811"/>
         </scene>
         <!--my note-->
         <scene sceneID="0ha-Jv-mQD">
@@ -474,7 +560,7 @@
                 <pageViewController storyboardIdentifier="NotePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="Cu0-Ih-biP" customClass="NotePageViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e36-r8-Agu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1622" y="1410"/>
+            <point key="canvasLocation" x="1604" y="2102"/>
         </scene>
         <!--Note Contents View Controller-->
         <scene sceneID="Rv8-QE-yLa">
@@ -519,7 +605,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZB-Ur-MyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2372" y="1410"/>
+            <point key="canvasLocation" x="2372" y="2101"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="fSt-aj-doV">
@@ -569,7 +655,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyL-2f-B0G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870.99236641221376" y="1409.8591549295775"/>
+            <point key="canvasLocation" x="840" y="2101"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="C6P-jB-nHE">
@@ -646,7 +732,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPe-UQ-9ae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870.99236641221376" y="2112.6760563380285"/>
+            <point key="canvasLocation" x="839" y="2811"/>
         </scene>
         <!--Quiz Page View Controller-->
         <scene sceneID="SkR-fL-pns">
@@ -654,7 +740,7 @@
                 <pageViewController storyboardIdentifier="QuizPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="OA2-bZ-hGg" customClass="QuizPageViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmZ-EF-eqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="2113"/>
+            <point key="canvasLocation" x="1604" y="2811"/>
         </scene>
         <!--Quiz Contents View Controller-->
         <scene sceneID="DkC-4q-hXC">
@@ -742,7 +828,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drs-Hx-8sX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2349" y="2113"/>
+            <point key="canvasLocation" x="2372" y="2811"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sOV-QE-3gZ">

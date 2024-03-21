@@ -41,6 +41,7 @@
 		296FFA7A2B2014FF00DE1D68 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA782B2014FF00DE1D68 /* QuizTableViewCell.swift */; };
 		296FFA7B2B2014FF00DE1D68 /* QuizTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296FFA792B2014FF00DE1D68 /* QuizTableViewCell.xib */; };
 		296FFA7E2B20392100DE1D68 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA7D2B20392100DE1D68 /* NavigationDelegate.swift */; };
+		2978599F2BAC18C700A3FA14 /* CreatedNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978599E2BAC18C700A3FA14 /* CreatedNoteViewController.swift */; };
 		2984A8FD2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */; };
 		2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */; };
 		29C43BA02B2B4956003D0E3D /* QuizPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C43B9F2B2B4956003D0E3D /* QuizPageViewController.swift */; };
@@ -115,6 +116,7 @@
 		296FFA782B2014FF00DE1D68 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		296FFA792B2014FF00DE1D68 /* QuizTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizTableViewCell.xib; sourceTree = "<group>"; };
 		296FFA7D2B20392100DE1D68 /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
+		2978599E2BAC18C700A3FA14 /* CreatedNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedNoteViewController.swift; sourceTree = "<group>"; };
 		2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyQuizListCollectionViewCell.xib; sourceTree = "<group>"; };
 		29C43B9F2B2B4956003D0E3D /* QuizPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPageViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				29237D712B2D62C900BE751D /* QuizViewController.swift */,
 				29237D752B2DDF9D00BE751D /* NoteViewController.swift */,
 				29237D772B2DE11700BE751D /* NoteContentsViewController.swift */,
+				2978599E2BAC18C700A3FA14 /* CreatedNoteViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				29F237532B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift in Sources */,
 				296FFA732B1F136300DE1D68 /* MainTableViewModel.swift in Sources */,
 				296FFA7A2B2014FF00DE1D68 /* QuizTableViewCell.swift in Sources */,
+				2978599F2BAC18C700A3FA14 /* CreatedNoteViewController.swift in Sources */,
 				294349F72B079F3700C57B49 /* UserInfoViewController.swift in Sources */,
 				295F90402B20CAFF00F28446 /* AllQuizViewController.swift in Sources */,
 				293E0C692B3F131300032033 /* SpringAPI.swift in Sources */,

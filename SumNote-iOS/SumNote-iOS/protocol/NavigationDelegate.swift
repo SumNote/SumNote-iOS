@@ -14,3 +14,9 @@ protocol NavigationDelegate: AnyObject {
     func didTappedNoteCell() // 노트 셀(미리보기), 전체 노트 셀 클릭시 노트 페이지로의 이동을 담당
     func didTappedQuizCell() // 퀴즈 셀(미리보기), 전체 퀴즈 셀 클릭시 퀴즈 페이지로의 이동을 담당
 }
+
+//// 생성된 노트 화면으로 이동을 위해 사용
+//protocol CreatedNoteViewDelegate : AnyObject {
+//
+//
+//}

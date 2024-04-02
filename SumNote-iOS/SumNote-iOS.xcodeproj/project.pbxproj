@@ -12,6 +12,7 @@
 		29237D742B2D711100BE751D /* QuizViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D732B2D711100BE751D /* QuizViewDelegate.swift */; };
 		29237D762B2DDF9D00BE751D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D752B2DDF9D00BE751D /* NoteViewController.swift */; };
 		29237D782B2DE11700BE751D /* NoteContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D772B2DE11700BE751D /* NoteContentsViewController.swift */; };
+		293C00E42BBC0CAC00A305CC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C00E32BBC0CAC00A305CC /* TestViewController.swift */; };
 		293E0C672B3F11D800032033 /* DjangoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C662B3F11D800032033 /* DjangoAPI.swift */; };
 		293E0C692B3F131300032033 /* SpringAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C682B3F131300032033 /* SpringAPI.swift */; };
 		294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BC2B07922100C57B49 /* AppDelegate.swift */; };
@@ -83,6 +84,7 @@
 		29237D732B2D711100BE751D /* QuizViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewDelegate.swift; sourceTree = "<group>"; };
 		29237D752B2DDF9D00BE751D /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		29237D772B2DE11700BE751D /* NoteContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteContentsViewController.swift; sourceTree = "<group>"; };
+		293C00E32BBC0CAC00A305CC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		293E0C662B3F11D800032033 /* DjangoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DjangoAPI.swift; sourceTree = "<group>"; };
 		293E0C682B3F131300032033 /* SpringAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAPI.swift; sourceTree = "<group>"; };
 		294349B92B07922100C57B49 /* SumNote-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SumNote-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +252,7 @@
 				29237D752B2DDF9D00BE751D /* NoteViewController.swift */,
 				29237D772B2DE11700BE751D /* NoteContentsViewController.swift */,
 				2978599E2BAC18C700A3FA14 /* CreatedNoteViewController.swift */,
+				293C00E32BBC0CAC00A305CC /* TestViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				293E0C692B3F131300032033 /* SpringAPI.swift in Sources */,
 				294349F32B079EEF00C57B49 /* MyNoteViewController.swift in Sources */,
 				29F818052B2994530002E3C8 /* NotePageViewController.swift in Sources */,
+				293C00E42BBC0CAC00A305CC /* TestViewController.swift in Sources */,
 				29C43BA22B2B49D9003D0E3D /* QuizContentsViewController.swift in Sources */,
 				294349C12B07922100C57B49 /* LoginViewController.swift in Sources */,
 				296FFA7E2B20392100DE1D68 /* NavigationDelegate.swift in Sources */,

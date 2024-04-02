@@ -564,10 +564,10 @@
             </objects>
             <point key="canvasLocation" x="1604" y="2102"/>
         </scene>
-        <!--Note Contents View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="Rv8-QE-yLa">
             <objects>
-                <viewController storyboardIdentifier="NoteContentsViewController" id="1Ub-sp-gDn" customClass="NoteContentsViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Ub-sp-gDn" customClass="TestViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kqz-75-EDV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -575,14 +575,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_note_background" translatesAutoresizingMaskIntoConstraints="NO" id="3V6-Kn-P53">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터 베이스의 이해" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-s5-zgD">
-                                <rect key="frame" x="20" y="79" width="353" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y92-fW-8wD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y92-fW-8wD">
                                 <rect key="frame" x="20" y="135" width="353" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text"># 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -593,13 +588,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xYL-va-Ic4" firstAttribute="trailing" secondItem="3V6-Kn-P53" secondAttribute="trailing" id="5MM-V2-vGF"/>
-                            <constraint firstItem="hAK-s5-zgD" firstAttribute="top" secondItem="xYL-va-Ic4" secondAttribute="top" constant="20" id="5o4-Xs-E7o"/>
                             <constraint firstItem="3V6-Kn-P53" firstAttribute="top" secondItem="xYL-va-Ic4" secondAttribute="top" id="9xc-4l-eRJ"/>
-                            <constraint firstItem="Y92-fW-8wD" firstAttribute="leading" secondItem="hAK-s5-zgD" secondAttribute="leading" id="CVp-PE-4fP"/>
-                            <constraint firstItem="Y92-fW-8wD" firstAttribute="top" secondItem="hAK-s5-zgD" secondAttribute="bottom" constant="20" id="Kj6-dh-szx"/>
-                            <constraint firstItem="xYL-va-Ic4" firstAttribute="trailing" secondItem="hAK-s5-zgD" secondAttribute="trailing" constant="20" id="Sif-sb-LC3"/>
-                            <constraint firstItem="Y92-fW-8wD" firstAttribute="trailing" secondItem="hAK-s5-zgD" secondAttribute="trailing" id="WbF-yL-I0v"/>
-                            <constraint firstItem="hAK-s5-zgD" firstAttribute="leading" secondItem="xYL-va-Ic4" secondAttribute="leading" constant="20" id="abo-Kf-dnF"/>
                             <constraint firstItem="3V6-Kn-P53" firstAttribute="leading" secondItem="xYL-va-Ic4" secondAttribute="leading" id="kWC-LZ-Wvd"/>
                             <constraint firstItem="xYL-va-Ic4" firstAttribute="bottom" secondItem="3V6-Kn-P53" secondAttribute="bottom" id="uLG-lU-yVB"/>
                         </constraints>
@@ -608,6 +597,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZB-Ur-MyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2372" y="2101"/>
+        </scene>
+        <!--Note Contents View Controller-->
+        <scene sceneID="nor-2e-yvb">
+            <objects>
+                <viewController storyboardIdentifier="NoteContentsViewController" id="3fv-bB-BJC" customClass="NoteContentsViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b7B-it-aJT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gr-Du-KsN">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbd-E3-bRf">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="900"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_note_background" translatesAutoresizingMaskIntoConstraints="NO" id="28A-Qx-HT4">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="900"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터 베이스의 이해" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFa-bi-OUd">
+                                                <rect key="frame" x="20" y="20" width="353" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzr-an-r9a">
+                                                <rect key="frame" x="20" y="76" width="353" height="573"/>
+                                                <string key="text"># 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어  # 질의어 : 데이터베이스 정보 요구를 위해 사용하는 언어 </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="fzr-an-r9a" firstAttribute="top" secondItem="DFa-bi-OUd" secondAttribute="bottom" constant="20" id="65D-i1-hwk"/>
+                                            <constraint firstItem="28A-Qx-HT4" firstAttribute="leading" secondItem="tbd-E3-bRf" secondAttribute="leading" id="BEu-bv-oRh"/>
+                                            <constraint firstItem="fzr-an-r9a" firstAttribute="trailing" secondItem="DFa-bi-OUd" secondAttribute="trailing" id="C9o-0j-rCx"/>
+                                            <constraint firstAttribute="trailing" secondItem="DFa-bi-OUd" secondAttribute="trailing" constant="20" id="Hjg-SL-RuX"/>
+                                            <constraint firstItem="DFa-bi-OUd" firstAttribute="leading" secondItem="tbd-E3-bRf" secondAttribute="leading" constant="20" id="OlY-es-nEA"/>
+                                            <constraint firstItem="fzr-an-r9a" firstAttribute="leading" secondItem="DFa-bi-OUd" secondAttribute="leading" id="SRK-M9-4LQ"/>
+                                            <constraint firstItem="28A-Qx-HT4" firstAttribute="top" secondItem="tbd-E3-bRf" secondAttribute="top" id="aHc-dz-eib"/>
+                                            <constraint firstAttribute="height" constant="900" id="gi3-zX-fwq"/>
+                                            <constraint firstAttribute="bottom" secondItem="28A-Qx-HT4" secondAttribute="bottom" id="hoB-u0-B37"/>
+                                            <constraint firstItem="DFa-bi-OUd" firstAttribute="top" secondItem="tbd-E3-bRf" secondAttribute="top" constant="20" id="rVl-UO-vfI"/>
+                                            <constraint firstAttribute="trailing" secondItem="28A-Qx-HT4" secondAttribute="trailing" id="yhF-8m-wmm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tbd-E3-bRf" firstAttribute="top" secondItem="Pgn-dz-Jym" secondAttribute="top" id="0ZI-6K-2CN"/>
+                                    <constraint firstItem="tbd-E3-bRf" firstAttribute="leading" secondItem="Pgn-dz-Jym" secondAttribute="leading" id="Geo-5a-t2U"/>
+                                    <constraint firstItem="tbd-E3-bRf" firstAttribute="trailing" secondItem="Pgn-dz-Jym" secondAttribute="trailing" id="Ntk-lt-kWK"/>
+                                    <constraint firstItem="tbd-E3-bRf" firstAttribute="width" secondItem="SKK-Oe-mfJ" secondAttribute="width" id="POq-ew-xuG"/>
+                                    <constraint firstItem="tbd-E3-bRf" firstAttribute="bottom" secondItem="Pgn-dz-Jym" secondAttribute="bottom" id="aof-1Z-eGf"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Pgn-dz-Jym"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="SKK-Oe-mfJ"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ib1-Tv-iqt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8gr-Du-KsN" firstAttribute="trailing" secondItem="ib1-Tv-iqt" secondAttribute="trailing" id="Hjk-Gw-IjB"/>
+                            <constraint firstItem="8gr-Du-KsN" firstAttribute="top" secondItem="b7B-it-aJT" secondAttribute="top" id="NBR-OA-vVU"/>
+                            <constraint firstAttribute="bottom" secondItem="8gr-Du-KsN" secondAttribute="bottom" id="V3N-oz-osW"/>
+                            <constraint firstItem="8gr-Du-KsN" firstAttribute="leading" secondItem="ib1-Tv-iqt" secondAttribute="leading" id="fBm-AI-Qi5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hM8-rj-IIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3162.5954198473282" y="2100.7042253521126"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="fSt-aj-doV">

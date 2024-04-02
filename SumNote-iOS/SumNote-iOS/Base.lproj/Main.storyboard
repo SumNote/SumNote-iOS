@@ -596,6 +596,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="btnCameraDidTapped:" destination="AU7-Jc-MvQ" eventType="touchUpInside" id="thb-e4-eSL"/>
+                                            <action selector="cancelBtnDidTapped:" destination="1Ub-sp-gDn" eventType="touchUpInside" id="abJ-FS-fXO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVQ-Pq-3nf">

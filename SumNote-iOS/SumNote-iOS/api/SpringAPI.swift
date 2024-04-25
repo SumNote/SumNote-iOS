@@ -14,6 +14,8 @@ class SpringAPI{
     
     static let baseUrl = "http://127.0.0.1:8080/api"
     
+    static var token : String? = nil
+    
     private init() {} // for singleton
     
     
@@ -23,14 +25,15 @@ class SpringAPI{
         
         AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default)
             .validate(statusCode: 200..<300)
-            .responseDecodable(of: LoginResponse.self) { response in
+            .responseDecodable(of: SpringBaseResponse<[UserInfo]>.self) { response in
                 switch response.result {
                 case .success:
                     // Extract the token from the Authorization header
                     if let authToken = response.response?.headers.value(for: "Authorization") {
                         print("#SpringAPI-loginRequest: \(authToken)")
-                        // 사용자 토큰 UserDefault에 저장
-                        UserDefaults.standard.set(authToken, forKey: "jwtToken")
+                        // 사용자 정보 저장
+                        UserDefaults.standard.set(authToken, forKey: "token")
+                        SpringAPI.token = authToken // 토큰 저장
                         completion(true) // 로그인 성공시
                     } else {
                         print("#SpringAPI-loginRequest: No Token received")
@@ -44,9 +47,29 @@ class SpringAPI{
     }
     
     
-    // 기본적인 CRUD 작업
-    
     // 사용자의 노트 데이터 요청(노트 목록)
+    func getNoteRequest(type : String){
+        let url = SpringAPI.baseUrl + "/sum-note?type=\(type)"
+        // ?type=home 노트 목록 5개 조회
+        // ?type=all 노트 전체 반환
+
+//        AF.request(url,
+//                   method: .get,
+//                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+//        .validate(statusCode: 200..<300)
+//        .responseDecodable(of: SpringBaseResponse<[]>.self) { response in
+//            switch response.result {
+//            case .success:
+//                if let data = response.data {
+//                    print("#getNoteRequest : \(data)")
+//                }
+//            case .failure(let error):
+//                print("#getNoteRequest error : \(error)")
+//            }
+//        }
+        
+    }
+
     
     // 사용자의 특정 노트의 페이지 데이터 요청(페이지들)
     

@@ -57,7 +57,7 @@ class NoteTableViewCell: UITableViewCell {
 
     // 서버로부터 보유중인 노트 얻어오는 동작 작성 필요
     func getMyNote(){
-        print("서버에서 노트 얻어오기")
+        SpringAPI.shared.getNoteRequest(type: "home")
     }
     
     // 해당 테이블 셀 클릭시 동작 정의(정의 x => 컨테이너 역할)

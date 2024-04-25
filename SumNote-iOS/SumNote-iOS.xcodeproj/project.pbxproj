@@ -49,7 +49,7 @@
 		29E54F532B2151CD00E6E4B9 /* AllNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E54F512B2151CD00E6E4B9 /* AllNoteTableViewCell.swift */; };
 		29E54F542B2151CD00E6E4B9 /* AllNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E54F522B2151CD00E6E4B9 /* AllNoteTableViewCell.xib */; };
 		29EFD8842BDA324A0064176A /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EFD8832BDA324A0064176A /* UserInfo.swift */; };
-		29EFD8862BDA35DA0064176A /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EFD8852BDA35DA0064176A /* LoginResponse.swift */; };
+		29EFD8862BDA35DA0064176A /* SpringBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EFD8852BDA35DA0064176A /* SpringBaseResponse.swift */; };
 		29F237532B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F237512B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift */; };
 		29F237542B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F237522B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.xib */; };
 		29F818002B26F2950002E3C8 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F817FE2B26F2950002E3C8 /* TitleCollectionViewCell.swift */; };
@@ -126,7 +126,7 @@
 		29E54F512B2151CD00E6E4B9 /* AllNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteTableViewCell.swift; sourceTree = "<group>"; };
 		29E54F522B2151CD00E6E4B9 /* AllNoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNoteTableViewCell.xib; sourceTree = "<group>"; };
 		29EFD8832BDA324A0064176A /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		29EFD8852BDA35DA0064176A /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		29EFD8852BDA35DA0064176A /* SpringBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringBaseResponse.swift; sourceTree = "<group>"; };
 		29F237512B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		29F237522B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeveloperInfoCollectionViewCell.xib; sourceTree = "<group>"; };
 		29F817FE2B26F2950002E3C8 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -312,7 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				29EFD8832BDA324A0064176A /* UserInfo.swift */,
-				29EFD8852BDA35DA0064176A /* LoginResponse.swift */,
+				29EFD8852BDA35DA0064176A /* SpringBaseResponse.swift */,
 			);
 			path = dto;
 			sourceTree = "<group>";
@@ -619,7 +619,7 @@
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
 				293E0C672B3F11D800032033 /* DjangoAPI.swift in Sources */,
 				295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */,
-				29EFD8862BDA35DA0064176A /* LoginResponse.swift in Sources */,
+				29EFD8862BDA35DA0064176A /* SpringBaseResponse.swift in Sources */,
 				29EFD8842BDA324A0064176A /* UserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

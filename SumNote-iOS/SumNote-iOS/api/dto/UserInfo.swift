@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserInfo : Encodable{
+struct UserInfo : Encodable, Decodable{
     var email : String?
     var name : String?
     

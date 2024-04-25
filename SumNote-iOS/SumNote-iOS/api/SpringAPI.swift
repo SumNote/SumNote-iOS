@@ -25,22 +25,22 @@ class SpringAPI{
         
         AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default)
             .validate(statusCode: 200..<300)
-            .responseDecodable(of: SpringBaseResponse<[UserInfo]>.self) { response in
+            .responseDecodable(of: SpringBaseResponse<UserInfo>.self) { response in
                 switch response.result {
                 case .success:
                     // Extract the token from the Authorization header
                     if let authToken = response.response?.headers.value(for: "Authorization") {
-                        print("#SpringAPI-loginRequest: \(authToken)")
+                        print("📌SpringAPI-loginRequest: \(authToken)📌")
                         // 사용자 정보 저장
                         UserDefaults.standard.set(authToken, forKey: "token")
                         SpringAPI.token = authToken // 토큰 저장
                         completion(true) // 로그인 성공시
                     } else {
-                        print("#SpringAPI-loginRequest: No Token received")
+                        print("📌SpringAPI-loginRequest: No Token received📌")
                         completion(false) // 로그인 실패시
                     }
                 case .failure(let error):
-                    print("#SpringAPI-loginRequest: Error: \(error)")
+                    print("📌SpringAPI-loginRequest: Error: \(error)📌")
                     completion(false)
                 }
             }

@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
         // 웹사이트를 사용하여 카카오톡 로그인 화면 띄우기
         UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
             if let error = error {
-                print("KaKao Login Error : \(error)")
+                print("📌LoginViewController-kakaoLoginBtnDidTapped KaKao Login Error : \(error)📌")
             } else {
                 self.requestUserInfo()
             }
@@ -38,14 +38,14 @@ class LoginViewController: UIViewController {
     private func requestUserInfo(){
         UserApi.shared.me { (user, error) in
             if let error = error {
-                print("Failed to request user info: \(error)")
+                print("📌LoginViewController-requestUserInfo Failed to request user info: \(error)📌")
             } else if let user = user {
-                print("User info request successful")
+                print("📌LoginViewController-requestUserInfo : User info request successful📌")
                 
                 if let email = user.kakaoAccount?.email, let nickname = user.kakaoAccount?.profile?.nickname {
                     self.springLogin(email: email, name: nickname)
                 } else {
-                    print("Necessary user info not available")
+                    print("📌LoginViewController-requestUserInfo : Necessary user info not available📌")
                 }
             }
         }
@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
         let user = UserInfo(email: email, name: name)
         SpringAPI.shared.loginRequest(user: user){ isSuccess in
             if isSuccess{
-                print("LoginViewController-springLogin: Success")
+                print("📌LoginViewController-springLogin: Success📌")
                 DispatchQueue.main.async {
                     // 1. 스토리보드 찾기
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
                     self.present(tabBarController, animated: true)
                 }
             } else {
-                print("LoginViewController-springLogin: Fail")
+                print("📌LoginViewController-springLogin: Fail📌")
             }
         }
             

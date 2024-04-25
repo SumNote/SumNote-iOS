@@ -112,7 +112,7 @@ extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
     //셀 크기 지정
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         //let width = MyNoteViewController.width
-        return self.view.frame.size.height/2 - 120
+        return self.view.frame.size.height/2 - (self.parent?.tabBarController?.tabBar.frame.height ?? 100) // 탭바 높이 만큼 제거
     }
     
     

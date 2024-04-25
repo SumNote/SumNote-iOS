@@ -12,7 +12,34 @@ class SpringAPI{
     
     static let shared = SpringAPI() // Singleton
     
+    static let baseUrl = "http://127.0.0.1:8080/api"
+    
     private init() {} // for singleton
+    
+    
+    // 로그인
+    func loginRequest(user : UserInfo){
+        let url = SpringAPI.baseUrl + "/member/login"
+        
+        AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default)
+            .validate(statusCode: 200..<300)
+            .responseDecodable(of: LoginResponse.self) { response in
+                switch response.result {
+                case .success:
+                    // Extract the token from the Authorization header
+                    if let authToken = response.response?.headers.value(for: "Authorization") {
+                        print("#SpringAPI-loginRequest: \(authToken)")
+                        // Save the user token to UserDefaults
+                        UserDefaults.standard.set(authToken, forKey: "jwtToken")
+                    } else {
+                        print("#SpringAPI-loginRequest: No Token received")
+                    }
+                case .failure(let error):
+                    print("#SpringAPI-loginRequest: Error: \(error)")
+                }
+            }
+    }
+    
     
     // 기본적인 CRUD 작업
     

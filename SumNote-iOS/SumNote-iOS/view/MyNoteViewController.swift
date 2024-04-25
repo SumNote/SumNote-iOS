@@ -26,12 +26,14 @@ class MyNoteViewController: UIViewController{
 
         userImageLabel.layer.cornerRadius = 25
         setUserInfo()
-        //setCollectionView()
-        setMainTableView()
+        setMainTableView() // 노트, 퀴즈 테이블 뷰 활성화
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        print("📌MyNoteViewController-viewWillAppear📌")
+        mainTableView.reloadData() // 테이블 뷰 다시 새로고침 -> 노트, 퀴즈 테이블 뷰 셀 업데이트
         
         // 네비게이션 바 숨기기
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -113,6 +115,15 @@ extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         //let width = MyNoteViewController.width
         return self.view.frame.size.height/2 - (self.parent?.tabBarController?.tabBar.frame.height ?? 100) // 탭바 높이 만큼 제거
+    }
+    
+    //뷰 새로고침 시,
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if(indexPath.row == 0){
+            if let noteCell = cell as? NoteTableViewCell {
+                noteCell.getMyNote()
+            }
+        }
     }
     
     

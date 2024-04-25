@@ -17,6 +17,8 @@ class AllNoteViewController: UIViewController {
     
     @IBOutlet weak var backBtn: UIImageView! // 뒤로가기버튼(이미지)
     
+    var noteList : [UserNote] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
@@ -26,7 +28,22 @@ class AllNoteViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backBtnTapped))
         backBtn.isUserInteractionEnabled = true // 사용자 상호작용 활성화
         backBtn.addGestureRecognizer(tapGesture)
+        
+        getAllNote()
     }
+    
+    
+    // 전체 노트 얻어오기
+    private func getAllNote(){
+        SpringAPI.shared.getNoteRequest(type: "all"){ isSuccess, noteList in
+            if isSuccess{
+                self.noteList = noteList
+                print("📌AllNoteViewController-getAllNote📌 : \(noteList)")
+                self.allNoteTableView.reloadData()
+            }
+        }
+    }
+    
     
     func setTableView(){
         allNoteTableView.delegate = self
@@ -34,8 +51,6 @@ class AllNoteViewController: UIViewController {
         
         // 사용할 셀 등록
         allNoteTableView.register(UINib(nibName: "AllNoteTableViewCell", bundle: nil), forCellReuseIdentifier: AllNoteTableViewCell.identifier)
-        
-        
     }
     
     // 뷰가 실행되고 난 이후 (네비게이션 바 커스텀을 위해 상단 바 숨기기)
@@ -67,7 +82,7 @@ class AllNoteViewController: UIViewController {
 extension AllNoteViewController : UITableViewDelegate,UITableViewDataSource{
     // 사용할 셀의 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 // 서버로부터 얻어온 모든 노트의 개수만큼
+        return noteList.count
     }
     
     // 보여줄 셀의 모습 지정
@@ -78,6 +93,11 @@ extension AllNoteViewController : UITableViewDelegate,UITableViewDataSource{
             errorCell.backgroundColor = .blue
             return errorCell
         }
+
+        // Data Binding
+        let note = noteList[indexPath.row]
+        cell.noteGenDate.text = note.lastModifiedAt
+        cell.noteTitle.text = note.title
         
         // 모듈러 연산을 사용하여 노트 이미지를 돌려쓸수 있도록
         let noteNum = (indexPath.row)%8+1

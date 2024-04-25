@@ -20,11 +20,12 @@ class NoteTableViewCell: UITableViewCell {
     @IBOutlet weak var myNoteListCollectionView: UICollectionView!
     
     // 서버로부터 얻어올 노트 데이터 리스트 작성 필요
-    
+    var noteList : [UserNote] = []
     
     // CollectionView에 대한 Delegate,Datasource선언
     override func awakeFromNib() {
         super.awakeFromNib()
+        print("📌NoteTableViewCell-awakeFromNib📌")
         // Initialization code
         setMyNoteListCollectionView() // CollectioView init
         
@@ -57,7 +58,13 @@ class NoteTableViewCell: UITableViewCell {
 
     // 서버로부터 보유중인 노트 얻어오는 동작 작성 필요
     func getMyNote(){
-        SpringAPI.shared.getNoteRequest(type: "home")
+        print("📌NoteTableViewCell-getMyNote📌")
+        SpringAPI.shared.getNoteRequest(type: "home"){ isSuccess, noteList in
+            if isSuccess{
+                self.noteList = noteList
+                self.myNoteListCollectionView.reloadData() // 컬렉션뷰 새로고침
+            }
+        }
     }
     
     // 해당 테이블 셀 클릭시 동작 정의(정의 x => 컨테이너 역할)
@@ -73,7 +80,11 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     
     // 몇개의 셀을 보여줄 것인지
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5 //5개보다 적을 경우 리스트 숫자만큼 반환하도록 수정 필요
+        // 최대 5개만 보여줌
+        if noteList.count < 5{
+            return noteList.count
+        }
+        return 5
     }
     
     //
@@ -85,6 +96,10 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
         }
         
         // 정보 주입
+        let note = noteList[indexPath.row]
+        
+        cell.noteNameLabel.text = note.title
+        cell.noteGeneratedTime.text = note.lastModifiedAt
         
         // 모듈러 연산을 사용하여 노트 이미지를 돌려쓸수 있도록
         let noteNum = (indexPath.row)%8+1

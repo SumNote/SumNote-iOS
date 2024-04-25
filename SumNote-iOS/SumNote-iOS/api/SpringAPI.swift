@@ -48,25 +48,25 @@ class SpringAPI{
     
     
     // 사용자의 노트 데이터 요청(노트 목록)
-    func getNoteRequest(type : String){
+    func getNoteRequest(type : String, completion : @escaping (Bool,[UserNote])->Void){
         let url = SpringAPI.baseUrl + "/sum-note?type=\(type)"
         // ?type=home 노트 목록 5개 조회
         // ?type=all 노트 전체 반환
-
-//        AF.request(url,
-//                   method: .get,
-//                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
-//        .validate(statusCode: 200..<300)
-//        .responseDecodable(of: SpringBaseResponse<[]>.self) { response in
-//            switch response.result {
-//            case .success:
-//                if let data = response.data {
-//                    print("#getNoteRequest : \(data)")
-//                }
-//            case .failure(let error):
-//                print("#getNoteRequest error : \(error)")
-//            }
-//        }
+        AF.request(url,
+                   method: .get,
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of: SpringBaseResponse<[UserNote]>.self) { response in
+            switch response.result {
+            case .success(let apiResponse):
+                let noteList = apiResponse.data
+                print("📌SpringAPI-getNoteRequest Success : \(noteList)📌")
+                completion(true,noteList)
+            case .failure(let error):
+                print("📌SpringAPI-getNoteRequest error : \(error)📌")
+                completion(false,[])
+            }
+        }
         
     }
 

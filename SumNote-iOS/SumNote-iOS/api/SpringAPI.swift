@@ -18,7 +18,7 @@ class SpringAPI{
     
     
     // 로그인
-    func loginRequest(user : UserInfo){
+    func loginRequest(user : UserInfo, completion: @escaping (Bool) -> Void){
         let url = SpringAPI.baseUrl + "/member/login"
         
         AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default)
@@ -29,13 +29,16 @@ class SpringAPI{
                     // Extract the token from the Authorization header
                     if let authToken = response.response?.headers.value(for: "Authorization") {
                         print("#SpringAPI-loginRequest: \(authToken)")
-                        // Save the user token to UserDefaults
+                        // 사용자 토큰 UserDefault에 저장
                         UserDefaults.standard.set(authToken, forKey: "jwtToken")
+                        completion(true) // 로그인 성공시
                     } else {
                         print("#SpringAPI-loginRequest: No Token received")
+                        completion(false) // 로그인 실패시
                     }
                 case .failure(let error):
                     print("#SpringAPI-loginRequest: Error: \(error)")
+                    completion(false)
                 }
             }
     }

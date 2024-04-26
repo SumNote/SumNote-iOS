@@ -50,7 +50,7 @@ class AllQuizViewController: UIViewController {
     // 네비게이션 컨트롤러에서 현재 뷰 컨트롤러 제거
     @objc func backBtnTapped() {
         self.navigationController?.popViewController(animated: true)
-        print("뒤로가기 클릭됨")
+        self.log("backBtnTapped")
     }
     
     private func setTableView(){
@@ -97,4 +97,10 @@ extension AllQuizViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
     
+}
+
+extension AllQuizViewController {
+    private func log(_ message : String){
+        print("📌[AllQuizViewController] \(message)📌")
+    }
 }

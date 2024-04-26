@@ -24,11 +24,6 @@ class FastAPI{
         self.session = Session(configuration: configuration)
     }
     
-    // 확인용
-    private func log(_ message: String){
-        print("🛜[FastAPI] \(message)🛜")
-    }
-    
     // multipart 방식으로 이미지 RequestBody에 삽입해서 OCR 결과물 얻어옴
     // key-name : "image"
     public func makeNoteByImageRequest(image : UIImage, completion : @escaping (Bool,CreatedNoteResult?) -> Void){
@@ -69,4 +64,10 @@ class FastAPI{
         print("Quiz 데이터 얻어옴..")
     }
     
+}
+
+extension FastAPI {
+    private func log(_ message: String){
+        print("🛜[FastAPI] \(message)🛜")
+    }
 }

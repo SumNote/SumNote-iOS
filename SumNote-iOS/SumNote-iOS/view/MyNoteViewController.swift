@@ -32,7 +32,6 @@ class MyNoteViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print("📌MyNoteViewController-viewWillAppear📌")
         mainTableView.reloadData() // 테이블 뷰 다시 새로고침 -> 노트, 퀴즈 테이블 뷰 셀 업데이트
         
         // 네비게이션 바 숨기기
@@ -52,8 +51,9 @@ class MyNoteViewController: UIViewController{
         UserApi.shared.me() {(user, error) in
             if let error = error {
                 print(error)
+                self.log("setUserInfo error : \(error)")
             } else if let userInfo = KaKaoAPI.shared.extractUserInfo(user) {
-                print("### Extracted User Info: \(userInfo)")
+                self.log("setUserInfo Extracted User Info : \(userInfo)")
                 self.userNameLabel.text = userInfo["nickname"] as? String
                 let urlString = userInfo["profileImage"]
                 let url = URL(string: urlString as! String)
@@ -137,7 +137,7 @@ extension MyNoteViewController : NavigationDelegate{
     
     // 전체 퀴즈 보기로 이동
     func didTapGoAllQuizButton() {
-        print("didTapgoAllQuizButton Did Tapped : by Protocal")
+        self.log("didTapGoAllQuizButton Did Tappbed")
         // 이동할 뷰 찾기(전체 노트 뷰)
         let allQuizView = stoaryBoard.instantiateViewController(withIdentifier: "AllQuizViewController") as! AllQuizViewController
         // 위임자 전달
@@ -149,7 +149,7 @@ extension MyNoteViewController : NavigationDelegate{
     
     // 전체 노트 보기로 이동
     func didTapGoAllNoteButton() {
-        print("didTapgoAllNoteButton Did Tapped : by Protocal")
+        self.log("didTapGoAllNoteButton Did Tapped")
         // 이동할 뷰 찾기(전체 노트 뷰)
         let allNoteView = stoaryBoard.instantiateViewController(withIdentifier: "AllNoteViewController") as! AllNoteViewController
         // 위임자 전달
@@ -160,8 +160,7 @@ extension MyNoteViewController : NavigationDelegate{
     
     // 노트 페이지로 이동(노트 셀 클릭시)
     func didTappedNoteCell() {
-        print("didTappedNoteCell")
-        
+        self.log("didTappedNoteCall Did Tapped")
         // 노트 페이지 뷰 인스턴스 찾기
         let noteVC = stoaryBoard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
         // 화면 이동하기
@@ -170,8 +169,7 @@ extension MyNoteViewController : NavigationDelegate{
     
     // 퀴즈 페이지로 이동(퀴즈 셀 클릭시)
     func didTappedQuizCell() {
-        print("didTappedQuizCell")
-        
+        self.log("didTappedQuizCell Did Tapped")
         // 퀴즈 페이지 뷰 인스턴스 찾기
         let quizVC = stoaryBoard.instantiateViewController(withIdentifier: "QuizViewController") as! QuizViewController
         // 화면 이동하기
@@ -179,4 +177,10 @@ extension MyNoteViewController : NavigationDelegate{
     }
     
     
+}
+
+extension MyNoteViewController {
+    private func log(_ message : String){
+        print("📌[MyNoteViewController] \(message)📌")
+    }
 }

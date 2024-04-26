@@ -27,9 +27,9 @@ class KaKaoAPI{
     
     //사용자 정보 추출
     func extractUserInfo(_ userInfo: User?) -> [String: Any]? {
-        print("call extractUserInfo :\(String(describing: userInfo))")
+        self.log("extractUserInfo : \(String(describing: userInfo))")
         guard let userInfo = userInfo, let properties = userInfo.properties else {
-            print("extractUserInfo Data binding failed")
+            self.log("extractUserInfo : Data binding failed")
             return nil
         }
 
@@ -44,7 +44,7 @@ class KaKaoAPI{
             extractedInfo["email"] = email
         }
         
-        print("binding data : \(extractedInfo)")
+        self.log("extractUserInfo binding data : \(extractedInfo)")
         
         //닉네임, 프로필이미지, 썸네일이미지 반환
         return extractedInfo
@@ -52,4 +52,10 @@ class KaKaoAPI{
 
     
     
+}
+
+extension KaKaoAPI {
+    private func log(_ message : String){
+        print("🛜[KaKaoAPI] \(message)🛜")
+    }
 }

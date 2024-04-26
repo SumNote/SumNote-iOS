@@ -38,7 +38,7 @@ class AllNoteViewController: UIViewController {
         SpringAPI.shared.getNoteRequest(type: "all"){ isSuccess, noteList in
             if isSuccess{
                 self.noteList = noteList
-                print("📌AllNoteViewController-getAllNote📌 : \(noteList)")
+                self.log("getAllNote : \(noteList)")
                 self.allNoteTableView.reloadData()
             }
         }
@@ -73,7 +73,7 @@ class AllNoteViewController: UIViewController {
     // 네비게이션 컨트롤러에서 현재 뷰 컨트롤러 제거
     @objc func backBtnTapped() {
         self.navigationController?.popViewController(animated: true)
-        print("뒤로가기 클릭됨")
+        self.log("backBtnTapped")
     }
 
 }
@@ -111,8 +111,14 @@ extension AllNoteViewController : UITableViewDelegate,UITableViewDataSource{
     
     // 셀 클릭시 동작
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("allNoteTableViewCell Clicked : \(indexPath.row)")
+        self.log("didSelectRowAt : \(indexPath.row)")
         delegater?.didTappedNoteCell() // 노트 셀 클릭됨
+    }
+}
+
+extension AllNoteViewController {
+    private func log(_ message : String){
+        print("📌[AllNoteViewController] \(message)📌")
     }
 }
 

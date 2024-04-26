@@ -87,7 +87,7 @@ class QuizViewController: UIViewController {
     // 서버로부터 데이터 얻어오기
     private func fetchQuizData(){
         let data = ["Quiz1","Quiz2","Quiz3","Quiz4","Quiz5"] // 퀴즈로 제공할 정보 배열(테스트용)
-        print("퀴즈 데이터 얻어옴..")
+        self.log("fetchQuizData")
         self.quizData = data
         
     }
@@ -96,7 +96,7 @@ class QuizViewController: UIViewController {
     @objc func backBtnTapped() {
         // 네비게이션 컨트롤러에서 현재 뷰 컨트롤러 제거
         self.navigationController?.popViewController(animated: true)
-        print("뒤로가기 클릭됨")
+        self.log("backBtnTapped")
     }
     
     
@@ -106,7 +106,7 @@ class QuizViewController: UIViewController {
 extension QuizViewController : QuizViewDelegate {
     // 프로그래스 바 진행도 표시
     func setProgressBar(index: Int) {
-        print("progress -> \(index)")
+        self.log("progress -> \(index)")
         let totalQuestions = self.quizData.count // 전체 퀴즈의 수
         let progress = Float(index) / Float(totalQuestions)
         progressBar.setProgress(progress, animated: true)
@@ -114,10 +114,16 @@ extension QuizViewController : QuizViewDelegate {
     
     //
     func setQuizIndex(index: Int) {
-        print("QuizIndex -> \(index)")
+        self.log("QuizIndex -> \(index)")
         currentIndex.text = "\(index)"
         setProgressBar(index: index) // 인덱스 업데이트 시 프로그래스바도 업데이트
     }
     
     
+}
+
+extension QuizViewController{
+    private func log(_ message : String){
+        print("📌[QuizViewController] \(message)📌")
+    }
 }

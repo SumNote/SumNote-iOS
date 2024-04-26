@@ -40,7 +40,7 @@ class CreatedNoteViewController: UIViewController {
     // 취소 => 되돌아가기
     @IBAction func cancelBtnDidTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-        print("CreatedNoteViewController : cancelBtnDidTapped")
+        self.log("cancelBtnDidTapped")
     }
     
     private func setNote(){
@@ -48,4 +48,10 @@ class CreatedNoteViewController: UIViewController {
         self.noteContent.text = self.createdNote?.summary
     }
 
+}
+
+extension CreatedNoteViewController {
+    private func log(_ message : String){
+        print("📌[CreatedNoteViewController] \(message)📌")
+    }
 }

@@ -25,7 +25,7 @@ class NoteTableViewCell: UITableViewCell {
     // CollectionView에 대한 Delegate,Datasource선언
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("📌NoteTableViewCell-awakeFromNib📌")
+        self.log("awakeFromNib")
         // Initialization code
         setMyNoteListCollectionView() // CollectioView init
         
@@ -35,7 +35,7 @@ class NoteTableViewCell: UITableViewCell {
     // 전체 보기 버튼 클릭시 => 화면 전환
     //MARK: 전체 보기 함수
     @IBAction func goAllNoteBtnDidTapped(_ sender: Any) {
-        print("goAllNoteBtnDidTapped : NoteTableViewCell")
+        self.log("goAllNoteBtnDidTapped : NoteTableViewCell")
         delegate?.didTapGoAllNoteButton() // 위임자에서 화면이동 프로토콜 수행
     }
     
@@ -58,7 +58,7 @@ class NoteTableViewCell: UITableViewCell {
 
     // 서버로부터 보유중인 노트 얻어오는 동작 작성 필요
     func getMyNote(){
-        print("📌NoteTableViewCell-getMyNote📌")
+        self.log("getMyNote")
         SpringAPI.shared.getNoteRequest(type: "home"){ isSuccess, noteList in
             if isSuccess{
                 self.noteList = noteList
@@ -110,7 +110,7 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     
     // 컬렉션뷰 클릭시 동작 => MyNoteView로 위임 필요?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("cell clicked")
+        self.log("cell clicked")
         delegate?.didTappedNoteCell() // 노트 페이지로 이동
     }
     
@@ -136,4 +136,11 @@ extension NoteTableViewCell : UICollectionViewDelegateFlowLayout{
         return 20
     }
 
+}
+
+
+extension NoteTableViewCell {
+    private func log(_ message : String){
+        print("📌[NoteTableViewCell] \(message)📌")
+    }
 }

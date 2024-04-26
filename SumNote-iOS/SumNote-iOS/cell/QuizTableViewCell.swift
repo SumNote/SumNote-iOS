@@ -43,7 +43,7 @@ class QuizTableViewCell: UITableViewCell {
 
     // 서버로부터 보유중인 퀴즈 얻어오는 동작 작성 필요
     func getMyQuiz(){
-        print("서버에서 퀴즈 얻어오기")
+        self.log("getMyQuiz")
     }
     
     
@@ -105,4 +105,10 @@ extension QuizTableViewCell : UICollectionViewDelegateFlowLayout{
         return CGSize(width: width-20, height: height/2-20)
     }
     
+}
+
+extension QuizTableViewCell {
+    private func log(_ message : String){
+        print("📌[QuizTableViewCell] \(message)📌")
+    }
 }

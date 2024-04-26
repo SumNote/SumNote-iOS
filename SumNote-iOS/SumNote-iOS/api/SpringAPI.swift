@@ -12,7 +12,7 @@ class SpringAPI{
     
     static let shared = SpringAPI() // Singleton
     
-    static let baseUrl = "http://127.0.0.1:8080/api"
+    static let baseUrl = "http://192.168.0.22:8080/api"
     
     static var token : String? = nil
     
@@ -30,17 +30,17 @@ class SpringAPI{
                 case .success:
                     // Extract the token from the Authorization header
                     if let authToken = response.response?.headers.value(for: "Authorization") {
-                        print("📌SpringAPI-loginRequest: \(authToken)📌")
+                        self.log("loginRequest success : \(authToken)")
                         // 사용자 정보 저장
                         UserDefaults.standard.set(authToken, forKey: "token")
                         SpringAPI.token = authToken // 토큰 저장
                         completion(true) // 로그인 성공시
                     } else {
-                        print("📌SpringAPI-loginRequest: No Token received📌")
+                        self.log("loginRequest success : No Token received")
                         completion(false) // 로그인 실패시
                     }
                 case .failure(let error):
-                    print("📌SpringAPI-loginRequest: Error: \(error)📌")
+                    self.log("loginRequest fail : \(error)")
                     completion(false)
                 }
             }
@@ -60,10 +60,10 @@ class SpringAPI{
             switch response.result {
             case .success(let apiResponse):
                 let noteList = apiResponse.data
-                print("📌SpringAPI-getNoteRequest Success : \(noteList)📌")
+                self.log("getNoteRequest success \(noteList)")
                 completion(true,noteList)
             case .failure(let error):
-                print("📌SpringAPI-getNoteRequest error : \(error)📌")
+                self.log("getNoteRequest error \(error)")
                 completion(false,[])
             }
         }
@@ -80,5 +80,11 @@ class SpringAPI{
     // 사용자의 노트 삭제 요청
     
     // 사용자의 퀴즈 삭제 요청
+    
+    
+    // 확인용
+    private func log(_ message: String){
+        print("🛜[SpringAPI] \(message)🛜")
+    }
     
 }

@@ -11,10 +11,15 @@ import UIKit
 // 사용자는 생성된 노트를 확인하고 원한다면 저장, 원하지 않는다면 되돌아간다.
 class CreatedNoteViewController: UIViewController {
 
+    @IBOutlet weak var noteTitle: UILabel!
+    @IBOutlet weak var noteContent: UILabel!
+    
+    var createdNote : CreatedNoteResult?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setNote()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,14 +43,9 @@ class CreatedNoteViewController: UIViewController {
         print("CreatedNoteViewController : cancelBtnDidTapped")
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setNote(){
+        self.noteTitle.text = self.createdNote?.title
+        self.noteContent.text = self.createdNote?.summary
     }
-    */
 
 }

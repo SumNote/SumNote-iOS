@@ -19,6 +19,8 @@ class NoteMakerViewController: UIViewController {
     
     weak var delegate : NavigationDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
     
+    var createdNote : CreatedNoteResult?
+    
     private let stoaryBoard = UIStoryboard(name: "Main", bundle: nil)
     
     // Life Cycle
@@ -53,31 +55,18 @@ class NoteMakerViewController: UIViewController {
     
     //MARK: Camera Button Action
     @IBAction func btnCameraDidTapped(_ sender: Any) {
+        self.log("Camera Button Tapped")
         // imagePicker의 타입 결정
-        // 1. photoLibrary : 갤러리
-        // 2. camera : 시스템 카메라
-        self.imagePickerViewController.sourceType = .camera // 카메라로 선택
-        self.present(imagePickerViewController,animated: true,completion: nil)
+        self.imagePickerViewController.sourceType = .camera // 카메라 실행
+        self.present(imagePickerViewController, animated: true, completion: nil)
     }
     
     //MARK: Gallery Button Action
     @IBAction func btnGalleryDidTapped(_ sender: Any) {
-        //1. imagePicker의 타입 선택
-        //self.imagePickerViewController.sourceType = .photoLibrary
-        //2. NavigationController를 사용하여, ImagePickerContoller로 화면 전환
-        // completion은 이후에 수행할 함수를 의미?
-        //self.present(imagePickerViewController,animated: true,completion: nil)
-        
-        // 노트 생성이 완료되었다고 가정하고 화면 이동
-        // 생성된 노트를 보여줄 뷰 인스턴스 찾기
-//        let createdNoteVC = stoaryBoard.instantiateViewController(withIdentifier: "CreatedNoteViewController") as! CreatedNoteViewController
-//        // 화면 이동하기
-//        self.navigationController?.pushViewController(createdNoteVC, animated: true)
-        
-        print("Gallery Button Tapped") // 로그 추가
-        let createdNoteVC = stoaryBoard.instantiateViewController(withIdentifier: "CreatedNoteViewController") as! CreatedNoteViewController
-        print("CreatedNoteVC: \(createdNoteVC)") // 인스턴스 생성 확인 로그
-        self.navigationController?.pushViewController(createdNoteVC, animated: true)
+        self.log("Gallery Button Tapped")
+        // imagePicker의 타입 결정
+        self.imagePickerViewController.sourceType = .photoLibrary // photoLibrary : 갤러리
+        self.present(imagePickerViewController, animated: true, completion: nil)
     }
 }
 
@@ -85,14 +74,32 @@ class NoteMakerViewController: UIViewController {
 extension NoteMakerViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     // 이미지가 선택된 후에, 아래 함수가 호출된다.
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            print(image) // 사용자가 이미지를 선택하거나, 촬영하면 동작함
-        }
-        // 사용자가 선택한 이미지를 Multipart를 사용하여 서버로 전송하는 로직 작성 필요
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        picker.dismiss(animated: true, completion: nil) // 이미지 피커 닫기
         // OCR + GPT Generation이 진행중인 동안 indicator를 사용하여 화면에 로딩 띄우는 작업 필요
         // 로딩이 끝난 이후 노트 페이지로 이동 하는 작업 필요(네비게이션으로?)
+        if let image = info[.originalImage] as? UIImage {
+            // 이미지를 서버로 전송
+            FastAPI.shared.makeNoteByImageRequest(image: image){ isSuccess, createdNote in
+                if isSuccess{
+                    self.createdNote = createdNote
+                    // 노트 생성 이후 처리
+                    let createdNoteVC = self.stoaryBoard.instantiateViewController(withIdentifier: "CreatedNoteViewController") as! CreatedNoteViewController
+                    createdNoteVC.createdNote = self.createdNote // 노트 데이터 전달
+                    self.navigationController?.pushViewController(createdNoteVC, animated: true)
+                } else {
+                    
+                }
+            }
+            
+            
+        }
     }
     
-    
+}
+
+extension NoteMakerViewController {
+    private func log(_ message : String){
+        print("📌[NoteMakerViewController] \(message)📌")
+    }
 }

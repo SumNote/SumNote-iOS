@@ -18,6 +18,11 @@ class SpringAPI{
     
     private init() {} // for singleton
     
+    // 확인용
+    private func log(_ message: String){
+        print("🛜[SpringAPI] \(message)🛜")
+    }
+    
     
     // 로그인
     func loginRequest(user : UserInfo, completion: @escaping (Bool) -> Void){
@@ -80,11 +85,5 @@ class SpringAPI{
     // 사용자의 노트 삭제 요청
     
     // 사용자의 퀴즈 삭제 요청
-    
-    
-    // 확인용
-    private func log(_ message: String){
-        print("🛜[SpringAPI] \(message)🛜")
-    }
-    
+
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,77 +20,76 @@
                     <view contentMode="scaleToFill" restorationIdentifier="DeveloperInfoCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="SqS-JD-5sV">
                         <rect key="frame" x="0.0" y="0.0" width="531" height="510"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_choi76" translatesAutoresizingMaskIntoConstraints="NO" id="dJR-z6-xFC">
-                                <rect key="frame" x="175.66666666666663" y="50" width="180" height="180"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="Am1-bn-gJr"/>
-                                    <constraint firstAttribute="width" constant="180" id="aFW-88-4Pm"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최  강" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rth-Wi-A38">
-                                <rect key="frame" x="175.66666666666666" y="240" width="54" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="컴퓨터공학부" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFA-xS-eDU">
-                                <rect key="frame" x="239.66666666666663" y="240" width="104" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email-icon" translatesAutoresizingMaskIntoConstraints="NO" id="UIT-4E-Yd0">
-                                <rect key="frame" x="175.66666666666666" y="280" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="lZA-Tn-Srg"/>
-                                    <constraint firstAttribute="width" constant="30" id="tx0-kz-xAt"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="y2_12@naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEE-Ht-5Uo">
-                                <rect key="frame" x="210.66666666666663" y="280" width="123" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android &amp; iOS Application 개발" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APi-fZ-MBf">
-                                <rect key="frame" x="150.33333333333331" y="320" width="230.33333333333331" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Django Server 구축 및 개발" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcL-hd-WL6">
-                                <rect key="frame" x="168" y="345.33333333333331" width="195" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPT Prompt Engineering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKI-az-udd">
-                                <rect key="frame" x="171.66666666666663" y="371.33333333333331" width="188" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rVW-ag-NwW">
+                                <rect key="frame" x="150.33333333333331" y="84.666666666666686" width="230.33333333333331" height="341"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_choi76" translatesAutoresizingMaskIntoConstraints="NO" id="dJR-z6-xFC">
+                                        <rect key="frame" x="25.333333333333314" y="0.0" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="Am1-bn-gJr"/>
+                                            <constraint firstAttribute="width" constant="180" id="aFW-88-4Pm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="t82-f5-gaj">
+                                        <rect key="frame" x="31.666666666666657" y="188" width="167" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최  강" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rth-Wi-A38">
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="컴퓨터공학부" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFA-xS-eDU">
+                                                <rect key="frame" x="63" y="0.0" width="104" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-RJ-8u3">
+                                        <rect key="frame" x="36.666666666666657" y="226" width="157" height="30"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email-icon" translatesAutoresizingMaskIntoConstraints="NO" id="UIT-4E-Yd0">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="lZA-Tn-Srg"/>
+                                                    <constraint firstAttribute="width" constant="30" id="tx0-kz-xAt"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="y2_12@naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEE-Ht-5Uo">
+                                                <rect key="frame" x="34" y="0.0" width="123" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android &amp; iOS Application 개발" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APi-fZ-MBf">
+                                        <rect key="frame" x="0.0" y="264" width="230.33333333333334" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Django Server 구축 및 개발" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcL-hd-WL6">
+                                        <rect key="frame" x="18" y="292.33333333333331" width="194.33333333333334" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPT Prompt Engineering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKI-az-udd">
+                                        <rect key="frame" x="21.333333333333314" y="320.66666666666663" width="187.66666666666666" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jcL-hd-WL6" firstAttribute="top" secondItem="APi-fZ-MBf" secondAttribute="bottom" constant="5" id="42Q-71-Tqq"/>
-                            <constraint firstItem="gEE-Ht-5Uo" firstAttribute="leading" secondItem="UIT-4E-Yd0" secondAttribute="trailing" constant="5" id="6DG-NE-esq"/>
-                            <constraint firstItem="rth-Wi-A38" firstAttribute="leading" secondItem="dJR-z6-xFC" secondAttribute="leading" id="6ly-5I-0C4"/>
-                            <constraint firstItem="pKI-az-udd" firstAttribute="centerX" secondItem="SqS-JD-5sV" secondAttribute="centerX" id="8nf-LR-vfh"/>
-                            <constraint firstItem="jcL-hd-WL6" firstAttribute="centerX" secondItem="SqS-JD-5sV" secondAttribute="centerX" id="9Jw-Ob-c7n"/>
-                            <constraint firstItem="rth-Wi-A38" firstAttribute="top" secondItem="dJR-z6-xFC" secondAttribute="bottom" constant="10" id="DvQ-sN-MDh"/>
-                            <constraint firstItem="APi-fZ-MBf" firstAttribute="top" secondItem="UIT-4E-Yd0" secondAttribute="bottom" constant="10" id="Hke-iG-L6g"/>
-                            <constraint firstItem="YFA-xS-eDU" firstAttribute="leading" secondItem="rth-Wi-A38" secondAttribute="trailing" constant="10" id="Lii-cJ-9Yd"/>
-                            <constraint firstItem="YFA-xS-eDU" firstAttribute="bottom" secondItem="rth-Wi-A38" secondAttribute="bottom" id="MkU-SU-pQk"/>
-                            <constraint firstItem="dJR-z6-xFC" firstAttribute="centerX" secondItem="SqS-JD-5sV" secondAttribute="centerX" id="Nkr-8T-rNP"/>
-                            <constraint firstItem="YFA-xS-eDU" firstAttribute="top" secondItem="rth-Wi-A38" secondAttribute="top" id="OFF-TP-JPi"/>
-                            <constraint firstItem="pKI-az-udd" firstAttribute="top" secondItem="jcL-hd-WL6" secondAttribute="bottom" constant="5" id="Wti-KQ-tLr"/>
-                            <constraint firstItem="APi-fZ-MBf" firstAttribute="centerX" secondItem="SqS-JD-5sV" secondAttribute="centerX" id="bNa-wr-lHw"/>
-                            <constraint firstItem="gEE-Ht-5Uo" firstAttribute="bottom" secondItem="UIT-4E-Yd0" secondAttribute="bottom" id="eFt-zU-rHs"/>
-                            <constraint firstItem="dJR-z6-xFC" firstAttribute="top" secondItem="SqS-JD-5sV" secondAttribute="top" constant="50" id="fm2-Yx-r9m"/>
-                            <constraint firstItem="UIT-4E-Yd0" firstAttribute="leading" secondItem="rth-Wi-A38" secondAttribute="leading" id="gDK-Cz-iYg"/>
-                            <constraint firstItem="gEE-Ht-5Uo" firstAttribute="top" secondItem="UIT-4E-Yd0" secondAttribute="top" id="i5i-If-5pu"/>
-                            <constraint firstItem="UIT-4E-Yd0" firstAttribute="top" secondItem="rth-Wi-A38" secondAttribute="bottom" constant="10" id="mu7-hD-mHp"/>
+                            <constraint firstItem="rVW-ag-NwW" firstAttribute="centerX" secondItem="SqS-JD-5sV" secondAttribute="centerX" id="GUM-3c-f70"/>
+                            <constraint firstItem="rVW-ag-NwW" firstAttribute="centerY" secondItem="SqS-JD-5sV" secondAttribute="centerY" id="gXS-H2-2vx"/>
                         </constraints>
                     </view>
                 </subviews>

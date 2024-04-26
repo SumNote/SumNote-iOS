@@ -24,7 +24,7 @@ class FastAPI{
         self.session = Session(configuration: configuration)
     }
     
-    // multipart 방식으로 이미지 RequestBody에 삽입해서 OCR 결과물 얻어옴
+    // multipart 방식으로 이미지를 RequestBody에 삽입해서 OCR 결과물 얻어옴
     // key-name : "image"
     public func makeNoteByImageRequest(image : UIImage, completion : @escaping (Bool,CreatedNoteResult?) -> Void){
         let url = FastAPI.baseURL + "/image-to-text"
@@ -57,6 +57,41 @@ class FastAPI{
             }
         }
     }
+        
+    
+    // multipart 방식으로 PDF파일을 RequestBody에 삽입해서 OCR 결과물 얻어옴
+    // key-name : "pdf"
+    public func makeNoteByPdf(pdfURL: URL, completion: @escaping (Bool, CreatedNoteResult?) -> Void) {
+            let url = FastAPI.baseURL + "/pdf-to-text"
+            let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
+
+            // URLRequest를 만들고 타임아웃 설정 적용
+            var request = URLRequest(url: URL(string: url)!)
+            request.method = .post
+            request.headers = headers
+            request.timeoutInterval = 120 // 개별 요청 타임아웃 설정
+
+            // PDF 파일을 Data 객체로 변환
+            guard let pdfData = try? Data(contentsOf: pdfURL) else {
+                self.log("Failed to load PDF file")
+                completion(false, nil)
+                return
+            }
+
+            // Alamofire를 사용하여 MultipartFormData 방식으로 PDF 파일 업로드
+            session.upload(multipartFormData: { multipartFormData in
+                multipartFormData.append(pdfData, withName: "pdf", fileName: "document.pdf", mimeType: "application/pdf")
+            }, with: request).responseDecodable(of: CreatedNoteResult.self) { response in
+                switch response.result {
+                case .success(let createdNote):
+                    self.log("makeNoteByPdf: PDF processed successfully")
+                    completion(true, createdNote)
+                case .failure(let error):
+                    self.log("makeNoteByPdf: Failed to upload PDF - \(error.localizedDescription)")
+                    completion(false, nil)
+                }
+            }
+        }
     
     
     // 퀴즈 생성 요청

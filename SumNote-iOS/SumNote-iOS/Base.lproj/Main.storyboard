@@ -456,6 +456,9 @@
                                         <state key="normal" title="PDF">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnPdfDidTapped:" destination="AU7-Jc-MvQ" eventType="touchUpInside" id="ziQ-1Q-4BK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c3-ep-A9K">
                                         <rect key="frame" x="247.33333333333329" y="0.0" width="115.66666666666666" height="50"/>

@@ -36,7 +36,6 @@
 		295F90442B20CBF000F28446 /* AllQuizTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */; };
 		296A24482B90D440002411D8 /* +UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296A24472B90D440002411D8 /* +UIView.swift */; };
 		296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */; };
-		296FFA732B1F136300DE1D68 /* MainTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA722B1F136300DE1D68 /* MainTableViewModel.swift */; };
 		296FFA762B2014F000DE1D68 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA742B2014F000DE1D68 /* NoteTableViewCell.swift */; };
 		296FFA772B2014F000DE1D68 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296FFA752B2014F000DE1D68 /* NoteTableViewCell.xib */; };
 		296FFA7A2B2014FF00DE1D68 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA782B2014FF00DE1D68 /* QuizTableViewCell.swift */; };
@@ -115,7 +114,6 @@
 		295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllQuizTableViewCell.xib; sourceTree = "<group>"; };
 		296A24472B90D440002411D8 /* +UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIView.swift"; sourceTree = "<group>"; };
 		296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteViewController.swift; sourceTree = "<group>"; };
-		296FFA722B1F136300DE1D68 /* MainTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewModel.swift; sourceTree = "<group>"; };
 		296FFA742B2014F000DE1D68 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		296FFA752B2014F000DE1D68 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 		296FFA782B2014FF00DE1D68 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 		296FFA712B1F134E00DE1D68 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				296FFA722B1F136300DE1D68 /* MainTableViewModel.swift */,
 				29F818022B26F67D0002E3C8 /* DeveloperInfo.swift */,
 			);
 			path = model;
@@ -598,7 +595,6 @@
 				29F818032B26F67D0002E3C8 /* DeveloperInfo.swift in Sources */,
 				2984A8FD2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift in Sources */,
 				29F237532B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift in Sources */,
-				296FFA732B1F136300DE1D68 /* MainTableViewModel.swift in Sources */,
 				296FFA7A2B2014FF00DE1D68 /* QuizTableViewCell.swift in Sources */,
 				2942749A2BDB4979006B224B /* CreatedNoteResult.swift in Sources */,
 				2978599F2BAC18C700A3FA14 /* CreatedNoteViewController.swift in Sources */,

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import MobileCoreServices
+import UniformTypeIdentifiers
 
 // 사용자가 찍은 사진을 서버로 전송하여 노트 생성 화면으로 이동
 class NoteMakerViewController: UIViewController {
@@ -21,7 +23,7 @@ class NoteMakerViewController: UIViewController {
     
     var createdNote : CreatedNoteResult?
     
-    private let stoaryBoard = UIStoryboard(name: "Main", bundle: nil)
+    private let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     
     // Life Cycle
     override func viewDidLoad() {
@@ -68,31 +70,41 @@ class NoteMakerViewController: UIViewController {
         self.imagePickerViewController.sourceType = .photoLibrary // photoLibrary : 갤러리
         self.present(imagePickerViewController, animated: true, completion: nil)
     }
+    
+    //MARK: PDF Button Action
+    
+    
+    @IBAction func btnPdfDidTapped(_ sender: Any) {
+        self.log("PDF Button Tapped")
+        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.pdf], asCopy: true)
+        documentPicker.delegate = self
+        documentPicker.modalPresentationStyle = .formSheet
+        self.present(documentPicker, animated: true, completion: nil)
+    }
+    
 }
 
 // 뷰를 전환하기 위한 NavigationController와, 카메라,갤러리 뷰를 사용하기 위해 ImagePickerControllerDelegate 프로토콜을 채택한다.
 extension NoteMakerViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
-    // 이미지가 선택된 후에, 아래 함수가 호출된다.
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        picker.dismiss(animated: true, completion: nil) // 이미지 피커 닫기
-        // OCR + GPT Generation이 진행중인 동안 indicator를 사용하여 화면에 로딩 띄우는 작업 필요
-        // 로딩이 끝난 이후 노트 페이지로 이동 하는 작업 필요(네비게이션으로?)
-        if let image = info[.originalImage] as? UIImage {
-            // 이미지를 서버로 전송
-            FastAPI.shared.makeNoteByImageRequest(image: image){ isSuccess, createdNote in
-                if isSuccess{
-                    self.createdNote = createdNote
-                    // 노트 생성 이후 처리
-                    let createdNoteVC = self.stoaryBoard.instantiateViewController(withIdentifier: "CreatedNoteViewController") as! CreatedNoteViewController
-                    createdNoteVC.createdNote = self.createdNote // 노트 데이터 전달
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let url = urls.first else {
+            self.log("No file selected")
+            return
+        }
+        // 파일이 선택되었을 때의 처리 로직
+        FastAPI.shared.makeNoteByPdf(pdfURL: url) { success, createdNote in
+            if success {
+                self.createdNote = createdNote
+                // 성공적으로 파일을 업로드하고 처리 완료 후 UI 업데이트
+                DispatchQueue.main.async {
+                    let createdNoteVC = self.storyBoard.instantiateViewController(withIdentifier: "CreatedNoteViewController") as! CreatedNoteViewController
+                    createdNoteVC.createdNote = self.createdNote
                     self.navigationController?.pushViewController(createdNoteVC, animated: true)
-                } else {
-                    
                 }
+            } else {
+                self.log("Failed to upload PDF")
             }
-            
-            
         }
     }
     
@@ -101,5 +113,26 @@ extension NoteMakerViewController : UIImagePickerControllerDelegate,UINavigation
 extension NoteMakerViewController {
     private func log(_ message : String){
         print("📌[NoteMakerViewController] \(message)📌")
+    }
+}
+
+
+//MARK: PDF File Select
+extension NoteMakerViewController : UIDocumentPickerDelegate {
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+        // 파일 선택 이후 api 호출
+        FastAPI.shared.makeNoteByPdf(pdfURL : url) { success, createdNote in
+            if success {
+                self.createdNote = createdNote
+                // 노트 생성 이후 처리
+                DispatchQueue.main.async {
+                    let createdNoteVC = self.storyBoard.instantiateViewController(withIdentifier: "CreatedNoteViewController") as! CreatedNoteViewController
+                    createdNoteVC.createdNote = self.createdNote // 노트 데이터 전달
+                    self.navigationController?.pushViewController(createdNoteVC, animated: true)
+                }
+            } else {
+                self.log("Failed to upload PDF")
+            }
+        }
     }
 }

@@ -13,6 +13,9 @@ import UIKit
 class NotePageViewController: UIPageViewController {
 
     var noteData : [String] = [] // 사용자에게 보여줄 데이터형태
+    
+    var pageData : [NotePagesDto] = [] // 노트 페이지 정보
+    
     var currentIndex : Int = 0 // 현재 페이지가 몇번째 페이지인지 확인하기 위함
     
     override func viewDidLoad() {

@@ -132,9 +132,6 @@ extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
 
 // 노트 셀, 퀴즈 셀 아이템에서 화면이동하는 알고리즘을 구현
 extension MyNoteViewController : NavigationDelegate{
-    
-    
-    
     // 전체 퀴즈 보기로 이동
     func didTapGoAllQuizButton() {
         self.log("didTapGoAllQuizButton Did Tappbed")
@@ -159,10 +156,13 @@ extension MyNoteViewController : NavigationDelegate{
     }
     
     // 노트 페이지로 이동(노트 셀 클릭시)
-    func didTappedNoteCell() {
+    func didTappedNoteCell(_ userNotePage : UserNotePage) {
         self.log("didTappedNoteCall Did Tapped")
         // 노트 페이지 뷰 인스턴스 찾기
         let noteVC = stoaryBoard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
+        
+        // 노트 페이지 뷰에 정보 전달
+        
         // 화면 이동하기
         self.navigationController?.pushViewController(noteVC, animated: true)
     }

@@ -9,7 +9,10 @@ import UIKit
 
 class NoteViewController: UIViewController {
     
-    var noteData : [String] = [] // 사용자에게 보여줄 데이터
+    var pageData : [NotePagesDto] = [] // 사용자에게 보여줄 데이터
+    
+    // 사용자에게 보여줄 노트 데이터
+    var userNotePages : UserNotePage!
     
     @IBOutlet weak var notePageViewContainer: UIView! // 페이지뷰의 컨테이너 역할을 수행
     var notePageViewController : UIPageViewController! // 노트 페이지 뷰
@@ -19,7 +22,7 @@ class NoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchNoteData() // 노트 데이터 얻어오기
+        setNotePages() // 페이지 정보 할당
         
         // 뒤로가기 이벤트 정의
         // 탭 제스처 인식기 설정 => 뒤로가기 버튼 사용을 위해
@@ -34,8 +37,7 @@ class NoteViewController: UIViewController {
             self.addChild(notePageVC) // 자식 뷰 컨트롤러로 추가
             self.notePageViewContainer.addSubview(notePageVC.view) // containerView에 뷰 추가
             
-            // 노트 데이터 넘기기
-            notePageVC.noteData = self.noteData
+            notePageVC.pageData = self.pageData // 페이지 데이터 넘기기
 
             // MyPageViewController의 뷰 크기 및 위치 조정(자식으로 지정)
             notePageVC.view.frame = notePageViewContainer.bounds
@@ -65,10 +67,8 @@ class NoteViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    // 서버로부터 데이터 얻어오기
-    private func fetchNoteData(){
-        let data = ["Page1","Page2","Page3"] // 노트의 각 페이지에 해당하는 내용
-        self.noteData = data
+    private func setNotePages(){
+        //self.pageData = userNotePages.notePages
     }
     
     // 네비게이션 바 숨기기

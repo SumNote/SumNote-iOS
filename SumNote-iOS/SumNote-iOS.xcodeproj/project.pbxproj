@@ -14,6 +14,7 @@
 		29237D782B2DE11700BE751D /* NoteContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237D772B2DE11700BE751D /* NoteContentsViewController.swift */; };
 		293E0C672B3F11D800032033 /* FastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C662B3F11D800032033 /* FastAPI.swift */; };
 		293E0C692B3F131300032033 /* SpringAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C682B3F131300032033 /* SpringAPI.swift */; };
+		293F28EA2BDD3B5A0030ACBC /* UserNotePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */; };
 		2942749A2BDB4979006B224B /* CreatedNoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294274992BDB4979006B224B /* CreatedNoteResult.swift */; };
 		294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BC2B07922100C57B49 /* AppDelegate.swift */; };
 		294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BE2B07922100C57B49 /* SceneDelegate.swift */; };
@@ -88,6 +89,7 @@
 		29237D772B2DE11700BE751D /* NoteContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteContentsViewController.swift; sourceTree = "<group>"; };
 		293E0C662B3F11D800032033 /* FastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastAPI.swift; sourceTree = "<group>"; };
 		293E0C682B3F131300032033 /* SpringAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAPI.swift; sourceTree = "<group>"; };
+		293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotePage.swift; sourceTree = "<group>"; };
 		294274992BDB4979006B224B /* CreatedNoteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedNoteResult.swift; sourceTree = "<group>"; };
 		294349B92B07922100C57B49 /* SumNote-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SumNote-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294349BC2B07922100C57B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				29EFD8852BDA35DA0064176A /* SpringBaseResponse.swift */,
 				2976E9C52BDABE6700BD9DC1 /* UserNote.swift */,
 				294274992BDB4979006B224B /* CreatedNoteResult.swift */,
+				293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */,
 			);
 			path = dto;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				29F237532B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.swift in Sources */,
 				296FFA7A2B2014FF00DE1D68 /* QuizTableViewCell.swift in Sources */,
 				2942749A2BDB4979006B224B /* CreatedNoteResult.swift in Sources */,
+				293F28EA2BDD3B5A0030ACBC /* UserNotePage.swift in Sources */,
 				2978599F2BAC18C700A3FA14 /* CreatedNoteViewController.swift in Sources */,
 				294349F72B079F3700C57B49 /* UserInfoViewController.swift in Sources */,
 				295F90402B20CAFF00F28446 /* AllQuizViewController.swift in Sources */,

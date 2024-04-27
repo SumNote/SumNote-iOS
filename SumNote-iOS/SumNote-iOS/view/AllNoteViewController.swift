@@ -112,7 +112,7 @@ extension AllNoteViewController : UITableViewDelegate,UITableViewDataSource{
     // 셀 클릭시 동작
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.log("didSelectRowAt : \(indexPath.row)")
-        delegater?.didTappedNoteCell() // 노트 셀 클릭됨
+        //	delegater?.didTappedNoteCell() // 노트 셀 클릭됨
     }
 }
 

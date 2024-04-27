@@ -12,7 +12,7 @@ class SpringAPI{
     
     static let shared = SpringAPI() // Singleton
     
-    static let baseUrl = "http://127.0.0.1:8080/api"
+    static let baseUrl = "http://52.78.139.114:8080/api"
     
     static var token : String? = nil
     
@@ -59,18 +59,37 @@ class SpringAPI{
             switch response.result {
             case .success(let apiResponse):
                 let noteList = apiResponse.data
-                self.log("getNoteRequest success \(noteList)")
+                self.log("getNoteRequest success \(String(describing: apiResponse.message))")
                 completion(true,noteList)
             case .failure(let error):
-                self.log("getNoteRequest error \(error)")
+                self.log("getNoteRequest error : \(error)")
                 completion(false,[])
             }
         }
         
     }
-
     
     // 사용자의 특정 노트의 페이지 데이터 요청(페이지들)
+    func getNotePagesReqeust(noteId : Int, completion : @escaping (Bool,UserNotePage?)->()){
+        let url = SpringAPI.baseUrl + "/sum-note/\(noteId)"
+        
+        AF.request(url,
+                   method: .get,
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of: SpringBaseResponse<UserNotePage>.self) { response in
+            switch response.result{
+            case .success(let apiResponse):
+                let requestResult = apiResponse.data
+                self.log("getNotePagesReqeust \(String(describing: apiResponse.message))")
+                self.log("getNotePagesReqeust success : \(String(describing: requestResult.notePages))")
+                completion(true,requestResult)
+            case .failure(let error):
+                self.log("getNotePagesReqeust error : \(error)")
+                completion(false,nil)
+            }
+        }
+    }
     
     // 사용자의 문제집 데이터 요청(문제집 목록)
     

@@ -161,7 +161,7 @@ extension MyNoteViewController : NavigationDelegate{
         // 노트 페이지 뷰 인스턴스 찾기
         let noteVC = stoaryBoard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
         
-        // 노트 페이지 뷰에 정보 전달
+        noteVC.userNotePages = userNotePage // 노트 페이지 뷰에 정보 전달
         
         // 화면 이동하기
         self.navigationController?.pushViewController(noteVC, animated: true)

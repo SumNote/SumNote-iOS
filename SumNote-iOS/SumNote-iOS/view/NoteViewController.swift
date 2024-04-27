@@ -23,6 +23,7 @@ class NoteViewController: UIViewController {
         super.viewDidLoad()
         
         setNotePages() // 페이지 정보 할당
+        self.log("viewDidLoad userNotePage : \(String(describing: pageData))")
         
         // 뒤로가기 이벤트 정의
         // 탭 제스처 인식기 설정 => 뒤로가기 버튼 사용을 위해
@@ -31,24 +32,27 @@ class NoteViewController: UIViewController {
         backBtn.addGestureRecognizer(tapGesture)
         
         
-        //스토리보드를 사용하여 NotePageViewController 인스턴스화 & 자식 VC로 지정
-        if let notePageVC = storyboard?.instantiateViewController(withIdentifier: "NotePageViewController") as? NotePageViewController {
-            self.notePageViewController = notePageVC
-            self.addChild(notePageVC) // 자식 뷰 컨트롤러로 추가
-            self.notePageViewContainer.addSubview(notePageVC.view) // containerView에 뷰 추가
-            
-            notePageVC.pageData = self.pageData // 페이지 데이터 넘기기
+        DispatchQueue.main.async {
+            //스토리보드를 사용하여 NotePageViewController 인스턴스화 & 자식 VC로 지정
+            if let notePageVC = self.storyboard?.instantiateViewController(withIdentifier: "NotePageViewController") as? NotePageViewController {
+                self.notePageViewController = notePageVC
+                self.notePageViewContainer.addSubview(notePageVC.view) // containerView에 뷰 추가
+                self.addChild(notePageVC) // 자식 뷰 컨트롤러로 추가
+                
+                notePageVC.pageData = self.pageData // 페이지 데이터 넘기기
+                // MyPageViewController의 뷰 크기 및 위치 조정(자식으로 지정)
+                notePageVC.view.frame = self.notePageViewContainer.bounds
+                notePageVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                notePageVC.didMove(toParent: self)
+                
+                // 시작 페이지 설정
+                if let startingViewController = notePageVC.setNoteContent(at: 0) {
+                    notePageVC.setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
+                }
 
-            // MyPageViewController의 뷰 크기 및 위치 조정(자식으로 지정)
-            notePageVC.view.frame = notePageViewContainer.bounds
-            notePageVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            notePageVC.didMove(toParent: self)
-            
-            // 시작 페이지 설정
-            if let startingViewController = notePageVC.setNoteContent(at: 0) {
-                notePageVC.setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
             }
         }
+        
     }
     
     // 뷰가 실행되고 난 이후 (네비게이션 바 커스텀을 위해 상단 바 숨기기)
@@ -68,7 +72,7 @@ class NoteViewController: UIViewController {
     }
     
     private func setNotePages(){
-        //self.pageData = userNotePages.notePages
+        self.pageData = userNotePages.notePages!
     }
     
     // 네비게이션 바 숨기기
@@ -81,4 +85,10 @@ class NoteViewController: UIViewController {
         print("뒤로가기 클릭됨")
     }
     
+}
+
+extension NoteViewController {
+    private func log(_ message : String){
+        print("📌[NoteViewController] \(message)📌")
+    }
 }

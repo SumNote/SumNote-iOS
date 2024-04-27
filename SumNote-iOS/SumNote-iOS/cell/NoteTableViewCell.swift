@@ -22,9 +22,6 @@ class NoteTableViewCell: UITableViewCell {
     // 서버로부터 얻어올 노트 데이터 리스트 작성 필요
     var noteList : [UserNote] = []
     
-    // 서버로부터 얻어올 페이지 데이터
-    var userNotePage : UserNotePage?
-    
     // CollectionView에 대한 Delegate,Datasource선언
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -111,19 +108,16 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
         return cell
     }
     
-    // 컬렉션뷰 클릭시 동작 => MyNoteView로 위임 필요?
+    // 컬렉션뷰 클릭시 동작 => MyNoteView로 위임 필요
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.log("\(indexPath.row) cell clicked")
         
         let note = noteList[indexPath.row]
         SpringAPI.shared.getNotePagesReqeust(noteId: note.noteId!){ isSucess,userNotePage in
             if isSucess{
-                self.userNotePage = userNotePage // 데이터 바인딩
-                DispatchQueue.main.async {
-                    self.delegate?.didTappedNoteCell(userNotePage!) // 노트 페이지로 이동
-                }
+                self.delegate?.didTappedNoteCell(userNotePage!) // 얻어온 노트 정보 전달
             } else {
-                
+                // 오류 처리 필요
             }
         }
         

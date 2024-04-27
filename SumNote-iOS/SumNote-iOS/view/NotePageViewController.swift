@@ -22,6 +22,9 @@ class NotePageViewController: UIPageViewController {
         super.viewDidLoad()
         
         self.dataSource = self // datasource를 자기 자신으로 지정
+        
+        // 정보 수신 확인
+        self.log("viewDidLoad : \(pageData)")
     }
     
     // 노트의 페이지에 정보 할당 후 노트 페이지 리턴
@@ -88,4 +91,10 @@ extension NotePageViewController: UIPageViewControllerDataSource {
     }
 
 
+}
+
+extension NotePageViewController{
+    private func log(_ message : String){
+        print("📌[NotePageViewController] \(message)📌")
+    }
 }

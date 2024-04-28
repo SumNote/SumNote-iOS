@@ -569,6 +569,91 @@
             </objects>
             <point key="canvasLocation" x="2372" y="1403"/>
         </scene>
+        <!--Save Note View Controller-->
+        <scene sceneID="Vbq-2h-3sK">
+            <objects>
+                <viewController id="rwV-HS-z7Z" customClass="SaveNoteViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sz8-Me-6Ow">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7V9-pR-LLi">
+                                <rect key="frame" x="20" y="213.66666666666663" width="353" height="450"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저장할 노트를 선택해주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwV-Zh-dL3">
+                                        <rect key="frame" x="10" y="14.999999999999998" width="333" height="26.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" name="green"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0C-AO-Za9">
+                                        <rect key="frame" x="0.0" y="56.333333333333343" width="353" height="1"/>
+                                        <color key="backgroundColor" red="0.83710148360000003" green="0.83710148360000003" blue="0.83710148360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="uyx-np-Om8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-KH-J3a">
+                                        <rect key="frame" x="0.0" y="127.33333333333334" width="353" height="1"/>
+                                        <color key="backgroundColor" red="0.83710148360000003" green="0.83710148360000003" blue="0.83710148360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="T89-6b-o3J"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdW-Ab-cyh">
+                                        <rect key="frame" x="5" y="57.333333333333343" width="348" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="oBs-lT-0FH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" 새로운 노트에 저장하기" image="plus_circle">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dao-Ns-gM4">
+                                        <rect key="frame" x="0.0" y="128.33333333333334" width="353" height="321.66666666666663"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="dao-Ns-gM4" firstAttribute="leading" secondItem="7V9-pR-LLi" secondAttribute="leading" id="5AV-4D-Sd8"/>
+                                    <constraint firstAttribute="trailing" secondItem="foQ-KH-J3a" secondAttribute="trailing" id="5L0-rW-utm"/>
+                                    <constraint firstItem="foQ-KH-J3a" firstAttribute="leading" secondItem="7V9-pR-LLi" secondAttribute="leading" id="7lz-hC-8aD"/>
+                                    <constraint firstAttribute="height" constant="450" id="IFq-nZ-E7V"/>
+                                    <constraint firstItem="GdW-Ab-cyh" firstAttribute="leading" secondItem="7V9-pR-LLi" secondAttribute="leading" constant="5" id="L7X-8s-pF7"/>
+                                    <constraint firstAttribute="bottom" secondItem="dao-Ns-gM4" secondAttribute="bottom" id="LFl-rt-lGj"/>
+                                    <constraint firstItem="LwV-Zh-dL3" firstAttribute="leading" secondItem="7V9-pR-LLi" secondAttribute="leading" constant="10" id="NiX-QQ-VVi"/>
+                                    <constraint firstAttribute="trailing" secondItem="dao-Ns-gM4" secondAttribute="trailing" id="TSH-9e-eNd"/>
+                                    <constraint firstItem="dao-Ns-gM4" firstAttribute="top" secondItem="foQ-KH-J3a" secondAttribute="bottom" id="TSi-9o-GE7"/>
+                                    <constraint firstItem="i0C-AO-Za9" firstAttribute="leading" secondItem="7V9-pR-LLi" secondAttribute="leading" id="Upj-rh-xwt"/>
+                                    <constraint firstItem="foQ-KH-J3a" firstAttribute="top" secondItem="GdW-Ab-cyh" secondAttribute="bottom" id="Wd6-D7-FrY"/>
+                                    <constraint firstItem="LwV-Zh-dL3" firstAttribute="top" secondItem="7V9-pR-LLi" secondAttribute="top" constant="15" id="ZxI-Ur-jH7"/>
+                                    <constraint firstAttribute="trailing" secondItem="i0C-AO-Za9" secondAttribute="trailing" id="aFa-56-Onw"/>
+                                    <constraint firstItem="LwV-Zh-dL3" firstAttribute="centerX" secondItem="7V9-pR-LLi" secondAttribute="centerX" id="bTH-al-aBF"/>
+                                    <constraint firstAttribute="trailing" secondItem="LwV-Zh-dL3" secondAttribute="trailing" constant="10" id="beh-N4-qxq"/>
+                                    <constraint firstItem="GdW-Ab-cyh" firstAttribute="top" secondItem="i0C-AO-Za9" secondAttribute="bottom" id="fdH-j7-VRU"/>
+                                    <constraint firstAttribute="trailing" secondItem="GdW-Ab-cyh" secondAttribute="trailing" id="gu0-5h-jq9"/>
+                                    <constraint firstItem="i0C-AO-Za9" firstAttribute="top" secondItem="LwV-Zh-dL3" secondAttribute="bottom" constant="15" id="wJ8-cd-0m4"/>
+                                    <constraint firstItem="LwV-Zh-dL3" firstAttribute="centerX" secondItem="i0C-AO-Za9" secondAttribute="centerX" id="x0h-kY-APT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5ni-GV-WOb"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7V9-pR-LLi" firstAttribute="leading" secondItem="5ni-GV-WOb" secondAttribute="leading" constant="20" id="8BS-6z-g7y"/>
+                            <constraint firstItem="7V9-pR-LLi" firstAttribute="centerX" secondItem="5ni-GV-WOb" secondAttribute="centerX" id="LtU-vj-938"/>
+                            <constraint firstItem="5ni-GV-WOb" firstAttribute="trailing" secondItem="7V9-pR-LLi" secondAttribute="trailing" constant="20" id="NKb-4g-bmK"/>
+                            <constraint firstItem="7V9-pR-LLi" firstAttribute="centerY" secondItem="5ni-GV-WOb" secondAttribute="centerY" id="bF5-Id-KsF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1X-EQ-2Xk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3145.801526717557" y="1402.8169014084508"/>
+        </scene>
         <!--Note Contents View Controller-->
         <scene sceneID="nor-2e-yvb">
             <objects>
@@ -1015,6 +1100,7 @@
         <image name="img_note_background" width="114.33333587646484" height="225.66667175292969"/>
         <image name="img_reference_image" width="800.33331298828125" height="1181.3333740234375"/>
         <image name="message-square" width="28" height="28"/>
+        <image name="plus_circle" width="31" height="30"/>
         <namedColor name="green">
             <color red="0.027450980392156862" green="0.78823529411764703" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

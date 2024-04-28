@@ -14,7 +14,7 @@ class SpringAPI{
     
     static let baseUrl = "http://52.78.139.114:8080/api"
     
-    static var token : String? = nil
+    static var token : String = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGxya2QxMjIxQGdtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MTQzMDM4ODUsImV4cCI6MTcxNTUxMzQ4NX0.7rKpS5avqVjsX6YZWLpeAjf21REG30uzQkG0HbFGDno"
     
     private init() {} // for singleton
     
@@ -53,7 +53,7 @@ class SpringAPI{
         // ?type=all 노트 전체 반환
         AF.request(url,
                    method: .get,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of: SpringBaseResponse<[UserNote]>.self) { response in
             switch response.result {
@@ -75,7 +75,7 @@ class SpringAPI{
         
         AF.request(url,
                    method: .get,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of: SpringBaseResponse<UserNotePage>.self) { response in
             switch response.result{

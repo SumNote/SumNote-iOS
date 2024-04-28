@@ -19,7 +19,7 @@ class CreatedNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setNote()
+        //setNote()
     }
     
     override func viewWillAppear(_ animated: Bool) {

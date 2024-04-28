@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iJq-gv-fsu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Ub-sp-gDn">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -494,6 +494,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="btnCameraDidTapped:" destination="AU7-Jc-MvQ" eventType="touchUpInside" id="cig-7K-Cb4"/>
+                                            <segue destination="rwV-HS-z7Z" kind="presentation" id="ZdS-Qh-6Zy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -574,34 +575,34 @@
             <objects>
                 <viewController id="rwV-HS-z7Z" customClass="SaveNoteViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sz8-Me-6Ow">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7V9-pR-LLi">
-                                <rect key="frame" x="20" y="213.66666666666663" width="353" height="450"/>
+                                <rect key="frame" x="40" y="196" width="313" height="450"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저장할 노트를 선택해주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwV-Zh-dL3">
-                                        <rect key="frame" x="10" y="14.999999999999998" width="333" height="26.333333333333329"/>
+                                        <rect key="frame" x="10" y="14.999999999999998" width="293" height="26.333333333333329"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" name="green"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0C-AO-Za9">
-                                        <rect key="frame" x="0.0" y="56.333333333333343" width="353" height="1"/>
+                                        <rect key="frame" x="0.0" y="56.333333333333343" width="313" height="1"/>
                                         <color key="backgroundColor" red="0.83710148360000003" green="0.83710148360000003" blue="0.83710148360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="uyx-np-Om8"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-KH-J3a">
-                                        <rect key="frame" x="0.0" y="127.33333333333334" width="353" height="1"/>
+                                        <rect key="frame" x="0.0" y="127.33333333333331" width="313" height="1"/>
                                         <color key="backgroundColor" red="0.83710148360000003" green="0.83710148360000003" blue="0.83710148360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="T89-6b-o3J"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdW-Ab-cyh">
-                                        <rect key="frame" x="5" y="57.333333333333343" width="348" height="70"/>
+                                        <rect key="frame" x="10" y="57.333333333333343" width="303" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="oBs-lT-0FH"/>
                                         </constraints>
@@ -612,7 +613,7 @@
                                         </state>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dao-Ns-gM4">
-                                        <rect key="frame" x="0.0" y="128.33333333333334" width="353" height="321.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="129.33333333333326" width="313" height="321.66666666666674"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -622,7 +623,7 @@
                                     <constraint firstAttribute="trailing" secondItem="foQ-KH-J3a" secondAttribute="trailing" id="5L0-rW-utm"/>
                                     <constraint firstItem="foQ-KH-J3a" firstAttribute="leading" secondItem="7V9-pR-LLi" secondAttribute="leading" id="7lz-hC-8aD"/>
                                     <constraint firstAttribute="height" constant="450" id="IFq-nZ-E7V"/>
-                                    <constraint firstItem="GdW-Ab-cyh" firstAttribute="leading" secondItem="7V9-pR-LLi" secondAttribute="leading" constant="5" id="L7X-8s-pF7"/>
+                                    <constraint firstItem="GdW-Ab-cyh" firstAttribute="leading" secondItem="7V9-pR-LLi" secondAttribute="leading" constant="10" id="L7X-8s-pF7"/>
                                     <constraint firstAttribute="bottom" secondItem="dao-Ns-gM4" secondAttribute="bottom" id="LFl-rt-lGj"/>
                                     <constraint firstItem="LwV-Zh-dL3" firstAttribute="leading" secondItem="7V9-pR-LLi" secondAttribute="leading" constant="10" id="NiX-QQ-VVi"/>
                                     <constraint firstAttribute="trailing" secondItem="dao-Ns-gM4" secondAttribute="trailing" id="TSH-9e-eNd"/>
@@ -643,12 +644,17 @@
                         <viewLayoutGuide key="safeArea" id="5ni-GV-WOb"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7V9-pR-LLi" firstAttribute="leading" secondItem="5ni-GV-WOb" secondAttribute="leading" constant="20" id="8BS-6z-g7y"/>
+                            <constraint firstItem="7V9-pR-LLi" firstAttribute="leading" secondItem="5ni-GV-WOb" secondAttribute="leading" constant="40" id="8BS-6z-g7y"/>
                             <constraint firstItem="7V9-pR-LLi" firstAttribute="centerX" secondItem="5ni-GV-WOb" secondAttribute="centerX" id="LtU-vj-938"/>
-                            <constraint firstItem="5ni-GV-WOb" firstAttribute="trailing" secondItem="7V9-pR-LLi" secondAttribute="trailing" constant="20" id="NKb-4g-bmK"/>
+                            <constraint firstItem="5ni-GV-WOb" firstAttribute="trailing" secondItem="7V9-pR-LLi" secondAttribute="trailing" constant="40" id="NKb-4g-bmK"/>
                             <constraint firstItem="7V9-pR-LLi" firstAttribute="centerY" secondItem="5ni-GV-WOb" secondAttribute="centerY" id="bF5-Id-KsF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8Pa-Di-F9T"/>
+                    <connections>
+                        <outlet property="noteTableView" destination="dao-Ns-gM4" id="0Hm-Ha-kdO"/>
+                        <outlet property="saveNewNoteBtn" destination="GdW-Ab-cyh" id="Dq8-Je-6O5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1X-EQ-2Xk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

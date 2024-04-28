@@ -14,7 +14,7 @@ class SpringAPI{
     
     static let baseUrl = "http://52.78.139.114:8080/api"
     
-    static var token : String = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGxya2QxMjIxQGdtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MTQzMDM4ODUsImV4cCI6MTcxNTUxMzQ4NX0.7rKpS5avqVjsX6YZWLpeAjf21REG30uzQkG0HbFGDno"
+    static var token : String?
     
     private init() {} // for singleton
     
@@ -53,7 +53,7 @@ class SpringAPI{
         // ?type=all 노트 전체 반환
         AF.request(url,
                    method: .get,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of: SpringBaseResponse<[UserNote]>.self) { response in
             switch response.result {
@@ -75,7 +75,7 @@ class SpringAPI{
         
         AF.request(url,
                    method: .get,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of: SpringBaseResponse<UserNotePage>.self) { response in
             switch response.result{
@@ -91,11 +91,36 @@ class SpringAPI{
         }
     }
     
+    // 특정 노트에 페이지 추가 저장
+    func savePageToNoteRequest(noteId : Int, notePage : SaveNotePageDto, completion : @escaping (Bool)->()){
+        let url = SpringAPI.baseUrl + "/sum-note/\(noteId)/add"
+        
+        AF.request(url,
+                   method: .put,
+                   parameters: notePage,
+                   encoder: JSONParameterEncoder.default,
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of: SaveNoteResponse.self){ response in
+            switch response.result{
+            case .success(let apiResponse):
+                self.log("savePageToNoteRequest success \(apiResponse)")
+            case .failure(let error):
+                self.log("savePageToNoteRequest success \(error)")
+            }
+        }
+    }
+    
+    
+    // 1. 새로운 노트 생성 후 페이지 저장
+    
+    // 2. 노트 이름 변경
+    
+    // 사용자의 노트 삭제 요청
+    
     // 사용자의 문제집 데이터 요청(문제집 목록)
     
     // 사용자의 특정 문제집의 퀴즈 데이터 요청(문제집에 소속된 퀴즈들)
-    
-    // 사용자의 노트 삭제 요청
     
     // 사용자의 퀴즈 삭제 요청
 

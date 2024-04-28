@@ -19,7 +19,7 @@ class CreatedNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //setNote()
+        setNote()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +43,12 @@ class CreatedNoteViewController: UIViewController {
         self.log("cancelBtnDidTapped")
     }
     
+    
+    @IBAction func saveNoteBtn(_ sender: Any) {
+        performSegue(withIdentifier: "saveNote", sender: self)
+    }
+    
+    
     private func setNote(){
         self.noteTitle.text = self.createdNote?.title
         self.noteContent.text = self.createdNote?.summary
@@ -53,5 +59,16 @@ class CreatedNoteViewController: UIViewController {
 extension CreatedNoteViewController {
     private func log(_ message : String){
         print("📌[CreatedNoteViewController] \(message)📌")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "saveNote" {
+            guard let saveNoteViewController = segue.destination as? SaveNoteViewController else {
+                return
+            }
+            // 생성된 페이지 정보 전달
+            saveNoteViewController.noteTitle = self.noteTitle.text
+            saveNoteViewController.noteContent = self.noteContent.text
+        }
     }
 }

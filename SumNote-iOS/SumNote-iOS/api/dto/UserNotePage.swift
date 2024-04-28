@@ -12,7 +12,7 @@ struct UserNotePage : Decodable{
     var notePages: [NotePagesDto]?
 }
 
-struct NotePageNoteDto : Decodable {
+struct NotePageNoteDto : Decodable{
     var noteId : Int?
     var title : String?
 }
@@ -22,4 +22,9 @@ struct NotePagesDto : Decodable {
     var title : String?
     var content : String?
     var isQuizExist : Bool?
+}
+
+struct SaveNotePageDto : Encodable {
+    var title : String?
+    var content : String?
 }

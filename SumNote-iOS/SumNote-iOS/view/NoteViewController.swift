@@ -11,7 +11,6 @@ class NoteViewController: UIViewController {
     
     @IBOutlet weak var noteTitle: UILabel!
     @IBOutlet weak var notePageViewContainer: UIView! // 페이지뷰의 컨테이너 역할 수행
-    
     @IBOutlet weak var backBtn : UIImageView! // 뒤로가기 기능을 수행하기 위함
     
     var userNotePages : UserNotePage!

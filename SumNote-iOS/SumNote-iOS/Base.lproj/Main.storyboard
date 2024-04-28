@@ -637,6 +637,10 @@
                             <constraint firstItem="8gr-Du-KsN" firstAttribute="leading" secondItem="ib1-Tv-iqt" secondAttribute="leading" id="fBm-AI-Qi5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageContent" destination="fzr-an-r9a" id="fD8-nk-qPI"/>
+                        <outlet property="pageTitle" destination="DFa-bi-OUd" id="UXV-pZ-ilf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM8-rj-IIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -686,6 +690,7 @@
                     <connections>
                         <outlet property="backBtn" destination="dx9-Rn-UCy" id="hM0-M8-qOx"/>
                         <outlet property="notePageViewContainer" destination="9U6-Zk-jJG" id="USf-bV-32V"/>
+                        <outlet property="noteTitle" destination="PQg-Xm-GD1" id="RwI-ps-L3s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyL-2f-B0G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

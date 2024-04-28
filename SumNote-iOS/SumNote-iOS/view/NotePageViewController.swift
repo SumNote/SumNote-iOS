@@ -11,8 +11,6 @@ import UIKit
 // 노트 화면에 해당
 // 좌우 슬라이드를 통해 노트의 내용을 보며 학습 가능
 class NotePageViewController: UIPageViewController {
-
-    var noteData : [String] = [] // 사용자에게 보여줄 데이터형태
     
     var pageData : [NotePagesDto] = [] // 노트 페이지 정보
     
@@ -20,8 +18,7 @@ class NotePageViewController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.dataSource = self // datasource를 자기 자신으로 지정
+        self.dataSource = self // for UIPageViewController
         
         // 정보 수신 확인
         self.log("viewDidLoad : \(pageData)")
@@ -30,7 +27,7 @@ class NotePageViewController: UIPageViewController {
     // 노트의 페이지에 정보 할당 후 노트 페이지 리턴
     func setNoteContent(at index : Int) -> NoteContentsViewController? {
         // 유효성 검사
-        if index < 0 || index >= noteData.count {
+        if index < 0 || index >= pageData.count {
             return nil
         }
         // 스토리보드를 통해 퀴즈 페이지 찾기
@@ -38,9 +35,9 @@ class NotePageViewController: UIPageViewController {
         // NoteContentsViewController 찾기
         if let noteContentsVC = stoaryboard.instantiateViewController(withIdentifier: "NoteContentsViewController") as? NoteContentsViewController{
             // 노트 페이지에 정보 할당
+            noteContentsVC.notePageData = pageData[index]
             // 노트 페이지의 인덱스 설정
             noteContentsVC.pageIndex = index // 페이지 인덱스 설정
-            //quizContentsVC.question = quizData[index]
             // 정보 할당 완료 후 퀴즈 페이지 리턴
             return noteContentsVC
         }
@@ -81,7 +78,7 @@ extension NotePageViewController: UIPageViewControllerDataSource {
         }
         var index = noteContentsVC.pageIndex
         // 마지막 페이지인지 확인
-        if index == noteData.count - 1 {
+        if index == pageData.count - 1 {
             return nil
         }
         // 그렇지 않다면 다음 인덱스로 이동

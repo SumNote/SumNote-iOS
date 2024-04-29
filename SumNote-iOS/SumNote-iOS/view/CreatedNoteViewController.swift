@@ -66,9 +66,11 @@ extension CreatedNoteViewController {
             guard let saveNoteViewController = segue.destination as? SaveNoteViewController else {
                 return
             }
+            saveNoteViewController.delegate = self.navigationController?.viewControllers.first { $0 is NoteMakerViewController } as? NoteMakerViewController
             // 생성된 페이지 정보 전달
             saveNoteViewController.noteTitle = self.noteTitle.text
             saveNoteViewController.noteContent = self.noteContent.text
         }
     }
 }
+

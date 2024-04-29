@@ -12,6 +12,8 @@ class SaveNoteViewController: UIViewController {
     @IBOutlet weak var noteTableView: UITableView!
     @IBOutlet weak var saveNewNoteBtn: UIButton!
     
+    weak var delegate: NoteSavingDelegate?
+    
     var noteTitle : String?
     var noteContent : String?
     
@@ -93,14 +95,17 @@ extension SaveNoteViewController : UITableViewDelegate{
         let note = noteList[indexPath.row]
         let notePage = SaveNotePageDto(title: self.noteTitle, content: self.noteContent) // 저장할 페이지
         
-        SpringAPI.shared.savePageToNoteRequest(noteId: note.noteId!, notePage: notePage){ isSuccess in
-            if isSuccess {
-                self.log("tableView didSelectRowAt : Success to save note")
-                
-            } else {
-                self.log("tableView didSelectRowAt : Fail to save note")
+        SpringAPI.shared.savePageToNoteRequest(noteId: note.noteId!, notePage: notePage) { [weak self] isSuccess in
+            DispatchQueue.main.async { // 메인 스레드에서 실행
+                if isSuccess {
+                    self?.log("tableView didSelectRowAt : Success to save note")
+                    self?.dismiss(animated: false){
+                        self?.delegate?.shouldCloseAllRelatedViews()
+                    }
+                } else {
+                    self?.log("tableView didSelectRowAt : Fail to save note")
+                }
             }
-            // 이후 초기화면으로 이동하는 로직 작성 필요
         }
     }
 }

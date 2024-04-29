@@ -92,7 +92,7 @@ class SpringAPI{
     }
     
     // 특정 노트에 페이지 추가 저장
-    func savePageToNoteRequest(noteId : Int, notePage : SaveNotePageDto, completion : @escaping (Bool)->()){
+    func savePageToNoteRequest(noteId : Int, notePage : SaveNotePageDto, completion : @escaping (Bool)->(Void)){
         let url = SpringAPI.baseUrl + "/sum-note/\(noteId)/add"
         
         AF.request(url,
@@ -105,8 +105,10 @@ class SpringAPI{
             switch response.result{
             case .success(let apiResponse):
                 self.log("savePageToNoteRequest success \(apiResponse)")
+                completion(true)
             case .failure(let error):
                 self.log("savePageToNoteRequest success \(error)")
+                completion(false)
             }
         }
     }

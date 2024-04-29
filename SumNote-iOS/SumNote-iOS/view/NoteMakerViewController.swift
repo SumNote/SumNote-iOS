@@ -162,3 +162,12 @@ extension NoteMakerViewController : UIDocumentPickerDelegate {
         }
     }
 }
+
+
+extension NoteMakerViewController: NoteSavingDelegate {
+    func shouldCloseAllRelatedViews() {
+        DispatchQueue.main.async {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+}

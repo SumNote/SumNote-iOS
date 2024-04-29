@@ -27,6 +27,17 @@ class SaveNoteViewController: UIViewController {
         getAllNote() // 서버로부터 데이터 요청
     }
     
+    
+    // 새로운 노트에 저장하기
+    @IBAction func saveNewNoteBtnDidTapped(_ sender: Any) {
+        // 현재 세그를 종료하고, 부모(CreatedNoteViewController)에서 saveNewNote 세그 실행
+        self.log("saveNewNoteBtnDidTapped")
+        self.parent?.performSegue(withIdentifier: "saveNewNote", sender: self)
+    }
+    
+    
+    
+    
     private func setTableView(){
         noteTableView.delegate = self
         noteTableView.dataSource = self

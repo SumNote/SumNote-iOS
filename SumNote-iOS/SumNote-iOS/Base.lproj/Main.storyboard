@@ -564,7 +564,7 @@
                     <connections>
                         <outlet property="noteContent" destination="3tc-kv-957" id="Uo0-7Z-hWJ"/>
                         <outlet property="noteTitle" destination="UXZ-w1-YFC" id="3eG-Um-Ztf"/>
-                        <segue destination="rwV-HS-z7Z" kind="show" identifier="saveNote" id="aKI-yy-Ust"/>
+                        <segue destination="rwV-HS-z7Z" kind="presentation" identifier="saveNote" id="aKI-yy-Ust"/>
                         <segue destination="BgK-mV-fDc" kind="show" identifier="saveNewNote" id="KWe-2j-WVT"/>
                     </connections>
                 </viewController>
@@ -613,6 +613,9 @@
                                         <state key="normal" title=" 새로운 노트에 저장하기" image="plus_circle">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveNewNoteBtnDidTapped:" destination="rwV-HS-z7Z" eventType="touchUpInside" id="O0S-CM-Lww"/>
+                                        </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dao-Ns-gM4">
                                         <rect key="frame" x="0.0" y="128.33333333333329" width="313" height="321.66666666666674"/>
@@ -660,7 +663,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1X-EQ-2Xk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3145.801526717557" y="1402.8169014084508"/>
+            <point key="canvasLocation" x="3127" y="1403"/>
         </scene>
         <!--Save New Note View Controller-->
         <scene sceneID="j9M-PV-R9H">
@@ -730,7 +733,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGa-dC-jfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3914" y="1403"/>
+            <point key="canvasLocation" x="3831" y="1403"/>
         </scene>
         <!--Note Contents View Controller-->
         <scene sceneID="nor-2e-yvb">

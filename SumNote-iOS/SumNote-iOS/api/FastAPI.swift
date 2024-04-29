@@ -12,7 +12,7 @@ class FastAPI{
     
     static let shared = FastAPI()
     
-    static let baseURL = "http://192.168.0.22:8000"
+    static let baseURL = "http://192.168.174.183:8000"
     
     private let session: Session
     

@@ -565,7 +565,7 @@
                         <outlet property="noteContent" destination="3tc-kv-957" id="Uo0-7Z-hWJ"/>
                         <outlet property="noteTitle" destination="UXZ-w1-YFC" id="3eG-Um-Ztf"/>
                         <segue destination="rwV-HS-z7Z" kind="presentation" identifier="saveNote" id="aKI-yy-Ust"/>
-                        <segue destination="BgK-mV-fDc" kind="show" identifier="saveNewNote" id="KWe-2j-WVT"/>
+                        <segue destination="BgK-mV-fDc" kind="presentation" identifier="saveNewNote" id="KWe-2j-WVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZB-Ur-MyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

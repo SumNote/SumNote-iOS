@@ -12,7 +12,8 @@ class SaveNoteViewController: UIViewController {
     @IBOutlet weak var noteTableView: UITableView!
     @IBOutlet weak var saveNewNoteBtn: UIButton!
     
-    weak var delegate: NoteSavingDelegate?
+    weak var finishNoteSaveDelegate: FinishNoteSaveDelegate?
+    weak var saveNewNoteDelegate : SaveNewNoteDelegate?
     
     var noteTitle : String?
     var noteContent : String?
@@ -32,9 +33,11 @@ class SaveNoteViewController: UIViewController {
     
     // 새로운 노트에 저장하기
     @IBAction func saveNewNoteBtnDidTapped(_ sender: Any) {
-        // 현재 세그를 종료하고, 부모(CreatedNoteViewController)에서 saveNewNote 세그 실행
         self.log("saveNewNoteBtnDidTapped")
-        self.parent?.performSegue(withIdentifier: "saveNewNote", sender: self)
+        // 현재 세그를 종료하고, 부모(CreatedNoteViewController)에서 saveNewNote 세그 실행
+        self.dismiss(animated: false){
+            self.saveNewNoteDelegate?.showSaveNewNoteModal()
+        }
     }
     
     
@@ -100,7 +103,7 @@ extension SaveNoteViewController : UITableViewDelegate{
                 if isSuccess {
                     self?.log("tableView didSelectRowAt : Success to save note")
                     self?.dismiss(animated: false){
-                        self?.delegate?.shouldCloseAllRelatedViews()
+                        self?.finishNoteSaveDelegate?.shouldCloseAllRelatedViews()
                     }
                 } else {
                     self?.log("tableView didSelectRowAt : Fail to save note")

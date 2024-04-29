@@ -164,7 +164,7 @@ extension NoteMakerViewController : UIDocumentPickerDelegate {
 }
 
 
-extension NoteMakerViewController: NoteSavingDelegate {
+extension NoteMakerViewController: FinishNoteSaveDelegate {
     func shouldCloseAllRelatedViews() {
         DispatchQueue.main.async {
             self.navigationController?.popToRootViewController(animated: true)

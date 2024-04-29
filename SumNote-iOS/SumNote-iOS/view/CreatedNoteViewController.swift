@@ -66,11 +66,27 @@ extension CreatedNoteViewController {
             guard let saveNoteViewController = segue.destination as? SaveNoteViewController else {
                 return
             }
-            saveNoteViewController.delegate = self.navigationController?.viewControllers.first { $0 is NoteMakerViewController } as? NoteMakerViewController
+            // 위임자 지정
+            saveNoteViewController.finishNoteSaveDelegate = self.navigationController?.viewControllers.first { $0 is NoteMakerViewController } as? NoteMakerViewController
+            saveNoteViewController.saveNewNoteDelegate = self
             // 생성된 페이지 정보 전달
             saveNoteViewController.noteTitle = self.noteTitle.text
             saveNoteViewController.noteContent = self.noteContent.text
+        } else if segue.identifier == "saveNewNote" { // 새로운 노트에 저장인 경우
+            guard let saveNewNoteViewController = segue.destination as? SaveNewNoteViewController else {
+                return
+            }
+            // 정보 전달
+            saveNewNoteViewController.noteTitle = self.noteTitle.text
+            saveNewNoteViewController.noteContent = self.noteContent.text
         }
     }
 }
 
+extension CreatedNoteViewController : SaveNewNoteDelegate {
+    
+    func showSaveNewNoteModal() {
+        self.log("showSaveNewNoteModal")
+        performSegue(withIdentifier: "saveNewNote", sender: self)
+    }
+}

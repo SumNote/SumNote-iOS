@@ -8,6 +8,9 @@
 import UIKit
 
 class SaveNewNoteViewController: UIViewController {
+    
+    var noteTitle : String?
+    var noteContent : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()

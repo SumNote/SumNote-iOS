@@ -148,7 +148,7 @@ open class AnimatedImageView: UIImageView {
     }
 
     /// Delegate of this `AnimatedImageView` object. See `AnimatedImageViewDelegate` protocol for more.
-    public weak var delegate: AnimatedImageViewDelegate?
+    public weak var finishNoteSaveDelegate: AnimatedImageViewDelegate?
 
     /// The `Animator` instance that holds the frames of a specific image in memory.
     public private(set) var animator: Animator?
@@ -286,7 +286,7 @@ open class AnimatedImageView: UIImageView {
                 framePreloadCount: framePreloadCount,
                 repeatCount: repeatCount,
                 preloadQueue: preloadQueue)
-            animator.delegate = self
+            animator.finishNoteSaveDelegate = self
             animator.needsPrescaling = needsPrescaling
             animator.backgroundDecode = backgroundDecode
             animator.prepareFramesAsynchronously()
@@ -313,7 +313,7 @@ open class AnimatedImageView: UIImageView {
 
         guard !animator.isFinished else {
             stopAnimating()
-            delegate?.animatedImageViewDidFinishAnimating(self)
+            finishNoteSaveDelegate?.animatedImageViewDidFinishAnimating(self)
             return
         }
 
@@ -346,7 +346,7 @@ protocol AnimatorDelegate: AnyObject {
 
 extension AnimatedImageView: AnimatorDelegate {
     func animator(_ animator: Animator, didPlayAnimationLoops count: UInt) {
-        delegate?.animatedImageView(self, didPlayAnimationLoops: count)
+        finishNoteSaveDelegate?.animatedImageView(self, didPlayAnimationLoops: count)
     }
 }
 
@@ -411,7 +411,7 @@ extension AnimatedImageView {
 
         var backgroundDecode = true
 
-        weak var delegate: AnimatorDelegate?
+        weak var finishNoteSaveDelegate: AnimatorDelegate?
 
         // Total duration of one animation loop
         var loopDuration: TimeInterval = 0
@@ -650,12 +650,12 @@ extension AnimatedImageView {
                     isFinished = true
 
                     // Notify the delegate here because the animation is stopping.
-                    delegate?.animator(self, didPlayAnimationLoops: currentRepeatCount)
+                    finishNoteSaveDelegate?.animator(self, didPlayAnimationLoops: currentRepeatCount)
                 }
             } else if wasLastFrame {
 
                 // Notify the delegate that the loop completed
-                delegate?.animator(self, didPlayAnimationLoops: currentRepeatCount)
+                finishNoteSaveDelegate?.animator(self, didPlayAnimationLoops: currentRepeatCount)
             }
         }
 

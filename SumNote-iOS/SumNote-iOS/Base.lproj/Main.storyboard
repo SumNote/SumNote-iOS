@@ -730,6 +730,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pUN-hr-p8x"/>
+                    <connections>
+                        <outlet property="doneBtnView" destination="C3a-3E-wDg" id="yyf-VA-lSc"/>
+                        <outlet property="newNoteTitle" destination="hq4-eO-Grz" id="Wfe-XY-2NE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGa-dC-jfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

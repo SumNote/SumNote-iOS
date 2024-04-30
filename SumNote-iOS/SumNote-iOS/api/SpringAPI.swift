@@ -113,18 +113,41 @@ class SpringAPI{
         }
     }
     
-    
-    // 1. 새로운 노트 생성 후 페이지 저장
-    
-    // 2. 노트 이름 변경
+    // 새로운 노트 생성 후 페이지 저장
+    func savePageToNewNoteRequest(newNote : CreateNoteDto, completion : @escaping (Bool)->(Void)){
+        let url = SpringAPI.baseUrl + "/sum-note"
+        
+        AF.request(url,
+                   method: .post,
+                   parameters: newNote,
+                   encoder: JSONParameterEncoder.default,
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of : SaveNoteResponse.self){ response in
+            switch response.result{
+            case .success(let apiResponse):
+                self.log("savePageToNewNoteRequest success \(apiResponse)")
+                completion(true)
+            case .failure(let error):
+                self.log("savePageToNewNoteRequest success \(error)")
+                completion(false)
+            }
+        }
+    }
+
     
     // 사용자의 노트 삭제 요청
     
+    
+    
     // 사용자의 문제집 데이터 요청(문제집 목록)
+    
+    
     
     // 사용자의 특정 문제집의 퀴즈 데이터 요청(문제집에 소속된 퀴즈들)
     
-    // 사용자의 퀴즈 삭제 요청
+    
+    //
 
 }
 

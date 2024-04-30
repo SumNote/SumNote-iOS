@@ -19,7 +19,7 @@ class CreatedNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setNote()
+        //setNote()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,7 +67,8 @@ extension CreatedNoteViewController {
                 return
             }
             // 위임자 지정
-            saveNoteViewController.finishNoteSaveDelegate = self.navigationController?.viewControllers.first { $0 is NoteMakerViewController } as? NoteMakerViewController
+            saveNoteViewController.finishNoteSaveDelegate = self.navigationController?.viewControllers.first { 
+                $0 is NoteMakerViewController } as? NoteMakerViewController
             saveNoteViewController.saveNewNoteDelegate = self
             // 생성된 페이지 정보 전달
             saveNoteViewController.noteTitle = self.noteTitle.text
@@ -77,6 +78,7 @@ extension CreatedNoteViewController {
                 return
             }
             // 정보 전달
+            saveNewNoteViewController.finishNoteSaveDelegate = self.navigationController?.viewControllers.first { $0 is NoteMakerViewController } as? NoteMakerViewController
             saveNewNoteViewController.noteTitle = self.noteTitle.text
             saveNewNoteViewController.noteContent = self.noteContent.text
         }

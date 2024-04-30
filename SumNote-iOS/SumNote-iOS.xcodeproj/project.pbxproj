@@ -37,6 +37,7 @@
 		294432BC2BDF243C00AB1B1E /* SaveNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294432BB2BDF243C00AB1B1E /* SaveNewNoteViewController.swift */; };
 		294432C12BDF804400AB1B1E /* FinishNoteSaveDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294432C02BDF804400AB1B1E /* FinishNoteSaveDelegate.swift */; };
 		294432C32BDF8B4F00AB1B1E /* SaveNewNoteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294432C22BDF8B4F00AB1B1E /* SaveNewNoteDelegate.swift */; };
+		294432C52BE0B34C00AB1B1E /* CreateNoteDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294432C42BE0B34C00AB1B1E /* CreateNoteDto.swift */; };
 		295F90402B20CAFF00F28446 /* AllQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295F903F2B20CAFF00F28446 /* AllQuizViewController.swift */; };
 		295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295F90412B20CBF000F28446 /* AllQuizTableViewCell.swift */; };
 		295F90442B20CBF000F28446 /* AllQuizTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */; };
@@ -121,6 +122,7 @@
 		294432BB2BDF243C00AB1B1E /* SaveNewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNewNoteViewController.swift; sourceTree = "<group>"; };
 		294432C02BDF804400AB1B1E /* FinishNoteSaveDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishNoteSaveDelegate.swift; sourceTree = "<group>"; };
 		294432C22BDF8B4F00AB1B1E /* SaveNewNoteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNewNoteDelegate.swift; sourceTree = "<group>"; };
+		294432C42BE0B34C00AB1B1E /* CreateNoteDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteDto.swift; sourceTree = "<group>"; };
 		295F903F2B20CAFF00F28446 /* AllQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizViewController.swift; sourceTree = "<group>"; };
 		295F90412B20CBF000F28446 /* AllQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizTableViewCell.swift; sourceTree = "<group>"; };
 		295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllQuizTableViewCell.xib; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				294274992BDB4979006B224B /* CreatedNoteResult.swift */,
 				293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */,
 				294432B92BDE72DB00AB1B1E /* SaveNoteResponse.swift */,
+				294432C42BE0B34C00AB1B1E /* CreateNoteDto.swift */,
 			);
 			path = dto;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				294349F12B079DDE00C57B49 /* TabBarController.swift in Sources */,
 				2976E9C62BDABE6700BD9DC1 /* UserNote.swift in Sources */,
 				296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */,
+				294432C52BE0B34C00AB1B1E /* CreateNoteDto.swift in Sources */,
 				29E54F532B2151CD00E6E4B9 /* AllNoteTableViewCell.swift in Sources */,
 				29237D722B2D62C900BE751D /* QuizViewController.swift in Sources */,
 				29F818002B26F2950002E3C8 /* TitleCollectionViewCell.swift in Sources */,

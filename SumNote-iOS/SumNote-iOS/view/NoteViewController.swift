@@ -62,8 +62,6 @@ class NoteViewController: UIViewController {
     
     // 노트 제목 수정
     func changeNoteNameHandler(action : UIAction){
-        
-        let noteParameter = ChangeNoteParameter(changeTitle: "")
         // 노트 제목 변경 다이얼로그 띄우기
         performSegue(withIdentifier: "changeNoteTitle" , sender: self)
     }

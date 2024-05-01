@@ -231,6 +231,7 @@
                     <navigationItem key="navigationItem" id="Buc-pI-V05"/>
                     <connections>
                         <outlet property="mainTableView" destination="sjW-vM-dpk" id="LPJ-mL-Vw4"/>
+                        <outlet property="menuBtn" destination="0SP-5R-thc" id="QFx-dS-gXU"/>
                         <outlet property="userEmailLabel" destination="2Be-cm-xeq" id="gzP-7r-kT9"/>
                         <outlet property="userImageLabel" destination="tj5-g4-lE9" id="DN7-cm-LBS"/>
                         <outlet property="userNameLabel" destination="Mva-sd-J8u" id="HrL-Me-WeO"/>

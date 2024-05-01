@@ -17,6 +17,7 @@ class MyNoteViewController: UIViewController{
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userImageLabel: UIImageView!
     @IBOutlet weak var mainTableView: UITableView!
+    @IBOutlet weak var menuBtn: UIButton!
     
     // 스토리보드 참조
     private let stoaryBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -26,6 +27,7 @@ class MyNoteViewController: UIViewController{
 
         userImageLabel.layer.cornerRadius = 25
         setUserInfo()
+        setpriorityButton()
         setMainTableView() // 노트, 퀴즈 테이블 뷰 활성화
     }
     
@@ -45,7 +47,6 @@ class MyNoteViewController: UIViewController{
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    
     // 사용자 정보 얻어오기(카카오톡 사용자 정보)
     private func setUserInfo(){
         UserApi.shared.me() {(user, error) in
@@ -63,6 +64,42 @@ class MyNoteViewController: UIViewController{
             }
         }
     }
+    
+    
+    // 풀 업 메뉴 활성화
+    func setpriorityButton() {
+        menuBtn.menu = UIMenu(children: [
+            UIAction(title: "로그아웃", state: .off, handler: logoutHandler),
+        ])
+        menuBtn.showsMenuAsPrimaryAction = true
+        menuBtn.changesSelectionAsPrimaryAction = true
+    }
+    
+    
+    // 카카오 로그아웃 수행
+    func logoutHandler(action : UIAction){
+        kakaoLogout()
+    }
+    
+    
+    
+    // 카카오 로그아웃
+    private func kakaoLogout(){
+        UserApi.shared.logout {(error) in
+            if let error = error {
+                self.log("kakoLogout Fail! \(error)")
+            }
+            else {
+                self.log("kakoLogout Success!")
+                // 초기화면으로 되돌아가는 로직 작성 필요
+                DispatchQueue.main.async {
+                    self.dismiss(animated: false)
+                }
+            }
+        }
+    }
+    
+    
     
     // 테이블뷰 init
     private func setMainTableView(){

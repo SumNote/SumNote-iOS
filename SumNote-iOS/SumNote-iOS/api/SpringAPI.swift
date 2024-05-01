@@ -101,7 +101,7 @@ class SpringAPI{
                    encoder: JSONParameterEncoder.default,
                    headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
         .validate(statusCode: 200..<300)
-        .responseDecodable(of: SaveNoteResponse.self){ response in
+        .responseDecodable(of: SpringDataNUllResponse.self){ response in
             switch response.result{
             case .success(let apiResponse):
                 self.log("savePageToNoteRequest success \(apiResponse)")
@@ -123,7 +123,7 @@ class SpringAPI{
                    encoder: JSONParameterEncoder.default,
                    headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
         .validate(statusCode: 200..<300)
-        .responseDecodable(of : SaveNoteResponse.self){ response in
+        .responseDecodable(of : SpringDataNUllResponse.self){ response in
             switch response.result{
             case .success(let apiResponse):
                 self.log("savePageToNewNoteRequest success \(apiResponse)")
@@ -135,6 +135,29 @@ class SpringAPI{
         }
     }
 
+    // 노트 이름 바꾸기
+    func changeNoteNameRequest(noteId : Int, changeNoteParameter : ChangeNoteParameter, completion : @escaping (Bool)->(Void)){
+        let url = SpringAPI.baseUrl + "/sum-note/\(noteId)/title"
+        
+        AF.request(url, 
+                   method: .put,
+                   parameters: changeNoteParameter,
+                   encoder: JSONParameterEncoder.default,
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of : SpringDataNUllResponse.self){ response in
+            switch response.result{
+            case .success(let apiResponse):
+                self.log("changeNoteNameRequest success \(apiResponse)")
+                completion(true)
+            case .failure(let error):
+                self.log("changeNoteNameRequest success \(error)")
+                completion(false)
+            }
+        }
+    }
+    
+    
     
     // 사용자의 노트 삭제 요청
     

@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -194,10 +195,26 @@
                                 <rect key="frame" x="0.0" y="168" width="393" height="601"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0SP-5R-thc">
+                                <rect key="frame" x="360" y="131" width="18" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="9Q1-ww-6KB"/>
+                                    <constraint firstAttribute="height" constant="24" id="d7f-xT-h4K"/>
+                                </constraints>
+                                <menu key="menu" id="pmH-NX-UXc">
+                                    <children>
+                                        <command title="Item 1" id="Iqa-po-eNv"/>
+                                        <command title="Item 2" id="UYE-E2-VW7"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Button" image="menu"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aMD-hj-zL3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aMD-hj-zL3" firstAttribute="trailing" secondItem="0SP-5R-thc" secondAttribute="trailing" constant="15" id="3pg-R7-eJo"/>
+                            <constraint firstItem="0SP-5R-thc" firstAttribute="centerY" secondItem="tj5-g4-lE9" secondAttribute="centerY" id="5F8-N3-ePF"/>
                             <constraint firstItem="Mva-sd-J8u" firstAttribute="top" secondItem="aMD-hj-zL3" secondAttribute="top" constant="20" id="BdH-D8-bau"/>
                             <constraint firstItem="2Be-cm-xeq" firstAttribute="top" secondItem="Mva-sd-J8u" secondAttribute="bottom" constant="5" id="DTV-Oq-0mH"/>
                             <constraint firstItem="tj5-g4-lE9" firstAttribute="top" secondItem="aMD-hj-zL3" secondAttribute="top" constant="15" id="Edh-a1-LVW"/>
@@ -436,7 +453,80 @@
                 <pageViewController storyboardIdentifier="NotePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="Cu0-Ih-biP" customClass="NotePageViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e36-r8-Agu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="2102"/>
+            <point key="canvasLocation" x="2372" y="2101"/>
+        </scene>
+        <!--Change Note Title View Controller-->
+        <scene sceneID="BCC-rc-eNs">
+            <objects>
+                <viewController id="b6a-Zl-L44" customClass="ChangeNoteTitleViewController" customModule="SumNote_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Yq-p6-5Cl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOh-09-Bsy">
+                                <rect key="frame" x="40" y="336" width="313" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="노트 제목을 입력해 주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR3-Zn-hPy">
+                                        <rect key="frame" x="64.666666666666686" y="15.000000000000002" width="184" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" name="green"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1DD-sX-8cI">
+                                        <rect key="frame" x="20" y="61.666666666666686" width="273" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-lO-YSC">
+                                        <rect key="frame" x="0.0" y="120" width="313" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mL-i5-oUh">
+                                                <rect key="frame" x="140" y="13.666666666666686" width="33" height="23"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="green"/>
+                                        <constraints>
+                                            <constraint firstItem="0mL-i5-oUh" firstAttribute="centerX" secondItem="BJn-lO-YSC" secondAttribute="centerX" id="9sN-XP-g5t"/>
+                                            <constraint firstItem="0mL-i5-oUh" firstAttribute="centerY" secondItem="BJn-lO-YSC" secondAttribute="centerY" id="Wq6-S8-Bx3"/>
+                                            <constraint firstAttribute="height" constant="50" id="dQk-1g-u1e"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="1DD-sX-8cI" firstAttribute="centerX" secondItem="iOh-09-Bsy" secondAttribute="centerX" id="AS5-id-yHB"/>
+                                    <constraint firstAttribute="height" constant="170" id="ShW-4y-LZg"/>
+                                    <constraint firstAttribute="trailing" secondItem="BJn-lO-YSC" secondAttribute="trailing" id="aiH-2s-5bR"/>
+                                    <constraint firstItem="dR3-Zn-hPy" firstAttribute="top" secondItem="iOh-09-Bsy" secondAttribute="top" constant="15" id="bR9-Yi-hr5"/>
+                                    <constraint firstItem="1DD-sX-8cI" firstAttribute="top" secondItem="dR3-Zn-hPy" secondAttribute="bottom" constant="25" id="c1T-7e-KNW"/>
+                                    <constraint firstAttribute="bottom" secondItem="BJn-lO-YSC" secondAttribute="bottom" id="fN6-Z2-jtA"/>
+                                    <constraint firstItem="dR3-Zn-hPy" firstAttribute="centerX" secondItem="iOh-09-Bsy" secondAttribute="centerX" id="fg4-14-Y10"/>
+                                    <constraint firstItem="BJn-lO-YSC" firstAttribute="leading" secondItem="iOh-09-Bsy" secondAttribute="leading" id="hsm-az-JNx"/>
+                                    <constraint firstItem="1DD-sX-8cI" firstAttribute="leading" secondItem="iOh-09-Bsy" secondAttribute="leading" constant="20" id="jMZ-8g-LGP"/>
+                                    <constraint firstAttribute="trailing" secondItem="1DD-sX-8cI" secondAttribute="trailing" constant="20" id="z0M-x6-zpc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dQH-ZJ-tmJ"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iOh-09-Bsy" firstAttribute="centerX" secondItem="dQH-ZJ-tmJ" secondAttribute="centerX" id="J7W-3o-txk"/>
+                            <constraint firstItem="iOh-09-Bsy" firstAttribute="leading" secondItem="dQH-ZJ-tmJ" secondAttribute="leading" constant="40" id="OuQ-Dk-01s"/>
+                            <constraint firstItem="iOh-09-Bsy" firstAttribute="centerY" secondItem="dQH-ZJ-tmJ" secondAttribute="centerY" id="r4s-nC-ayD"/>
+                            <constraint firstItem="dQH-ZJ-tmJ" firstAttribute="trailing" secondItem="iOh-09-Bsy" secondAttribute="trailing" constant="40" id="tdZ-Bf-vGZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeNoteTitleEditText" destination="1DD-sX-8cI" id="ymS-T8-w5q"/>
+                        <outlet property="changeNoteTitleViewBtn" destination="BJn-lO-YSC" id="4u9-AS-u4z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lt-Vc-th8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603.8167938931297" y="2100.7042253521126"/>
         </scene>
         <!--Created Note View Controller-->
         <scene sceneID="Rv8-QE-yLa">
@@ -814,7 +904,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM8-rj-IIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2372" y="2101"/>
+            <point key="canvasLocation" x="3140" y="2101"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="fSt-aj-doV">
@@ -841,6 +931,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bfm-rk-HKx">
+                                <rect key="frame" x="360" y="69" width="18" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="Cfu-1l-MbN"/>
+                                    <constraint firstAttribute="height" constant="24" id="DG9-wX-Gky"/>
+                                </constraints>
+                                <menu key="menu" id="aJe-OQ-Wz6">
+                                    <children>
+                                        <command title="Item 1" id="EC0-aI-DCp"/>
+                                        <command title="Item 2" id="zuE-bs-svM"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Button" image="menu"/>
+                                <connections>
+                                    <action selector="makeQuizPullDownBtnDidTapped:" destination="OUQ-P3-XDb" eventType="touchUpInside" id="bjS-mw-DRh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3ZZ-be-cJe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -850,17 +957,23 @@
                             <constraint firstItem="9U6-Zk-jJG" firstAttribute="trailing" secondItem="3ZZ-be-cJe" secondAttribute="trailing" id="DaD-hc-X1V"/>
                             <constraint firstItem="9U6-Zk-jJG" firstAttribute="top" secondItem="dx9-Rn-UCy" secondAttribute="bottom" constant="10" id="K8h-UR-CYr"/>
                             <constraint firstItem="dx9-Rn-UCy" firstAttribute="leading" secondItem="3ZZ-be-cJe" secondAttribute="leading" constant="10" id="L8z-IW-Gj3"/>
+                            <constraint firstItem="3ZZ-be-cJe" firstAttribute="trailing" secondItem="Bfm-rk-HKx" secondAttribute="trailing" constant="15" id="NUX-5m-Jwy"/>
+                            <constraint firstItem="Bfm-rk-HKx" firstAttribute="top" secondItem="PQg-Xm-GD1" secondAttribute="top" id="QIJ-YK-zmH"/>
                             <constraint firstItem="9U6-Zk-jJG" firstAttribute="bottom" secondItem="3ZZ-be-cJe" secondAttribute="bottom" id="aFz-M6-ztE"/>
+                            <constraint firstItem="Bfm-rk-HKx" firstAttribute="bottom" secondItem="PQg-Xm-GD1" secondAttribute="bottom" id="cQe-Ty-Kxo"/>
                             <constraint firstItem="9U6-Zk-jJG" firstAttribute="leading" secondItem="3ZZ-be-cJe" secondAttribute="leading" id="fmu-1B-RCS"/>
                             <constraint firstItem="dx9-Rn-UCy" firstAttribute="top" secondItem="3ZZ-be-cJe" secondAttribute="top" constant="10" id="tHc-QB-bKV"/>
+                            <constraint firstItem="Bfm-rk-HKx" firstAttribute="centerY" secondItem="PQg-Xm-GD1" secondAttribute="centerY" id="wT4-FW-bRT"/>
                             <constraint firstItem="PQg-Xm-GD1" firstAttribute="top" secondItem="dx9-Rn-UCy" secondAttribute="top" id="y6i-ck-AXi"/>
                             <constraint firstItem="PQg-Xm-GD1" firstAttribute="bottom" secondItem="dx9-Rn-UCy" secondAttribute="bottom" id="ytI-VG-NPR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="dx9-Rn-UCy" id="hM0-M8-qOx"/>
+                        <outlet property="makeQuizBtn" destination="Bfm-rk-HKx" id="HvQ-tg-C0Y"/>
                         <outlet property="notePageViewContainer" destination="9U6-Zk-jJG" id="USf-bV-32V"/>
                         <outlet property="noteTitle" destination="PQg-Xm-GD1" id="RwI-ps-L3s"/>
+                        <segue destination="b6a-Zl-L44" kind="presentation" identifier="changeNoteTitle" id="gOf-MI-c55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyL-2f-B0G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1184,6 +1297,7 @@
         <image name="img_left_cross" width="8.6666669845581055" height="8.6666669845581055"/>
         <image name="img_note_background" width="114.33333587646484" height="225.66667175292969"/>
         <image name="img_reference_image" width="800.33331298828125" height="1181.3333740234375"/>
+        <image name="menu" width="16" height="16"/>
         <image name="message-square" width="28" height="28"/>
         <image name="plus_circle" width="31" height="30"/>
         <namedColor name="green">

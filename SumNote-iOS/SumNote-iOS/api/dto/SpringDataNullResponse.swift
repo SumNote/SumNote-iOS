@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SaveNoteResponse : Decodable {
+struct SpringDataNUllResponse : Decodable {
     var status : Int?
     var data : Data?
     var message : String?

@@ -16,6 +16,7 @@
 		2939C0922BE24C9800A5CF43 /* ChangeNoteTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0912BE24C9800A5CF43 /* ChangeNoteTitleViewController.swift */; };
 		2939C0942BE252EC00A5CF43 /* ChangeNoteTitleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0932BE252EC00A5CF43 /* ChangeNoteTitleDelegate.swift */; };
 		2939C0962BE38EE400A5CF43 /* QuizResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0952BE38EE400A5CF43 /* QuizResponseDto.swift */; };
+		2939C0982BE391DC00A5CF43 /* NotePageCheckDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0972BE391DC00A5CF43 /* NotePageCheckDelegate.swift */; };
 		293E0C672B3F11D800032033 /* FastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C662B3F11D800032033 /* FastAPI.swift */; };
 		293E0C692B3F131300032033 /* SpringAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C682B3F131300032033 /* SpringAPI.swift */; };
 		293F28EA2BDD3B5A0030ACBC /* UserNotePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */; };
@@ -101,6 +102,7 @@
 		2939C0912BE24C9800A5CF43 /* ChangeNoteTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNoteTitleViewController.swift; sourceTree = "<group>"; };
 		2939C0932BE252EC00A5CF43 /* ChangeNoteTitleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNoteTitleDelegate.swift; sourceTree = "<group>"; };
 		2939C0952BE38EE400A5CF43 /* QuizResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResponseDto.swift; sourceTree = "<group>"; };
+		2939C0972BE391DC00A5CF43 /* NotePageCheckDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePageCheckDelegate.swift; sourceTree = "<group>"; };
 		293E0C662B3F11D800032033 /* FastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastAPI.swift; sourceTree = "<group>"; };
 		293E0C682B3F131300032033 /* SpringAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAPI.swift; sourceTree = "<group>"; };
 		293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotePage.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				294432C02BDF804400AB1B1E /* FinishNoteSaveDelegate.swift */,
 				294432C22BDF8B4F00AB1B1E /* SaveNewNoteDelegate.swift */,
 				2939C0932BE252EC00A5CF43 /* ChangeNoteTitleDelegate.swift */,
+				2939C0972BE391DC00A5CF43 /* NotePageCheckDelegate.swift */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				29C43BA22B2B49D9003D0E3D /* QuizContentsViewController.swift in Sources */,
 				2939C0942BE252EC00A5CF43 /* ChangeNoteTitleDelegate.swift in Sources */,
 				294349C12B07922100C57B49 /* LoginViewController.swift in Sources */,
+				2939C0982BE391DC00A5CF43 /* NotePageCheckDelegate.swift in Sources */,
 				296FFA7E2B20392100DE1D68 /* NavigationDelegate.swift in Sources */,
 				294432C12BDF804400AB1B1E /* FinishNoteSaveDelegate.swift in Sources */,
 				296A24482B90D440002411D8 /* +UIView.swift in Sources */,

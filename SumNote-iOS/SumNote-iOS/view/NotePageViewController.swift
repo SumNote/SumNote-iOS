@@ -16,6 +16,8 @@ class NotePageViewController: UIPageViewController {
     
     var currentIndex : Int = 0 // 현재 페이지가 몇번째 페이지인지 확인하기 위함
     
+    weak var pageCheckDelegate : NotePageCheckDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self // for UIPageViewController
@@ -66,6 +68,7 @@ extension NotePageViewController: UIPageViewControllerDataSource {
 
         // 그렇지 않다면 이전 인덱스로 이동
         index -= 1
+        pageCheckDelegate?.getCurrentNotePage(index: index)
         return setNoteContent(at: index) // 이전 페이지 생성 후 리턴
         
     }
@@ -83,6 +86,7 @@ extension NotePageViewController: UIPageViewControllerDataSource {
         }
         // 그렇지 않다면 다음 인덱스로 이동
         index += 1
+        pageCheckDelegate?.getCurrentNotePage(index: index)
         return setNoteContent(at: index) // 다음 페이지 생성 후 리턴
         
     }

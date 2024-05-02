@@ -18,6 +18,9 @@ class NoteViewController: UIViewController {
     var pageData : [NotePagesDto] = []
     var notePageViewController : UIPageViewController! // 노트 페이지 뷰
     
+    // 현재 사용자가 pageData의 몇번 째 노트를 보고 있는지 관측하기 위함
+    var currIndex : Int = 0 // 디폴트는 0번째 페이지
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNote() // 노트 제목 설정 및 페이지 할당
@@ -56,8 +59,8 @@ class NoteViewController: UIViewController {
     
     // 문제 생성
     func createQuizHandler(action : UIAction){
-        //SpringAPI.shared.createQuiz()
-        print("문제 생성")
+        self.log("call createQuizHandler")
+        
     }
     
     // 노트 제목 수정
@@ -88,6 +91,7 @@ class NoteViewController: UIViewController {
         //스토리보드를 사용하여 NotePageViewController 인스턴스화 & 자식 VC로 지정
         if let notePageVC = self.storyboard?.instantiateViewController(withIdentifier: "NotePageViewController") as? NotePageViewController {
             self.notePageViewController = notePageVC
+            notePageVC.pageCheckDelegate = self
             
             notePageVC.pageData = self.pageData // 페이지 데이터 넘기기
             self.notePageViewContainer.addSubview(notePageVC.view) // containerView에 뷰 추가
@@ -144,4 +148,9 @@ extension NoteViewController : ChangeNoteTitleDelegate{
     }
 }
 
-
+extension NoteViewController : NotePageCheckDelegate {
+    func getCurrentNotePage(index: Int) {
+        self.currIndex = index
+        self.log("currentIndex : \(index)")
+    }
+}

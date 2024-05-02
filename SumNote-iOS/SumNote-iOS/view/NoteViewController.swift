@@ -61,6 +61,18 @@ class NoteViewController: UIViewController {
     func createQuizHandler(action : UIAction){
         self.log("call createQuizHandler")
         
+        let currNoteContent = pageData[self.currIndex]
+        let currNoteText = "[\(currNoteContent.title!)]\n\(currNoteContent.content!)"
+        self.log("createQuizHandler : \(currNoteText)")
+        
+        FastAPI.shared.makeQuizRequest(noteText: currNoteText){ isSuccess,quizResponseDto in
+            if isSuccess {
+                self.log("createQuizHandler Success! \(String(describing: quizResponseDto))")
+            } else {
+                self.log("createQuizHandler Fail!")
+            }
+            
+        }
     }
     
     // 노트 제목 수정

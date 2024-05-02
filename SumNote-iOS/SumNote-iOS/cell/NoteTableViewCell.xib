@@ -45,6 +45,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="chc-bW-M74" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="49O-OP-f1M"/>
                     <constraint firstAttribute="trailing" secondItem="CdK-61-lrR" secondAttribute="trailing" constant="15" id="6Z5-LG-QRv"/>

@@ -12,7 +12,7 @@ class FastAPI{
     
     static let shared = FastAPI()
     
-    static let baseURL = "http://192.168.174.183:8000"
+    static let baseURL = "http://220.76.49.32:8000"
     
     private let session: Session
     
@@ -95,11 +95,50 @@ class FastAPI{
     
     
     // 퀴즈 생성 요청
-    public func makeQuizRequest(){
-        print("Quiz 데이터 얻어옴..")
+    public func makeQuizRequest(noteText : String, completion : @escaping (Bool,QuizResponseDto?)->(Void)){
+        let url = FastAPI.baseURL + "/gen-problem"
+        
+        // 헤더 설정: Content-Type을 text/plain으로 설정
+        let headers: HTTPHeaders = [
+            "Content-Type": "text/plain"
+        ]
+        AF.request(url, 
+                   method: .post,
+                   parameters: nil,
+                   encoding: PlainTextEncoding(text: noteText),
+                   headers: headers)
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of : QuizResponseDto.self){ response in
+            switch response.result {
+            case .success(let apiResponse):
+                self.log("makeQuizRequest Success : \(apiResponse)")
+                completion(true,apiResponse)
+            case .failure(let error):
+                self.log("makeQuizRequest Fail : \(error)")
+                completion(false,nil)
+            }
+        }
+        
     }
     
 }
+
+// Custom Encoder for Plain Text
+struct PlainTextEncoding: ParameterEncoding {
+    private let text: String
+
+    init(text: String) {
+        self.text = text
+    }
+
+    func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var urlRequest = try urlRequest.asURLRequest()
+        urlRequest.httpBody = text.data(using: .utf8)
+        return urlRequest
+    }
+}
+
+
 
 extension FastAPI {
     private func log(_ message: String){

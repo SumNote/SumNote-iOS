@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserNote : Decodable {
+struct NoteDto : Decodable {
     var noteId : Int?
     var title : String?
     var createdAt : String?

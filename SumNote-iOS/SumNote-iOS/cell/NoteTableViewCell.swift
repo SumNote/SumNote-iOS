@@ -20,7 +20,7 @@ class NoteTableViewCell: UITableViewCell {
     @IBOutlet weak var myNoteListCollectionView: UICollectionView!
     
     // 서버로부터 얻어올 노트 데이터 리스트 작성 필요
-    var noteList : [UserNote] = []
+    var noteList : [NoteDto] = []
     
     // CollectionView에 대한 Delegate,Datasource선언
     override func awakeFromNib() {

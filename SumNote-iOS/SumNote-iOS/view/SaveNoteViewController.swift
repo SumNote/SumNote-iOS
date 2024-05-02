@@ -18,7 +18,7 @@ class SaveNoteViewController: UIViewController {
     var noteTitle : String?
     var noteContent : String?
     
-    var noteList : [UserNote] = []{
+    var noteList : [NoteDto] = []{
         didSet{ // 상태 변경시 테이블뷰 리로드
             noteTableView.reloadData()
         }

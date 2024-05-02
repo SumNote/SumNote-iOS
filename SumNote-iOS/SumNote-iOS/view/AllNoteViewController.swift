@@ -17,7 +17,7 @@ class AllNoteViewController: UIViewController {
     
     @IBOutlet weak var backBtn: UIImageView! // 뒤로가기버튼(이미지)
     
-    var noteList : [UserNote] = []
+    var noteList : [NoteDto] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

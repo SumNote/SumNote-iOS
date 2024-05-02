@@ -12,7 +12,7 @@ struct QuizResponseDto : Decodable {
     var count : Int?
 }
 
-struct QuizDataDto : Decodable {
+struct QuizDataDto : Decodable,Encodable {
     var question : String?
     var selection : [String]?
     var answer : String?

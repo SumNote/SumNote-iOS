@@ -12,7 +12,8 @@ class SpringAPI{
     
     static let shared = SpringAPI() // Singleton
     
-    static let baseUrl = "http://52.78.139.114:8080/api"
+    static let baseUrl = "http://localhost:8080/api"
+//    static let baseUrl = "http://52.78.139.114:8080/api"
     
     static var token : String? = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGxya2QxMjIxQGdtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MTQzNTMwNzIsImV4cCI6MTcxNTU2MjY3Mn0.V4RHTl1HBy3D8MJVy73soHb50fkVEhIIWFMKv1Bl3mM"
     
@@ -157,14 +158,59 @@ class SpringAPI{
         }
     }
     
-    
-    
     // 사용자의 노트 삭제 요청
     
     
     
-    // 사용자의 문제집 데이터 요청(문제집 목록)
     
+    
+    // 문제집 생성 요청
+    func createQuizDocRequest(parameter : CreateQuizRequestParameter, completion : @escaping (Bool)->(Void)){
+        let url = SpringAPI.baseUrl + "/quiz"
+        
+        // POST
+        AF.request(url,
+                   method: .post,
+                   parameters: parameter,
+                   encoder: JSONParameterEncoder.default,
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of : SpringDataNUllResponse.self){ response in
+            switch response.result{
+            case .success(let apiResponse):
+                self.log("createQuizDocRequest success \(String(describing: apiResponse.message))")
+                completion(true)
+            case .failure(let error):
+                self.log("createQuizDocRequest success \(error)")
+                completion(false)
+            }
+        }
+        
+    }
+    
+    
+    // 사용자의 문제집 데이터 요청(문제집 목록)
+    func getQuizRequest(type : String, completion : @escaping (Bool,[QuizDocDto])->Void){
+        let url = SpringAPI.baseUrl + "/quiz?type=\(type)"
+        // ?type=home 퀴즈 목록 5개 조회
+        // ?type=all 퀴즈 전체 반환
+        AF.request(url,
+                   method: .get,
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of: SpringBaseResponse<[QuizDocDto]>.self) { response in
+            switch response.result {
+            case .success(let apiResponse):
+                let quizDocList = apiResponse.data
+                self.log("getNoteRequest success \(String(describing: apiResponse.message))")
+                completion(true,quizDocList)
+            case .failure(let error):
+                self.log("getNoteRequest error : \(error)")
+                completion(false,[])
+            }
+        }
+        
+    }
     
     
     // 사용자의 특정 문제집의 퀴즈 데이터 요청(문제집에 소속된 퀴즈들)

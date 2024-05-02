@@ -17,6 +17,8 @@
 		2939C0942BE252EC00A5CF43 /* ChangeNoteTitleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0932BE252EC00A5CF43 /* ChangeNoteTitleDelegate.swift */; };
 		2939C0962BE38EE400A5CF43 /* QuizResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0952BE38EE400A5CF43 /* QuizResponseDto.swift */; };
 		2939C0982BE391DC00A5CF43 /* NotePageCheckDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0972BE391DC00A5CF43 /* NotePageCheckDelegate.swift */; };
+		2939C09A2BE3FEF800A5CF43 /* QuizDocDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0992BE3FEF800A5CF43 /* QuizDocDto.swift */; };
+		2939C09C2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C09B2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift */; };
 		293E0C672B3F11D800032033 /* FastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C662B3F11D800032033 /* FastAPI.swift */; };
 		293E0C692B3F131300032033 /* SpringAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C682B3F131300032033 /* SpringAPI.swift */; };
 		293F28EA2BDD3B5A0030ACBC /* UserNotePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */; };
@@ -103,6 +105,8 @@
 		2939C0932BE252EC00A5CF43 /* ChangeNoteTitleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNoteTitleDelegate.swift; sourceTree = "<group>"; };
 		2939C0952BE38EE400A5CF43 /* QuizResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResponseDto.swift; sourceTree = "<group>"; };
 		2939C0972BE391DC00A5CF43 /* NotePageCheckDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePageCheckDelegate.swift; sourceTree = "<group>"; };
+		2939C0992BE3FEF800A5CF43 /* QuizDocDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDocDto.swift; sourceTree = "<group>"; };
+		2939C09B2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuizRequestParameter.swift; sourceTree = "<group>"; };
 		293E0C662B3F11D800032033 /* FastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastAPI.swift; sourceTree = "<group>"; };
 		293E0C682B3F131300032033 /* SpringAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAPI.swift; sourceTree = "<group>"; };
 		293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotePage.swift; sourceTree = "<group>"; };
@@ -352,6 +356,8 @@
 				294432C42BE0B34C00AB1B1E /* CreateNoteDto.swift */,
 				2939C08F2BE0DEF700A5CF43 /* ChangeNoteParameter.swift */,
 				2939C0952BE38EE400A5CF43 /* QuizResponseDto.swift */,
+				2939C0992BE3FEF800A5CF43 /* QuizDocDto.swift */,
+				2939C09B2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift */,
 			);
 			path = dto;
 			sourceTree = "<group>";
@@ -636,6 +642,7 @@
 				296FFA7A2B2014FF00DE1D68 /* QuizTableViewCell.swift in Sources */,
 				2942749A2BDB4979006B224B /* CreatedNoteResult.swift in Sources */,
 				293F28EA2BDD3B5A0030ACBC /* UserNotePage.swift in Sources */,
+				2939C09C2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift in Sources */,
 				2978599F2BAC18C700A3FA14 /* CreatedNoteViewController.swift in Sources */,
 				294349F72B079F3700C57B49 /* UserInfoViewController.swift in Sources */,
 				295F90402B20CAFF00F28446 /* AllQuizViewController.swift in Sources */,
@@ -659,6 +666,7 @@
 				2939C0962BE38EE400A5CF43 /* QuizResponseDto.swift in Sources */,
 				294349ED2B0792DF00C57B49 /* KaKaoAPI.swift in Sources */,
 				296FFA762B2014F000DE1D68 /* NoteTableViewCell.swift in Sources */,
+				2939C09A2BE3FEF800A5CF43 /* QuizDocDto.swift in Sources */,
 				294349F12B079DDE00C57B49 /* TabBarController.swift in Sources */,
 				2976E9C62BDABE6700BD9DC1 /* UserNote.swift in Sources */,
 				296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */,

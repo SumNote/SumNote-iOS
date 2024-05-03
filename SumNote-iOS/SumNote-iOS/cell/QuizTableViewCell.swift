@@ -17,7 +17,13 @@ class QuizTableViewCell: UITableViewCell {
     
     weak var delegate : NavigationDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
     
-    // 서버로부터 얻어올 퀴즈 데이터 리스트 작성 필요
+    // 변경사항 발생시 컬렉션 뷰 새로고침
+    var quizDocList : [QuizDocDto] = [] {
+        didSet{
+            self.myQuizListCollectionView.reloadData()
+        }
+    }
+    
     @IBOutlet weak var myQuizListCollectionView: UICollectionView!
     
     override func awakeFromNib() {
@@ -25,7 +31,7 @@ class QuizTableViewCell: UITableViewCell {
         // Initialization code
         setMyQuizListCollectionView() // CollectioView init
         
-        getMyQuiz()
+        getMyQuizDoc()
     }
     
     // 컬렉션뷰 init
@@ -40,10 +46,16 @@ class QuizTableViewCell: UITableViewCell {
         
     }
     
-
-    // 서버로부터 보유중인 퀴즈 얻어오는 동작 작성 필요
-    func getMyQuiz(){
-        self.log("getMyQuiz")
+    func getMyQuizDoc(){
+        self.log("getMyQuizDoc")
+        SpringAPI.shared.getQuizRequest(type: "home"){ isSuccess, quizDocList in
+            if isSuccess {
+                self.quizDocList = quizDocList
+            } else {
+                // 실패시 동작 작성 필요
+                self.quizDocList = []
+            }
+        }
     }
     
     
@@ -66,7 +78,10 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     
     // 몇개의 셀을 보여줄 것인지
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5 //5개보다 적을 경우 리스트 숫자만큼 반환하도록 수정 필요
+        if self.quizDocList.count < 5 {
+            return self.quizDocList.count
+        }
+        return 5 //5개보다 적을 경우 리스트 크기만큼 반환
     }
     
     // 보여줄 셀의 형태 지정
@@ -80,6 +95,12 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
         // 퀴즈 이미지 지정
         let quizNum = (indexPath.row)%6+1
         cell.quizUIImage.image = UIImage(named: "img_quiz_\(quizNum)")
+        
+        // 데이터 바인딩
+        let currQuizDoc = quizDocList[indexPath.row]
+        cell.quizTitleLabel.text = currQuizDoc.title!
+        cell.quizGenTimeLabel.text = currQuizDoc.lastModifiedAt!
+        
         
         return cell
     }

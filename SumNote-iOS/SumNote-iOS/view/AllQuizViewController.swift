@@ -8,18 +8,25 @@
 import UIKit
 
 class AllQuizViewController: UIViewController {
-
+    
     @IBOutlet weak var allQuizTableView: UITableView!
     
     weak var delegater : NavigationDelegate? // 화면 이동을 위한 위임자 지정
     
     @IBOutlet weak var backBtn: UIImageView! // 뒤로가기 버튼(이미지)
     
+    var quizDocList : [QuizDocDto] = [] {
+        didSet{
+            self.allQuizTableView.reloadData()
+        }
+    }
+    
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setTableView()
+        getAllQuizDoc()
         
         // 뒤로가기 이벤트 정의
         // 탭 제스처 인식기 설정 => 뒤로가기 버튼 사용을 위해
@@ -27,6 +34,19 @@ class AllQuizViewController: UIViewController {
         backBtn.isUserInteractionEnabled = true // 사용자 상호작용 활성화
         backBtn.addGestureRecognizer(tapGesture)
     }
+    
+    
+    private func getAllQuizDoc(){
+        SpringAPI.shared.getQuizRequest(type: "all"){ isSuccess, quizDocList in
+            if isSuccess {
+                self.quizDocList = quizDocList
+            } else {
+                // 예외 처리 작성 필요
+            }
+        }
+    }
+    
+    
     
     // 뷰가 실행되고 난 이후 (네비게이션 바 커스텀을 위해 상단 바 숨기기)
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +88,7 @@ class AllQuizViewController: UIViewController {
 extension AllQuizViewController : UITableViewDelegate,UITableViewDataSource{
     // 몇개의 데이터를 보여줄 것인지
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        self.quizDocList.count
     }
     
     // 어떤 셀을 보여줄 것인지
@@ -86,6 +106,12 @@ extension AllQuizViewController : UITableViewDelegate,UITableViewDataSource{
         
         // 셀 클릭 이벤트 제거(회색 배경 안뜨드록)
         cell.selectionStyle = .none
+        
+        // 데이터 바인딩
+        let currQuizDoc = quizDocList[indexPath.row]
+        cell.quizTitle.text = currQuizDoc.title
+        cell.quizGenDate.text = currQuizDoc.lastModifiedAt
+        
         
         return cell
         

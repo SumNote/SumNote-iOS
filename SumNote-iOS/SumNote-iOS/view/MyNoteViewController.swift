@@ -154,11 +154,15 @@ extension MyNoteViewController : UITableViewDelegate,UITableViewDataSource{
         return self.view.frame.size.height/2 - (self.parent?.tabBarController?.tabBar.frame.height ?? 100) // 탭바 높이 만큼 제거
     }
     
-    //뷰 새로고침 시,
+    //MyNoteViewController가 새로고침 될 때 마다 다시 데이터 연동
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if(indexPath.row == 0){
+        if indexPath.row == 0 {
             if let noteCell = cell as? NoteTableViewCell {
                 noteCell.getMyNote()
+            }
+        } else if indexPath.row == 1 {
+            if let quizCell = cell as? QuizTableViewCell {
+                quizCell.getMyQuizDoc()
             }
         }
     }

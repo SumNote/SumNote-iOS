@@ -17,7 +17,11 @@ class AllNoteViewController: UIViewController {
     
     @IBOutlet weak var backBtn: UIImageView! // 뒤로가기버튼(이미지)
     
-    var noteList : [NoteDto] = []
+    var noteList : [NoteDto] = [] {
+        didSet{
+            self.allNoteTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +43,6 @@ class AllNoteViewController: UIViewController {
             if isSuccess{
                 self.noteList = noteList
                 self.log("getAllNote : \(noteList)")
-                self.allNoteTableView.reloadData()
             }
         }
     }

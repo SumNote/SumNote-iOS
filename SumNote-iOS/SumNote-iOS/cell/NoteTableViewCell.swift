@@ -19,8 +19,11 @@ class NoteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var myNoteListCollectionView: UICollectionView!
     
-    // 서버로부터 얻어올 노트 데이터 리스트 작성 필요
-    var noteList : [NoteDto] = []
+    var noteList : [NoteDto] = [] {
+        didSet{
+            self.myNoteListCollectionView.reloadData()
+        }
+    }
     
     // CollectionView에 대한 Delegate,Datasource선언
     override func awakeFromNib() {
@@ -62,7 +65,8 @@ class NoteTableViewCell: UITableViewCell {
         SpringAPI.shared.getNoteRequest(type: "home"){ isSuccess, noteList in
             if isSuccess{
                 self.noteList = noteList
-                self.myNoteListCollectionView.reloadData() // 컬렉션뷰 새로고침
+            } else {
+                // 예외 처리 작성 필요
             }
         }
     }

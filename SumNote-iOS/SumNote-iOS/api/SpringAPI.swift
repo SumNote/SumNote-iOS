@@ -214,9 +214,27 @@ class SpringAPI{
     
     	
     // 사용자의 특정 문제집의 퀴즈 데이터 요청(문제집에 소속된 퀴즈들)
-    
-    
-    //
+    func getQuizPageRequest(quizId : Int, completion : @escaping (Bool,QuizPageDataDto?)->(Void)){
+        let url = SpringAPI.baseUrl + "/quiz/\(quizId)"
+        
+        AF.request(url,
+                   method: .get,
+                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of : SpringBaseResponse<QuizPageDataDto>.self){ response in
+            switch response.result {
+            case .success(let apiResponse):
+                let quizPageData = apiResponse.data
+                self.log("getQuizPageRequest success \(String(describing: apiResponse.message))")
+                self.log("getQuizPageRequest success \(String(describing: apiResponse.data))")
+                completion(true,quizPageData)
+            case .failure(let error):
+                self.log("getQuizPageRequest error : \(error)")
+                completion(false,nil)
+            }
+        }
+        
+    }
 
 }
 

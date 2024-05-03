@@ -107,7 +107,16 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     
     // 셀 클릭시
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didTappedQuizCell() // 퀴즈 페이지로 이동
+        let currQuizDoc = quizDocList[indexPath.row]
+        SpringAPI.shared.getQuizPageRequest(quizId: currQuizDoc.quizId){ isSuccess, quizPageData in
+            if isSuccess{
+                self.delegate?.didTappedQuizCell(quizPageData!) // 퀴즈 페이지로 이동
+            } else {
+                // 예외 처리 작성 필요
+            }
+            
+        }
+        
     }
     
 }

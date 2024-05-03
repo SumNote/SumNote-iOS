@@ -11,7 +11,7 @@ class AllQuizViewController: UIViewController {
     
     @IBOutlet weak var allQuizTableView: UITableView!
     
-    weak var delegater : NavigationDelegate? // 화면 이동을 위한 위임자 지정
+    weak var delegate : NavigationDelegate? // 화면 이동을 위한 위임자 지정
     
     @IBOutlet weak var backBtn: UIImageView! // 뒤로가기 버튼(이미지)
     
@@ -119,7 +119,15 @@ extension AllQuizViewController : UITableViewDelegate,UITableViewDataSource{
     
     // 화면 클릭 이벤트 발생시
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegater?.didTappedQuizCell() // 위임자를 이용하여 화면 이동
+        let currQuizDoc = quizDocList[indexPath.row]
+        SpringAPI.shared.getQuizPageRequest(quizId: currQuizDoc.quizId){ isSuccess, quizPageData in
+            if isSuccess{
+                self.delegate?.didTappedQuizCell(quizPageData!) // 퀴즈 페이지로 이동
+            } else {
+                // 예외 처리 작성 필요
+            }
+            
+        }
     }
     
     

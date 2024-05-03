@@ -122,7 +122,7 @@ extension AllQuizViewController : UITableViewDelegate,UITableViewDataSource{
         let currQuizDoc = quizDocList[indexPath.row]
         SpringAPI.shared.getQuizPageRequest(quizId: currQuizDoc.quizId){ isSuccess, quizPageData in
             if isSuccess{
-                self.delegate?.didTappedQuizCell(quizPageData!) // 퀴즈 페이지로 이동
+                self.delegate?.didTappedQuizCell(quizPageData: quizPageData!, quizTitle: currQuizDoc.title!)
             } else {
                 // 예외 처리 작성 필요
             }

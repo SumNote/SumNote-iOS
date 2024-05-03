@@ -24,32 +24,32 @@ class QuizViewController: UIViewController {
     // 퀴즈 페이지 뷰
     var quizPageViewController : UIPageViewController!
     
-    var quizData : [String] = [] // 사용자에게 보여줄 데이터 => 서버로부터 얻어온 결과물
+    var quizTitleString : String?
+    var quizPageData : QuizPageDataDto?
+    var quizPageList : [QuizPageDto] = []
     
     
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.log("viewDidLoad quizPageData : \(String(describing: quizPageData))")
+        setUpQuiz()
         
         // 뒤로가기 이벤트 정의
-        // 탭 제스처 인식기 설정 => 뒤로가기 버튼 사용을 위해
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backBtnTapped))
         backBtn.isUserInteractionEnabled = true // 사용자 상호작용 활성화
         backBtn.addGestureRecognizer(tapGesture)
         
-        fetchQuizData() // 서버로부터 퀴즈 정보 얻어오기
-        numberOfQuiz.text = "/\(quizData.count)"
-        
         //스토리보드를 사용하여 QuizPageViewController 인스턴스화 & 자식 VC로 지정
         if let quizPageVC = storyboard?.instantiateViewController(withIdentifier: "QuizPageViewController") as? QuizPageViewController {
+            quizPageVC.quizPageList = self.quizPageList // 데이터 넘기기
+            
             quizPageVC.delegater = self // 위임자 지정
+            
             self.quizPageViewController = quizPageVC
             self.addChild(quizPageVC) // 자식 뷰 컨트롤러로 추가
             self.quizPageViewContainer.addSubview(quizPageVC.view) // containerView에 뷰 추가
-            // 퀴즈 배열 넘기기
-            quizPageVC.quizData = self.quizData
 
             // MyPageViewController의 뷰 크기 및 위치 조정(자식으로 지정)
             quizPageVC.view.frame = quizPageViewContainer.bounds
@@ -85,11 +85,11 @@ class QuizViewController: UIViewController {
     
     // MARK: functions
     // 서버로부터 데이터 얻어오기
-    private func fetchQuizData(){
-        let data = ["Quiz1","Quiz2","Quiz3","Quiz4","Quiz5"] // 퀴즈로 제공할 정보 배열(테스트용)
+    private func setUpQuiz(){
         self.log("fetchQuizData")
-        self.quizData = data
-        
+        self.quizTitle.text = self.quizTitleString!
+        self.quizPageList = self.quizPageData!.quiz!
+        self.numberOfQuiz.text = "/\(quizPageList.count)"
     }
     
     // 백 버튼 탭 처리
@@ -107,7 +107,7 @@ extension QuizViewController : QuizViewDelegate {
     // 프로그래스 바 진행도 표시
     func setProgressBar(index: Int) {
         self.log("progress -> \(index)")
-        let totalQuestions = self.quizData.count // 전체 퀴즈의 수
+        let totalQuestions = self.quizPageList.count // 전체 퀴즈의 수
         let progress = Float(index) / Float(totalQuestions)
         progressBar.setProgress(progress, animated: true)
     }

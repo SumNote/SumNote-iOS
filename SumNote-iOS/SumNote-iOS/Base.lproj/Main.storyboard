@@ -1183,7 +1183,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="commentaryLabel" destination="X55-vd-uIw" id="Rb1-wg-a0t"/>
                         <outlet property="questionLabel" destination="3ZH-1i-1St" id="7MT-8z-3WE"/>
+                        <outlet property="selectionLabel1" destination="y3v-tD-JiK" id="Spe-Du-lxl"/>
+                        <outlet property="selectionLabel2" destination="6rl-Bm-RRF" id="HCG-eN-XvW"/>
+                        <outlet property="selectionLabel3" destination="75O-Bo-5Gv" id="qnO-XK-lME"/>
+                        <outlet property="selectionLabel4" destination="WlQ-Tw-BJi" id="sMu-zT-DyI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3r-Ka-RTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -10,8 +10,8 @@ import UIKit
 
 // 사용자가 퀴즈를 풀 수 있도록
 class QuizPageViewController: UIPageViewController {
-
-    var quizData : [String] = [] // 사용자에게 보여줄 데이터형태
+    
+    var quizPageList : [QuizPageDto] = [] // 사용자에게 보여줄 데이터 형태
     
     var currentIndex : Int = 0 // 현재 페이지가 몇번째 페이지인지 확인하기 위함
     
@@ -23,25 +23,21 @@ class QuizPageViewController: UIPageViewController {
         self.dataSource = self // datasource를 자기 자신으로 지정
         self.delegate = self // delegate 설정 추가
         
+        self.log("viewDidLoad quizPageList : \(quizPageList)")
     }
-    
     // 퀴즈 페이지에 정보 할당 후 퀴즈 페이지 리턴
     func getQuizContent(at index : Int) -> QuizContentsViewController? {
-        // print("called getQuizContent \(index)")
         // 유효성 검사
-        if index < 0 || index >= quizData.count {
+        if index < 0 || index >= quizPageList.count {
             return nil
         }
         // 스토리보드를 통해 퀴즈 페이지 찾기
         let stoaryboard = UIStoryboard(name: "Main", bundle: nil)
         // QuizContentsViewController 찾기
         if let quizContentsVC = stoaryboard.instantiateViewController(withIdentifier: "QuizContentsViewController") as? QuizContentsViewController{
-            // 퀴즈 페이지에 정보 할당
-            // 퀴즈 페이지의 인덱스 설정
             quizContentsVC.pageIndex = index // 페이지 인덱스 설정
-            quizContentsVC.question = quizData[index]
-            // 정보 할당 완료 후 퀴즈 페이지 리턴
-            return quizContentsVC
+            quizContentsVC.quizPageData = quizPageList[index] // 퀴즈 페이지에 정보 할당
+            return quizContentsVC // 정보 할당 완료 후 퀴즈 페이지 리턴
         }
         return nil // 스토리보드 탐색 실패시
         
@@ -80,7 +76,7 @@ extension QuizPageViewController : UIPageViewControllerDataSource{
         }
         var index = quizContentsVC.pageIndex
         // 마지막 페이지인지 확인
-        if index == quizData.count - 1 {
+        if index == quizPageList.count - 1 {
             return nil
         }
         // 그렇지 않다면 다음 인덱스로 이동
@@ -99,5 +95,13 @@ extension QuizPageViewController: UIPageViewControllerDelegate{
             currentIndex = currentVC.pageIndex // 인덱스 설정
             delegater?.setQuizIndex(index: currentIndex + 1) // 퀴즈 인덱스 설정
         }
+    }
+}
+
+
+extension QuizPageViewController {
+    private func log(_ message : String){
+        print("📌[QuizPageViewController] \(message)📌")
+        
     }
 }

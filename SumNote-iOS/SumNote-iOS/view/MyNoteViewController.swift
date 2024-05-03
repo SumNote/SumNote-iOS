@@ -200,21 +200,17 @@ extension MyNoteViewController : NavigationDelegate{
     // 노트 페이지로 이동(노트 셀 클릭시)
     func didTappedNoteCell(_ userNotePage : UserNotePage) {
         self.log("didTappedNoteCall Did Tapped")
-        // 노트 페이지 뷰 인스턴스 찾기
         let noteVC = stoaryBoard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
-        
-        noteVC.userNotePages = userNotePage // 노트 페이지 뷰에 정보 전달
-        
-        // 화면 이동하기
+        noteVC.userNotePages = userNotePage
         self.navigationController?.pushViewController(noteVC, animated: true)
     }
     
     // 퀴즈 페이지로 이동(퀴즈 셀 클릭시)
-    func didTappedQuizCell(_ quizPageData: QuizPageDataDto) {
+    func didTappedQuizCell(quizPageData: QuizPageDataDto, quizTitle : String) {
         self.log("didTappedQuizCell Did Tapped")
-        // 퀴즈 페이지 뷰 인스턴스 찾기
         let quizVC = stoaryBoard.instantiateViewController(withIdentifier: "QuizViewController") as! QuizViewController
-        // 화면 이동하기
+        quizVC.quizTitleString = quizTitle
+        quizVC.quizPageData = quizPageData
         self.navigationController?.pushViewController(quizVC, animated: true)
     }
     

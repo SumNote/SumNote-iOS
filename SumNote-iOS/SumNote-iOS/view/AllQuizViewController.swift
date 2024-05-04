@@ -37,7 +37,7 @@ class AllQuizViewController: UIViewController {
     
     
     private func getAllQuizDoc(){
-        SpringAPI.shared.getQuizRequest(type: "all"){ isSuccess, quizDocList in
+        SpringAPIService.shared.getQuizRequest(type: "all"){ isSuccess, quizDocList in
             if isSuccess {
                 self.quizDocList = quizDocList
             } else {
@@ -120,7 +120,7 @@ extension AllQuizViewController : UITableViewDelegate,UITableViewDataSource{
     // 화면 클릭 이벤트 발생시
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currQuizDoc = quizDocList[indexPath.row]
-        SpringAPI.shared.getQuizPageRequest(quizId: currQuizDoc.quizId){ isSuccess, quizPageData in
+        SpringAPIService.shared.getQuizPageRequest(quizId: currQuizDoc.quizId){ isSuccess, quizPageData in
             if isSuccess{
                 self.delegate?.didTappedQuizCell(quizPageData: quizPageData!, quizTitle: currQuizDoc.title!)
             } else {

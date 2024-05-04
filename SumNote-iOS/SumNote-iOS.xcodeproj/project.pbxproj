@@ -20,8 +20,8 @@
 		2939C09A2BE3FEF800A5CF43 /* QuizDocDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0992BE3FEF800A5CF43 /* QuizDocDto.swift */; };
 		2939C09C2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C09B2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift */; };
 		2939C0A12BE4776800A5CF43 /* QuizDataDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0A02BE4776800A5CF43 /* QuizDataDto.swift */; };
-		293E0C672B3F11D800032033 /* FastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C662B3F11D800032033 /* FastAPI.swift */; };
-		293E0C692B3F131300032033 /* SpringAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C682B3F131300032033 /* SpringAPI.swift */; };
+		293E0C672B3F11D800032033 /* FastAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C662B3F11D800032033 /* FastAPIService.swift */; };
+		293E0C692B3F131300032033 /* SpringAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C682B3F131300032033 /* SpringAPIService.swift */; };
 		293F28EA2BDD3B5A0030ACBC /* UserNotePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */; };
 		2942749A2BDB4979006B224B /* CreatedNoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294274992BDB4979006B224B /* CreatedNoteResult.swift */; };
 		294349BD2B07922100C57B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349BC2B07922100C57B49 /* AppDelegate.swift */; };
@@ -33,7 +33,7 @@
 		294349D42B07922400C57B49 /* SumNote_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349D32B07922400C57B49 /* SumNote_iOSTests.swift */; };
 		294349DE2B07922400C57B49 /* SumNote_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349DD2B07922400C57B49 /* SumNote_iOSUITests.swift */; };
 		294349E02B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349DF2B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift */; };
-		294349ED2B0792DF00C57B49 /* KaKaoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349EC2B0792DF00C57B49 /* KaKaoAPI.swift */; };
+		294349ED2B0792DF00C57B49 /* KaKaoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349EC2B0792DF00C57B49 /* KaKaoAPIService.swift */; };
 		294349F12B079DDE00C57B49 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349F02B079DDE00C57B49 /* TabBarController.swift */; };
 		294349F32B079EEF00C57B49 /* MyNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349F22B079EEF00C57B49 /* MyNoteViewController.swift */; };
 		294349F52B079F2E00C57B49 /* NoteMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294349F42B079F2E00C57B49 /* NoteMakerViewController.swift */; };
@@ -109,8 +109,8 @@
 		2939C0992BE3FEF800A5CF43 /* QuizDocDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDocDto.swift; sourceTree = "<group>"; };
 		2939C09B2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuizRequestParameter.swift; sourceTree = "<group>"; };
 		2939C0A02BE4776800A5CF43 /* QuizDataDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDataDto.swift; sourceTree = "<group>"; };
-		293E0C662B3F11D800032033 /* FastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastAPI.swift; sourceTree = "<group>"; };
-		293E0C682B3F131300032033 /* SpringAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAPI.swift; sourceTree = "<group>"; };
+		293E0C662B3F11D800032033 /* FastAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastAPIService.swift; sourceTree = "<group>"; };
+		293E0C682B3F131300032033 /* SpringAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAPIService.swift; sourceTree = "<group>"; };
 		293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotePage.swift; sourceTree = "<group>"; };
 		294274992BDB4979006B224B /* CreatedNoteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedNoteResult.swift; sourceTree = "<group>"; };
 		294349B92B07922100C57B49 /* SumNote-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SumNote-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +126,7 @@
 		294349D92B07922400C57B49 /* SumNote-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SumNote-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294349DD2B07922400C57B49 /* SumNote_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumNote_iOSUITests.swift; sourceTree = "<group>"; };
 		294349DF2B07922400C57B49 /* SumNote_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumNote_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		294349EC2B0792DF00C57B49 /* KaKaoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoAPI.swift; sourceTree = "<group>"; };
+		294349EC2B0792DF00C57B49 /* KaKaoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoAPIService.swift; sourceTree = "<group>"; };
 		294349F02B079DDE00C57B49 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		294349F22B079EEF00C57B49 /* MyNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteViewController.swift; sourceTree = "<group>"; };
 		294349F42B079F2E00C57B49 /* NoteMakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteMakerViewController.swift; sourceTree = "<group>"; };
@@ -297,9 +297,9 @@
 		294349EE2B07943C00C57B49 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				294349EC2B0792DF00C57B49 /* KaKaoAPI.swift */,
-				293E0C662B3F11D800032033 /* FastAPI.swift */,
-				293E0C682B3F131300032033 /* SpringAPI.swift */,
+				294349EC2B0792DF00C57B49 /* KaKaoAPIService.swift */,
+				293E0C662B3F11D800032033 /* FastAPIService.swift */,
+				293E0C682B3F131300032033 /* SpringAPIService.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -675,7 +675,7 @@
 				295F90402B20CAFF00F28446 /* AllQuizViewController.swift in Sources */,
 				2939C0902BE0DEF700A5CF43 /* ChangeNoteParameter.swift in Sources */,
 				294432BA2BDE72DB00AB1B1E /* SpringDataNullResponse.swift in Sources */,
-				293E0C692B3F131300032033 /* SpringAPI.swift in Sources */,
+				293E0C692B3F131300032033 /* SpringAPIService.swift in Sources */,
 				294349F32B079EEF00C57B49 /* MyNoteViewController.swift in Sources */,
 				29F818052B2994530002E3C8 /* NotePageViewController.swift in Sources */,
 				294432BC2BDF243C00AB1B1E /* SaveNewNoteViewController.swift in Sources */,
@@ -692,7 +692,7 @@
 				29237D782B2DE11700BE751D /* NoteContentsViewController.swift in Sources */,
 				294349FA2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.swift in Sources */,
 				2939C0962BE38EE400A5CF43 /* QuizResponseDto.swift in Sources */,
-				294349ED2B0792DF00C57B49 /* KaKaoAPI.swift in Sources */,
+				294349ED2B0792DF00C57B49 /* KaKaoAPIService.swift in Sources */,
 				296FFA762B2014F000DE1D68 /* NoteTableViewCell.swift in Sources */,
 				2939C09A2BE3FEF800A5CF43 /* QuizDocDto.swift in Sources */,
 				294349F12B079DDE00C57B49 /* TabBarController.swift in Sources */,
@@ -704,7 +704,7 @@
 				29F818002B26F2950002E3C8 /* TitleCollectionViewCell.swift in Sources */,
 				29237D742B2D711100BE751D /* QuizViewDelegate.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
-				293E0C672B3F11D800032033 /* FastAPI.swift in Sources */,
+				293E0C672B3F11D800032033 /* FastAPIService.swift in Sources */,
 				295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */,
 				294432C32BDF8B4F00AB1B1E /* SaveNewNoteDelegate.swift in Sources */,
 				29EFD8862BDA35DA0064176A /* SpringBaseResponse.swift in Sources */,

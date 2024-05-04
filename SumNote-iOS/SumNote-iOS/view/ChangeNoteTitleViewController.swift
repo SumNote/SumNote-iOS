@@ -25,7 +25,7 @@ class ChangeNoteTitleViewController: UIViewController {
     @objc func changeNoteTitle(){
         let newTitle = self.changeNoteTitleEditText.text
         let changeNoteParameter = ChangeNoteParameter(changeTitle: newTitle)
-        SpringAPI.shared.changeNoteNameRequest(noteId: self.noteId!, changeNoteParameter: changeNoteParameter){ isSuccess in
+        SpringAPIService.shared.changeNoteNameRequest(noteId: self.noteId!, changeNoteParameter: changeNoteParameter){ isSuccess in
             if isSuccess{
                 self.log("changeNoteTitle Success")
                 self.changeNotTitleDelegate?.changeNoteTitle(newTitle: newTitle!)

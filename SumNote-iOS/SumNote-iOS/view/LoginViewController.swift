@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
     // 스프링 서버로 로그인 요청
     private func springLogin(email: String, name: String){
         let user = UserInfo(email: email, name: name)
-        SpringAPI.shared.loginRequest(user: user){ isSuccess in
+        SpringAPIService.shared.loginRequest(user: user){ isSuccess in
             if isSuccess{
                 self.log("springLogin : Success")
                 DispatchQueue.main.async {

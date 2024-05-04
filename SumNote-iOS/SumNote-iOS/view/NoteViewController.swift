@@ -76,12 +76,12 @@ class NoteViewController: UIViewController {
         
         // 커스텀 인디케이터 시작
         
-        FastAPI.shared.makeQuizRequest(noteText: currNoteText){ isSuccess,quizResponseDto in
+        FastAPIService.shared.makeQuizRequest(noteText: currNoteText){ isSuccess,quizResponseDto in
             if isSuccess {
                 self.log("createQuizHandler Success! \(String(describing: quizResponseDto))")	
                 let quizParameter = CreateQuizRequestParameter(noteId: currNoteId, title: "\(currNoteTitle!)의 퀴즈",quiz: quizResponseDto?.data!)
                 // 스프링에 저장 요청
-                SpringAPI.shared.createQuizDocRequest(parameter: quizParameter){ isSuccess in
+                SpringAPIService.shared.createQuizDocRequest(parameter: quizParameter){ isSuccess in
                     if isSuccess{
                         self.log("createQuizDocRequest Success")
                         // 커스텀 인디케이터 종료 => 퀴즈가 생성되었습니다.

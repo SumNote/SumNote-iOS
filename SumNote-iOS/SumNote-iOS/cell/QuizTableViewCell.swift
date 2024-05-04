@@ -48,7 +48,7 @@ class QuizTableViewCell: UITableViewCell {
     
     func getMyQuizDoc(){
         self.log("getMyQuizDoc")
-        SpringAPI.shared.getQuizRequest(type: "home"){ isSuccess, quizDocList in
+        SpringAPIService.shared.getQuizRequest(type: "home"){ isSuccess, quizDocList in
             if isSuccess {
                 self.quizDocList = quizDocList
             } else {
@@ -108,7 +108,7 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     // 셀 클릭시
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let currQuizDoc = quizDocList[indexPath.row]
-        SpringAPI.shared.getQuizPageRequest(quizId: currQuizDoc.quizId){ isSuccess, quizPageData in
+        SpringAPIService.shared.getQuizPageRequest(quizId: currQuizDoc.quizId){ isSuccess, quizPageData in
             if isSuccess{
                 self.delegate?.didTappedQuizCell(quizPageData: quizPageData!, quizTitle: currQuizDoc.title!)
             } else {

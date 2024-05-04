@@ -53,7 +53,7 @@ class MyNoteViewController: UIViewController{
             if let error = error {
                 print(error)
                 self.log("setUserInfo error : \(error)")
-            } else if let userInfo = KaKaoAPI.shared.extractUserInfo(user) {
+            } else if let userInfo = KaKaoAPIService.shared.extractUserInfo(user) {
                 self.log("setUserInfo Extracted User Info : \(userInfo)")
                 self.userNameLabel.text = userInfo["nickname"] as? String
                 let urlString = userInfo["profileImage"]

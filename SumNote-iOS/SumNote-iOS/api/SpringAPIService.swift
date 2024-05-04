@@ -8,9 +8,9 @@
 import Foundation
 import Alamofire
 
-class SpringAPI{
+class SpringAPIService{
     
-    static let shared = SpringAPI() // Singleton
+    static let shared = SpringAPIService() // Singleton
     
     static let baseUrl = "http://localhost:8080/api"
 //    static let baseUrl = "http://52.78.139.114:8080/api"
@@ -21,7 +21,7 @@ class SpringAPI{
     
     // 로그인
     func loginRequest(user : UserInfo, completion: @escaping (Bool) -> Void){
-        let url = SpringAPI.baseUrl + "/member/login"
+        let url = SpringAPIService.baseUrl + "/member/login"
         
         AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default)
             .validate(statusCode: 200..<300)
@@ -33,7 +33,7 @@ class SpringAPI{
                         self.log("loginRequest success : \(authToken)")
                         // 사용자 정보 저장
                         UserDefaults.standard.set(authToken, forKey: "token")
-                        SpringAPI.token = authToken // 토큰 저장
+                        SpringAPIService.token = authToken // 토큰 저장
                         completion(true) // 로그인 성공시
                     } else {
                         self.log("loginRequest success : No Token received")
@@ -49,12 +49,12 @@ class SpringAPI{
     
     // 사용자의 노트 데이터 요청(노트 목록)
     func getNoteRequest(type : String, completion : @escaping (Bool,[NoteDto])->Void){
-        let url = SpringAPI.baseUrl + "/sum-note?type=\(type)"
+        let url = SpringAPIService.baseUrl + "/sum-note?type=\(type)"
         // ?type=home 노트 목록 5개 조회
         // ?type=all 노트 전체 반환
         AF.request(url,
                    method: .get,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPIService.token!]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of: SpringBaseResponse<[NoteDto]>.self) { response in
             switch response.result {
@@ -72,11 +72,11 @@ class SpringAPI{
     
     // 사용자의 특정 노트의 페이지 데이터 요청(페이지들)
     func getNotePagesReqeust(noteId : Int, completion : @escaping (Bool,UserNotePage?)->()){
-        let url = SpringAPI.baseUrl + "/sum-note/\(noteId)"
+        let url = SpringAPIService.baseUrl + "/sum-note/\(noteId)"
         
         AF.request(url,
                    method: .get,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPIService.token!]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of: SpringBaseResponse<UserNotePage>.self) { response in
             switch response.result{
@@ -94,13 +94,13 @@ class SpringAPI{
     
     // 특정 노트에 페이지 추가 저장
     func savePageToNoteRequest(noteId : Int, notePage : SaveNotePageDto, completion : @escaping (Bool)->(Void)){
-        let url = SpringAPI.baseUrl + "/sum-note/\(noteId)/add"
+        let url = SpringAPIService.baseUrl + "/sum-note/\(noteId)/add"
         
         AF.request(url,
                    method: .put,
                    parameters: notePage,
                    encoder: JSONParameterEncoder.default,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPIService.token!]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of: SpringDataNUllResponse.self){ response in
             switch response.result{
@@ -116,13 +116,13 @@ class SpringAPI{
     
     // 새로운 노트 생성 후 페이지 저장
     func savePageToNewNoteRequest(newNote : CreateNoteDto, completion : @escaping (Bool)->(Void)){
-        let url = SpringAPI.baseUrl + "/sum-note"
+        let url = SpringAPIService.baseUrl + "/sum-note"
         
         AF.request(url,
                    method: .post,
                    parameters: newNote,
                    encoder: JSONParameterEncoder.default,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPIService.token!]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of : SpringDataNUllResponse.self){ response in
             switch response.result{
@@ -138,13 +138,13 @@ class SpringAPI{
 
     // 노트 이름 바꾸기
     func changeNoteNameRequest(noteId : Int, changeNoteParameter : ChangeNoteParameter, completion : @escaping (Bool)->(Void)){
-        let url = SpringAPI.baseUrl + "/sum-note/\(noteId)/title"
+        let url = SpringAPIService.baseUrl + "/sum-note/\(noteId)/title"
         
         AF.request(url, 
                    method: .put,
                    parameters: changeNoteParameter,
                    encoder: JSONParameterEncoder.default,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPIService.token!]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of : SpringDataNUllResponse.self){ response in
             switch response.result{
@@ -166,14 +166,14 @@ class SpringAPI{
     
     // 문제집 생성(저장) 요청
     func createQuizDocRequest(parameter : CreateQuizRequestParameter, completion : @escaping (Bool)->(Void)){
-        let url = SpringAPI.baseUrl + "/quiz"
+        let url = SpringAPIService.baseUrl + "/quiz"
         
         // POST
         AF.request(url,
                    method: .post,
                    parameters: parameter,
                    encoder: JSONParameterEncoder.default,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPIService.token!]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of : SpringDataNUllResponse.self){ response in
             switch response.result{
@@ -191,12 +191,12 @@ class SpringAPI{
     
     // 사용자의 문제집 데이터 요청(문제집 목록)
     func getQuizRequest(type : String, completion : @escaping (Bool,[QuizDocDto])->Void){
-        let url = SpringAPI.baseUrl + "/quiz?type=\(type)"
+        let url = SpringAPIService.baseUrl + "/quiz?type=\(type)"
         // ?type=home 퀴즈 목록 5개 조회
         // ?type=all 퀴즈 전체 반환
         AF.request(url,
                    method: .get,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPIService.token!]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of: SpringBaseResponse<[QuizDocDto]>.self) { response in
             switch response.result {
@@ -215,11 +215,11 @@ class SpringAPI{
     	
     // 사용자의 특정 문제집의 퀴즈 데이터 요청(문제집에 소속된 퀴즈들)
     func getQuizPageRequest(quizId : Int, completion : @escaping (Bool,QuizPageDataDto?)->(Void)){
-        let url = SpringAPI.baseUrl + "/quiz/\(quizId)"
+        let url = SpringAPIService.baseUrl + "/quiz/\(quizId)"
         
         AF.request(url,
                    method: .get,
-                   headers: HTTPHeaders(["Authorization" : SpringAPI.token!]))
+                   headers: HTTPHeaders(["Authorization" : SpringAPIService.token!]))
         .validate(statusCode: 200..<300)
         .responseDecodable(of : SpringBaseResponse<QuizPageDataDto>.self){ response in
             switch response.result {
@@ -238,7 +238,7 @@ class SpringAPI{
 
 }
 
-extension SpringAPI {
+extension SpringAPIService {
     private func log(_ message: String){
         print("🛜[SpringAPI] \(message)🛜")
     }

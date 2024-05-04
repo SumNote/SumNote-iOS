@@ -33,7 +33,7 @@ class SaveNewNoteViewController: UIViewController {
         let newNotePage = SaveNotePageDto(title: noteTitle!, content: noteContent!)
         let createNoteDto = CreateNoteDto(note : newNote, notePages : [newNotePage])
         // 새로운 노트 저장 API 호출
-        SpringAPI.shared.savePageToNewNoteRequest(newNote: createNoteDto){ isSuccess in
+        SpringAPIService.shared.savePageToNewNoteRequest(newNote: createNoteDto){ isSuccess in
             if isSuccess{
                 // 성공 토스트 뷰 띄우기
                 

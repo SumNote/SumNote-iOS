@@ -62,7 +62,7 @@ class NoteTableViewCell: UITableViewCell {
     // 서버로부터 보유중인 노트 얻어오는 동작 작성 필요
     func getMyNote(){
         self.log("getMyNote")
-        SpringAPI.shared.getNoteRequest(type: "home"){ isSuccess, noteList in
+        SpringAPIService.shared.getNoteRequest(type: "home"){ isSuccess, noteList in
             if isSuccess{
                 self.noteList = noteList
             } else {
@@ -117,7 +117,7 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
         self.log("\(indexPath.row) cell clicked")
         
         let note = noteList[indexPath.row]
-        SpringAPI.shared.getNotePagesReqeust(noteId: note.noteId!){ isSucess,userNotePage in
+        SpringAPIService.shared.getNotePagesReqeust(noteId: note.noteId!){ isSucess,userNotePage in
             if isSucess{
                 self.delegate?.didTappedNoteCell(userNotePage!) // 얻어온 노트 정보 전달
             } else {

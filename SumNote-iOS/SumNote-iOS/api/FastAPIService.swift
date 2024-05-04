@@ -8,9 +8,9 @@
 import Foundation
 import Alamofire // api
 
-class FastAPI{
+class FastAPIService{
     
-    static let shared = FastAPI()
+    static let shared = FastAPIService()
     
     static let baseURL = "http://220.76.49.32:8000"
     
@@ -27,7 +27,7 @@ class FastAPI{
     // multipart 방식으로 이미지를 RequestBody에 삽입해서 OCR 결과물 얻어옴
     // key-name : "image"
     public func makeNoteByImageRequest(image : UIImage, completion : @escaping (Bool,CreatedNoteResult?) -> Void){
-        let url = FastAPI.baseURL + "/image-to-text"
+        let url = FastAPIService.baseURL + "/image-to-text"
         let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
 
         // UIImage를 Data로 변환
@@ -62,7 +62,7 @@ class FastAPI{
     // multipart 방식으로 PDF파일을 RequestBody에 삽입해서 OCR 결과물 얻어옴
     // key-name : "pdf"
     public func makeNoteByPdf(pdfURL: URL, completion: @escaping (Bool, CreatedNoteResult?) -> Void) {
-        let url = FastAPI.baseURL + "/pdf-to-text"
+        let url = FastAPIService.baseURL + "/pdf-to-text"
         let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
 
         // URLRequest를 만들고 타임아웃 설정 적용
@@ -96,7 +96,7 @@ class FastAPI{
     
     // 퀴즈 생성 요청
     public func makeQuizRequest(noteText : String, completion : @escaping (Bool,QuizResponseDto?)->(Void)){
-        let url = FastAPI.baseURL + "/gen-problem"
+        let url = FastAPIService.baseURL + "/gen-problem"
         
         // 헤더 설정: Content-Type을 text/plain으로 설정
         let headers: HTTPHeaders = [
@@ -140,7 +140,7 @@ struct PlainTextEncoding: ParameterEncoding {
 
 
 
-extension FastAPI {
+extension FastAPIService {
     private func log(_ message: String){
         print("🛜[FastAPI] \(message)🛜")
     }

@@ -93,7 +93,7 @@ extension NoteMakerViewController : UIImagePickerControllerDelegate,UINavigation
             self.log("No file selected")
             return
         }
-        FastAPI.shared.makeNoteByPdf(pdfURL: url) { success, createdNote in
+        FastAPIService.shared.makeNoteByPdf(pdfURL: url) { success, createdNote in
             if success {
                 self.createdNote = createdNote
                 // 성공적으로 파일을 업로드하고 처리 완료 후 UI 업데이트
@@ -117,7 +117,7 @@ extension NoteMakerViewController : UIImagePickerControllerDelegate,UINavigation
             return
         }
         
-        FastAPI.shared.makeNoteByImageRequest(image: selectedImage) { success, createdNote in
+        FastAPIService.shared.makeNoteByImageRequest(image: selectedImage) { success, createdNote in
             if success {
                 self.createdNote = createdNote
                 DispatchQueue.main.async {
@@ -147,7 +147,7 @@ extension NoteMakerViewController {
 extension NoteMakerViewController : UIDocumentPickerDelegate {
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
         // 파일 선택 이후 api 호출
-        FastAPI.shared.makeNoteByPdf(pdfURL : url) { success, createdNote in
+        FastAPIService.shared.makeNoteByPdf(pdfURL : url) { success, createdNote in
             if success {
                 self.createdNote = createdNote
                 // 노트 생성 이후 처리

@@ -39,7 +39,7 @@ class AllNoteViewController: UIViewController {
     
     // 전체 노트 얻어오기
     private func getAllNote(){
-        SpringAPI.shared.getNoteRequest(type: "all"){ isSuccess, noteList in
+        SpringAPIService.shared.getNoteRequest(type: "all"){ isSuccess, noteList in
             if isSuccess{
                 self.noteList = noteList
                 self.log("getAllNote : \(noteList)")
@@ -116,7 +116,7 @@ extension AllNoteViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.log("didSelectRowAt : \(indexPath.row)")
         let note = noteList[indexPath.row] // 현재 선택한 노트
-        SpringAPI.shared.getNotePagesReqeust(noteId: note.noteId!){ isSucess,userNotePage in
+        SpringAPIService.shared.getNotePagesReqeust(noteId: note.noteId!){ isSucess,userNotePage in
             if isSucess{
                 self.delegater?.didTappedNoteCell(userNotePage!) // 얻어온 노트 정보 전달
             } else {

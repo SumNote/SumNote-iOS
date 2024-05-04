@@ -51,7 +51,7 @@ class SaveNoteViewController: UIViewController {
     }
     
     private func getAllNote(){
-        SpringAPI.shared.getNoteRequest(type: "all"){ isSuccess, noteList in
+        SpringAPIService.shared.getNoteRequest(type: "all"){ isSuccess, noteList in
             if isSuccess{
                 self.noteList = noteList
             }
@@ -98,7 +98,7 @@ extension SaveNoteViewController : UITableViewDelegate{
         let note = noteList[indexPath.row]
         let notePage = SaveNotePageDto(title: self.noteTitle, content: self.noteContent) // 저장할 페이지
         
-        SpringAPI.shared.savePageToNoteRequest(noteId: note.noteId!, notePage: notePage) { [weak self] isSuccess in
+        SpringAPIService.shared.savePageToNoteRequest(noteId: note.noteId!, notePage: notePage) { [weak self] isSuccess in
             DispatchQueue.main.async { // 메인 스레드에서 실행
                 if isSuccess {
                     self?.log("tableView didSelectRowAt : Success to save note")

@@ -29,6 +29,13 @@ class NoteViewController: UIViewController {
         setpriorityButton() // 메뉴 버튼 설정
     }
     
+    private func setupNote(){
+        self.noteTitle.text = userNotePages.note?.title // 노트 제목 설정
+        self.pageData = userNotePages.notePages!
+        setupNotePageViewController() // 데이터 할당 이후 뷰 컨트롤러 설정
+    }
+    
+    
     // 뷰가 실행되고 난 이후 (네비게이션 바 커스텀을 위해 상단 바 숨기기)
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -62,12 +69,29 @@ class NoteViewController: UIViewController {
         self.log("call createQuizHandler")
         
         let currNoteContent = pageData[self.currIndex]
+        let currNoteId = userNotePages.note?.noteId!
+        let currNoteTitle = userNotePages.note?.title!
         let currNoteText = "[\(currNoteContent.title!)]\n\(currNoteContent.content!)"
         self.log("createQuizHandler : \(currNoteText)")
         
+        // 커스텀 인디케이터 시작
+        
         FastAPI.shared.makeQuizRequest(noteText: currNoteText){ isSuccess,quizResponseDto in
             if isSuccess {
-                self.log("createQuizHandler Success! \(String(describing: quizResponseDto))")
+                self.log("createQuizHandler Success! \(String(describing: quizResponseDto))")	
+                let quizParameter = CreateQuizRequestParameter(noteId: currNoteId, title: "\(currNoteTitle!)의 퀴즈",quiz: quizResponseDto?.data!)
+                // 스프링에 저장 요청
+                SpringAPI.shared.createQuizDocRequest(parameter: quizParameter){ isSuccess in
+                    if isSuccess{
+                        self.log("createQuizDocRequest Success")
+                        // 커스텀 인디케이터 종료 => 퀴즈가 생성되었습니다.
+                        // self.dismiss(animated: false) // 성공이후 메인화면으로 되돌아가기
+                        self.navigationController?.popViewController(animated: true)
+                    } else {
+                        self.log("createQuizDocReqeust Fail")
+                        // 예외처리 필요
+                    }
+                }
             } else {
                 self.log("createQuizHandler Fail!")
             }
@@ -86,11 +110,7 @@ class NoteViewController: UIViewController {
         print("노트 삭제")
     }
     
-    private func setupNote(){
-        self.noteTitle.text = userNotePages.note?.title // 노트 제목 설정
-        self.pageData = userNotePages.notePages!
-        setupNotePageViewController() // 데이터 할당 이후 뷰 컨트롤러 설정
-    }
+    
     
     
     private func setupBackButton() {

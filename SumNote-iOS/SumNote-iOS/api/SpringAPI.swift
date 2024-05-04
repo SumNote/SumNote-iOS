@@ -164,7 +164,7 @@ class SpringAPI{
     
     
     
-    // 문제집 생성 요청
+    // 문제집 생성(저장) 요청
     func createQuizDocRequest(parameter : CreateQuizRequestParameter, completion : @escaping (Bool)->(Void)){
         let url = SpringAPI.baseUrl + "/quiz"
         

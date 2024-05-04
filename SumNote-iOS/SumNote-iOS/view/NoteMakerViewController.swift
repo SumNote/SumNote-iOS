@@ -85,7 +85,7 @@ class NoteMakerViewController: UIViewController {
 }
 
 // 뷰를 전환하기 위한 NavigationController와, 카메라,갤러리 뷰를 사용하기 위해 ImagePickerControllerDelegate 프로토콜을 채택한다.
-extension NoteMakerViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+extension NoteMakerViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate, UIDocumentPickerDelegate{
     
     //MARK: PDF File Select
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
@@ -141,28 +141,6 @@ extension NoteMakerViewController {
         print("📌[NoteMakerViewController] \(message)📌")
     }
 }
-
-
-
-extension NoteMakerViewController : UIDocumentPickerDelegate {
-    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
-        // 파일 선택 이후 api 호출
-        FastAPIService.shared.makeNoteByPdf(pdfURL : url) { success, createdNote in
-            if success {
-                self.createdNote = createdNote
-                // 노트 생성 이후 처리
-                DispatchQueue.main.async {
-                    let createdNoteVC = self.storyBoard.instantiateViewController(withIdentifier: "CreatedNoteViewController") as! CreatedNoteViewController
-                    createdNoteVC.createdNote = self.createdNote // 노트 데이터 전달
-                    self.navigationController?.pushViewController(createdNoteVC, animated: true)
-                }
-            } else {
-                self.log("Failed to upload PDF")
-            }
-        }
-    }
-}
-
 
 extension NoteMakerViewController: FinishNoteSaveDelegate {
     func shouldCloseAllRelatedViews() {

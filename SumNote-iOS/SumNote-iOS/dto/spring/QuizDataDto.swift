@@ -17,7 +17,7 @@ struct QuizPageDto : Decodable,Encodable {
     var quizPageId : Int?
     var question : String?
     var selection : [QuizSelectionDto]?
-    var anwer : String?
+    var answer : String?
     var commentary : String? // 해설
 }
 

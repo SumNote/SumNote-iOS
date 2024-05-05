@@ -28,26 +28,64 @@ class QuizContentsViewController: UIViewController {
     var selections : [QuizSelectionDto]?
     var resultNum : String? // 정답 번호
     var commentary : String? // 해설
+    var answerIndex : Int!
+    var gradeFinish : Bool = false // 채점 상태
+    
+    var selectionButtonLabelList : [UIButton] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpQuiz()
     }
     
-    func setUpQuiz(){
+    func setUpQuiz() {
         question = quizPageData?.question
-        resultNum = quizPageData?.anwer
+        resultNum = quizPageData?.answer
         commentary = quizPageData?.commentary
         selections = quizPageData?.selection
-        
+
+        if let answer = resultNum, let num = Int(answer) {
+            self.answerIndex = num - 1
+        }
+
+        selectionButtonLabelList.append(selectionLabel1)
+        selectionButtonLabelList.append(selectionLabel2)
+        selectionButtonLabelList.append(selectionLabel3)
+        selectionButtonLabelList.append(selectionLabel4)
+
         questionLabel.text = question
-        selectionLabel1.setTitle(selections?[0].selection, for: .normal)
-        selectionLabel2.setTitle(selections?[1].selection, for: .normal)
-        selectionLabel3.setTitle(selections?[2].selection, for: .normal)
-        selectionLabel4.setTitle(selections?[3].selection, for: .normal)
+        for (i, selectionLabel) in selectionButtonLabelList.enumerated() {
+            selectionLabel.setTitle(selections?[i].selection, for: .normal)
+            selectionLabel.addTarget(self, action: #selector(grading), for: .touchUpInside)
+            selectionLabel.tag = i // 버튼에 태그 설정
+        }
+
         commentaryLabel.text = commentary
-        
+        commentaryLabel.isHidden = true // 초기엔 정답 안보임
     }
+
+    // 채점하기
+    @objc func grading(sender: UIButton) {
+        if gradeFinish == false{
+            if sender.tag == self.answerIndex {
+                self.log("grading result -> Correct!")
+            } else {
+                self.log("grading result -> Wrong!")
+                let wrongAnswerLabel = selectionButtonLabelList[sender.tag]
+                wrongAnswerLabel.borderColor = .red
+                wrongAnswerLabel.borderWidth = 5
+                wrongAnswerLabel.cornerRadius = 10
+            }
+            let answerLabel = selectionButtonLabelList[self.answerIndex]
+            answerLabel.borderColor = UIColor(named: "green")
+            answerLabel.borderWidth = 5
+            answerLabel.cornerRadius = 10
+            
+            commentaryLabel.isHidden = false
+            gradeFinish = true // 채점 완료 => 한번 풀은 상태에서는 다시 풀기 불가능
+        }
+    }
+
 
 }
 

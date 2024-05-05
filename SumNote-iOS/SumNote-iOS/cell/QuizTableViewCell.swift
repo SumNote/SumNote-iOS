@@ -110,6 +110,7 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
         let currQuizDoc = quizDocList[indexPath.row]
         SpringAPIService.shared.getQuizPageRequest(quizId: currQuizDoc.quizId){ isSuccess, quizPageData in
             if isSuccess{
+                self.log("check : \(quizPageData)")
                 self.delegate?.didTappedQuizCell(quizPageData: quizPageData!, quizTitle: currQuizDoc.title!)
             } else {
                 // 예외 처리 작성 필요

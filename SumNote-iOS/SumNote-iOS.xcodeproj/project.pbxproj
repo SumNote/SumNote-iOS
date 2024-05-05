@@ -21,6 +21,7 @@
 		2939C09C2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C09B2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift */; };
 		2939C0A12BE4776800A5CF43 /* QuizDataDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0A02BE4776800A5CF43 /* QuizDataDto.swift */; };
 		2939C0A42BE66BBA00A5CF43 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0A32BE66BBA00A5CF43 /* LoadingIndicator.swift */; };
+		2939C0A62BE79BFC00A5CF43 /* ResultDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939C0A52BE79BFC00A5CF43 /* ResultDialog.swift */; };
 		293E0C672B3F11D800032033 /* FastAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C662B3F11D800032033 /* FastAPIService.swift */; };
 		293E0C692B3F131300032033 /* SpringAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0C682B3F131300032033 /* SpringAPIService.swift */; };
 		293F28EA2BDD3B5A0030ACBC /* UserNotePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */; };
@@ -111,6 +112,7 @@
 		2939C09B2BE4001E00A5CF43 /* CreateQuizRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuizRequestParameter.swift; sourceTree = "<group>"; };
 		2939C0A02BE4776800A5CF43 /* QuizDataDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDataDto.swift; sourceTree = "<group>"; };
 		2939C0A32BE66BBA00A5CF43 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		2939C0A52BE79BFC00A5CF43 /* ResultDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDialog.swift; sourceTree = "<group>"; };
 		293E0C662B3F11D800032033 /* FastAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastAPIService.swift; sourceTree = "<group>"; };
 		293E0C682B3F131300032033 /* SpringAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAPIService.swift; sourceTree = "<group>"; };
 		293F28E92BDD3B5A0030ACBC /* UserNotePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotePage.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				2939C0A32BE66BBA00A5CF43 /* LoadingIndicator.swift */,
+				2939C0A52BE79BFC00A5CF43 /* ResultDialog.swift */,
 			);
 			path = indicator;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				29E54F532B2151CD00E6E4B9 /* AllNoteTableViewCell.swift in Sources */,
 				29237D722B2D62C900BE751D /* QuizViewController.swift in Sources */,
 				29F818002B26F2950002E3C8 /* TitleCollectionViewCell.swift in Sources */,
+				2939C0A62BE79BFC00A5CF43 /* ResultDialog.swift in Sources */,
 				29237D742B2D711100BE751D /* QuizViewDelegate.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
 				293E0C672B3F11D800032033 /* FastAPIService.swift in Sources */,

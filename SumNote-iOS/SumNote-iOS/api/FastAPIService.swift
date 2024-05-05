@@ -17,6 +17,9 @@ class FastAPIService{
     
     private let session: Session
     
+    private let loadingIndicator = LoadingIndicator.shared
+    private let resultDialog = ResultDialog.shared
+    
     private init() { // for singleton
         // 세션 설정으로 타임아웃 조정
         let configuration = URLSessionConfiguration.default
@@ -28,7 +31,7 @@ class FastAPIService{
     // multipart 방식으로 이미지를 RequestBody에 삽입해서 OCR 결과물 얻어옴
     // key-name : "image"
     public func makeNoteByImageRequest(image : UIImage, completion : @escaping (Bool,CreatedNoteResult?) -> Void){
-        LoadingIndicator.shared.startIndicator(withMessage: "노트를 생성하는 중입니다 ..")
+        self.loadingIndicator.startIndicator(withMessage: "노트를 생성하는 중입니다 ..")
         let url = FastAPIService.baseURL + "/image-to-text"
         let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
 
@@ -52,10 +55,12 @@ class FastAPIService{
             case .success(let apiResponse):
                 let createdNote = apiResponse
                 self.log("makeNoteByImageRequest : note created successfully \(String(describing: createdNote.sum_result))")
-                LoadingIndicator.shared.finishIndicator() // 인디케이터 종료
+                self.loadingIndicator.finishIndicator() // 인디케이터 종료
+                self.resultDialog.showDialog(isSuccess: true, message: "노트가 저장되었습니다!", delayTime: 1.0)
                 completion(true, createdNote)
             case .failure(let error):
                 self.log("makeNoteByImageRequest : image send fail \(error)")
+                self.resultDialog.showDialog(isSuccess: false, message: "노트 작성에 실패하였습니다.", delayTime: 1.0)
                 completion(false, nil)
             }
         }
@@ -65,7 +70,7 @@ class FastAPIService{
     // multipart 방식으로 PDF파일을 RequestBody에 삽입해서 OCR 결과물 얻어옴
     // key-name : "pdf"
     public func makeNoteByPdf(pdfURL: URL, completion: @escaping (Bool, CreatedNoteResult?) -> Void) {
-        LoadingIndicator.shared.startIndicator(withMessage: "노트를 생성하는 중입니다 ...")
+        self.loadingIndicator.startIndicator(withMessage: "노트를 생성하는 중입니다 ...")
         let url = FastAPIService.baseURL + "/pdf-to-text"
         let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
 
@@ -89,11 +94,14 @@ class FastAPIService{
             switch response.result {
             case .success(let createdNote):
                 self.log("makeNoteByPdf: PDF processed successfully")
-                LoadingIndicator.shared.finishIndicator() // 인디케이터 종료
+                self.loadingIndicator.finishIndicator() // 인디케이터 종료
+                self.resultDialog.showDialog(isSuccess: true, message: "노트가 저장되었습니다!", delayTime: 1.0)
                 completion(true, createdNote)
             case .failure(let error):
                 self.log("makeNoteByPdf: Failed to upload PDF - \(error.localizedDescription)")
+                self.resultDialog.showDialog(isSuccess: false, message: "노트 작성에 실패하였습니다.", delayTime: 1.0)
                 completion(false, nil)
+                
             }
         }
     }
@@ -101,7 +109,7 @@ class FastAPIService{
     
     // 퀴즈 생성 요청
     public func makeQuizRequest(noteText : String, completion : @escaping (Bool,QuizResponseDto?)->(Void)){
-        LoadingIndicator.shared.startIndicator(withMessage: "문제를 생성하는 중입니다 ...")
+        self.loadingIndicator.startIndicator(withMessage: "문제를 생성하는 중입니다 ...")
         let url = FastAPIService.baseURL + "/gen-problem"
         
         // 헤더 설정: Content-Type을 text/plain으로 설정
@@ -118,10 +126,12 @@ class FastAPIService{
             switch response.result {
             case .success(let apiResponse):
                 self.log("makeQuizRequest Success : \(apiResponse)")
-                LoadingIndicator.shared.finishIndicator()
+                self.loadingIndicator.finishIndicator()
+                self.resultDialog.showDialog(isSuccess: true, message: "문제가 성공적으로 생성되었습니다!", delayTime: 1.0)
                 completion(true,apiResponse)
             case .failure(let error):
                 self.log("makeQuizRequest Fail : \(error)")
+                self.resultDialog.showDialog(isSuccess: false, message: "문제 생성에 실패하였습니다.", delayTime: 1.0)
                 completion(false,nil)
             }
         }

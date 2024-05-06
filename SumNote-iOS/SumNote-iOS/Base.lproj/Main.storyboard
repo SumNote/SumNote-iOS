@@ -523,6 +523,7 @@
                     <connections>
                         <outlet property="changeNoteTitleEditText" destination="1DD-sX-8cI" id="ymS-T8-w5q"/>
                         <outlet property="changeNoteTitleViewBtn" destination="BJn-lO-YSC" id="4u9-AS-u4z"/>
+                        <outlet property="dialogCenterYConstraint" destination="r4s-nC-ayD" id="llq-lf-uLl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lt-Vc-th8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

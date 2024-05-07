@@ -11,8 +11,7 @@ class ChangeNoteTitleViewController: UIViewController {
 
     @IBOutlet weak var changeNoteTitleEditText: UITextField!
     @IBOutlet weak var changeNoteTitleViewBtn: UIView!
-    
-    
+    @IBOutlet weak var dialogUIView: UIView!
     @IBOutlet weak var dialogCenterYConstraint: NSLayoutConstraint!
     
     
@@ -32,10 +31,18 @@ class ChangeNoteTitleViewController: UIViewController {
         // 뷰 전체에 대한 탭 제스처 인식기 추가
         let keyBoardTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         keyBoardTapGesture.cancelsTouchesInView = false
-        view.addGestureRecognizer(keyBoardTapGesture)
+        dialogUIView.addGestureRecognizer(keyBoardTapGesture)
         
+        let dismissDialogTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissDialog))
+        view.addGestureRecognizer(dismissDialogTapGesture)
         
     }
+    
+    @objc func dismissDialog(sender : UITapGestureRecognizer){
+        self.dismiss(animated: true)
+    }
+    
+    
     
     // 키보드가 나타나면 다이얼로그를 위로 이동
     @objc func startEditing(sender : UITextField){

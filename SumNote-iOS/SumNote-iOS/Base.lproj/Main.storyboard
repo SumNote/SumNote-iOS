@@ -824,6 +824,7 @@
                     <navigationItem key="navigationItem" id="pUN-hr-p8x"/>
                     <connections>
                         <outlet property="dialogCenterYConstraint" destination="tA1-Pj-PHd" id="G43-nL-q1b"/>
+                        <outlet property="dialogUIView" destination="KYa-IT-UEW" id="jHW-2f-n4h"/>
                         <outlet property="doneBtnView" destination="C3a-3E-wDg" id="yyf-VA-lSc"/>
                         <outlet property="newNoteTitle" destination="hq4-eO-Grz" id="Wfe-XY-2NE"/>
                     </connections>

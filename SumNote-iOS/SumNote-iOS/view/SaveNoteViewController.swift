@@ -28,8 +28,15 @@ class SaveNoteViewController: UIViewController {
         super.viewDidLoad()
         setTableView()
         getAllNote() // 서버로부터 데이터 요청
+        
+        let closeDialogTapGesture = UITapGestureRecognizer(target: self, action: #selector(closeDialog))
+        view.addGestureRecognizer(closeDialogTapGesture)
     }
     
+    
+    @objc func closeDialog(sender : UITapGestureRecognizer){
+        self.dismiss(animated: true)
+    }
     
     // 새로운 노트에 저장하기
     @IBAction func saveNewNoteBtnDidTapped(_ sender: Any) {

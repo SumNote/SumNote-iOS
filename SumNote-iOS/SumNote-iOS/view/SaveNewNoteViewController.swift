@@ -14,6 +14,8 @@ class SaveNewNoteViewController: UIViewController {
     
     @IBOutlet weak var doneBtnView: UIView! // 완료버튼으로 사용하기 위한 뷰
     
+    @IBOutlet weak var dialogUIView: UIView!
+    
     var noteTitle : String?
     var noteContent : String?
     weak var finishNoteSaveDelegate: FinishNoteSaveDelegate?
@@ -34,8 +36,16 @@ class SaveNewNoteViewController: UIViewController {
         // 뷰 전체에 대한 탭 제스처 인식기 추가
         let keyBoardTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         keyBoardTapGesture.cancelsTouchesInView = false
-        view.addGestureRecognizer(keyBoardTapGesture)
+        dialogUIView.addGestureRecognizer(keyBoardTapGesture)
         
+        
+        let closeDialogTapGesture = UITapGestureRecognizer(target: self, action: #selector(closeDialog))
+        view.addGestureRecognizer(closeDialogTapGesture)
+        
+    }
+    
+    @objc func closeDialog(sender : UITapGestureRecognizer){
+        self.dismiss(animated: true)
     }
     
     // 키보드가 나타나면 다이얼로그를 위로 이동

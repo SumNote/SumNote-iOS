@@ -12,10 +12,10 @@ class SpringAPIService{
     
     static let shared = SpringAPIService() // Singleton
     
-    static let baseUrl = "http://localhost:8080/api"
-//    static let baseUrl = "http://52.78.139.114:8080/api"
+    //static let baseUrl = "http://localhost:8080/api"
+    static let baseUrl = "http://52.78.139.114:8080/api"
     
-    static var token : String? = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGxya2QxMjIxQGdtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3MTQzNTMwNzIsImV4cCI6MTcxNTU2MjY3Mn0.V4RHTl1HBy3D8MJVy73soHb50fkVEhIIWFMKv1Bl3mM"
+    static var token : String?
     
     private init() {} // for singleton
     

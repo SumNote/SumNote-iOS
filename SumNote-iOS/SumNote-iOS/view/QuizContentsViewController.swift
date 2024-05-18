@@ -69,8 +69,10 @@ class QuizContentsViewController: UIViewController {
         if gradeFinish == false{
             if sender.tag == self.answerIndex {
                 self.log("grading result -> Correct!")
+                ToastMessage.shared.showToast(message: "정답입니다!", fontSize: 14.0, view: self.view)
             } else {
                 self.log("grading result -> Wrong!")
+                ToastMessage.shared.showToast(message: "틀렸습니다!", fontSize: 14.0, view: self.view)
                 let wrongAnswerLabel = selectionButtonLabelList[sender.tag]
                 wrongAnswerLabel.borderColor = .red
                 wrongAnswerLabel.borderWidth = 5

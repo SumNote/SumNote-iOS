@@ -41,6 +41,7 @@ class SaveNoteViewController: UIViewController {
     // 새로운 노트에 저장하기
     @IBAction func saveNewNoteBtnDidTapped(_ sender: Any) {
         self.log("saveNewNoteBtnDidTapped")
+        ToastMessage.shared.showToast(message: "노트가 저장되었습니다.", fontSize: 14.0, view: self.view)
         // 현재 세그를 종료하고, 부모(CreatedNoteViewController)에서 saveNewNote 세그 실행
         self.dismiss(animated: false){
             self.saveNewNoteDelegate?.showSaveNewNoteModal()

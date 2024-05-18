@@ -4,12 +4,13 @@
 //
 //  Created by Choi76 on 5/18/24.
 //
+
 import UIKit
 
 // 싱글톤 패턴으로 토스트 메시지 클래스 작성
 class ToastMessage {
     
-    let shared = ToastMessage()
+    static let shared = ToastMessage()
     
     private init(){}
     

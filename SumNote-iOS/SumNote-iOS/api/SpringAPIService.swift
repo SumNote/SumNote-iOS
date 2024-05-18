@@ -12,7 +12,7 @@ class SpringAPIService{
     
     static let shared = SpringAPIService() // Singleton
     
-    //static let baseUrl = "http://localhost:8080/api"
+    // static let baseUrl = "http://localhost:8080/api"
     static let baseUrl = "http://52.78.139.114:8080/api"
     
     static var token : String?

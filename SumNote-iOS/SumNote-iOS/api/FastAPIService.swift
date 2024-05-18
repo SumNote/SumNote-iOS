@@ -60,6 +60,7 @@ class FastAPIService{
                 completion(true, createdNote)
             case .failure(let error):
                 self.log("makeNoteByImageRequest : image send fail \(error)")
+                self.loadingIndicator.finishIndicator() // 인디케이터 종료
                 self.resultDialog.showDialog(isSuccess: false, message: "노트 작성에 실패하였습니다.", delayTime: 1.0)
                 completion(false, nil)
             }
@@ -99,6 +100,7 @@ class FastAPIService{
                 completion(true, createdNote)
             case .failure(let error):
                 self.log("makeNoteByPdf: Failed to upload PDF - \(error.localizedDescription)")
+                self.loadingIndicator.finishIndicator() // 인디케이터 종료
                 self.resultDialog.showDialog(isSuccess: false, message: "노트 작성에 실패하였습니다.", delayTime: 1.0)
                 completion(false, nil)
                 
@@ -131,6 +133,7 @@ class FastAPIService{
                 completion(true,apiResponse)
             case .failure(let error):
                 self.log("makeQuizRequest Fail : \(error)")
+                self.loadingIndicator.finishIndicator()
                 self.resultDialog.showDialog(isSuccess: false, message: "문제 생성에 실패하였습니다.", delayTime: 1.0)
                 completion(false,nil)
             }

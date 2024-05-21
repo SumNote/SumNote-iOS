@@ -109,7 +109,6 @@ class NoteViewController: UIViewController {
         SpringAPIService.shared.deleteNoteDocRequest(noteId: self.noteId!){ isSuccess in
             if isSuccess{
                 self.log("deleteNote Success")
-                
                 // 초기 화면으로 되돌아가기
                 self.navigationController?.popViewController(animated: true)
             } else {

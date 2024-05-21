@@ -163,6 +163,12 @@ extension NoteTableViewCell : UICollectionViewDelegateFlowLayout{
         let height = collectionViewFrameSize.height
         let width = collectionViewFrameSize.width
         
+        
+        // 반환할 데이터가 있는 경우와 없는 경우 고려
+        if noteList.count == 0 {
+            return CGSize(width: width-20, height: height)
+        }
+        
         return CGSize(width: width/2, height: height)
     }
     

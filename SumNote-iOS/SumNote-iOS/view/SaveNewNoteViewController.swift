@@ -38,7 +38,6 @@ class SaveNewNoteViewController: UIViewController {
         keyBoardTapGesture.cancelsTouchesInView = false
         dialogUIView.addGestureRecognizer(keyBoardTapGesture)
         
-        
         let closeDialogTapGesture = UITapGestureRecognizer(target: self, action: #selector(closeDialog))
         view.addGestureRecognizer(closeDialogTapGesture)
         
@@ -54,7 +53,6 @@ class SaveNewNoteViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
-        
     }
     
     // 키보드가 사라지면 다이얼로그를 아래로 이동
@@ -80,8 +78,8 @@ class SaveNewNoteViewController: UIViewController {
         // 새로운 노트 저장 API 호출
         SpringAPIService.shared.savePageToNewNoteRequest(newNote: createNoteDto){ isSuccess in
             if isSuccess{
-                // 성공 토스트 뷰 띄우기
-                
+                // 성공 토스트 뷰 띄우기"
+                ToastMessage.shared.showToast(message: "노트가 생성되었습니다.", fontSize: 14.0, view: self.view)
                 self.log("saveByNewNote Success!")
                 // 초기 화면으로 되돌아가기
                 self.dismiss(animated: false){

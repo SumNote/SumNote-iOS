@@ -159,6 +159,26 @@ class SpringAPIService{
     }
     
     // 사용자의 노트 삭제 요청
+    func deleteNoteDocRequest(noteId : Int, completion : @escaping (Bool) -> Void){
+        let url = SpringAPIService.baseUrl + "/\(noteId)"
+        
+        self.log("delteNoteDeocRequest : \(noteId)")
+        
+        AF.request(url,
+                   method: .delete,
+                   headers: HTTPHeaders(["Authorization" : SpringAPIService.token!]))
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of: SpringDataNUllResponse.self) { response in
+            switch response.result {
+            case .success(let apiResponse): // 삭제 요청 성공시
+                self.log("deleteNoteDocReqeust success \(String(describing: apiResponse.message))")
+                completion(true)
+            case .failure(let error): // 삭제 요청 실패시
+                self.log("deleteNoteDocReqeust error : \(error)")
+                completion(false)
+            }
+        }
+    }
     
     
     

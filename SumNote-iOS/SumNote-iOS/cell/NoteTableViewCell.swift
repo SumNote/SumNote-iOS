@@ -142,7 +142,8 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
             let note = noteList[indexPath.row]
             SpringAPIService.shared.getNotePagesReqeust(noteId: note.noteId!){ isSucess,userNotePage in
                 if isSucess{
-                    self.delegate?.didTappedNoteCell(userNotePage!) // 얻어온 노트 정보 전달
+                    self.log("NoteTableViewCell didSelectItemAt noteId : \(note.noteId!)")
+                    self.delegate?.didTappedNoteCell(userNotePage: userNotePage!, noteId: note.noteId!)
                 } else {
                     // 오류 처리 필요
                 }

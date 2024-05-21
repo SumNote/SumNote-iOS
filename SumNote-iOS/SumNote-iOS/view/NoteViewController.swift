@@ -17,6 +17,7 @@ class NoteViewController: UIViewController {
     var userNotePages : UserNotePage!
     var pageData : [NotePagesDto] = []
     var notePageViewController : UIPageViewController! // 노트 페이지 뷰
+    var noteId : Int? // 현재 보고 있는 노트의 아이디
     
     // 현재 사용자가 pageData의 몇번 째 노트를 보고 있는지 관측하기 위함
     var currIndex : Int = 0 // 디폴트는 0번째 페이지
@@ -74,8 +75,6 @@ class NoteViewController: UIViewController {
         let currNoteText = "[\(currNoteContent.title!)]\n\(currNoteContent.content!)"
         self.log("createQuizHandler : \(currNoteText)")
         
-        // 커스텀 인디케이터 시작
-        
         FastAPIService.shared.makeQuizRequest(noteText: currNoteText){ isSuccess,quizResponseDto in
             if isSuccess {
                 self.log("createQuizHandler Success! \(String(describing: quizResponseDto))")	
@@ -107,7 +106,17 @@ class NoteViewController: UIViewController {
     
     // 노트 삭제
     func deleteNote(action : UIAction){
-        print("노트 삭제")
+        SpringAPIService.shared.deleteNoteDocRequest(noteId: self.noteId!){ isSuccess in
+            if isSuccess{
+                self.log("deleteNote Success")
+                
+                // 초기 화면으로 되돌아가기
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                // 예외 처리 작성 필요
+                self.log("deleteNote Fail")
+            }
+        }
     }
     
     

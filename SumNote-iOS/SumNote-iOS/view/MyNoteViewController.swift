@@ -198,9 +198,10 @@ extension MyNoteViewController : NavigationDelegate{
     }
     
     // 노트 페이지로 이동(노트 셀 클릭시)
-    func didTappedNoteCell(_ userNotePage : UserNotePage) {
+    func didTappedNoteCell(userNotePage : UserNotePage, noteId : Int) {
         self.log("didTappedNoteCall Did Tapped")
         let noteVC = stoaryBoard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
+        noteVC.noteId = noteId
         noteVC.userNotePages = userNotePage
         self.navigationController?.pushViewController(noteVC, animated: true)
     }

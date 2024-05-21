@@ -118,7 +118,7 @@ extension AllNoteViewController : UITableViewDelegate,UITableViewDataSource{
         let note = noteList[indexPath.row] // 현재 선택한 노트
         SpringAPIService.shared.getNotePagesReqeust(noteId: note.noteId!){ isSucess,userNotePage in
             if isSucess{
-                self.delegater?.didTappedNoteCell(userNotePage!) // 얻어온 노트 정보 전달
+                self.delegater?.didTappedNoteCell(userNotePage: userNotePage!, noteId: note.noteId!)
             } else {
                 // 오류 처리 필요
             }

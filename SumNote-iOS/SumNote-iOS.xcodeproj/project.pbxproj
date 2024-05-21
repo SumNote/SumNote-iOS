@@ -53,6 +53,8 @@
 		295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295F90412B20CBF000F28446 /* AllQuizTableViewCell.swift */; };
 		295F90442B20CBF000F28446 /* AllQuizTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */; };
 		296A24482B90D440002411D8 /* +UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296A24472B90D440002411D8 /* +UIView.swift */; };
+		296D36F32BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296D36F22BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.xib */; };
+		296D36F42BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D36F12BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.swift */; };
 		296FFA5C2B1CB25400DE1D68 /* AllNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */; };
 		296FFA762B2014F000DE1D68 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FFA742B2014F000DE1D68 /* NoteTableViewCell.swift */; };
 		296FFA772B2014F000DE1D68 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296FFA752B2014F000DE1D68 /* NoteTableViewCell.xib */; };
@@ -149,6 +151,8 @@
 		295F90412B20CBF000F28446 /* AllQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizTableViewCell.swift; sourceTree = "<group>"; };
 		295F90422B20CBF000F28446 /* AllQuizTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllQuizTableViewCell.xib; sourceTree = "<group>"; };
 		296A24472B90D440002411D8 /* +UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIView.swift"; sourceTree = "<group>"; };
+		296D36F12BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyNoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		296D36F22BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyNoteCollectionViewCell.xib; sourceTree = "<group>"; };
 		296FFA5B2B1CB25400DE1D68 /* AllNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteViewController.swift; sourceTree = "<group>"; };
 		296FFA742B2014F000DE1D68 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		296FFA752B2014F000DE1D68 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
@@ -408,6 +412,8 @@
 				29F237522B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.xib */,
 				29F817FE2B26F2950002E3C8 /* TitleCollectionViewCell.swift */,
 				29F817FF2B26F2950002E3C8 /* TitleCollectionViewCell.xib */,
+				296D36F12BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.swift */,
+				296D36F22BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -558,6 +564,7 @@
 				29F818012B26F2950002E3C8 /* TitleCollectionViewCell.xib in Resources */,
 				2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */,
 				294349C92B07922300C57B49 /* LaunchScreen.storyboard in Resources */,
+				296D36F32BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.xib in Resources */,
 				294349C62B07922300C57B49 /* Assets.xcassets in Resources */,
 				296FFA772B2014F000DE1D68 /* NoteTableViewCell.xib in Resources */,
 				29F237542B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.xib in Resources */,
@@ -740,6 +747,7 @@
 				2939C0A62BE79BFC00A5CF43 /* ResultDialog.swift in Sources */,
 				29237D742B2D711100BE751D /* QuizViewDelegate.swift in Sources */,
 				294349BF2B07922100C57B49 /* SceneDelegate.swift in Sources */,
+				296D36F42BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.swift in Sources */,
 				293E0C672B3F11D800032033 /* FastAPIService.swift in Sources */,
 				295F90432B20CBF000F28446 /* AllQuizTableViewCell.swift in Sources */,
 				294432C32BDF8B4F00AB1B1E /* SaveNewNoteDelegate.swift in Sources */,

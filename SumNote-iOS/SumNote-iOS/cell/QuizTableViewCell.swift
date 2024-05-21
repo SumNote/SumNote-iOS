@@ -44,6 +44,11 @@ class QuizTableViewCell: UITableViewCell {
             nibName: "MyQuizListCollectionViewCell",
             bundle: nil), forCellWithReuseIdentifier: MyQuizListCollectionViewCell.identifier)
         
+        // 생성된 퀴즈가 없을 때 보여줄 셀
+        myQuizListCollectionView.register(UINib(
+            nibName: "EmptyQuizCollectionViewCell",
+            bundle: nil), forCellWithReuseIdentifier: EmptyQuizCollectionViewCell.identifier)
+        
     }
     
     func getMyQuizDoc(){
@@ -78,6 +83,9 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     
     // 몇개의 셀을 보여줄 것인지
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if self.quizDocList.count == 0 {
+            return 1 // 안내 셀을 보여주기 위함
+        }
         if self.quizDocList.count < 5 {
             return self.quizDocList.count
         }
@@ -92,6 +100,15 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
             return errorCell
         }
         
+        guard let guidCell = collectionView.dequeueReusableCell(withReuseIdentifier: EmptyQuizCollectionViewCell.identifier, for: indexPath) as? EmptyQuizCollectionViewCell else {
+            let errorCell = UICollectionViewCell()
+            errorCell.backgroundColor = .blue
+            return errorCell
+        }
+        
+        if quizDocList.isEmpty {
+            return guidCell
+        }
         // 퀴즈 이미지 지정
         let quizNum = (indexPath.row)%6+1
         cell.quizUIImage.image = UIImage(named: "img_quiz_\(quizNum)")
@@ -107,6 +124,10 @@ extension QuizTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     
     // 셀 클릭시
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // 퀴즈가 비어있지 않은 경우에 대해서만
+        if quizDocList.isEmpty{
+            return
+        }
         let currQuizDoc = quizDocList[indexPath.row]
         SpringAPIService.shared.getQuizPageRequest(quizId: currQuizDoc.quizId){ isSuccess, quizPageData in
             if isSuccess{
@@ -128,10 +149,13 @@ extension QuizTableViewCell : UICollectionViewDelegateFlowLayout{
     
     //높이와 너비 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let collectionViewFrameSize = self.myQuizListCollectionView.frame.size
         let height = collectionViewFrameSize.height
         let width = collectionViewFrameSize.width
+        
+        if quizDocList.isEmpty{
+            return CGSize(width: width-20, height: height-50)
+        }
         
         return CGSize(width: width-20, height: height/2-20)
     }

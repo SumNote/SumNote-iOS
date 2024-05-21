@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="442" height="243"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저장된 노트가 없습니다.  노트 메이커(note maker)에서 첫번째 노트를 만들어보세요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64Z-FK-hQR">
-                                <rect key="frame" x="43.666666666666657" y="103.66666666666667" width="355" height="36.000000000000014"/>
+                                <rect key="frame" x="0.0" y="0.0" width="442" height="243"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="textGray"/>
                                 <nil key="highlightedColor"/>
@@ -30,8 +30,10 @@
                         </subviews>
                         <color key="backgroundColor" name="wramGray"/>
                         <constraints>
-                            <constraint firstItem="64Z-FK-hQR" firstAttribute="centerX" secondItem="QML-MW-zZM" secondAttribute="centerX" id="Idt-QU-snz"/>
-                            <constraint firstItem="64Z-FK-hQR" firstAttribute="centerY" secondItem="QML-MW-zZM" secondAttribute="centerY" id="lRO-PA-tE8"/>
+                            <constraint firstAttribute="bottom" secondItem="64Z-FK-hQR" secondAttribute="bottom" id="o8R-j1-5we"/>
+                            <constraint firstItem="64Z-FK-hQR" firstAttribute="top" secondItem="QML-MW-zZM" secondAttribute="top" id="qyA-NQ-zDz"/>
+                            <constraint firstItem="64Z-FK-hQR" firstAttribute="leading" secondItem="QML-MW-zZM" secondAttribute="leading" id="r25-GN-5Gu"/>
+                            <constraint firstAttribute="trailing" secondItem="64Z-FK-hQR" secondAttribute="trailing" id="wjy-R4-Fog"/>
                         </constraints>
                     </view>
                 </subviews>

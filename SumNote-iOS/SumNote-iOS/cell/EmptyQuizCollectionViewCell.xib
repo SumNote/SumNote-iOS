@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="EmptyQuizCollectionViewCell" reuseIdentifier="EmptyQuizCollectionViewCell" id="gTV-IL-0wX" customClass="EmptyQuizCollectionViewCell" customModule="SumNote_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="580" height="236"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="580" height="236"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHt-ZL-QuB">
+                        <rect key="frame" x="0.0" y="0.0" width="580" height="236"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저장된 퀴즈가 없습니다.  노트 페이지에서 첫번째 퀴즈를 만들어보세요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHs-SN-y00">
+                                <rect key="frame" x="0.0" y="0.0" width="580" height="236"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="textGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="wramGray"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VHs-SN-y00" secondAttribute="bottom" id="9Ox-6D-rMW"/>
+                            <constraint firstItem="VHs-SN-y00" firstAttribute="top" secondItem="VHt-ZL-QuB" secondAttribute="top" id="CWf-0C-gg4"/>
+                            <constraint firstItem="VHs-SN-y00" firstAttribute="leading" secondItem="VHt-ZL-QuB" secondAttribute="leading" id="acD-om-4jZ"/>
+                            <constraint firstAttribute="trailing" secondItem="VHs-SN-y00" secondAttribute="trailing" id="ucJ-qp-wJH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="VHt-ZL-QuB" secondAttribute="bottom" id="2xd-VS-9Zf"/>
+                <constraint firstAttribute="trailing" secondItem="VHt-ZL-QuB" secondAttribute="trailing" id="c8a-63-gxi"/>
+                <constraint firstItem="VHt-ZL-QuB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oQA-iB-Lmi"/>
+                <constraint firstItem="VHt-ZL-QuB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ys4-2t-4H2"/>
+            </constraints>
+            <size key="customSize" width="580" height="236"/>
+            <connections>
+                <outlet property="emptyCellView" destination="VHt-ZL-QuB" id="Zkc-qH-sPH"/>
+            </connections>
+            <point key="canvasLocation" x="-94.656488549618317" y="16.901408450704228"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="textGray">
+            <color red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="wramGray">
+            <color red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

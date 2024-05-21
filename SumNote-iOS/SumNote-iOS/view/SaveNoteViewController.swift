@@ -30,6 +30,7 @@ class SaveNoteViewController: UIViewController {
         getAllNote() // 서버로부터 데이터 요청
         
         let closeDialogTapGesture = UITapGestureRecognizer(target: self, action: #selector(closeDialog))
+        closeDialogTapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(closeDialogTapGesture)
     }
     
@@ -105,6 +106,8 @@ extension SaveNoteViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let note = noteList[indexPath.row]
         let notePage = SaveNotePageDto(title: self.noteTitle, content: self.noteContent) // 저장할 페이지
+        
+        self.log("TableViewCell Clicked")
         
         SpringAPIService.shared.savePageToNoteRequest(noteId: note.noteId!, notePage: notePage) { [weak self] isSuccess in
             DispatchQueue.main.async { // 메인 스레드에서 실행

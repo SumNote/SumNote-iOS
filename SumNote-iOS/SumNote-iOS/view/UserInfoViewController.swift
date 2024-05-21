@@ -18,7 +18,7 @@ class UserInfoViewController: UIViewController {
             imageName: "img_minseo",
             devName: "강민서", devEmail: "kms02171@naver.com",
             role1: "Kotlin, JPA, SpringBoot를 이용한 API 개발" ,
-            role2: "클라우드 구축 (VPC, EC2, RDS, Jenkins, Docker, Jenkins)",
+            role2: "클라우드 구축 (VPC, EC2, RDS, Jenkins, Docker, Ansible)",
             role3: "어플리케이션 디자인 개선"),
         DeveloperInfo(
             imageName: "img_taeha",

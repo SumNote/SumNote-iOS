@@ -53,8 +53,13 @@ class NoteTableViewCell: UITableViewCell {
             nibName: "MyNoteListCollectionViewCell",
             bundle: nil), forCellWithReuseIdentifier: MyNoteListCollectionViewCell.identifier)
         
-        myNoteListCollectionView.contentInset = UIEdgeInsets(top:0, left:10, bottom:0, right: 0) // 컬렉션뷰 시작 위치 간격 설정
+        // 생성된 노트가 없을 경우에 보여줄 셀
+        myNoteListCollectionView.register(UINib(
+            nibName: "EmptyNoteCollectionViewCell", 
+            bundle: nil), forCellWithReuseIdentifier: EmptyNoteCollectionViewCell.identifier)
         
+        
+        myNoteListCollectionView.contentInset = UIEdgeInsets(top:0, left:10, bottom:0, right: 0) // 컬렉션뷰 시작 위치 간격 설정
         
     }
     
@@ -84,6 +89,10 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
     
     // 몇개의 셀을 보여줄 것인지
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if noteList.count == 0 { // 아직 저장된 노트가 없다면
+            return 1 // 안내용 셀 보여주기
+        }
+        
         // 최대 5개만 보여줌
         if noteList.count < 5{
             return noteList.count
@@ -91,44 +100,55 @@ extension NoteTableViewCell : UICollectionViewDelegate,UICollectionViewDataSourc
         return 5
     }
     
-    //
+    // 사용할 셀의 모습 정의
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // 에러 셀
+        guard let emptyCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: EmptyNoteCollectionViewCell.identifier, for: indexPath) as? EmptyNoteCollectionViewCell else {
+            let errorCell = UICollectionViewCell()
+            errorCell.backgroundColor = .blue
+            return errorCell
+        }
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyNoteListCollectionViewCell.identifier, for: indexPath) as? MyNoteListCollectionViewCell else {
             let errorCell = UICollectionViewCell()
             errorCell.backgroundColor = .blue
             return errorCell
         }
         
-        // 정보 주입
-        let note = noteList[indexPath.row]
-        
-        cell.noteNameLabel.text = note.title
-        cell.noteGeneratedTime.text = note.lastModifiedAt
-        
-        // 모듈러 연산을 사용하여 노트 이미지를 돌려쓸수 있도록
-        let noteNum = (indexPath.row)%8+1
-        cell.noteUIImage.image = UIImage(named: "img_note_\(noteNum)")
-        
-        return cell
+        // 저장된 노트가 없는 경우 - 있는 경우 나눠서 생각
+        if noteList.count == 0{
+            return emptyCell
+        } else {
+            // 정보 주입
+            let note = noteList[indexPath.row]
+            
+            cell.noteNameLabel.text = note.title
+            cell.noteGeneratedTime.text = note.lastModifiedAt
+            
+            // 모듈러 연산을 사용하여 노트 이미지를 돌려쓸수 있도록
+            let noteNum = (indexPath.row)%8+1
+            cell.noteUIImage.image = UIImage(named: "img_note_\(noteNum)")
+            
+            return cell
+        }
     }
     
     // 컬렉션뷰 클릭시 동작 => MyNoteView로 위임 필요
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.log("\(indexPath.row) cell clicked")
         
-        let note = noteList[indexPath.row]
-        SpringAPIService.shared.getNotePagesReqeust(noteId: note.noteId!){ isSucess,userNotePage in
-            if isSucess{
-                self.delegate?.didTappedNoteCell(userNotePage!) // 얻어온 노트 정보 전달
-            } else {
-                // 오류 처리 필요
+        // 저장되어있는 셀이 없는 경우에는 반환 이벤트 없음
+        if noteList.count != 0 {
+            let note = noteList[indexPath.row]
+            SpringAPIService.shared.getNotePagesReqeust(noteId: note.noteId!){ isSucess,userNotePage in
+                if isSucess{
+                    self.delegate?.didTappedNoteCell(userNotePage!) // 얻어온 노트 정보 전달
+                } else {
+                    // 오류 처리 필요
+                }
             }
         }
-        
-        
     }
-    
-    
 }
 
 // 셀 크기 동적으로 정의

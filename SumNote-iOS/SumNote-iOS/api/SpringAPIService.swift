@@ -160,7 +160,7 @@ class SpringAPIService{
     
     // 사용자의 노트 삭제 요청
     func deleteNoteDocRequest(noteId : Int, completion : @escaping (Bool) -> Void){
-        let url = SpringAPIService.baseUrl + "/\(noteId)"
+        let url = SpringAPIService.baseUrl + "/sum-note/\(noteId)"
         
         self.log("delteNoteDeocRequest : \(noteId)")
         

@@ -167,6 +167,17 @@
 		2978599E2BAC18C700A3FA14 /* CreatedNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedNoteViewController.swift; sourceTree = "<group>"; };
 		2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyQuizListCollectionViewCell.xib; sourceTree = "<group>"; };
+		29B70B252C02147700B8E8CF /* pretendard_semi_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_semi_bold.ttf; sourceTree = "<group>"; };
+		29B70B262C02147800B8E8CF /* pretendard_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_medium.ttf; sourceTree = "<group>"; };
+		29B70B272C02147800B8E8CF /* pretendard_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_thin.ttf; sourceTree = "<group>"; };
+		29B70B282C02147800B8E8CF /* pretendard_extra_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_extra_bold.ttf; sourceTree = "<group>"; };
+		29B70B292C02147800B8E8CF /* pretendard_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_light.ttf; sourceTree = "<group>"; };
+		29B70B2A2C02147800B8E8CF /* pretendard_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_bold.ttf; sourceTree = "<group>"; };
+		29B70B2B2C02147800B8E8CF /* yeongdeoksea.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yeongdeoksea.ttf; sourceTree = "<group>"; };
+		29B70B2C2C02147800B8E8CF /* pretendard_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_regular.ttf; sourceTree = "<group>"; };
+		29B70B2D2C02147800B8E8CF /* pretendard_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_black.ttf; sourceTree = "<group>"; };
+		29B70B2E2C02147800B8E8CF /* bm_hanna_pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bm_hanna_pro.ttf; sourceTree = "<group>"; };
+		29B70B2F2C02147800B8E8CF /* pretendard_extra_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_extra_light.ttf; sourceTree = "<group>"; };
 		29C43B9F2B2B4956003D0E3D /* QuizPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPageViewController.swift; sourceTree = "<group>"; };
 		29C43BA12B2B49D9003D0E3D /* QuizContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizContentsViewController.swift; sourceTree = "<group>"; };
 		29E54F512B2151CD00E6E4B9 /* AllNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteTableViewCell.swift; sourceTree = "<group>"; };
@@ -282,6 +293,7 @@
 		294349BB2B07922100C57B49 /* SumNote-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				29B70B242C02142C00B8E8CF /* font */,
 				295E61102BF8CE930017F632 /* util */,
 				296A24462B90D402002411D8 /* extenstion */,
 				296FFA7C2B2038F400DE1D68 /* protocol */,
@@ -422,6 +434,24 @@
 				296D36FA2BFCA29C004D2D08 /* EmptyQuizCollectionViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		29B70B242C02142C00B8E8CF /* font */ = {
+			isa = PBXGroup;
+			children = (
+				29B70B2E2C02147800B8E8CF /* bm_hanna_pro.ttf */,
+				29B70B2D2C02147800B8E8CF /* pretendard_black.ttf */,
+				29B70B2A2C02147800B8E8CF /* pretendard_bold.ttf */,
+				29B70B282C02147800B8E8CF /* pretendard_extra_bold.ttf */,
+				29B70B2F2C02147800B8E8CF /* pretendard_extra_light.ttf */,
+				29B70B292C02147800B8E8CF /* pretendard_light.ttf */,
+				29B70B262C02147800B8E8CF /* pretendard_medium.ttf */,
+				29B70B2C2C02147800B8E8CF /* pretendard_regular.ttf */,
+				29B70B252C02147700B8E8CF /* pretendard_semi_bold.ttf */,
+				29B70B272C02147800B8E8CF /* pretendard_thin.ttf */,
+				29B70B2B2C02147800B8E8CF /* yeongdeoksea.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 		29EFD8822BDA322F0064176A /* dto */ = {

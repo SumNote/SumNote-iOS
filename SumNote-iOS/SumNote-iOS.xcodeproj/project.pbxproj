@@ -67,6 +67,17 @@
 		2978599F2BAC18C700A3FA14 /* CreatedNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978599E2BAC18C700A3FA14 /* CreatedNoteViewController.swift */; };
 		2984A8FD2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */; };
 		2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */; };
+		29B70B3B2C0214FF00B8E8CF /* bm_hanna_pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B302C0214FE00B8E8CF /* bm_hanna_pro.ttf */; };
+		29B70B3C2C0214FF00B8E8CF /* yeongdeoksea.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B312C0214FE00B8E8CF /* yeongdeoksea.ttf */; };
+		29B70B3D2C0214FF00B8E8CF /* pretendard_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B322C0214FF00B8E8CF /* pretendard_medium.ttf */; };
+		29B70B3E2C0214FF00B8E8CF /* pretendard_extra_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B332C0214FF00B8E8CF /* pretendard_extra_bold.ttf */; };
+		29B70B3F2C0214FF00B8E8CF /* pretendard_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B342C0214FF00B8E8CF /* pretendard_black.ttf */; };
+		29B70B402C0214FF00B8E8CF /* pretendard_semi_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B352C0214FF00B8E8CF /* pretendard_semi_bold.ttf */; };
+		29B70B412C0214FF00B8E8CF /* pretendard_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B362C0214FF00B8E8CF /* pretendard_bold.ttf */; };
+		29B70B422C0214FF00B8E8CF /* pretendard_extra_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B372C0214FF00B8E8CF /* pretendard_extra_light.ttf */; };
+		29B70B432C0214FF00B8E8CF /* pretendard_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B382C0214FF00B8E8CF /* pretendard_thin.ttf */; };
+		29B70B442C0214FF00B8E8CF /* pretendard_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B392C0214FF00B8E8CF /* pretendard_regular.ttf */; };
+		29B70B452C0214FF00B8E8CF /* pretendard_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29B70B3A2C0214FF00B8E8CF /* pretendard_light.ttf */; };
 		29C43BA02B2B4956003D0E3D /* QuizPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C43B9F2B2B4956003D0E3D /* QuizPageViewController.swift */; };
 		29C43BA22B2B49D9003D0E3D /* QuizContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C43BA12B2B49D9003D0E3D /* QuizContentsViewController.swift */; };
 		29E54F532B2151CD00E6E4B9 /* AllNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E54F512B2151CD00E6E4B9 /* AllNoteTableViewCell.swift */; };
@@ -167,17 +178,17 @@
 		2978599E2BAC18C700A3FA14 /* CreatedNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedNoteViewController.swift; sourceTree = "<group>"; };
 		2984A8FB2B0F163C009BDF9F /* MyQuizListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2984A8FC2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyQuizListCollectionViewCell.xib; sourceTree = "<group>"; };
-		29B70B252C02147700B8E8CF /* pretendard_semi_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_semi_bold.ttf; sourceTree = "<group>"; };
-		29B70B262C02147800B8E8CF /* pretendard_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_medium.ttf; sourceTree = "<group>"; };
-		29B70B272C02147800B8E8CF /* pretendard_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_thin.ttf; sourceTree = "<group>"; };
-		29B70B282C02147800B8E8CF /* pretendard_extra_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_extra_bold.ttf; sourceTree = "<group>"; };
-		29B70B292C02147800B8E8CF /* pretendard_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_light.ttf; sourceTree = "<group>"; };
-		29B70B2A2C02147800B8E8CF /* pretendard_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_bold.ttf; sourceTree = "<group>"; };
-		29B70B2B2C02147800B8E8CF /* yeongdeoksea.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yeongdeoksea.ttf; sourceTree = "<group>"; };
-		29B70B2C2C02147800B8E8CF /* pretendard_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_regular.ttf; sourceTree = "<group>"; };
-		29B70B2D2C02147800B8E8CF /* pretendard_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_black.ttf; sourceTree = "<group>"; };
-		29B70B2E2C02147800B8E8CF /* bm_hanna_pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bm_hanna_pro.ttf; sourceTree = "<group>"; };
-		29B70B2F2C02147800B8E8CF /* pretendard_extra_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_extra_light.ttf; sourceTree = "<group>"; };
+		29B70B302C0214FE00B8E8CF /* bm_hanna_pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bm_hanna_pro.ttf; sourceTree = "<group>"; };
+		29B70B312C0214FE00B8E8CF /* yeongdeoksea.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yeongdeoksea.ttf; sourceTree = "<group>"; };
+		29B70B322C0214FF00B8E8CF /* pretendard_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_medium.ttf; sourceTree = "<group>"; };
+		29B70B332C0214FF00B8E8CF /* pretendard_extra_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_extra_bold.ttf; sourceTree = "<group>"; };
+		29B70B342C0214FF00B8E8CF /* pretendard_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_black.ttf; sourceTree = "<group>"; };
+		29B70B352C0214FF00B8E8CF /* pretendard_semi_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_semi_bold.ttf; sourceTree = "<group>"; };
+		29B70B362C0214FF00B8E8CF /* pretendard_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_bold.ttf; sourceTree = "<group>"; };
+		29B70B372C0214FF00B8E8CF /* pretendard_extra_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_extra_light.ttf; sourceTree = "<group>"; };
+		29B70B382C0214FF00B8E8CF /* pretendard_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_thin.ttf; sourceTree = "<group>"; };
+		29B70B392C0214FF00B8E8CF /* pretendard_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_regular.ttf; sourceTree = "<group>"; };
+		29B70B3A2C0214FF00B8E8CF /* pretendard_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pretendard_light.ttf; sourceTree = "<group>"; };
 		29C43B9F2B2B4956003D0E3D /* QuizPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPageViewController.swift; sourceTree = "<group>"; };
 		29C43BA12B2B49D9003D0E3D /* QuizContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizContentsViewController.swift; sourceTree = "<group>"; };
 		29E54F512B2151CD00E6E4B9 /* AllNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteTableViewCell.swift; sourceTree = "<group>"; };
@@ -439,17 +450,17 @@
 		29B70B242C02142C00B8E8CF /* font */ = {
 			isa = PBXGroup;
 			children = (
-				29B70B2E2C02147800B8E8CF /* bm_hanna_pro.ttf */,
-				29B70B2D2C02147800B8E8CF /* pretendard_black.ttf */,
-				29B70B2A2C02147800B8E8CF /* pretendard_bold.ttf */,
-				29B70B282C02147800B8E8CF /* pretendard_extra_bold.ttf */,
-				29B70B2F2C02147800B8E8CF /* pretendard_extra_light.ttf */,
-				29B70B292C02147800B8E8CF /* pretendard_light.ttf */,
-				29B70B262C02147800B8E8CF /* pretendard_medium.ttf */,
-				29B70B2C2C02147800B8E8CF /* pretendard_regular.ttf */,
-				29B70B252C02147700B8E8CF /* pretendard_semi_bold.ttf */,
-				29B70B272C02147800B8E8CF /* pretendard_thin.ttf */,
-				29B70B2B2C02147800B8E8CF /* yeongdeoksea.ttf */,
+				29B70B302C0214FE00B8E8CF /* bm_hanna_pro.ttf */,
+				29B70B342C0214FF00B8E8CF /* pretendard_black.ttf */,
+				29B70B362C0214FF00B8E8CF /* pretendard_bold.ttf */,
+				29B70B332C0214FF00B8E8CF /* pretendard_extra_bold.ttf */,
+				29B70B372C0214FF00B8E8CF /* pretendard_extra_light.ttf */,
+				29B70B3A2C0214FF00B8E8CF /* pretendard_light.ttf */,
+				29B70B322C0214FF00B8E8CF /* pretendard_medium.ttf */,
+				29B70B392C0214FF00B8E8CF /* pretendard_regular.ttf */,
+				29B70B352C0214FF00B8E8CF /* pretendard_semi_bold.ttf */,
+				29B70B382C0214FF00B8E8CF /* pretendard_thin.ttf */,
+				29B70B312C0214FE00B8E8CF /* yeongdeoksea.ttf */,
 			);
 			path = font;
 			sourceTree = "<group>";
@@ -596,19 +607,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B70B3B2C0214FF00B8E8CF /* bm_hanna_pro.ttf in Resources */,
 				294349FB2B07AD3E00C57B49 /* MyNoteListCollectionViewCell.xib in Resources */,
 				29F818012B26F2950002E3C8 /* TitleCollectionViewCell.xib in Resources */,
 				2984A8FE2B0F163C009BDF9F /* MyQuizListCollectionViewCell.xib in Resources */,
+				29B70B432C0214FF00B8E8CF /* pretendard_thin.ttf in Resources */,
 				296D36FB2BFCA29C004D2D08 /* EmptyQuizCollectionViewCell.xib in Resources */,
 				294349C92B07922300C57B49 /* LaunchScreen.storyboard in Resources */,
 				296D36F32BFC7C64004D2D08 /* EmptyNoteCollectionViewCell.xib in Resources */,
 				294349C62B07922300C57B49 /* Assets.xcassets in Resources */,
 				296FFA772B2014F000DE1D68 /* NoteTableViewCell.xib in Resources */,
+				29B70B3F2C0214FF00B8E8CF /* pretendard_black.ttf in Resources */,
 				29F237542B26E6C300EEF3DD /* DeveloperInfoCollectionViewCell.xib in Resources */,
+				29B70B402C0214FF00B8E8CF /* pretendard_semi_bold.ttf in Resources */,
+				29B70B442C0214FF00B8E8CF /* pretendard_regular.ttf in Resources */,
+				29B70B412C0214FF00B8E8CF /* pretendard_bold.ttf in Resources */,
+				29B70B3D2C0214FF00B8E8CF /* pretendard_medium.ttf in Resources */,
+				29B70B452C0214FF00B8E8CF /* pretendard_light.ttf in Resources */,
 				296FFA7B2B2014FF00DE1D68 /* QuizTableViewCell.xib in Resources */,
 				295F90442B20CBF000F28446 /* AllQuizTableViewCell.xib in Resources */,
 				294349C42B07922100C57B49 /* Main.storyboard in Resources */,
 				29E54F542B2151CD00E6E4B9 /* AllNoteTableViewCell.xib in Resources */,
+				29B70B3C2C0214FF00B8E8CF /* yeongdeoksea.ttf in Resources */,
+				29B70B422C0214FF00B8E8CF /* pretendard_extra_light.ttf in Resources */,
+				29B70B3E2C0214FF00B8E8CF /* pretendard_extra_bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

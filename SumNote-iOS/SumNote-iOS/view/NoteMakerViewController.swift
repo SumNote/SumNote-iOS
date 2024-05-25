@@ -12,14 +12,13 @@ import UniformTypeIdentifiers
 // 사용자가 찍은 사진을 서버로 전송하여 노트 생성 화면으로 이동
 class NoteMakerViewController: UIViewController {
 
-    //MARK: layout
-    @IBOutlet weak var btnCamera: UIButton!
-    @IBOutlet weak var btnGallery: UIButton!
-    @IBOutlet weak var btnPdf: UIButton!
+    @IBOutlet weak var btnCamera: UIView!
+    @IBOutlet weak var btnPdf: UIView!
+    @IBOutlet weak var btnGallery: UIView!
     
     private let imagePickerViewController = UIImagePickerController()
     
-    weak var delegate : NavigationDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
+    weak var delegate : NavigationDelegate?
     
     var createdNote : CreatedNoteResult?
     
@@ -28,8 +27,20 @@ class NoteMakerViewController: UIViewController {
     // Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBtnLayout() // 버튼 테두리 둥글게 적용
         imagePickerViewController.delegate = self
+        
+        // CameraViewBtn DidTappedGesture
+        let cameraViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(btnCameraDidTapped))
+        btnCamera.addGestureRecognizer(cameraViewTapGesture)
+        
+        // PdfViewBtn DidTappedGesture
+        let pdfViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(btnPdfDidTapped))
+        btnPdf.addGestureRecognizer(pdfViewTapGesture)
+        
+        // GalleryViewBtn DidTappedGesture
+        let galleryViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(btnGalleryDidTapped))
+        btnGallery.addGestureRecognizer(galleryViewTapGesture)
+        
     }
     
     
@@ -46,35 +57,26 @@ class NoteMakerViewController: UIViewController {
         // 다른 뷰로 이동할 때 네비게이션 바를 다시 보이게 설정
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+
     
-    
-    // 버튼 테두리 둥글게 적용
-    private func setBtnLayout(){
-        self.btnCamera.layer.cornerRadius = 15
-        self.btnGallery.layer.cornerRadius = 15
-        self.btnPdf.layer.cornerRadius = 15
-    }
-    
-    //MARK: Camera Button Action
-    @IBAction func btnCameraDidTapped(_ sender: Any) {
+    // MARK: Camera Button Action
+    @objc func btnCameraDidTapped(Sender : UITapGestureRecognizer){
         self.log("Camera Button Tapped")
         // imagePicker의 타입 결정
         self.imagePickerViewController.sourceType = .camera // 카메라 실행
         self.present(imagePickerViewController, animated: true, completion: nil)
     }
     
-    //MARK: Gallery Button Action
-    @IBAction func btnGalleryDidTapped(_ sender: Any) {
+    // MARK: Gallery Button Action
+    @objc func btnGalleryDidTapped(sender : UITapGestureRecognizer){
         self.log("Gallery Button Tapped")
         // imagePicker의 타입 결정
         self.imagePickerViewController.sourceType = .photoLibrary // photoLibrary : 갤러리
         self.present(imagePickerViewController, animated: true, completion: nil)
     }
     
-    //MARK: PDF Button Action
-    
-    
-    @IBAction func btnPdfDidTapped(_ sender: Any) {
+    // MARK: PDF Button Action
+    @objc func btnPdfDidTapped(sender : UITapGestureRecognizer){
         self.log("PDF Button Tapped")
         let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.pdf], asCopy: true)
         documentPicker.delegate = self

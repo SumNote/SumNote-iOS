@@ -25,7 +25,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdK-61-lrR">
-                        <rect key="frame" x="492" y="15" width="56" height="30"/>
+                        <rect key="frame" x="491" y="15" width="57" height="30"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="전체 보기">
                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +61,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="goAllNoteBtn" destination="CdK-61-lrR" id="Gdp-oA-3p1"/>
                 <outlet property="myNoteListCollectionView" destination="lqe-25-Ttm" id="yTs-lS-ufr"/>
+                <outlet property="noteTableViewTitle" destination="chc-bW-M74" id="oXp-Pf-4Ue"/>
             </connections>
             <point key="canvasLocation" x="17.557251908396946" y="-7.394366197183099"/>
         </tableViewCell>

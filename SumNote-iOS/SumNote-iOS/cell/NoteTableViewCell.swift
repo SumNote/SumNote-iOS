@@ -15,8 +15,10 @@ class NoteTableViewCell: UITableViewCell {
 
     static let identifier = "NoteTableViewCell"
     
+    @IBOutlet weak var goAllNoteBtn: UIButton!
     weak var delegate : NavigationDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
     
+    @IBOutlet weak var noteTableViewTitle: UILabel!
     @IBOutlet weak var myNoteListCollectionView: UICollectionView!
     
     var noteList : [NoteDto] = [] {
@@ -30,6 +32,8 @@ class NoteTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.log("awakeFromNib")
         // Initialization code
+        noteTableViewTitle.font = UIFont(name: "Pretendard-SemiBold", size: 21.0)
+        goAllNoteBtn.titleLabel?.font = UIFont(name: "Pretendard-ExtraLight", size: 15.0) // 폰트 설정
         setMyNoteListCollectionView() // CollectioView init
         
         getMyNote()

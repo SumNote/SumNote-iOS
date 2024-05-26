@@ -113,6 +113,7 @@
             </constraints>
             <size key="customSize" width="531" height="510"/>
             <connections>
+                <outlet property="devAff" destination="YFA-xS-eDU" id="xb6-Bz-bDT"/>
                 <outlet property="devEmail" destination="gEE-Ht-5Uo" id="7c8-qC-P30"/>
                 <outlet property="devImage" destination="dJR-z6-xFC" id="5P3-MJ-Np2"/>
                 <outlet property="devName" destination="rth-Wi-A38" id="I6Z-SY-Lu4"/>

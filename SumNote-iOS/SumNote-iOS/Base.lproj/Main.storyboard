@@ -85,7 +85,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 노트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo0-9o-1fK">
-                                <rect key="frame" x="44" y="69" width="74" height="24"/>
+                                <rect key="frame" x="44" y="69" width="304" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,6 +101,7 @@
                             <constraint firstItem="y2b-sn-Gxf" firstAttribute="trailing" secondItem="slF-wz-K6E" secondAttribute="trailing" id="eky-W6-tnv"/>
                             <constraint firstItem="slF-wz-K6E" firstAttribute="bottom" secondItem="y2b-sn-Gxf" secondAttribute="bottom" id="pul-3L-paY"/>
                             <constraint firstItem="lo0-9o-1fK" firstAttribute="top" secondItem="Hvt-sw-znu" secondAttribute="top" id="qqi-D2-INB"/>
+                            <constraint firstItem="slF-wz-K6E" firstAttribute="trailing" secondItem="lo0-9o-1fK" secondAttribute="trailing" constant="45" id="x7J-QR-oxN"/>
                             <constraint firstItem="Hvt-sw-znu" firstAttribute="leading" secondItem="slF-wz-K6E" secondAttribute="leading" constant="10" id="ysE-gN-HSL"/>
                             <constraint firstItem="Hvt-sw-znu" firstAttribute="top" secondItem="slF-wz-K6E" secondAttribute="top" constant="10" id="zT0-Fk-Kx8"/>
                         </constraints>
@@ -108,6 +109,7 @@
                     <navigationItem key="navigationItem" id="Wex-01-t2I"/>
                     <connections>
                         <outlet property="allNoteTableView" destination="y2b-sn-Gxf" id="8Qm-JW-cpH"/>
+                        <outlet property="allnoteTitle" destination="lo0-9o-1fK" id="pSz-NL-Ghk"/>
                         <outlet property="backBtn" destination="Hvt-sw-znu" id="cxh-vF-w4X"/>
                     </connections>
                 </viewController>
@@ -135,7 +137,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 퀴즈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCV-kn-2Jc">
-                                <rect key="frame" x="44" y="69" width="74" height="24"/>
+                                <rect key="frame" x="44" y="69" width="304" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -150,6 +152,7 @@
                             <constraint firstItem="UCV-kn-2Jc" firstAttribute="leading" secondItem="b2S-At-oHk" secondAttribute="trailing" constant="10" id="KiW-H3-iHi"/>
                             <constraint firstItem="UCV-kn-2Jc" firstAttribute="top" secondItem="b2S-At-oHk" secondAttribute="top" id="VX0-qk-J8T"/>
                             <constraint firstItem="b2S-At-oHk" firstAttribute="leading" secondItem="sc8-I8-hiA" secondAttribute="leading" constant="10" id="jRg-Np-PTs"/>
+                            <constraint firstItem="sc8-I8-hiA" firstAttribute="trailing" secondItem="UCV-kn-2Jc" secondAttribute="trailing" constant="45" id="n3G-BU-lNS"/>
                             <constraint firstItem="3IK-gq-j6l" firstAttribute="trailing" secondItem="sc8-I8-hiA" secondAttribute="trailing" id="pPQ-Tm-ClI"/>
                             <constraint firstItem="b2S-At-oHk" firstAttribute="top" secondItem="sc8-I8-hiA" secondAttribute="top" constant="10" id="up2-u4-jhr"/>
                             <constraint firstItem="3IK-gq-j6l" firstAttribute="leading" secondItem="sc8-I8-hiA" secondAttribute="leading" id="vat-KY-myl"/>
@@ -157,6 +160,7 @@
                     </view>
                     <connections>
                         <outlet property="allQuizTableView" destination="3IK-gq-j6l" id="lHJ-k0-SWb"/>
+                        <outlet property="allquizViewTitle" destination="UCV-kn-2Jc" id="oEl-k4-a2h"/>
                         <outlet property="backBtn" destination="b2S-At-oHk" id="Jx5-AZ-Du2"/>
                     </connections>
                 </viewController>

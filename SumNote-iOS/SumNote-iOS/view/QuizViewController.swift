@@ -36,6 +36,8 @@ class QuizViewController: UIViewController {
         self.log("viewDidLoad quizPageData : \(String(describing: quizPageData))")
         setUpQuiz()
         
+        quizTitle.font = UIFont(name: "Pretendard-Medium", size: 20.0)
+        
         // 뒤로가기 이벤트 정의
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backBtnTapped))
         backBtn.isUserInteractionEnabled = true // 사용자 상호작용 활성화

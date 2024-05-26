@@ -60,7 +60,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="goAllQuizBtn" destination="brc-07-orJ" id="QOn-B1-GOM"/>
                 <outlet property="myQuizListCollectionView" destination="ObU-tg-C5v" id="9vt-LJ-Ixi"/>
+                <outlet property="quizTableViewTitle" destination="b2k-Gb-LdO" id="TB3-IR-F9d"/>
             </connections>
             <point key="canvasLocation" x="-358" y="59"/>
         </tableViewCell>

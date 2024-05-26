@@ -48,6 +48,7 @@
             <size key="customSize" width="442" height="243"/>
             <connections>
                 <outlet property="alertView" destination="QML-MW-zZM" id="yTy-Vz-sAw"/>
+                <outlet property="announce" destination="64Z-FK-hQR" id="Eny-np-Aa7"/>
             </connections>
             <point key="canvasLocation" x="369.46564885496184" y="57.394366197183103"/>
         </collectionViewCell>

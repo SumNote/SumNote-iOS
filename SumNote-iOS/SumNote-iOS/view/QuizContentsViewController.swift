@@ -56,12 +56,16 @@ class QuizContentsViewController: UIViewController {
         questionLabel.text = question
         for (i, selectionLabel) in selectionButtonLabelList.enumerated() {
             selectionLabel.setTitle(selections?[i].selection, for: .normal)
+            selectionLabel.titleLabel?.font = UIFont(name: "Pretendard-Regular", size: 16.0)
             selectionLabel.addTarget(self, action: #selector(grading), for: .touchUpInside)
             selectionLabel.tag = i // 버튼에 태그 설정
         }
 
         commentaryLabel.text = commentary
         commentaryLabel.isHidden = true // 초기엔 정답 안보임
+        
+        questionLabel.font = UIFont(name: "Pretendard-Medium", size: 20.0)
+        commentaryLabel.font = UIFont(name: "Pretendard-Regular", size: 17.0)
     }
 
     // 채점하기

@@ -15,6 +15,7 @@ class AllQuizViewController: UIViewController {
     
     @IBOutlet weak var backBtn: UIImageView! // 뒤로가기 버튼(이미지)
     
+    @IBOutlet weak var allquizViewTitle: UILabel!
     var quizDocList : [QuizDocDto] = [] {
         didSet{
             self.allQuizTableView.reloadData()
@@ -24,6 +25,7 @@ class AllQuizViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        allquizViewTitle.font = UIFont(name: "Pretendard-Medium", size: 20.0)
         // Do any additional setup after loading the view.
         setTableView()
         getAllQuizDoc()

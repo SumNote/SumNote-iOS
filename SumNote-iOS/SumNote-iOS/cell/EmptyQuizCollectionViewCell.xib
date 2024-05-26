@@ -47,6 +47,7 @@
             </constraints>
             <size key="customSize" width="580" height="236"/>
             <connections>
+                <outlet property="announce" destination="VHs-SN-y00" id="Ip6-Pc-Cbs"/>
                 <outlet property="emptyCellView" destination="VHt-ZL-QuB" id="Zkc-qH-sPH"/>
             </connections>
             <point key="canvasLocation" x="-94.656488549618317" y="16.901408450704228"/>

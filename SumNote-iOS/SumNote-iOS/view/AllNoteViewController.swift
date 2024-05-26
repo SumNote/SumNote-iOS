@@ -17,6 +17,8 @@ class AllNoteViewController: UIViewController {
     
     @IBOutlet weak var backBtn: UIImageView! // 뒤로가기버튼(이미지)
     
+    @IBOutlet weak var allnoteTitle: UILabel!
+    
     var noteList : [NoteDto] = [] {
         didSet{
             self.allNoteTableView.reloadData()
@@ -26,7 +28,7 @@ class AllNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
-        
+        allnoteTitle.font = UIFont(name: "Pretendard-Medium", size: 20.0)
         // 뒤로가기 이벤트 정의
         // 탭 제스처 인식기 설정 => 뒤로가기 버튼 사용을 위해
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backBtnTapped))

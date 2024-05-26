@@ -18,6 +18,8 @@ class AllQuizTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        quizTitle.font = UIFont(name: "Pretendard-Bold", size: 18.0)
+        quizGenDate.font = UIFont(name: "Pretendard-ExtraLight", size: 13.0)
         quizImage.layer.cornerRadius = 10
     }
 

@@ -15,6 +15,8 @@ class QuizTableViewCell: UITableViewCell {
     
     static let identifier = "QuizTableViewCell"
     
+    @IBOutlet weak var goAllQuizBtn: UIButton!
+    @IBOutlet weak var quizTableViewTitle: UILabel!
     weak var delegate : NavigationDelegate? // 위임자 선언 => MyNoteTableViewController(메인화면)
     
     // 변경사항 발생시 컬렉션 뷰 새로고침
@@ -29,6 +31,9 @@ class QuizTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        quizTableViewTitle.font = UIFont(name: "Pretendard-SemiBold", size: 21.0)
+        goAllQuizBtn.titleLabel?.font = UIFont(name: "Pretendard-ExtraLight", size: 15.0)
+        
         setMyQuizListCollectionView() // CollectioView init
         
         getMyQuizDoc()

@@ -18,6 +18,8 @@ class AllNoteTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        noteTitle.font = UIFont(name: "Pretendard-Bold", size: 18.0)
+        noteGenDate.font = UIFont(name: "Pretendard-ExtraLight", size: 13.0)
         noteImage.layer.cornerRadius = 10 // 테두리 둥글게
     }
 

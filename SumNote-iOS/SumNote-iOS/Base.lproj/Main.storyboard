@@ -12,6 +12,23 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="pretendard_black.ttf">
+            <string>Pretendard-Black</string>
+        </array>
+        <array key="pretendard_bold.ttf">
+            <string>Pretendard-Bold</string>
+        </array>
+        <array key="pretendard_extra_bold.ttf">
+            <string>Pretendard-ExtraBold</string>
+        </array>
+        <array key="pretendard_extra_light.ttf">
+            <string>Pretendard-ExtraLight</string>
+        </array>
+        <array key="pretendard_medium.ttf">
+            <string>Pretendard-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="cXH-eV-f5b">
@@ -181,14 +198,14 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홍길동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-sd-J8u">
-                                <rect key="frame" x="75" y="123" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="75" y="123" width="44.333333333333343" height="20"/>
+                                <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ghdrlfehd@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Be-cm-xeq">
-                                <rect key="frame" x="75" y="149" width="124" height="14.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <rect key="frame" x="75" y="148" width="113.66666666666669" height="14"/>
+                                <fontDescription key="fontDescription" name="Pretendard-ExtraLight" family="Pretendard" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -299,7 +316,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이렇게 찍어주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHZ-n4-sRN">
                                 <rect key="frame" x="10" y="122.99999999999999" width="373" height="38.333333333333329"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Pretendard-Black" family="Pretendard" pointSize="32"/>
                                 <color key="textColor" name="green"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -321,20 +338,20 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글자가 수평으로 잘 보이게 찍어주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1l8-Gg-TyA">
-                                        <rect key="frame" x="38.333333333333343" y="18" width="286.33333333333326" height="23"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <rect key="frame" x="39" y="18" width="285.33333333333326" height="23"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-ExtraBold" family="Pretendard" pointSize="19"/>
                                         <color key="textColor" name="green"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중요한 단어는 빨간 펜으로 밑줄을 그어주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biv-x1-g2c">
-                                        <rect key="frame" x="14.333333333333343" y="56" width="334.33333333333326" height="23"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <rect key="frame" x="15" y="56" width="333.33333333333331" height="23"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-ExtraBold" family="Pretendard" pointSize="19"/>
                                         <color key="textColor" name="green"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지면으로부터 수직으로 찍어주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3q-LE-4Bq">
-                                        <rect key="frame" x="51" y="94" width="261.33333333333331" height="23"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <rect key="frame" x="51.333333333333343" y="94" width="260.66666666666663" height="23"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-ExtraBold" family="Pretendard" pointSize="19"/>
                                         <color key="textColor" name="green"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -702,7 +719,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저장할 노트를 선택해주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwV-Zh-dL3">
                                         <rect key="frame" x="10" y="14.999999999999998" width="293" height="26.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
                                         <color key="textColor" name="green"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1025,7 +1042,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터베이스의 문제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVa-sP-lPE">
-                                <rect key="frame" x="74.000000000000014" y="124" width="160.33333333333337" height="24"/>
+                                <rect key="frame" x="74" y="124" width="274" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1054,6 +1071,7 @@
                         <viewLayoutGuide key="safeArea" id="2Zd-oU-pJd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2Zd-oU-pJd" firstAttribute="trailing" secondItem="JVa-sP-lPE" secondAttribute="trailing" constant="45" id="2bR-fF-sfN"/>
                             <constraint firstItem="2Zd-oU-pJd" firstAttribute="trailing" secondItem="xBl-9l-7Ja" secondAttribute="trailing" constant="40" id="51j-A7-CRz"/>
                             <constraint firstItem="JVa-sP-lPE" firstAttribute="leading" secondItem="eNc-kP-VVF" secondAttribute="trailing" constant="10" id="ACg-fh-KX6"/>
                             <constraint firstItem="JVa-sP-lPE" firstAttribute="top" secondItem="eNc-kP-VVF" secondAttribute="top" id="BcW-Cc-5I8"/>
@@ -1265,7 +1283,7 @@
                                                     <constraint firstAttribute="width" constant="220" id="IVS-03-vlb"/>
                                                     <constraint firstAttribute="height" constant="72.666666666666629" id="VVf-Fc-jH0"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                                <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="80"/>
                                                 <color key="textColor" name="green"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1274,7 +1292,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="220" id="yWl-dx-jQb"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                                <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="80"/>
                                                 <color key="textColor" name="green"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1288,6 +1306,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="P1P-S2-xHA"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Pretendard-ExtraBold" family="Pretendard" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="  카카오 계정으로 시작하기" image="message-square">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>

@@ -22,7 +22,27 @@ class NoteContentsViewController: UIViewController {
     
     private func setPageContent(){
         self.pageTitle.text = notePageData?.title
+        self.pageTitle.font = UIFont(name: "Yeongdeok-Sea", size: 30.0)
+        self.applyBoldEffect(to: pageTitle, fontName: "Yeongdeok-Sea", fontSize: 30.0)
+        
         self.pageContent.text = notePageData?.content
+        self.pageContent.font = UIFont(name: "Yeongdeok-Sea", size: 20.0)
+    }
+    
+    // Bold 효과 적용
+    private func applyBoldEffect(to label: UILabel, fontName: String,
+                                 fontSize: CGFloat) {
+        let shadow = NSShadow()
+        shadow.shadowOffset = CGSize(width: 1, height: 1)
+        shadow.shadowColor = UIColor.black.withAlphaComponent(0.3)
+        shadow.shadowBlurRadius = 1
+
+        let attributes: [NSAttributedString.Key: Any] = [
+           .font: UIFont(name: fontName, size: fontSize)!,
+           .shadow: shadow
+        ]
+
+        label.attributedText = NSAttributedString(string: label.text ?? "", attributes: attributes)
     }
 }
 

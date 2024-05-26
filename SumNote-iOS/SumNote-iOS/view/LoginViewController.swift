@@ -17,7 +17,20 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         btnKaKaoLogin.layer.cornerRadius = 20 // 버튼 테두리 둥글게
+        
+        // 폰트 이름 알아내기
+        for family in UIFont.familyNames {
+
+            let sName: String = family as String
+            print("family: \(sName)")
+                    
+            for name in UIFont.fontNames(forFamilyName: sName) {
+                print("name: \(name as String)")
+            }
+        }
     }
+    
+    
     
     
     // 카카오 계정으로 시작하기 버튼 클릭시

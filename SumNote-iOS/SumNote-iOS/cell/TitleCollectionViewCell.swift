@@ -17,6 +17,8 @@ class TitleCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        sumNote.font = UIFont(name: "Pretendard-Bold", size: 27.0)
+        developerInformation.font = UIFont(name: "Pretendard-Bold", size: 27.0)
     }
 
 }

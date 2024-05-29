@@ -36,6 +36,9 @@ class ResultDialog {
             label.text = message
             label.textAlignment = .center
             label.textColor = .white
+            label.adjustsFontSizeToFitWidth = true
+            label.minimumScaleFactor = 0.5
+            label.lineBreakMode = .byClipping
             backgroundView.addSubview(label)
             
             window.addSubview(backgroundView)
